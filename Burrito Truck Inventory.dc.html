@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="stylesheet" href="_ds/industry-4f5b489d-92cd-4d30-997c-ad2a40c3e918/styles.css">
+<script src="_ds/industry-4f5b489d-92cd-4d30-997c-ad2a40c3e918/_ds_bundle.js"></script>
+<style>
+body{margin:0}
+.app{display:grid;grid-template-columns:238px 1fr;min-height:100vh}
+.side{border-right:1px solid var(--color-divider);padding:var(--space-4);display:flex;flex-direction:column;gap:3px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{font-family:var(--font-heading);font-weight:600;font-size:21px;letter-spacing:-.01em;line-height:1;margin-bottom:2px}
+.brand small{display:block;font-family:var(--font-body);font-weight:400;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent);margin-top:5px}
+.side-sec{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-500);margin:var(--space-4) 0 4px 10px}
+.nav-link{display:flex;align-items:center;gap:11px;padding:8px 10px;font-family:var(--font-heading);font-weight:600;font-size:15px;color:var(--color-text);cursor:pointer;border:1px solid transparent;background:transparent;text-align:left;width:100%}
+.nav-link:hover{background:color-mix(in srgb,var(--color-text) 6%,transparent)}
+.nav-link.active{background:var(--color-accent-900);color:var(--color-bg)}
+.nav-link .badge{margin-left:auto;font-family:var(--font-body);font-size:11px;min-width:20px;height:18px;padding:0 5px;display:inline-flex;align-items:center;justify-content:center;background:var(--color-accent-900);color:var(--color-bg)}
+.nav-link.active .badge{background:var(--color-bg);color:var(--color-accent-900)}
+.ic{width:18px;height:18px;flex:none}
+.main{padding:var(--space-6) var(--space-8);max-width:1200px}
+.phead{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--space-4);margin-bottom:var(--space-6);flex-wrap:wrap}
+.phead h1{font-size:34px;margin:0}
+.phead .sub{color:var(--color-neutral-600);font-size:14px;margin-top:3px}
+.pos-pill{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-family:var(--font-heading);padding:5px 11px;border:1px solid var(--color-divider)}
+.dot-i{width:7px;height:7px;border-radius:50%;background:var(--color-neutral-400)}
+.pos-on .dot-i{background:var(--color-accent)}
+.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);margin-bottom:var(--space-6)}
+.stat{padding:var(--space-4) var(--space-4) var(--space-4)}
+.stat .k{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent)}
+.stat .n{font-family:var(--font-heading);font-weight:600;font-size:40px;line-height:1;margin:8px 0 4px}
+.stat .s{font-size:12px;color:var(--color-neutral-600)}
+.sec-title{display:flex;align-items:center;justify-content:space-between;margin:var(--space-6) 0 var(--space-3)}
+.sec-title h2{font-size:22px;margin:0}
+.panel{padding:var(--space-4)}
+.alert-row{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:var(--space-4);padding:var(--space-3) 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent)}
+.alert-row:last-child{border-bottom:none}
+.alert-name{font-family:var(--font-heading);font-weight:600;font-size:16px}
+.alert-meta{font-size:12px;color:var(--color-neutral-600);margin-top:2px}
+.st{padding:3px 9px;font-size:11px;letter-spacing:.02em;display:inline-flex;white-space:nowrap}
+.st-ok{background:var(--color-neutral-100);color:var(--color-neutral-700)}
+.st-low{background:var(--color-accent-100);color:var(--color-accent-800)}
+.st-crit{background:var(--color-accent-900);color:var(--color-bg)}
+.meter{height:6px;background:var(--color-neutral-200);position:relative;width:100%}
+.meter>span{position:absolute;left:0;top:0;bottom:0;background:var(--color-accent-500)}
+.bar-low>span{background:var(--color-accent-500)}
+.bar-crit>span{background:var(--color-accent-900)}
+.bar-ok>span{background:var(--color-neutral-400)}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:var(--space-4)}
+.chip{font-family:var(--font-heading);font-weight:600;font-size:13px;padding:6px 12px;border:1px solid var(--color-divider);background:transparent;cursor:pointer;color:var(--color-text)}
+.chip:hover{background:color-mix(in srgb,var(--color-text) 6%,transparent)}
+.chip.on{background:var(--color-accent-900);color:var(--color-bg);border-color:var(--color-accent-900)}
+.inv-t{width:100%;border-collapse:collapse;font-size:14px}
+.inv-t th{text-align:left;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-600);padding:var(--space-2) var(--space-3);border-bottom:1px solid var(--color-divider)}
+.inv-t td{padding:var(--space-3);border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent);vertical-align:middle}
+.inv-t tbody tr:hover{background:color-mix(in srgb,var(--color-text) 4%,transparent)}
+.rowname{font-family:var(--font-heading);font-weight:600;font-size:15px;cursor:pointer}
+.rowname:hover{color:var(--color-accent)}
+.rowcat{font-size:11px;color:var(--color-neutral-500)}
+.stepper{display:inline-flex;align-items:center;border:1px solid var(--color-divider)}
+.stepper button{width:28px;height:30px;border:none;background:transparent;cursor:pointer;font-size:16px;font-family:var(--font-heading);color:var(--color-text);line-height:1}
+.stepper button:hover{background:color-mix(in srgb,var(--color-text) 8%,transparent)}
+.stepper .val{min-width:56px;text-align:center;font-variant-numeric:tabular-nums;font-size:14px;border-left:1px solid var(--color-divider);border-right:1px solid var(--color-divider);height:30px;display:flex;align-items:center;justify-content:center}
+.unit-mut{color:var(--color-neutral-500);font-size:12px}
+.two{display:grid;grid-template-columns:1.6fr 1fr;gap:var(--space-6);align-items:start}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+.field-lg label{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:5px}
+.big-count{font-family:var(--font-heading);font-weight:600;font-size:56px;line-height:1}
+.big-count small{font-size:20px;color:var(--color-neutral-500);font-weight:400}
+.back-btn{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-heading);font-weight:600;font-size:13px;color:var(--color-accent);background:none;border:none;cursor:pointer;padding:0;margin-bottom:var(--space-3)}
+.vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4)}
+.vcard{padding:var(--space-4);cursor:pointer}
+.vcard:hover{background:color-mix(in srgb,var(--color-text) 4%,transparent)}
+.vcard h3{font-size:19px;margin:0 0 3px}
+.vmeta{font-size:12px;color:var(--color-neutral-600);line-height:1.5}
+.pillrow{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}
+.mini-tag{font-size:10.5px;padding:2px 8px;background:var(--color-accent-100);color:var(--color-accent-800)}
+.stack{display:flex;flex-direction:column;gap:var(--space-4)}
+.hstack{display:flex;gap:var(--space-3);align-items:center;flex-wrap:wrap}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--color-divider);border:1px solid var(--color-divider)}
+.cal .dh{background:var(--color-bg);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-600);padding:6px;text-align:center;font-family:var(--font-heading)}
+.cell{background:var(--color-bg);min-height:70px;padding:6px 7px;cursor:pointer;position:relative;font-size:13px}
+.cell:hover{outline:1px solid var(--color-accent)}
+.cell.blank{background:var(--color-neutral-100);cursor:default}
+.cell.blank:hover{outline:none}
+.cell.busy{background:var(--color-accent-200)}
+.cell.holiday{background:var(--color-accent-300)}
+.cell.slow{background:var(--color-neutral-100)}
+.cell.closed{background:var(--color-neutral-300)}
+.cell.custom{background:repeating-linear-gradient(45deg,var(--color-accent-100),var(--color-accent-100) 5px,var(--color-bg) 5px,var(--color-bg) 10px)}
+.cell .today-m{position:absolute;top:6px;right:7px;width:6px;height:6px;background:var(--color-accent-900);border-radius:50%}
+.cell .cl{font-size:10px;font-family:var(--font-heading);font-weight:600;margin-top:4px;text-transform:uppercase;letter-spacing:.04em}
+.dow{display:grid;grid-template-columns:60px 1fr 46px;gap:var(--space-3);align-items:center}
+.dow input[type=range]{width:100%;accent-color:var(--color-accent)}
+.dpgrid{display:grid;grid-template-columns:46px repeat(4,1fr) 48px;gap:8px;align-items:center;padding:5px 0}
+.dphead{border-bottom:1px solid var(--color-divider);padding-bottom:6px;margin-bottom:2px}
+.dpcol{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-neutral-600);text-align:center;font-family:var(--font-heading)}
+.dpcell{display:flex;flex-direction:column;gap:2px;align-items:center}
+.dpcell input[type=range]{width:100%;accent-color:var(--color-accent)}
+.dpval{font-size:11px;font-variant-numeric:tabular-nums;color:var(--color-neutral-600)}
+.dpavg{text-align:center;font-variant-numeric:tabular-nums;font-family:var(--font-heading);font-weight:600;font-size:13px}
+.fbar{display:grid;grid-template-columns:70px 1fr auto;gap:var(--space-3);align-items:center;padding:6px 0}
+.fmeter{height:20px;background:var(--color-neutral-200);position:relative}
+.fmeter>span{position:absolute;left:0;top:0;bottom:0;background:var(--color-accent-500)}
+.fmeter.hi>span{background:var(--color-accent-900)}
+.legend{display:flex;gap:var(--space-4);flex-wrap:wrap;font-size:12px;color:var(--color-neutral-700);margin-top:var(--space-3)}
+.legend i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px;border:1px solid var(--color-divider)}
+.calrow{display:grid;grid-template-columns:96px 1fr;gap:var(--space-3);align-items:center;padding:6px 0}
+.segbtns{display:flex;gap:5px}
+.segbtns button{flex:1;font-family:var(--font-heading);font-weight:600;font-size:12px;padding:6px 4px;border:1px solid var(--color-divider);background:transparent;color:var(--color-text);cursor:pointer}
+.segbtns button:hover{background:color-mix(in srgb,var(--color-text) 6%,transparent)}
+.segbtns button.on{background:var(--color-accent-900);color:var(--color-bg);border-color:var(--color-accent-900)}
+.set-row{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:var(--space-3) 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent)}
+.toggle{width:44px;height:24px;border:1px solid var(--color-divider);background:var(--color-neutral-200);position:relative;cursor:pointer;flex:none}
+.toggle.on{background:var(--color-accent)}
+.toggle span{position:absolute;top:2px;left:2px;width:18px;height:18px;background:var(--color-bg);transition:left .12s}
+.toggle.on span{left:22px}
+.newgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);align-items:end}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--color-accent-900);color:var(--color-bg);padding:11px 20px;font-family:var(--font-heading);font-weight:600;font-size:14px;box-shadow:var(--shadow-lg);z-index:60}
+.mailbox{background:var(--color-neutral-100);border:1px solid var(--color-divider);padding:var(--space-3);font-size:13px;line-height:1.6}
+.growl{color:var(--color-neutral-600);font-size:13px}
+.trash{background:none;border:1px solid var(--color-divider);width:32px;height:32px;cursor:pointer;color:var(--color-neutral-700);display:inline-flex;align-items:center;justify-content:center}
+.trash:hover{border-color:var(--color-accent-900);color:var(--color-accent-900)}
+.deliv{font-size:12px;color:var(--color-neutral-600)}
+.vgrouphd{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding-bottom:var(--space-3);margin-bottom:var(--space-2);border-bottom:1px solid var(--color-divider)}
+.th-sort{cursor:pointer;user-select:none;white-space:nowrap}
+.th-sort:hover{color:var(--color-accent)}
+.statbtn{text-align:left;cursor:pointer;font:inherit;color:inherit;background:transparent;display:block;width:100%}
+.statbtn:hover{background:color-mix(in srgb,var(--color-accent) 8%,transparent)}
+.statbtn:hover .n{color:var(--color-accent)}
+.pos-pill{width:100%;border-radius:0;font-family:var(--font-heading)}
+.pos-opt{display:flex;align-items:center;gap:12px;width:100%;padding:12px 16px;border:none;font-family:var(--font-heading);font-weight:600;font-size:16px;cursor:pointer;color:#fff;text-align:left}
+.pos-opt:hover{filter:brightness(1.09)}
+.pos-opt .pos-mark{width:28px;height:28px;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;flex:none}
+.pos-opt .arw{margin-left:auto;opacity:.85;font-size:15px}
+.pos-toast{background:#ff4c00}.pos-toast .pos-mark{color:#ff4c00}
+.pos-square{background:#111}.pos-square .pos-mark{color:#111}
+.pos-shopify{background:#5e8e3e}.pos-shopify .pos-mark{color:#5e8e3e}
+.pos-clover{background:#00a94f}.pos-clover .pos-mark{color:#00a94f}
+.pos-lightspeed{background:#e4002b}.pos-lightspeed .pos-mark{color:#e4002b}
+.pos-list{display:flex;flex-direction:column;gap:9px;margin-top:var(--space-2)}
+</style>
+</helmet>
+<div class="app">
+<aside class="side">
+<div class="brand blueprint" style="border:none;padding:0">Mauricio’s Burrito’s<br><small>Inventory Ops</small></div>
+<div class="side-sec">Overview</div>
+<button class="nav-link {{ v.dashboard }}" onClick="{{ go.dashboard }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>Dashboard</button>
+<button class="nav-link {{ v.reorders }}" onClick="{{ go.reorders }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>Reorder alerts<sc-if value="{{ alertCount }}" hint-placeholder-val="{{ true }}"><span class="badge">{{ alertCount }}</span></sc-if></button>
+<div class="side-sec">Manage</div>
+<button class="nav-link {{ v.inventory }}" onClick="{{ go.inventory }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.3 9 5.1"></path><path d="M21 8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>Inventory</button>
+<button class="nav-link {{ v.orders }}" onClick="{{ go.orders }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8l4 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8Z"></path><path d="M4 8h16"></path><path d="M9 13h6"></path><path d="M9 17h6"></path></svg>Orders</button>
+<button class="nav-link {{ v.vendors }}" onClick="{{ go.vendors }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-4"></path><path d="M9 9v.01M9 12v.01M9 15v.01M9 18v.01"></path></svg>Vendors</button>
+<div class="side-sec">Plan</div>
+<button class="nav-link {{ v.forecast }}" onClick="{{ go.forecast }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>Forecasting</button>
+<div class="f1"></div>
+<button class="pos-pill {{ posClass }}" style="justify-content:center;margin-top:var(--space-4)" onClick="{{ openPos }}"><span class="dot-i"></span>{{ posLabel }}</button>
+</aside>
+<main class="main">
+
+<sc-if value="{{ isDashboard }}" hint-placeholder-val="{{ true }}"><div>
+<div class="phead"><div><h1>Good morning, Mauricio</h1><div class="sub">{{ todayLabel }} · projected demand {{ todayDemand }} vs. an average day</div></div><div class="hstack"><button class="btn btn-secondary" onClick="{{ simulateDay }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.7 9.7 0 0 0-6.7 2.7L3 8"></path><path d="M3 3v5h5"></path></svg>Simulate a sales day</button></div></div>
+<div class="statgrid">
+<button class="stat statbtn blueprint elev-sm" onClick="{{ go.inventory }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">Tracked items</div><div class="n">{{ stats.total }}</div><div class="s">across {{ stats.catCount }} categories</div></button>
+<button class="stat statbtn blueprint elev-sm" onClick="{{ go.reorders }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">Need attention</div><div class="n">{{ stats.attention }}</div><div class="s">{{ stats.critCount }} critical · {{ stats.lowCount }} low</div></button>
+<button class="stat statbtn blueprint elev-sm" onClick="{{ go.orders }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">Open orders</div><div class="n">{{ stats.pending }}</div><div class="s">{{ stats.pendingSub }}</div></button>
+<button class="stat statbtn blueprint elev-sm" onClick="{{ go.forecast }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">Peak this week</div><div class="n">{{ stats.peak }}</div><div class="s">{{ stats.peakDay }}</div></button>
+</div>
+<div class="sec-title"><h2>Reorder reminders</h2><button class="btn btn-ghost" onClick="{{ go.reorders }}">Review all →</button></div>
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<sc-for list="{{ topAlerts }}" as="a" hint-placeholder-count="4"><div class="alert-row"><div><div class="alert-name">{{ a.name }} <span class="st {{ a.statusClass }}">{{ a.statusLabel }}</span></div><div class="alert-meta">{{ a.countDisp }} left · about {{ a.daysDisp }} of cover · from {{ a.vendorName }}</div></div><div class="deliv">Suggest {{ a.sugDisp }}</div><button class="btn btn-primary" onClick="{{ a.reorder }}">Review order</button></div></sc-for>
+<sc-if value="{{ noAlerts }}" hint-placeholder-val="{{ false }}"><div class="growl">Everything is above its reorder point. Nice.</div></sc-if>
+</div>
+</div></sc-if>
+
+<sc-if value="{{ isReorders }}" hint-placeholder-val="{{ false }}"><div>
+<div class="phead"><div><h1>Reorder alerts</h1><div class="sub">Grouped by vendor — combine everything from one supplier into a single email.</div></div></div>
+<div class="stack"><sc-for list="{{ alertGroups }}" as="g" hint-placeholder-count="4"><div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="vgrouphd"><div><div class="alert-name">{{ g.vendorName }}</div><div class="alert-meta">{{ g.count }} item(s) below reorder point</div></div><sc-if value="{{ g.multi }}" hint-placeholder-val="{{ true }}"><button class="btn btn-primary" onClick="{{ g.orderAll }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v4H4z"/><path d="M6 8v12h12V8"/><path d="M10 12h4"/></svg>Order all {{ g.count }} in one email</button></sc-if></div>
+<sc-for list="{{ g.items }}" as="a" hint-placeholder-count="3"><div class="alert-row"><div><div class="alert-name">{{ a.name }} <span class="st {{ a.statusClass }}">{{ a.statusLabel }}</span></div><div class="alert-meta">{{ a.countDisp }} on hand · reorder point {{ a.lowDisp }} · ~{{ a.daysDisp }} cover</div></div><div class="deliv">Suggest {{ a.sugDisp }}</div><button class="btn btn-secondary" onClick="{{ a.reorder }}">Review order</button></div></sc-for>
+</div></sc-for>
+<sc-if value="{{ noAlerts }}" hint-placeholder-val="{{ false }}"><div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="growl">No items below their reorder point right now.</div></div></sc-if>
+</div>
+</div></sc-if>
+
+<sc-if value="{{ isInventory }}" hint-placeholder-val="{{ false }}"><div>
+<div class="phead"><div><h1>Inventory</h1><div class="sub">{{ stats.total }} ingredients · counts sync from the POS as tickets close.</div></div><button class="btn btn-primary" onClick="{{ toggleAddIng }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>Add ingredient</button></div>
+<sc-if value="{{ addIngOpen }}" hint-placeholder-val="{{ false }}"><div class="panel blueprint" style="margin-bottom:var(--space-4)"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<h4>New ingredient</h4>
+<div class="newgrid" style="margin-top:var(--space-3)">
+<div class="field-lg" style="grid-column:span 2"><label>Name</label><input class="input" value="{{ nw.name }}" onChange="{{ nw.setName }}" placeholder="e.g. Cotija cheese"></div>
+<div class="field-lg"><label>Unit</label><input class="input" value="{{ nw.unit }}" onChange="{{ nw.setUnit }}" placeholder="lbs"></div>
+<div class="field-lg"><label>Category</label><select class="input" value="{{ nw.cat }}" onChange="{{ nw.setCat }}"><sc-for list="{{ cats }}" as="c" hint-placeholder-count="7"><option value="{{ c }}">{{ c }}</option></sc-for></select></div>
+<div class="field-lg"><label>Vendor</label><select class="input" value="{{ nw.vendorId }}" onChange="{{ nw.setVendor }}"><sc-for list="{{ vendorRows }}" as="vo" hint-placeholder-count="7"><option value="{{ vo.id }}">{{ vo.name }}</option></sc-for></select></div>
+<div class="field-lg"><label>On hand</label><input class="input" type="number" value="{{ nw.count }}" onChange="{{ nw.setCount }}"></div>
+<div class="field-lg"><label>Par / full level</label><input class="input" type="number" value="{{ nw.par }}" onChange="{{ nw.setPar }}"></div>
+<div class="field-lg"><label>Reorder point</label><input class="input" type="number" value="{{ nw.low }}" onChange="{{ nw.setLow }}"></div>
+<div class="field-lg"><label>Critical level</label><input class="input" type="number" value="{{ nw.crit }}" onChange="{{ nw.setCrit }}"></div>
+<div class="field-lg"><label>Est. use / day</label><input class="input" type="number" value="{{ nw.perDay }}" onChange="{{ nw.setPerDay }}"></div>
+<div class="field-lg"><label>Price / unit ($)</label><input class="input" type="number" value="{{ nw.price }}" onChange="{{ nw.setPrice }}"></div>
+</div>
+<div class="hstack" style="margin-top:var(--space-4)"><button class="btn btn-primary" onClick="{{ addIngredient }}">Add ingredient</button><button class="btn btn-secondary" onClick="{{ toggleAddIng }}">Cancel</button></div>
+</div></sc-if>
+<div class="filters"><sc-for list="{{ filterChips }}" as="c" hint-placeholder-count="8"><button class="chip {{ c.cls }}" onClick="{{ c.set }}">{{ c.label }}</button></sc-for></div>
+<div class="panel blueprint" style="padding:var(--space-3) var(--space-4)"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<table class="inv-t"><thead><tr><th class="th-sort" onClick="{{ sortHead.name }}">Ingredient{{ sortArw.name }}</th><th class="th-sort" onClick="{{ sortHead.count }}">On hand{{ sortArw.count }}</th><th class="th-sort" style="width:160px" onClick="{{ sortHead.level }}">Level{{ sortArw.level }}</th><th class="th-sort" onClick="{{ sortHead.cover }}">Cover{{ sortArw.cover }}</th><th class="th-sort" onClick="{{ sortHead.status }}">Status{{ sortArw.status }}</th><th style="width:150px">Adjust</th><th></th></tr></thead>
+<tbody><sc-for list="{{ invRows }}" as="r" hint-placeholder-count="10"><tr><td><div class="rowname" onClick="{{ r.select }}">{{ r.name }}</div><div class="rowcat">{{ r.cat }}</div></td><td><span style="font-variant-numeric:tabular-nums">{{ r.countDisp }}</span></td><td><div class="meter {{ r.barClass }}"><span style="{{ r.barStyle }}"></span></div></td><td class="unit-mut">{{ r.daysDisp }}</td><td><span class="st {{ r.statusClass }}">{{ r.statusLabel }}</span></td><td><div class="stepper"><button onClick="{{ r.dec }}">−</button><span class="val">{{ r.countNum }}</span><button onClick="{{ r.inc }}">+</button></div></td><td><div class="hstack" style="gap:6px"><button class="btn btn-secondary" onClick="{{ r.reorder }}">Order</button><button class="trash" onClick="{{ r.remove }}" title="Remove ingredient"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path></svg></button></div></td></tr></sc-for></tbody></table>
+</div>
+</div></sc-if>
+
+<sc-if value="{{ isIngredient }}" hint-placeholder-val="{{ false }}"><div>
+<button class="back-btn" onClick="{{ go.inventory }}">← Inventory</button>
+<sc-if value="{{ detail }}" hint-placeholder-val="{{ false }}"><div>
+<div class="phead"><div><div class="rowcat">{{ detail.cat }}</div><h1>{{ detail.name }}</h1></div><div class="hstack"><span class="st {{ detail.statusClass }}">{{ detail.statusLabel }}</span><button class="btn btn-primary" onClick="{{ detail.reorder }}">Place order</button></div></div>
+<div class="two">
+<div class="stack">
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="hstack" style="justify-content:space-between;align-items:flex-end"><div class="big-count">{{ detail.countNum }} <small>{{ detail.unit }}</small></div><div class="stepper"><button onClick="{{ detail.dec }}">−</button><span class="val">{{ detail.countNum }}</span><button onClick="{{ detail.inc }}">+</button></div></div>
+<div class="meter {{ detail.barClass }}" style="margin-top:var(--space-3)"><span style="{{ detail.barStyle }}"></span></div>
+<div class="unit-mut" style="margin-top:8px">About {{ detail.daysDisp }} of cover at {{ detail.perDayDisp }}/day · par level {{ detail.parDisp }}</div>
+</div>
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<h4>Reorder settings</h4>
+<div class="kv" style="margin-top:var(--space-3)">
+<div class="field-lg"><label>On hand ({{ detail.unit }})</label><input class="input" type="number" value="{{ detail.countNum }}" onChange="{{ detail.setCount }}"></div>
+<div class="field-lg"><label>Par / full level</label><input class="input" type="number" value="{{ detail.par }}" onChange="{{ detail.setPar }}"></div>
+<div class="field-lg"><label>Reorder point (low)</label><input class="input" type="number" value="{{ detail.low }}" onChange="{{ detail.setLow }}"></div>
+<div class="field-lg"><label>Critical level</label><input class="input" type="number" value="{{ detail.crit }}" onChange="{{ detail.setCrit }}"></div>
+<div class="field-lg"><label>Est. use / day</label><input class="input" type="number" value="{{ detail.perDay }}" onChange="{{ detail.setPerDay }}"></div>
+<div class="field-lg"><label>Price / {{ detail.unit }} ($)</label><input class="input" type="number" value="{{ detail.price }}" onChange="{{ detail.setPrice }}"></div>
+<div class="field-lg"><label>Vendor</label><select class="input" value="{{ detail.vendorId }}" onChange="{{ detail.setVendor }}"><sc-for list="{{ detail.vendorList }}" as="vo" hint-placeholder-count="7"><option value="{{ vo.id }}">{{ vo.name }}</option></sc-for></select></div>
+</div>
+</div>
+</div>
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="card-kicker">Supplier</div>
+<h3 style="margin:4px 0 0">{{ detail.vendor.name }}</h3>
+<div class="vmeta" style="margin-top:8px">{{ detail.vendor.contact }}<br>{{ detail.vendor.email }}<br>{{ detail.vendor.phone }}</div>
+<div class="vmeta" style="margin-top:10px">Lead time {{ detail.vendor.leadTime }} · {{ detail.vendorPrice }}/{{ detail.unit }}</div>
+<button class="btn btn-secondary btn-block" style="margin-top:var(--space-4)" onClick="{{ detail.emailVendor }}">Email vendor</button>
+<button class="btn btn-ghost" style="margin-top:var(--space-2)" onClick="{{ detail.openVendor }}">Open vendor page →</button>
+</div>
+</div>
+</div></sc-if>
+</div></sc-if>
+
+<sc-if value="{{ isOrders }}" hint-placeholder-val="{{ false }}"><div>
+<div class="phead"><div><h1>Orders</h1><div class="sub">Grouped by vendor — mark a whole delivery received at once to add stock back.</div></div></div>
+<div class="stack"><sc-for list="{{ orderGroups }}" as="g" hint-placeholder-count="4"><div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="vgrouphd"><div><div class="alert-name">{{ g.vendorName }}</div><div class="alert-meta">{{ g.pendingCount }} pending delivery(s)</div></div><sc-if value="{{ g.hasPending }}" hint-placeholder-val="{{ true }}"><button class="btn btn-primary" onClick="{{ g.receiveAll }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Mark all received</button></sc-if></div>
+<table class="inv-t"><tbody><sc-for list="{{ g.rows }}" as="o" hint-placeholder-count="2"><tr><td class="unit-mut" style="width:90px">{{ o.date }}</td><td><span class="rowname" style="cursor:default">{{ o.name }}</span></td><td>{{ o.qtyDisp }}</td><td class="unit-mut">{{ o.eta }}</td><td><span class="st {{ o.statusClass }}">{{ o.status }}</span></td><td style="width:150px"><sc-if value="{{ o.pending }}" hint-placeholder-val="{{ true }}"><button class="btn btn-secondary" onClick="{{ o.receive }}">Mark received</button></sc-if></td></tr></sc-for></tbody></table>
+</div></sc-for></div>
+</div></sc-if>
+
+<sc-if value="{{ isVendors }}" hint-placeholder-val="{{ false }}"><div>
+<div class="phead"><div><h1>Vendors</h1><div class="sub">{{ vendorRows.length }} suppliers. Each ingredient is tied to a vendor for reordering.</div></div><button class="btn btn-primary" onClick="{{ toggleAddVendor }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>New vendor</button></div>
+<sc-if value="{{ addVendorOpen }}" hint-placeholder-val="{{ false }}"><div class="panel blueprint" style="margin-bottom:var(--space-4)"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<h4>New vendor</h4>
+<div class="kv" style="margin-top:var(--space-3);grid-template-columns:repeat(3,1fr)">
+<div class="field-lg"><label>Supplier name</label><input class="input" value="{{ nv.name }}" onChange="{{ nv.setName }}" placeholder="e.g. Agave Wholesale"></div>
+<div class="field-lg"><label>Contact name</label><input class="input" value="{{ nv.contact }}" onChange="{{ nv.setContact }}"></div>
+<div class="field-lg"><label>Email</label><input class="input" value="{{ nv.email }}" onChange="{{ nv.setEmail }}"></div>
+<div class="field-lg"><label>Phone</label><input class="input" value="{{ nv.phone }}" onChange="{{ nv.setPhone }}"></div>
+<div class="field-lg"><label>Typical lead time</label><input class="input" value="{{ nv.leadTime }}" onChange="{{ nv.setLead }}"></div>
+</div>
+<div class="hstack" style="margin-top:var(--space-4)"><button class="btn btn-primary" onClick="{{ addVendor }}">Add vendor</button><button class="btn btn-secondary" onClick="{{ toggleAddVendor }}">Cancel</button></div>
+<div class="growl" style="margin-top:var(--space-2)">Assign ingredients to this vendor from each ingredient’s detail page or the vendor’s own page.</div>
+</div></sc-if>
+<div class="vgrid"><sc-for list="{{ vendorRows }}" as="v" hint-placeholder-count="6"><div class="vcard blueprint" onClick="{{ v.open }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><h3>{{ v.name }}</h3><div class="vmeta">{{ v.contact }} · {{ v.email }}<br>Lead time {{ v.leadTime }}</div><div class="pillrow"><sc-for list="{{ v.chips }}" as="ch" hint-placeholder-count="4"><span class="mini-tag">{{ ch }}</span></sc-for></div></div></sc-for></div>
+<sc-if value="{{ hasInactive }}" hint-placeholder-val="{{ false }}"><div>
+<div class="sec-title" style="margin-top:var(--space-8)"><h2>Inactive</h2><span class="growl">Past suppliers kept on file — open one to reactivate if a current vendor falls through.</span></div>
+<div class="vgrid"><sc-for list="{{ inactiveVendorRows }}" as="v" hint-placeholder-count="2"><div class="vcard blueprint" style="opacity:.62" onClick="{{ v.open }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><h3>{{ v.name }} <span class="st st-ok">Inactive</span></h3><div class="vmeta">{{ v.contact }} · {{ v.email }}<br>Lead time {{ v.leadTime }}</div><div class="pillrow"><sc-for list="{{ v.chips }}" as="ch" hint-placeholder-count="3"><span class="mini-tag">{{ ch }}</span></sc-for></div></div></sc-for></div>
+</div></sc-if>
+</div></sc-if>
+
+<sc-if value="{{ isVendor }}" hint-placeholder-val="{{ false }}"><div>
+<button class="back-btn" onClick="{{ go.vendors }}">← Vendors</button>
+<sc-if value="{{ vdetail }}" hint-placeholder-val="{{ false }}"><div>
+<div class="phead"><div><div class="rowcat">Supplier</div><h1>{{ vdetail.name }}</h1></div><button class="btn btn-primary" onClick="{{ vdetail.emailAction }}">Email vendor</button></div>
+<div class="stack">
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<h4>Contact details</h4>
+<div class="kv" style="margin-top:var(--space-3);grid-template-columns:repeat(3,1fr)">
+<div class="field-lg"><label>Supplier name</label><input class="input" value="{{ vdetail.name }}" onChange="{{ vdetail.setName }}"></div>
+<div class="field-lg"><label>Contact name</label><input class="input" value="{{ vdetail.contact }}" onChange="{{ vdetail.setContact }}"></div>
+<div class="field-lg"><label>Email</label><input class="input" value="{{ vdetail.email }}" onChange="{{ vdetail.setEmail }}"></div>
+<div class="field-lg"><label>Phone</label><input class="input" value="{{ vdetail.phone }}" onChange="{{ vdetail.setPhone }}"></div>
+<div class="field-lg"><label>Typical lead time</label><input class="input" value="{{ vdetail.leadTime }}" onChange="{{ vdetail.setLead }}"></div>
+</div>
+<div class="set-row" style="border-bottom:none;margin-top:var(--space-3)"><div><div style="font-family:var(--font-heading);font-weight:600;font-size:15px">Vendor status — {{ vdetail.activeLabel }}</div><div class="growl">Inactive vendors are kept on file but hidden from ordering dropdowns.</div></div><div class="toggle {{ vdetail.activeClass }}" onClick="{{ vdetail.toggleActive }}"><span></span></div></div>
+</div>
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<h4>Ingredients supplied</h4>
+<table class="inv-t" style="margin-top:var(--space-2)"><tbody><sc-for list="{{ vdetail.items }}" as="it" hint-placeholder-count="4"><tr><td><span class="rowname" onClick="{{ it.select }}">{{ it.name }}</span></td><td style="width:130px"><div class="hstack" style="gap:6px"><input class="input" type="number" style="width:74px;padding:4px 8px" value="{{ it.countNum }}" onChange="{{ it.setCount }}"><span class="unit-mut">{{ it.unit }}</span></div></td><td><span class="st {{ it.statusClass }}">{{ it.statusLabel }}</span></td><td style="width:40px"><button class="trash" onClick="{{ it.unassign }}" title="Remove from this vendor"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></td></tr></sc-for></tbody></table>
+<div class="field-lg" style="margin-top:var(--space-4)"><label>Add an ingredient this vendor supplies</label><select class="input" value="" onChange="{{ vdetail.addIng }}"><option value="">Select an ingredient…</option><sc-for list="{{ vdetail.assignable }}" as="a" hint-placeholder-count="6"><option value="{{ a.id }}">{{ a.name }}</option></sc-for></select></div>
+</div>
+</div>
+</div></sc-if>
+</div></sc-if>
+
+<sc-if value="{{ isForecast }}" hint-placeholder-val="{{ false }}"><div>
+<div class="phead"><div><h1>Forecasting</h1><div class="sub">Blend day-of-week patterns, holidays and local events into your reorder quantities.</div></div><button class="btn btn-primary" onClick="{{ applyForecast }}">Apply forecast to suggestions</button></div>
+<div class="two">
+<div class="stack">
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="sec-title" style="margin:0 0 var(--space-3)"><h2 style="font-size:19px">July 2026</h2><span class="growl">Click a day to mark it busy · slow · closed</span></div>
+<div class="cal"><sc-for list="{{ dayHeads }}" as="d" hint-placeholder-count="7"><div class="dh">{{ d }}</div></sc-for><sc-for list="{{ calCells }}" as="c" hint-placeholder-count="35"><div class="cell {{ c.cls }}" onClick="{{ c.click }}">{{ c.num }}<sc-if value="{{ c.isToday }}" hint-placeholder-val="{{ false }}"><span class="today-m"></span></sc-if><div class="cl">{{ c.label }}</div></div></sc-for></div>
+<div class="legend"><span><i style="background:var(--color-accent-200)"></i>Busy</span><span><i style="background:var(--color-neutral-100)"></i>Slow</span><span><i style="background:var(--color-neutral-300)"></i>Closed</span><span><i style="background:var(--color-accent-100)"></i>Mixed dayparts</span></div>
+</div>
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<h4>Demand by day &amp; time of day</h4><div class="growl" style="margin-bottom:var(--space-3)">Relative demand vs. an average daypart. Drag each block — lunch, afternoon, dinner and late night can move independently.</div>
+<div class="dpgrid dphead"><span></span><sc-for list="{{ partHeads }}" as="ph" hint-placeholder-count="4"><span class="dpcol">{{ ph }}</span></sc-for><span class="dpcol">Avg</span></div>
+<sc-for list="{{ dowGrid }}" as="d" hint-placeholder-count="7"><div class="dpgrid"><span style="font-family:var(--font-heading);font-weight:600">{{ d.name }}</span><sc-for list="{{ d.parts }}" as="p" hint-placeholder-count="4"><div class="dpcell"><input type="range" min="0.4" max="2" step="0.05" value="{{ p.factor }}" onInput="{{ p.set }}"><span class="dpval">{{ p.disp }}</span></div></sc-for><span class="dpavg">{{ d.avgDisp }}</span></div></sc-for>
+</div>
+</div>
+<div class="stack">
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<h4>Next 7 days</h4><div class="growl" style="margin-bottom:var(--space-2)">Projected demand from patterns + your calendar.</div>
+<sc-for list="{{ forecastDays }}" as="f" hint-placeholder-count="7"><div class="fbar"><span style="font-family:var(--font-heading);font-weight:600">{{ f.label }}</span><div class="fmeter {{ f.hi }}"><span style="{{ f.style }}"></span></div><span style="font-variant-numeric:tabular-nums;width:44px;text-align:right">{{ f.disp }}</span></div></sc-for>
+</div>
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<h4>How suggestions adjust</h4>
+<p style="font-size:13.5px">Suggested order quantities are currently scaled by <strong>{{ boostDisp }}</strong> to cover the upcoming peak. With no sales history yet, forecasting seeds from your first days of data and the days you flag on the calendar — the more you mark, the sharper it gets.</p>
+<div class="growl">Factors in play: daypart rhythm (lunch, afternoon, dinner, late night), day-of-week patterns, flagged holidays &amp; closures, and local events.</div>
+</div>
+</div>
+</div>
+</div></sc-if>
+
+</div></sc-if>
+
+</main>
+</div>
+
+<sc-if value="{{ modalReorder }}" hint-placeholder-val="{{ false }}"><div class="dialog-backdrop" onClick="{{ closeModal }}"><div class="dialog blueprint" style="{{ dlgStyle }}" onClick="{{ stop }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="dialog-title">Review order — {{ modalReorder.name }}</div>
+<div class="dialog-body">Vendor <strong>{{ modalReorder.vendorName }}</strong> · lead time {{ modalReorder.leadTime }}. Suggested to reach par, adjusted for the forecast.</div>
+<div class="field-lg"><label>Order quantity ({{ modalReorder.unit }})</label><input class="input" type="number" value="{{ modalReorder.qty }}" onChange="{{ modalReorder.setQty }}"></div>
+<div class="growl">Est. cost {{ modalReorder.cost }}</div>
+<div class="dialog-actions"><button class="btn btn-secondary" onClick="{{ closeModal }}">Cancel</button><button class="btn btn-secondary" onClick="{{ modalReorder.place }}">Place order</button><button class="btn btn-primary" onClick="{{ modalReorder.placeEmail }}">Place &amp; email vendor</button></div>
+</div></div></sc-if>
+
+<sc-if value="{{ modalEmail }}" hint-placeholder-val="{{ false }}"><div class="dialog-backdrop" onClick="{{ closeModal }}"><div class="dialog blueprint" onClick="{{ stop }}" style="{{ emailDlgStyle }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="dialog-title">Email {{ modalEmail.vendorName }}</div>
+<div class="field-lg"><label>To</label><input class="input" value="{{ modalEmail.to }}" onChange="{{ modalEmail.setTo }}"></div>
+<div class="field-lg"><label>Subject</label><input class="input" value="{{ modalEmail.subject }}" onChange="{{ modalEmail.setSubject }}"></div>
+<div class="field-lg"><label>Message</label><textarea class="input" value="{{ modalEmail.body }}" onChange="{{ modalEmail.setBody }}"></textarea></div>
+<div class="dialog-actions"><button class="btn btn-secondary" onClick="{{ closeModal }}">Cancel</button><button class="btn btn-primary" onClick="{{ modalEmail.send }}">Send email</button></div>
+</div></div></sc-if>
+
+<sc-if value="{{ modalCal }}" hint-placeholder-val="{{ false }}"><div class="dialog-backdrop" onClick="{{ closeModal }}"><div class="dialog blueprint" style="{{ dlgStyle }}" onClick="{{ stop }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="dialog-title">{{ modalCal.label }}</div>
+<div class="dialog-body">Set the whole day at once, or dial in each part of the day.</div>
+<div class="calrow" style="border-bottom:1px solid var(--color-divider);padding-bottom:var(--space-3)"><span style="font-family:var(--font-heading);font-weight:600">Whole day</span><div class="segbtns"><sc-for list="{{ modalCal.wholeOpts }}" as="o" hint-placeholder-count="4"><button class="{{ o.on }}" onClick="{{ o.set }}">{{ o.label }}</button></sc-for></div></div>
+<sc-for list="{{ modalCal.rows }}" as="r" hint-placeholder-count="4"><div class="calrow"><span style="font-family:var(--font-heading);font-weight:600">{{ r.name }}</span><div class="segbtns"><sc-for list="{{ r.opts }}" as="o" hint-placeholder-count="4"><button class="{{ o.on }}" onClick="{{ o.set }}">{{ o.label }}</button></sc-for></div></div></sc-for>
+<div class="dialog-actions"><button class="btn btn-secondary" onClick="{{ closeModal }}">Cancel</button><button class="btn btn-primary" onClick="{{ modalCal.save }}">Save day</button></div>
+</div></div></sc-if>
+<sc-if value="{{ modalPos }}" hint-placeholder-val="{{ false }}"><div class="dialog-backdrop" onClick="{{ closeModal }}"><div class="dialog blueprint" style="{{ dlgStyle }}" onClick="{{ stop }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="dialog-title">Connect your POS</div>
+<div class="dialog-body">Sign in to sync ticket sales and update inventory automatically.</div>
+<div class="pos-list">
+<button class="pos-opt pos-toast" onClick="{{ posGo.toast }}"><span class="pos-mark">T</span>Log in with Toast<span class="arw">→</span></button>
+<button class="pos-opt pos-square" onClick="{{ posGo.square }}"><span class="pos-mark">◻</span>Log in with Square<span class="arw">→</span></button>
+<button class="pos-opt pos-shopify" onClick="{{ posGo.shopify }}"><span class="pos-mark">S</span>Log in with Shopify<span class="arw">→</span></button>
+<button class="pos-opt pos-clover" onClick="{{ posGo.clover }}"><span class="pos-mark">C</span>Log in with Clover<span class="arw">→</span></button>
+<button class="pos-opt pos-lightspeed" onClick="{{ posGo.lightspeed }}"><span class="pos-mark">L</span>Log in with Lightspeed<span class="arw">→</span></button>
+</div>
+<div class="dialog-actions"><button class="btn btn-secondary" onClick="{{ closeModal }}">Cancel</button></div>
+</div></div></sc-if>
+<sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}"><div class="toast">{{ toast }}</div></sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;modalBg&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#e9e9ea&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Appearance&quot;,&quot;options&quot;:[&quot;#e9e9ea&quot;,&quot;#f5f5f8&quot;,&quot;#ffffff&quot;,&quot;#d6ebff&quot;]},&quot;defaultView&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;dashboard&quot;,&quot;reorders&quot;,&quot;inventory&quot;,&quot;orders&quot;,&quot;vendors&quot;,&quot;forecast&quot;],&quot;default&quot;:&quot;dashboard&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;lowAlertsInclude&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;}}">
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    const I=(id,name,cat,unit,count,par,low,crit,perDay,vendorId)=>({id,name,cat,unit,count,par,low,crit,perDay,vendorId});
+    const ingredients=[
+      I('tor-flour','Large Flour Tortilla','Bases & Grains','tortillas',320,1200,400,200,260,'v-tortilla'),
+      I('tor-ww','Whole Wheat Tortilla','Bases & Grains','tortillas',180,400,140,70,60,'v-tortilla'),
+      I('tor-gf','Gluten-Free Tortilla','Bases & Grains','tortillas',90,300,110,55,40,'v-tortilla'),
+      I('rice-white','White Rice','Bases & Grains','lbs',85,200,70,35,28,'v-grain'),
+      I('rice-brown','Brown Rice','Bases & Grains','lbs',30,120,45,22,12,'v-grain'),
+      I('bean-pinto','Pinto Beans','Bases & Grains','lbs',120,220,80,40,30,'v-grain'),
+      I('bean-black','Black Beans','Bases & Grains','lbs',96,200,75,38,26,'v-grain'),
+      I('bean-refried','Refried Beans','Bases & Grains','lbs',54,160,60,30,20,'v-grain'),
+      I('beef','Beef (barbacoa & carne asada)','Proteins','lbs',34,140,50,25,30,'v-meat'),
+      I('pork','Pork (carnitas)','Proteins','lbs',72,120,45,22,20,'v-meat'),
+      I('chicken','Chicken (pollo asado)','Proteins','lbs',18,130,48,24,26,'v-meat'),
+      I('shrimp','Shrimp','Proteins','lbs',26,80,30,15,12,'v-sea'),
+      I('onion','Onions','Produce','lbs',68,120,45,22,26,'v-produce'),
+      I('bellpepper','Bell Peppers','Produce','lbs',30,90,36,18,16,'v-produce'),
+      I('tomato','Tomatoes','Produce','lbs',52,110,44,22,24,'v-produce'),
+      I('cilantro','Cilantro','Produce','bunches',6,60,20,10,10,'v-produce'),
+      I('lettuce','Lettuce','Produce','heads',22,80,30,15,14,'v-produce'),
+      I('fajita','Fajita Peppers & Onions','Produce','lbs',44,100,40,20,18,'v-produce'),
+      I('mushroom','Mushrooms','Produce','lbs',15,50,20,10,8,'v-produce'),
+      I('cheese-blend','Mexican Blend Cheese','Dairy','lbs',58,140,50,25,30,'v-dairy'),
+      I('queso','Queso Dip','Dairy','gal',3,14,5,2.5,2.2,'v-dairy'),
+      I('sourcream','Sour Cream','Dairy','gal',2,12,4,2,1.8,'v-dairy'),
+      I('pico','Pico de Gallo','Salsas & Condiments','lbs',24,60,24,12,14,'v-salsa'),
+      I('salsa-corn','Corn Salsa','Salsas & Condiments','qt',10,40,16,8,7,'v-salsa'),
+      I('salsa-verde','Salsa Verde','Salsas & Condiments','qt',6,36,14,7,6,'v-salsa'),
+      I('guac','Guacamole','Salsas & Condiments','lbs',7,50,20,10,12,'v-salsa'),
+      I('corn','Corn','Add-ons & Sides','lbs',40,80,28,14,10,'v-produce'),
+      I('jalapeno','Jalapeños','Add-ons & Sides','lbs',12,40,16,8,6,'v-produce'),
+      I('chips','Tortilla Chips','Add-ons & Sides','bags',34,120,45,22,26,'v-tortilla'),
+      I('seasoning','Taco Seasoning Blend','Spices','lbs',9,30,12,6,3,'v-salsa'),
+      I('cumin','Cumin','Spices','oz',40,120,45,22,6,'v-salsa'),
+      I('chili','Chili Powder','Spices','oz',80,140,50,25,8,'v-salsa'),
+      I('lime','Lime Juice','Spices','gal',1.5,10,4,2,1.2,'v-salsa'),
+      I('foil','Aluminum Foil','Serving','rolls',18,60,22,11,7,'v-supply'),
+      I('bowl-lg','Paper Bowls — Large','Serving','sleeves',24,90,32,16,11,'v-supply'),
+      I('bowl-sm','Paper Bowls — Small','Serving','sleeves',30,90,32,16,10,'v-supply'),
+      I('napkins','Napkins','Serving','packs',16,80,30,15,12,'v-supply'),
+      I('fork','Plastic Forks','Serving','boxes',9,50,20,10,7,'v-supply'),
+      I('knife','Plastic Knives','Serving','boxes',22,50,18,9,4,'v-supply'),
+      I('spoon','Plastic Spoons','Serving','boxes',14,50,18,9,5,'v-supply'),
+      I('cup-sm','Cups — Small','Serving','sleeves',26,80,28,14,9,'v-supply'),
+      I('cup-lg','Cups — Large','Serving','sleeves',12,80,28,14,10,'v-supply'),
+      I('sauce-mild','Hot Sauce — Mild','Serving','bottles',20,72,26,13,8,'v-salsa'),
+      I('sauce-hot','Hot Sauce — Hot','Serving','bottles',9,72,26,13,7,'v-salsa')
+    ];
+    const priceMap={'tor-flour':0.28,'tor-ww':0.34,'tor-gf':0.55,'chips':3.20,'rice-white':0.90,'rice-brown':1.10,'bean-pinto':1.20,'bean-black':1.25,'bean-refried':1.40,'beef':5.20,'pork':4.10,'chicken':3.40,'shrimp':9.20,'onion':0.80,'bellpepper':1.60,'tomato':1.40,'cilantro':0.90,'lettuce':1.20,'fajita':1.75,'mushroom':2.40,'corn':1.10,'jalapeno':1.30,'cheese-blend':3.60,'queso':12.00,'sourcream':6.50,'pico':2.20,'salsa-corn':2.40,'salsa-verde':2.60,'guac':4.80,'seasoning':3.50,'cumin':0.40,'chili':0.35,'lime':8.00,'foil':14.50,'bowl-lg':9.80,'bowl-sm':8.20,'napkins':6.40,'fork':7.10,'knife':7.10,'spoon':7.10,'cup-sm':8.90,'cup-lg':10.40};
+    ingredients.forEach(i=>{i.price=priceMap[i.id]??1;});
+    const V=(id,name,contact,email,phone,leadTime,active)=>({id,name,contact,email,phone,leadTime,active:active!==false});
+    const vendors=[
+      V('v-tortilla','Sonora Tortilla Co.','Marta Rios','orders@sonoratortilla.com','(602) 555-0148','2 days'),
+      V('v-grain','Valley Grain & Bean','Dev Patel','sales@valleygrainbean.com','(480) 555-0193','3 days'),
+      V('v-meat','Rancho Prime Meats','Luis Herrera','luis@ranchoprime.com','(602) 555-0172','2 days'),
+      V('v-sea','Gulf Coast Seafood','Nina Alvarez','orders@gulfcoastseafood.com','(713) 555-0110','4 days'),
+      V('v-produce','FreshField Produce','Sam Okafor','dispatch@freshfield.com','(480) 555-0166','1 day'),
+      V('v-dairy','Casa Dairy & Deli','Grace Kim','hello@casadairy.com','(602) 555-0121','2 days'),
+      V('v-salsa','Baja Kitchen Foods','Tom Reyes','tom@bajakitchen.com','(602) 555-0135','3 days'),
+      V('v-supply','PacWest Restaurant Supply','Rosa Medina','service@pacwestsupply.com','(480) 555-0159','3 days'),
+      V('v-old-produce','Desert Green Farms','Hector Nunez','hector@desertgreenfarms.com','(480) 555-0107','2 days',false),
+      V('v-old-meat','Sunland Butchers','Priya Shah','orders@sunlandbutchers.com','(602) 555-0188','3 days',false),
+      V('v-old-paper','Border Paper & Pack','Owen Diaz','sales@borderpaperpack.com','(915) 555-0142','4 days',false)
+    ];
+    const orders=[
+      {id:'o1',ingId:'beef',vendorId:'v-meat',qty:120,date:'Jul 8',eta:'Jul 10',status:'Delivered'},
+      {id:'o2',ingId:'cheese-blend',vendorId:'v-dairy',qty:100,date:'Jul 9',eta:'Jul 11',status:'Delivered'},
+      {id:'o3',ingId:'shrimp',vendorId:'v-sea',qty:60,date:'Jul 13',eta:'Jul 17',status:'Pending'},
+      {id:'o4',ingId:'cilantro',vendorId:'v-produce',qty:50,date:'Jul 14',eta:'Jul 15',status:'Pending'}
+    ];
+    this.state={
+      view:(props.defaultView||'dashboard'), selectedIng:null, selectedVendor:null,
+      ingredients, vendors, orders,
+      calendar:{'2026-07-04':{lunch:'busy',afternoon:'busy',dinner:'busy',late:'busy'},'2026-07-05':{lunch:'slow',afternoon:'slow',dinner:'slow',late:'slow'},'2026-07-18':{lunch:'normal',afternoon:'normal',dinner:'busy',late:'busy'},'2026-07-20':{lunch:'closed',afternoon:'closed',dinner:'closed',late:'closed'},'2026-07-25':{lunch:'busy',afternoon:'busy',dinner:'busy',late:'busy'}},
+      dowParts:{0:{lunch:1.2,afternoon:1.0,dinner:1.1,late:0.6},1:{lunch:0.8,afternoon:0.6,dinner:0.8,late:0.5},2:{lunch:0.85,afternoon:0.65,dinner:0.85,late:0.55},3:{lunch:0.9,afternoon:0.7,dinner:0.9,late:0.6},4:{lunch:1.0,afternoon:0.8,dinner:1.05,late:0.7},5:{lunch:1.3,afternoon:1.0,dinner:1.6,late:1.1},6:{lunch:1.4,afternoon:1.1,dinner:1.7,late:1.2}},
+      boost:1, posConnected:false, posProvider:null, autoDec:true, alertsOn:true,
+      newIng:{name:'',unit:'lbs',cat:'Produce',vendorId:'v-produce',count:0,low:10,par:40,crit:5,perDay:3,price:1},
+      newVendor:{name:'',contact:'',email:'',phone:'',leadTime:'2 days'},
+      addIngOpen:false, addVendorOpen:false,
+      modal:null, toast:''
+    };
+    this.cats=['Bases & Grains','Proteins','Produce','Dairy','Salsas & Condiments','Add-ons & Sides','Spices','Serving'];
+    this.filter='All';
+    this.sort={key:null,dir:'asc'};
+    this.today=new Date(2026,6,14);
+    this._t=null;
+  }
+  fmt(n){return Number.isInteger(n)?String(n):(Math.round(n*10)/10).toString();}
+  money(n){return '$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+  toast(m){clearTimeout(this._t);this.setState({toast:m});this._t=setTimeout(()=>this.setState({toast:''}),2600);}
+  go(view){this.setState({view});}
+  patch(id,p){this.setState(s=>({ingredients:s.ingredients.map(i=>i.id===id?{...i,...p}:i)}));}
+  adjust(id,d){this.setState(s=>({ingredients:s.ingredients.map(i=>i.id===id?{...i,count:Math.max(0,Math.round((i.count+d)*10)/10)}:i)}));}
+  step(u){return (u==='lbs'||u==='oz')?5:(u==='gal'||u==='qt')?1:(u==='tortillas'||u==='bags')?12:1;}
+  status(i){return i.count<=i.crit?'crit':i.count<=i.low?'low':'ok';}
+  vmap(){const m={};this.state.vendors.forEach(v=>m[v.id]=v);return m;}
+  dayFactor(k){const p=this.state.dowParts[k];if(!p)return 1;return (p.lunch+p.afternoon+p.dinner+p.late)/4;}
+  simulateDay(){
+    const f=this.adjFactor(this.today);
+    this.setState(s=>({ingredients:s.ingredients.map(i=>({...i,count:Math.max(0,Math.round((i.count-i.perDay*f)*10)/10)}))}));
+    this.toast('POS synced — a day of sales applied');
+  }
+  select(id){this.setState({view:'ingredient',selectedIng:id});}
+  selectVendor(id){this.setState({view:'vendor',selectedVendor:id});}
+  openReorder(id){
+    const i=this.state.ingredients.find(x=>x.id===id);
+    const qty=Math.max(0,Math.ceil((i.par-i.count)*this.state.boost));
+    this.setState({modal:{kind:'reorder',id,qty}});
+  }
+  openEmail(vendorId,preset){
+    const v=this.state.vendors.find(x=>x.id===vendorId);
+    const pre=preset||{};
+    this.setState({modal:{kind:'email',vendorId,orderIds:pre.orderIds||[],to:v.email,subject:pre.subject||('Purchase order — '+v.name),body:pre.body||('Hi '+v.contact+',\n\nWe\u2019d like to place an order. Please confirm availability and delivery.\n\nThank you,\nMauricio’s Burrito’s')}});
+  }
+  updateModal(p){this.setState(s=>({modal:{...s.modal,...p}}));}
+  closeModal(){this.setState({modal:null});}
+  placeOrder(id,qty,alsoEmail){
+    const i=this.state.ingredients.find(x=>x.id===id);
+    const v=this.state.vendors.find(x=>x.id===i.vendorId);
+    const oid='o'+Date.now();
+    const order={id:oid,ingId:id,vendorId:i.vendorId,qty,date:'Jul 14',eta:'Jul '+(14+ (parseInt(v.leadTime)||2)),status:'Pending'};
+    this.setState(s=>({orders:[order,...s.orders]}));
+    if(alsoEmail){
+      this.openEmail(i.vendorId,{orderIds:[oid],subject:'Purchase order — '+this.fmt(qty)+' '+i.unit+' '+i.name,body:'Hi '+v.contact+',\n\nPlease supply the following:\n\n\u2022 '+i.name+' — '+this.fmt(qty)+' '+i.unit+'\n\nDeliver to Mauricio’s Burrito’s at your earliest. Confirm pricing and ETA.\n\nThanks,\nMauricio’s Burrito’s'});
+    } else {
+      this.setState({modal:null});
+      this.toast('Order placed with '+v.name);
+    }
+  }
+  placeVendorOrders(vendorId){
+    const v=this.state.vendors.find(x=>x.id===vendorId);
+    const items=this.state.ingredients.filter(i=>i.vendorId===vendorId&&this.status(i)!=='ok')
+      .map(i=>({i,qty:Math.max(0,Math.ceil((i.par-i.count)*this.state.boost))})).filter(x=>x.qty>0);
+    if(!items.length)return this.toast('Nothing to reorder from '+v.name);
+    const stamp=Date.now();
+    const orders=items.map((x,n)=>({id:'o'+(stamp+n),ingId:x.i.id,vendorId,qty:x.qty,date:'Jul 14',eta:'Jul '+(14+(parseInt(v.leadTime)||2)),status:'Pending'}));
+    this.setState(s=>({orders:[...orders,...s.orders]}));
+    const lines=items.map(x=>'\u2022 '+x.i.name+' — '+this.fmt(x.qty)+' '+x.i.unit).join('\n');
+    this.openEmail(vendorId,{orderIds:orders.map(o=>o.id),subject:'Purchase order — '+items.length+' items for Mauricio’s Burrito’s',body:'Hi '+v.contact+',\n\nWe\u2019d like to place a combined order for the following:\n\n'+lines+'\n\nDeliver to Mauricio’s Burrito’s at your earliest. Please confirm pricing and ETA.\n\nThanks,\nMauricio’s Burrito’s'});
+  }
+  receiveOrder(oid){
+    this.setState(s=>{
+      const o=s.orders.find(x=>x.id===oid);
+      return {
+        orders:s.orders.map(x=>x.id===oid?{...x,status:'Delivered'}:x),
+        ingredients:s.ingredients.map(i=>i.id===o.ingId?{...i,count:Math.round((i.count+o.qty)*10)/10}:i)
+      };
+    });
+    this.toast('Stock received');
+  }
+  openCal(iso){
+    const c=this.state.calendar[iso]||{};
+    const parts={lunch:c.lunch||'normal',afternoon:c.afternoon||'normal',dinner:c.dinner||'normal',late:c.late||'normal'};
+    this.setState({modal:{kind:'cal',iso,parts}});
+  }
+  saveCal(){
+    const M=this.state.modal;if(!M)return;
+    const p=M.parts, iso=M.iso;
+    const allNormal=['lunch','afternoon','dinner','late'].every(k=>(p[k]||'normal')==='normal');
+    this.setState(s=>{const nc={...s.calendar};if(allNormal)delete nc[iso];else nc[iso]={...p};return {calendar:nc,modal:null};});
+    this.toast('Day updated');
+  }
+  partMult(l){return l==='busy'?1.3:l==='slow'?0.65:l==='closed'?0:1;}
+  adjFactor(date){const iso=this.iso(date);const c=this.state.calendar[iso];const p=this.state.dowParts[date.getDay()];const keys=['lunch','afternoon','dinner','late'];let s=0;keys.forEach(k=>{s+=p[k]*this.partMult(c&&c[k]);});return s/4;}
+  peakFactor(){
+    let mx=0;
+    for(let i=0;i<7;i++){const d=new Date(this.today);d.setDate(d.getDate()+i);const f=this.adjFactor(d);if(f>mx)mx=f;}
+    return Math.round(mx*100)/100;
+  }
+  iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  applyForecast(){const p=Math.max(1,this.peakFactor());this.setState({boost:p});this.toast('Suggestions scaled to the '+p.toFixed(2)+'× peak');}
+  addIngredient(){
+    const n=this.state.newIng;
+    if(!n.name.trim())return this.toast('Give the ingredient a name');
+    if(!n.vendorId)return this.toast('Choose a vendor');
+    const id='ci-'+Date.now();
+    const low=+n.low||10,par=+n.par||low*3;
+    const ing={id,name:n.name.trim(),cat:n.cat,unit:n.unit||'ea',count:+n.count||0,par,low,crit:+n.crit||Math.round(low/2),perDay:+n.perDay||Math.max(1,Math.round(low/4)),vendorId:n.vendorId,price:+n.price||1};
+    this.setState(s=>({ingredients:[...s.ingredients,ing],addIngOpen:false,newIng:{name:'',unit:'lbs',cat:'Produce',vendorId:'v-produce',count:0,low:10,par:40,crit:5,perDay:3,price:1}}));
+    this.toast(ing.name+' added to '+((this.vmap()[n.vendorId]||{}).name||'inventory'));
+  }
+  removeIngredient(id){this.setState(s=>({ingredients:s.ingredients.filter(i=>i.id!==id)}));this.toast('Ingredient removed');}
+  setNewV(p){this.setState(s=>({newVendor:{...s.newVendor,...p}}));}
+  addVendor(){
+    const n=this.state.newVendor;
+    if(!n.name.trim())return this.toast('Give the vendor a name');
+    const v={id:'cv-'+Date.now(),name:n.name.trim(),contact:n.contact.trim(),email:n.email.trim(),phone:n.phone.trim(),leadTime:n.leadTime||'2 days',active:true};
+    this.setState(s=>({vendors:[...s.vendors,v],addVendorOpen:false,newVendor:{name:'',contact:'',email:'',phone:'',leadTime:'2 days'}}));
+    this.toast(v.name+' added');
+  }
+  receiveVendorOrders(vendorId){
+    const pend=this.state.orders.filter(o=>o.vendorId===vendorId&&o.status==='Pending');
+    if(!pend.length)return;
+    const ids=new Set(pend.map(o=>o.id));
+    this.setState(s=>{
+      const add={};
+      s.orders.forEach(o=>{if(ids.has(o.id))add[o.ingId]=(add[o.ingId]||0)+o.qty;});
+      return {
+        orders:s.orders.map(o=>ids.has(o.id)?{...o,status:'Delivered'}:o),
+        ingredients:s.ingredients.map(i=>add[i.id]?{...i,count:Math.round((i.count+add[i.id])*10)/10}:i)
+      };
+    });
+    this.toast(pend.length+' deliveries received');
+  }
+  toggleSort(key){if(this.sort.key===key){this.sort={key,dir:this.sort.dir==='asc'?'desc':'asc'};}else{this.sort={key,dir:'asc'};}this.forceUpdate();}
+  setNew(p){this.setState(s=>({newIng:{...s.newIng,...p}}));}
+
+  decorate(i){
+    const s=this.status(i);
+    const par=i.par||1;
+    const pct=Math.max(4,Math.min(100,Math.round(i.count/par*100)));
+    const days=i.perDay>0?i.count/i.perDay:999;
+    const sug=Math.max(0,Math.ceil((i.par-i.count)*this.state.boost));
+    const v=this.vmap()[i.vendorId];
+    return {...i,
+      s, statusLabel:{ok:'In stock',low:'Low',crit:'Critical'}[s], statusClass:{ok:'st-ok',low:'st-low',crit:'st-crit'}[s],
+      pct, barStyle:{width:pct+'%'}, barClass:s==='crit'?'bar-crit':(s==='low'?'bar-low':'bar-ok'),
+      days, daysDisp:days>=999?'plenty':(days<1?'<1d':Math.floor(days)+'d'),
+      sug, sugDisp:this.fmt(sug)+' '+i.unit,
+      countNum:this.fmt(i.count), countDisp:this.fmt(i.count)+' '+i.unit, lowDisp:this.fmt(i.low)+' '+i.unit,
+      vendorName:v?v.name:'—', vendor:v
+    };
+  }
+
+  renderVals(){
+    const S=this.state, view=S.view;
+    const all=S.ingredients.map(i=>this.decorate(i));
+    const byId=id=>all.find(x=>x.id===id);
+    const vmap=this.vmap();
+    const mk=r=>({...r, select:()=>this.select(r.id), inc:()=>this.adjust(r.id,this.step(r.unit)), dec:()=>this.adjust(r.id,-this.step(r.unit)), reorder:()=>this.openReorder(r.id), remove:()=>this.removeIngredient(r.id)});
+
+    const includeLow=this.props.lowAlertsInclude!==false;
+    const onOrder=new Set(S.orders.filter(o=>o.status==='Pending'&&o.sent).map(o=>o.ingId));
+    const alerts=all.filter(r=>!onOrder.has(r.id)&&(includeLow?r.s!=='ok':r.s==='crit')).sort((a,b)=>(a.s==='crit'?0:1)-(b.s==='crit'?0:1)||a.days-b.days).map(mk);
+    const pendingOrders=S.orders.filter(o=>o.status==='Pending');
+
+    // forecast
+    const dayHeads=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    const first=new Date(2026,6,1);
+    const startDay=first.getDay();
+    const calCells=[];
+    for(let b=0;b<startDay;b++)calCells.push({blank:true,cls:'blank',num:'',label:'',click:()=>{}});
+    const todayISO=this.iso(this.today);
+    const calSumm=(c)=>{if(!c)return {cls:'',label:''};const keys=['lunch','afternoon','dinner','late'];const vals=keys.map(k=>c[k]||'normal');const uniq=[...new Set(vals)];if(uniq.length===1){const l=uniq[0];return l==='normal'?{cls:'',label:''}:{cls:l,label:{busy:'Busy',slow:'Slow',closed:'Closed'}[l]};}return {cls:'custom',label:'Mixed'};};
+    for(let d=1;d<=31;d++){
+      const date=new Date(2026,6,d), iso=this.iso(date), t=S.calendar[iso];const sm=calSumm(t);
+      calCells.push({num:d, cls:sm.cls, label:sm.label, isToday:iso===todayISO, click:()=>this.openCal(iso)});
+    }
+    const partDefs=[['lunch','Lunch'],['afternoon','Afternoon'],['dinner','Dinner'],['late','Late night']];
+    const partHeads=partDefs.map(p=>p[1]);
+    const dowGrid=[0,1,2,3,4,5,6].map(k=>{const p=S.dowParts[k];const avg=(p.lunch+p.afternoon+p.dinner+p.late)/4;return {name:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][k], avgDisp:avg.toFixed(2)+'×', parts:partDefs.map(([pk,pn])=>({key:pk, name:pn, factor:p[pk], disp:p[pk].toFixed(2)+'×', set:(e)=>{const val=+e.target.value;this.setState(st=>({dowParts:{...st.dowParts,[k]:{...st.dowParts[k],[pk]:val}}}));}}))};});
+    const forecastDays=[];
+    for(let i=0;i<7;i++){const date=new Date(this.today);date.setDate(date.getDate()+i);const f=Math.round(this.adjFactor(date)*100)/100;const pct=Math.max(3,Math.min(100,Math.round(f/2*100)));forecastDays.push({label:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][date.getDay()]+' '+date.getDate(), disp:f.toFixed(2)+'×', style:{width:pct+'%'}, hi:f>=1.35?'hi':''});}
+    const peak=this.peakFactor();
+
+    // detail
+    let detail=null;
+    if(view==='ingredient'&&S.selectedIng){
+      const r=byId(S.selectedIng);
+      if(r){const v=vmap[r.vendorId];
+        detail={...mk(r),
+          perDayDisp:this.fmt(r.perDay), parDisp:this.fmt(r.par)+' '+r.unit,
+          vendorPrice:this.money(r.price), vendorList:S.vendors, vendorId:r.vendorId,
+          setCount:e=>this.patch(r.id,{count:Math.max(0,+e.target.value||0)}),
+          setPar:e=>this.patch(r.id,{par:Math.max(0,+e.target.value||0)}),
+          setLow:e=>this.patch(r.id,{low:Math.max(0,+e.target.value||0)}),
+          setCrit:e=>this.patch(r.id,{crit:Math.max(0,+e.target.value||0)}),
+          setPerDay:e=>this.patch(r.id,{perDay:Math.max(0,+e.target.value||0)}),
+          setVendor:e=>this.patch(r.id,{vendorId:e.target.value}),
+          setPrice:e=>this.patch(r.id,{price:Math.max(0,+e.target.value||0)}),
+          emailVendor:()=>this.openEmail(r.vendorId,{subject:'Reorder — '+r.name,body:'Hi '+v.contact+',\n\nWe\u2019d like to reorder '+r.name+'. Please confirm current pricing and lead time.\n\nThanks,\nMauricio’s Burrito’s'}),
+          openVendor:()=>this.selectVendor(r.vendorId)
+        };
+      }
+    }
+    // vendor detail
+    let vdetail=null;
+    if(view==='vendor'&&S.selectedVendor){
+      const v=vmap[S.selectedVendor];
+      if(v){const supplied=all.filter(i=>i.vendorId===v.id);const others=all.filter(i=>i.vendorId!==v.id);vdetail={...v, items:supplied.map(it=>({...mk(it), setCount:e=>this.patch(it.id,{count:Math.max(0,+e.target.value||0)}), unassign:()=>this.patch(it.id,{vendorId:null})})), assignable:others, activeLabel:v.active?'Active':'Inactive', activeClass:v.active?'on':'',
+        toggleActive:()=>this.updV(v.id,{active:!v.active}), addIng:e=>{const id=e.target.value;if(id)this.patch(id,{vendorId:v.id});}, emailAction:()=>this.openEmail(v.id),
+        setName:e=>this.updV(v.id,{name:e.target.value}), setContact:e=>this.updV(v.id,{contact:e.target.value}),
+        setEmail:e=>this.updV(v.id,{email:e.target.value}), setPhone:e=>this.updV(v.id,{phone:e.target.value}),
+        setLead:e=>this.updV(v.id,{leadTime:e.target.value})};}
+    }
+    const activeVendors=S.vendors.filter(v=>v.active);
+    const vendorRows=activeVendors.map(v=>{const items=all.filter(i=>i.vendorId===v.id);return {...v, count:items.length, chips:items.map(i=>i.name.split(' (')[0]), open:()=>this.selectVendor(v.id), emailAction:()=>this.openEmail(v.id)};});
+    const inactiveVendorRows=S.vendors.filter(v=>!v.active).map(v=>{const items=all.filter(i=>i.vendorId===v.id);return {...v, count:items.length, chips:items.map(i=>i.name.split(' (')[0]), open:()=>this.selectVendor(v.id), emailAction:()=>this.openEmail(v.id)};});
+
+    const orderRows=S.orders.map(o=>{const i=byId(o.ingId)||{name:o.ingId,unit:''};const v=vmap[o.vendorId]||{name:'—'};return {...o, name:i.name, unit:i.unit, vendorName:v.name, qtyDisp:this.fmt(o.qty)+' '+i.unit, pending:o.status==='Pending', statusClass:o.status==='Pending'?'st-low':'st-ok', receive:()=>this.receiveOrder(o.id)};});
+    const orderGroups=(()=>{const g={};orderRows.forEach(o=>{(g[o.vendorId]=g[o.vendorId]||{vendorId:o.vendorId,vendorName:o.vendorName,rows:[]}).rows.push(o);});return Object.values(g).map(grp=>{const pc=grp.rows.filter(r=>r.pending).length;return {...grp, pendingCount:pc, hasPending:pc>0, multiPending:pc>1, receiveAll:()=>this.receiveVendorOrders(grp.vendorId)};});})();
+
+    // filter chips + inventory
+    const chips=['All',...this.cats].map(c=>({label:c, cls:this.filter===c?'on':'', set:()=>{this.filter=c;this.forceUpdate();}}));
+    let invList=all.filter(r=>this.filter==='All'||r.cat===this.filter);
+    const sk=this.sort.key, sd=this.sort.dir==='asc'?1:-1, rank={crit:0,low:1,ok:2};
+    if(sk){invList=[...invList].sort((a,b)=>{let x,y;if(sk==='name'){return a.name.localeCompare(b.name)*sd;}else if(sk==='count'){x=a.count;y=b.count;}else if(sk==='level'){x=a.pct;y=b.pct;}else if(sk==='cover'){x=a.days;y=b.days;}else{x=rank[a.s];y=rank[b.s];}return (x-y)*sd;});}
+    const invRows=invList.map(mk);
+    const arw=k=>this.sort.key===k?(this.sort.dir==='asc'?' ▲':' ▼'):'';
+    const sortHead={name:()=>this.toggleSort('name'), count:()=>this.toggleSort('count'), level:()=>this.toggleSort('level'), cover:()=>this.toggleSort('cover'), status:()=>this.toggleSort('status')};
+    const sortArw={name:arw('name'), count:arw('count'), level:arw('level'), cover:arw('cover'), status:arw('status')};
+
+    // modal
+    const M=S.modal;
+    let modalReorder=null, modalEmail=null;
+    if(M&&M.kind==='reorder'){const i=byId(M.id);const v=vmap[i.vendorId];
+      modalReorder={name:i.name, unit:i.unit, vendorName:v.name, leadTime:v.leadTime, qty:M.qty,
+        cost:this.money((+M.qty||0)*(i.price||0)),
+        setQty:e=>this.updateModal({qty:Math.max(0,+e.target.value||0)}),
+        place:()=>this.placeOrder(M.id,M.qty,false),
+        placeEmail:()=>this.placeOrder(M.id,M.qty,true)};
+    }
+    if(M&&M.kind==='email'){const v=vmap[M.vendorId];
+      modalEmail={vendorName:v.name, to:M.to, subject:M.subject, body:M.body,
+        setTo:e=>this.updateModal({to:e.target.value}), setSubject:e=>this.updateModal({subject:e.target.value}), setBody:e=>this.updateModal({body:e.target.value}),
+        send:()=>{const ids=new Set(M.orderIds||[]);this.setState(s=>({modal:null,orders:s.orders.map(o=>ids.has(o.id)?{...o,sent:true}:o)}));this.toast('Email sent to '+v.name);}};
+    }
+
+    const nw=S.newIng;
+    const posLabel=S.posConnected?('Connected — '+S.posProvider):'POS not connected';
+    const modalPos=M&&M.kind==='pos';
+    let modalCal=null;
+    if(M&&M.kind==='cal'){
+      const partDefs2=[['lunch','Lunch'],['afternoon','Afternoon'],['dinner','Dinner'],['late','Late night']];
+      const levs=[['busy','Busy'],['normal','Normal'],['slow','Slow'],['closed','Closed']];
+      const dt=new Date(M.iso+'T00:00:00');
+      const label=dt.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
+      const setPart=(k,v)=>this.setState(s=>({modal:{...s.modal,parts:{...s.modal.parts,[k]:v}}}));
+      const setWhole=(v)=>this.setState(s=>({modal:{...s.modal,parts:{lunch:v,afternoon:v,dinner:v,late:v}}}));
+      const wholeVal=(()=>{const vs=partDefs2.map(([k])=>M.parts[k]);return vs.every(x=>x===vs[0])?vs[0]:null;})();
+      modalCal={label,
+        wholeOpts:levs.map(([v,l])=>({label:l, on:wholeVal===v?'on':'', set:()=>setWhole(v)})),
+        rows:partDefs2.map(([k,n])=>({name:n, opts:levs.map(([v,l])=>({label:l, on:M.parts[k]===v?'on':'', set:()=>setPart(k,v)}))})),
+        save:()=>this.saveCal()};
+    }
+    const posGo={toast:()=>this.connectPos('Toast'),square:()=>this.connectPos('Square'),shopify:()=>this.connectPos('Shopify'),clover:()=>this.connectPos('Clover'),lightspeed:()=>this.connectPos('Lightspeed')};
+    return {
+      v:{dashboard:view==='dashboard'?'active':'', reorders:view==='reorders'?'active':'', inventory:(view==='inventory'||view==='ingredient')?'active':'', orders:view==='orders'?'active':'', vendors:(view==='vendors'||view==='vendor')?'active':'', forecast:view==='forecast'?'active':'', settings:view==='settings'?'active':''},
+      go:{dashboard:()=>this.go('dashboard'), reorders:()=>this.go('reorders'), inventory:()=>this.go('inventory'), orders:()=>this.go('orders'), vendors:()=>this.go('vendors'), forecast:()=>this.go('forecast'), settings:()=>this.go('settings')},
+      isDashboard:view==='dashboard', isReorders:view==='reorders', isInventory:view==='inventory', isIngredient:view==='ingredient', isOrders:view==='orders', isVendors:view==='vendors', isVendor:view==='vendor', isForecast:view==='forecast', isSettings:view==='settings',
+      posLabel, posClass:S.posConnected?'pos-on':'', posBtn:S.posConnected?'Disconnect':'Connect POS', posHint:S.posConnected?('Live — '+S.posProvider+' syncing as tickets close.'):'Connect to sync counts automatically.',
+      openPos:()=>this.setState({modal:{kind:'pos'}}), modalPos, posGo, modalCal,
+      dlgStyle:{background:this.props.modalBg||'#e9e9ea'}, emailDlgStyle:{background:this.props.modalBg||'#e9e9ea',width:'min(560px,100%)'},
+      togglePos:()=>{if(S.posConnected){this.setState({posConnected:false,posProvider:null});this.toast('POS disconnected');}else{this.setState({modal:{kind:'pos'}});}},
+      autoClass:S.autoDec?'on':'', alertsClass:S.alertsOn?'on':'',
+      toggleAuto:()=>this.setState(s=>({autoDec:!s.autoDec})), toggleAlerts:()=>this.setState(s=>({alertsOn:!s.alertsOn})),
+      simulateDay:()=>this.simulateDay(),
+      todayLabel:'Tuesday, July 14', todayDemand:this.dayFactor(this.today.getDay()).toFixed(2)+'×',
+      stats:{total:all.length, catCount:this.cats.length, attention:alerts.length, critCount:all.filter(r=>r.s==='crit').length, lowCount:all.filter(r=>r.s==='low').length, pending:pendingOrders.length, pendingSub:pendingOrders.length?'awaiting delivery':'none open', peak:peak.toFixed(2)+'×', peakDay:'over the next 7 days'},
+      topAlerts:alerts.slice(0,5), allAlerts:alerts, alertGroups:(()=>{const g={};alerts.forEach(a=>{(g[a.vendorId]=g[a.vendorId]||{vendorId:a.vendorId,vendorName:a.vendorName,items:[]}).items.push(a);});return Object.values(g).map(grp=>({...grp, count:grp.items.length, multi:grp.items.length>1, orderAll:()=>this.placeVendorOrders(grp.vendorId)}));})(), alertCount:alerts.length||undefined, noAlerts:alerts.length===0,
+      filterChips:chips, invRows, sortHead, sortArw,
+      detail, vdetail, vendorRows, inactiveVendorRows, hasInactive:inactiveVendorRows.length>0, orderRows, orderGroups,
+      dayHeads, calCells, dowGrid, partHeads, forecastDays, boostDisp:S.boost.toFixed(2)+'×',
+      applyForecast:()=>this.applyForecast(),
+      cats:this.cats, catalogRows:all.map(mk),
+      nw:{name:nw.name,unit:nw.unit,cat:nw.cat,vendorId:nw.vendorId,count:nw.count,low:nw.low,par:nw.par,crit:nw.crit,perDay:nw.perDay,price:nw.price,
+        setName:e=>this.setNew({name:e.target.value}), setUnit:e=>this.setNew({unit:e.target.value}), setCat:e=>this.setNew({cat:e.target.value}), setVendor:e=>this.setNew({vendorId:e.target.value}), setPrice:e=>this.setNew({price:e.target.value}),
+        setCount:e=>this.setNew({count:e.target.value}), setLow:e=>this.setNew({low:e.target.value}), setPar:e=>this.setNew({par:e.target.value}), setCrit:e=>this.setNew({crit:e.target.value}), setPerDay:e=>this.setNew({perDay:e.target.value})},
+      addIngredient:()=>this.addIngredient(),
+      addIngOpen:S.addIngOpen, toggleAddIng:()=>this.setState(s=>({addIngOpen:!s.addIngOpen})),
+      addVendorOpen:S.addVendorOpen, toggleAddVendor:()=>this.setState(s=>({addVendorOpen:!s.addVendorOpen})),
+      addVendor:()=>this.addVendor(),
+      nv:{name:S.newVendor.name,contact:S.newVendor.contact,email:S.newVendor.email,phone:S.newVendor.phone,leadTime:S.newVendor.leadTime,
+        setName:e=>this.setNewV({name:e.target.value}), setContact:e=>this.setNewV({contact:e.target.value}), setEmail:e=>this.setNewV({email:e.target.value}), setPhone:e=>this.setNewV({phone:e.target.value}), setLead:e=>this.setNewV({leadTime:e.target.value})},
+      modalReorder, modalEmail, closeModal:()=>this.closeModal(), stop:(e)=>e.stopPropagation(), toast:S.toast||undefined
+    };
+  }
+  updV(id,p){this.setState(s=>({vendors:s.vendors.map(v=>v.id===id?{...v,...p}:v)}));}
+  connectPos(name){this.setState({posConnected:true,posProvider:name,modal:null});this.toast('Connected to '+name+' POS');}
+}
+</script>
+</body>
+</html>
