@@ -824,6 +824,15 @@ class Component extends DCLogic {
     };
   }
 
+  updMenu(id,patch){this.setState(s=>({menu:s.menu.map(m=>m.id===id?{...m,...patch}:m)}));}
+  updComp(id,ci,patch){this.setState(s=>({menu:s.menu.map(m=>m.id!==id?m:{...m,comps:m.comps.map((c,i)=>i===ci?{...c,...patch}:c)})}));}
+  addMenuComp(id){this.setState(s=>({menu:s.menu.map(m=>m.id!==id?m:{...m,comps:[...m.comps,{label:'New ingredient',qty:'1 oz',opts:[s.ingredients[0].id]}]})}));}
+  removeMenuComp(id,ci){this.setState(s=>({menu:s.menu.map(m=>m.id!==id?m:{...m,comps:m.comps.filter((_,i)=>i!==ci)})}));}
+  addCompOpt(id,ci){this.setState(s=>({menu:s.menu.map(m=>m.id!==id?m:{...m,comps:m.comps.map((c,i)=>i!==ci?c:{...c,opts:[...c.opts,s.ingredients[0].id]})})}));}
+  setCompOpt(id,ci,oi,val){this.setState(s=>({menu:s.menu.map(m=>m.id!==id?m:{...m,comps:m.comps.map((c,i)=>i!==ci?c:{...c,opts:c.opts.map((o,j)=>j===oi?val:o)})})}));}
+  removeCompOpt(id,ci,oi){this.setState(s=>({menu:s.menu.map(m=>m.id!==id?m:{...m,comps:m.comps.map((c,i)=>i!==ci?c:{...c,opts:c.opts.filter((_,j)=>j!==oi)})})}));}
+  addMenuItem(){const id='item-'+Date.now();this.setState(s=>({menu:[...s.menu,{id,name:'New menu item',kicker:'Custom',price:0,desc:'',comps:[]}],editingMenu:id,view:'menu'}));this.toast('Menu item added — now editing');}
+  removeMenuItem(id){this.setState(s=>({menu:s.menu.filter(m=>m.id!==id),editingMenu:s.editingMenu===id?null:s.editingMenu}));this.toast('Menu item removed');}
   renderVals(){
     const S=this.state, view=S.view;
     const all=S.ingredients.map(i=>this.decorate(i));
