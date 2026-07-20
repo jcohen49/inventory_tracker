@@ -864,6 +864,30 @@ class Component extends DCLogic {
     for(let i=0;i<7;i++){const date=new Date(this.today);date.setDate(date.getDate()+i);const f=Math.round(this.adjFactor(date)*100)/100;const pct=Math.max(3,Math.min(100,Math.round(f/2*100)));forecastDays.push({label:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][date.getDay()]+' '+date.getDate(), disp:f.toFixed(2)+'×', style:{width:pct+'%'}, hi:f>=1.35?'hi':''});}
     const peak=this.peakFactor();
 
+     // popular items + usage share
+    const rangePresets=[['Week',7],['2 weeks',14],['Month',30],['2 months',60]];
+    const usageRange=S.usageRange;
+    const custom=!!(S.usageFrom&&S.usageTo);
+    const usage=custom?this.rangeUsageDates(S.usageFrom,S.usageTo):this.rangeUsage(usageRange);
+    const maxUsed=usage.items.length?usage.items[0].servings:1;
+    const popItems=usage.items.slice(0,10).map((x,idx)=>({rank:idx+1, name:x.name, cat:x.cat, servingsDisp:x.servings.toLocaleString('en-US'), volNumDisp:x.used.toLocaleString('en-US'), unit:x.unit, volDisp:x.used.toLocaleString('en-US')+' '+x.unit, barStyle:{width:Math.max(4,Math.round(x.servings/maxUsed*100))+'%'}}));
+    const usagePieSlices=this.usagePie(usage.items, S.usageMetric);
+    const volTotal=usage.items.reduce((s,x)=>s+x.used,0);
+    const usageChips=rangePresets.map(([label,days])=>({label, cls:(!custom&&usageRange===days)?'on':'', set:()=>this.setState({usageRange:days,usageFrom:null,usageTo:null})}));
+
+    // menu
+    const ingName=id=>{const i=S.ingredients.find(x=>x.id===id);return i?i.name.split(' (')[0]:id;};
+    const optShort={'tor-flour':'Flour','tor-ww':'Whole wheat','tor-gf':'Gluten-free','rice-white':'White','rice-brown':'Brown','bean-pinto':'Pinto','bean-black':'Black','bean-refried':'Refried','beef':'Beef','pork':'Pork','chicken':'Chicken','shrimp':'Shrimp'};
+    const allIngOpts=S.ingredients.map(i=>({id:i.id, name:ingName(i.id)}));
+    const menuCards=S.menu.map(m=>{const editing=S.editingMenu===m.id; return {id:m.id, name:m.name, kicker:m.kicker, price:'$'+m.price.toFixed(2), priceRaw:m.price, desc:m.desc, editing, notEditing:!editing,
+      edit:()=>this.setState({editingMenu:m.id}), done:()=>this.setState({editingMenu:null}), removeItem:()=>this.removeMenuItem(m.id),
+      setName:e=>this.updMenu(m.id,{name:e.target.value}), setKicker:e=>this.updMenu(m.id,{kicker:e.target.value}), setPrice:e=>this.updMenu(m.id,{price:parseFloat(e.target.value)||0}), setDesc:e=>this.updMenu(m.id,{desc:e.target.value}), addComp:()=>this.addMenuComp(m.id),
+      hasComps:m.comps.length>0, noComps:m.comps.length===0,
+      comps:m.comps.map((c,ci)=>{const choice=c.opts.length>1; return {qty:c.qty, label:c.label, choice, singleShow:!choice, single:choice?'':ingName(c.opts[0]), opts:choice?c.opts.map(o=>({name:optShort[o]||ingName(o)})):[],
+        setQty:e=>this.updComp(m.id,ci,{qty:e.target.value}), setLabel:e=>this.updComp(m.id,ci,{label:e.target.value}), removeComp:()=>this.removeMenuComp(m.id,ci), addOpt:()=>this.addCompOpt(m.id,ci),
+        editOpts:c.opts.map((o,oi)=>({value:o, set:e=>this.setCompOpt(m.id,ci,oi,e.target.value), remove:()=>this.removeCompOpt(m.id,ci,oi), canRemove:c.opts.length>1}))};})};});
+    const fmtD=(iso)=>new Date(iso+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
+    const rangeWord=custom?(fmtD(S.usageFrom)+' – '+fmtD(S.usageTo)):({7:'the last 7 days',14:'the last 2 weeks',30:'the last month',60:'the last 2 months'}[usageRange]||('the last '+usageRange+' days'));
     // detail
     let detail=null;
     if(view==='ingredient'&&S.selectedIng){
