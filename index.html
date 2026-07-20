@@ -565,13 +565,85 @@ class Component extends DCLogic {
       ingredients, vendors, orders,
       calendar:{'2026-07-04':{lunch:'busy',afternoon:'busy',dinner:'busy',late:'busy'},'2026-07-05':{lunch:'slow',afternoon:'slow',dinner:'slow',late:'slow'},'2026-07-18':{lunch:'normal',afternoon:'normal',dinner:'busy',late:'busy'},'2026-07-20':{lunch:'closed',afternoon:'closed',dinner:'closed',late:'closed'},'2026-07-25':{lunch:'busy',afternoon:'busy',dinner:'busy',late:'busy'}},
       dowParts:{0:{lunch:1.2,afternoon:1.0,dinner:1.1,late:0.6},1:{lunch:0.8,afternoon:0.6,dinner:0.8,late:0.5},2:{lunch:0.85,afternoon:0.65,dinner:0.85,late:0.55},3:{lunch:0.9,afternoon:0.7,dinner:0.9,late:0.6},4:{lunch:1.0,afternoon:0.8,dinner:1.05,late:0.7},5:{lunch:1.3,afternoon:1.0,dinner:1.6,late:1.1},6:{lunch:1.4,afternoon:1.1,dinner:1.7,late:1.2}},
-      boost:1, posConnected:false, posProvider:null, autoDec:true, alertsOn:true,
+      boost:1, posConnected:false, posProvider:null, autoDec:true, alertsOn:true, usageRange:7, usageMetric:'servings',
       newIng:{name:'',unit:'lbs',cat:'Produce',vendorId:'v-produce',count:0,low:10,par:40,crit:5,perDay:3,price:1},
       newVendor:{name:'',contact:'',email:'',phone:'',leadTime:'2 days'},
       addIngOpen:false, addVendorOpen:false,
       modal:null, toast:''
     };
     this.cats=['Bases & Grains','Proteins','Produce','Dairy','Salsas & Condiments','Add-ons & Sides','Spices','Serving'];
+    this.menu=[
+      {id:'burrito',name:'Signature Burrito',kicker:'Wrapped',price:10.50,desc:'Griddled tortilla loaded with rice, beans, protein and fixings, wrapped tight in foil.',comps:[
+        {label:'Tortilla',qty:'1',opts:['tor-flour','tor-ww','tor-gf']},
+        {label:'Rice',qty:'8 oz',opts:['rice-white','rice-brown']},
+        {label:'Beans',qty:'6 oz',opts:['bean-pinto','bean-black','bean-refried']},
+        {label:'Protein',qty:'5 oz',opts:['beef','pork','chicken','shrimp']},
+        {label:'Cheese',qty:'1 oz',opts:['cheese-blend']},
+        {label:'Salsa',qty:'2 oz',opts:['pico']},
+        {label:'Wrap',qty:'1 sheet',opts:['foil']}
+      ]},
+      {id:'bowl',name:'Burrito Bowl',kicker:'No tortilla',price:11.00,desc:'The whole burrito, tortilla-free, built in a bowl over a bed of rice.',comps:[
+        {label:'Rice',qty:'8 oz',opts:['rice-white','rice-brown']},
+        {label:'Beans',qty:'6 oz',opts:['bean-pinto','bean-black','bean-refried']},
+        {label:'Protein',qty:'5 oz',opts:['beef','pork','chicken','shrimp']},
+        {label:'Lettuce',qty:'2 oz',opts:['lettuce']},
+        {label:'Cheese',qty:'1 oz',opts:['cheese-blend']},
+        {label:'Salsa',qty:'2 oz',opts:['pico']},
+        {label:'Bowl',qty:'1',opts:['bowl-lg']}
+      ]},
+      {id:'tacos',name:'Street Tacos (3)',kicker:'Trio',price:9.50,desc:'Three soft tacos with protein, onion, cilantro and salsa verde.',comps:[
+        {label:'Tortilla',qty:'3',opts:['tor-flour']},
+        {label:'Protein',qty:'4.5 oz',opts:['beef','pork','chicken','shrimp']},
+        {label:'Onion',qty:'1 oz',opts:['onion']},
+        {label:'Cilantro',qty:'0.3 oz',opts:['cilantro']},
+        {label:'Salsa',qty:'1.5 oz',opts:['salsa-verde']}
+      ]},
+      {id:'quesadilla',name:'Quesadilla',kicker:'Griddled',price:8.50,desc:'Flour tortilla folded over melted cheese, with optional protein.',comps:[
+        {label:'Tortilla',qty:'1',opts:['tor-flour']},
+        {label:'Cheese',qty:'3 oz',opts:['cheese-blend']},
+        {label:'Protein',qty:'3 oz',opts:['beef','pork','chicken','shrimp']}
+      ]},
+      {id:'nachos',name:'Loaded Nachos',kicker:'Share plate',price:10.00,desc:'Warm chips smothered in queso, beans, protein and all the toppings.',comps:[
+        {label:'Chips',qty:'4 oz',opts:['chips']},
+        {label:'Queso',qty:'3 oz',opts:['queso']},
+        {label:'Beans',qty:'3 oz',opts:['bean-pinto','bean-black','bean-refried']},
+        {label:'Protein',qty:'3 oz',opts:['beef','pork','chicken','shrimp']},
+        {label:'Salsa',qty:'2 oz',opts:['pico']},
+        {label:'Jalapeño',qty:'0.5 oz',opts:['jalapeno']},
+        {label:'Sour cream',qty:'1 oz',opts:['sourcream']},
+        {label:'Bowl',qty:'1',opts:['bowl-lg']}
+      ]},
+      {id:'salad',name:'Taco Salad',kicker:'Bowl',price:11.00,desc:'Crisp lettuce base with protein, beans, corn, guac and cheese.',comps:[
+        {label:'Lettuce',qty:'4 oz',opts:['lettuce']},
+        {label:'Protein',qty:'4 oz',opts:['beef','pork','chicken','shrimp']},
+        {label:'Beans',qty:'3 oz',opts:['bean-pinto','bean-black','bean-refried']},
+        {label:'Corn',qty:'1 oz',opts:['corn']},
+        {label:'Salsa',qty:'2 oz',opts:['pico']},
+        {label:'Cheese',qty:'1 oz',opts:['cheese-blend']},
+        {label:'Guacamole',qty:'2 oz',opts:['guac']},
+        {label:'Bowl',qty:'1',opts:['bowl-lg']}
+      ]},
+      {id:'chips-guac',name:'Chips & Guacamole',kicker:'Side',price:5.50,desc:'A generous scoop of fresh guac with a basket of warm chips.',comps:[
+        {label:'Chips',qty:'3 oz',opts:['chips']},
+        {label:'Guacamole',qty:'4 oz',opts:['guac']},
+        {label:'Bowl',qty:'1',opts:['bowl-sm']}
+      ]},
+      {id:'chips-queso',name:'Chips & Queso',kicker:'Side',price:5.00,desc:'Warm queso dip with a basket of chips.',comps:[
+        {label:'Chips',qty:'3 oz',opts:['chips']},
+        {label:'Queso',qty:'4 oz',opts:['queso']},
+        {label:'Bowl',qty:'1',opts:['bowl-sm']}
+      ]},
+      {id:'side-rice',name:'Side of Rice',kicker:'Side',price:3.00,desc:'A cup of seasoned rice.',comps:[
+        {label:'Rice',qty:'6 oz',opts:['rice-white','rice-brown']},
+        {label:'Cup',qty:'1',opts:['cup-lg']}
+      ]},
+      {id:'side-beans',name:'Side of Beans',kicker:'Side',price:3.00,desc:'A cup of slow-cooked beans.',comps:[
+        {label:'Beans',qty:'6 oz',opts:['bean-pinto','bean-black','bean-refried']},
+        {label:'Cup',qty:'1',opts:['cup-lg']}
+      ]}
+    ];
+    this.state.menu=this.menu;
+    this.state.editingMenu=null;
     this.filter='All';
     this.sort={key:null,dir:'asc'};
     this.today=new Date(2026,6,14);
