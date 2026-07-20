@@ -245,6 +245,18 @@ body{margin:0}
 <sc-for list="{{ topAlerts }}" as="a" hint-placeholder-count="4"><div class="alert-row"><div><div class="alert-name">{{ a.name }} <span class="st {{ a.statusClass }}">{{ a.statusLabel }}</span></div><div class="alert-meta">{{ a.countDisp }} left · about {{ a.daysDisp }} of cover · from {{ a.vendorName }}</div></div><div class="deliv">Suggest {{ a.sugDisp }}</div><button class="btn btn-primary" onClick="{{ a.reorder }}">Review order</button></div></sc-for>
 <sc-if value="{{ noAlerts }}" hint-placeholder-val="{{ false }}"><div class="growl">Everything is above its reorder point. Nice.</div></sc-if>
 </div>
+<div class="sec-title"><h2>Most popular items</h2><div class="metric-toggle"><button class="{{ mServCls }}" onClick="{{ setMetricServ }}">Servings</button><button class="{{ mVolCls }}" onClick="{{ setMetricVol }}">Volume</button></div><div class="usage-controls"><div class="date-range"><input type="date" class="input date-in" value="{{ usageFromVal }}" onChange="{{ setUsageFrom }}"><span class="date-sep">–</span><input type="date" class="input date-in" value="{{ usageToVal }}" onChange="{{ setUsageTo }}"></div><div class="filters" style="margin-bottom:0"><sc-for list="{{ usageChips }}" as="c" hint-placeholder-count="4"><button class="chip {{ c.cls }}" onClick="{{ c.set }}">{{ c.label }}</button></sc-for></div></div></div>
+<div class="usage-wrap">
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="chart-kick">Top 10 · {{ metricWord }} sold over {{ usageRangeLabel }}</div>
+<sc-for list="{{ popItems }}" as="p" hint-placeholder-count="10"><div class="rankrow"><div class="rank-n">{{ p.rank }}</div><div><div class="rank-name">{{ p.name }}</div><div class="rank-bar"><span style="{{ p.barStyle }}"></span></div></div><div class="rank-used"><sc-if value="{{ metricServings }}" hint-placeholder-val="{{ true }}"><div>{{ p.servingsDisp }}<small>servings</small></div></sc-if><sc-if value="{{ metricVolume }}" hint-placeholder-val="{{ false }}"><div>{{ p.volNumDisp }}<small>{{ p.unit }}</small></div></sc-if></div></div></sc-for>
+</div>
+<div class="panel blueprint usage-chart"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="chart-kick">Ingredient usage share</div>
+<div class="pie-box"><svg viewBox="0 0 200 200"><sc-for list="{{ usagePie }}" as="s" hint-placeholder-count="6"><path d="{{ s.d }}" style="{{ s.fillStyle }}" stroke="var(--color-bg)" stroke-width="1.5"></path></sc-for><circle cx="100" cy="100" r="52" style="fill:var(--color-bg)"></circle></svg><div class="pie-center"><div class="pie-tot">{{ usageTotalDisp }}</div><div class="pie-tot-l">{{ pieCenterLabel }}</div></div></div>
+<div class="pie-legend"><sc-for list="{{ usagePie }}" as="s" hint-placeholder-count="6"><div class="pie-leg-row"><i style="{{ s.iStyle }}"></i><span class="pie-leg-name">{{ s.name }}</span><span class="pie-leg-pct">{{ s.pct }}</span></div></sc-for></div>
+</div>
+</div>
 </div></sc-if>
 
 <sc-if value="{{ isReorders }}" hint-placeholder-val="{{ false }}"><div>
