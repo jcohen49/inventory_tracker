@@ -538,6 +538,8 @@ class Component extends DCLogic {
     ];
     const priceMap={'tor-flour':0.28,'tor-ww':0.34,'tor-gf':0.55,'chips':3.20,'rice-white':0.90,'rice-brown':1.10,'bean-pinto':1.20,'bean-black':1.25,'bean-refried':1.40,'beef':5.20,'pork':4.10,'chicken':3.40,'shrimp':9.20,'onion':0.80,'bellpepper':1.60,'tomato':1.40,'cilantro':0.90,'lettuce':1.20,'fajita':1.75,'mushroom':2.40,'corn':1.10,'jalapeno':1.30,'cheese-blend':3.60,'queso':12.00,'sourcream':6.50,'pico':2.20,'salsa-corn':2.40,'salsa-verde':2.60,'guac':4.80,'seasoning':3.50,'cumin':0.40,'chili':0.35,'lime':8.00,'foil':14.50,'bowl-lg':9.80,'bowl-sm':8.20,'napkins':6.40,'fork':7.10,'knife':7.10,'spoon':7.10,'cup-sm':8.90,'cup-lg':10.40};
     ingredients.forEach(i=>{i.price=priceMap[i.id]??1;});
+    const servMap={'tor-flour':1,'tor-ww':1,'tor-gf':1,'rice-white':0.16,'rice-brown':0.16,'bean-pinto':0.15,'bean-black':0.15,'bean-refried':0.16,'beef':0.2,'pork':0.2,'chicken':0.2,'shrimp':0.18,'onion':0.05,'bellpepper':0.06,'tomato':0.07,'cilantro':0.02,'lettuce':0.04,'fajita':0.1,'mushroom':0.06,'cheese-blend':0.08,'queso':0.02,'sourcream':0.015,'pico':0.08,'salsa-corn':0.05,'salsa-verde':0.05,'guac':0.1,'corn':0.06,'jalapeno':0.03,'chips':0.12,'seasoning':0.01,'cumin':0.05,'chili':0.05,'lime':0.01,'foil':1,'bowl-lg':1,'bowl-sm':1,'napkins':1,'fork':1,'knife':1,'spoon':1,'cup-sm':1,'cup-lg':1,'sauce-mild':0.05,'sauce-hot':0.05};
+    ingredients.forEach(i=>{i.serving=servMap[i.id]??1;});  
     const V=(id,name,contact,email,phone,leadTime,active)=>({id,name,contact,email,phone,leadTime,active:active!==false});
     const vendors=[
       V('v-tortilla','Sonora Tortilla Co.','Marta Rios','orders@sonoratortilla.com','(602) 555-0148','2 days'),
