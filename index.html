@@ -970,9 +970,9 @@ class Component extends DCLogic {
     }
     const posGo={toast:()=>this.connectPos('Toast'),square:()=>this.connectPos('Square'),shopify:()=>this.connectPos('Shopify'),clover:()=>this.connectPos('Clover'),lightspeed:()=>this.connectPos('Lightspeed')};
     return {
-      v:{dashboard:view==='dashboard'?'active':'', reorders:view==='reorders'?'active':'', inventory:(view==='inventory'||view==='ingredient')?'active':'', orders:view==='orders'?'active':'', vendors:(view==='vendors'||view==='vendor')?'active':'', forecast:view==='forecast'?'active':'', settings:view==='settings'?'active':''},
-      go:{dashboard:()=>this.go('dashboard'), reorders:()=>this.go('reorders'), inventory:()=>this.go('inventory'), orders:()=>this.go('orders'), vendors:()=>this.go('vendors'), forecast:()=>this.go('forecast'), settings:()=>this.go('settings')},
-      isDashboard:view==='dashboard', isReorders:view==='reorders', isInventory:view==='inventory', isIngredient:view==='ingredient', isOrders:view==='orders', isVendors:view==='vendors', isVendor:view==='vendor', isForecast:view==='forecast', isSettings:view==='settings',
+            v:{dashboard:view==='dashboard'?'active':'', reorders:view==='reorders'?'active':'', inventory:(view==='inventory'||view==='ingredient')?'active':'', menu:view==='menu'?'active':'', orders:view==='orders'?'active':'', vendors:(view==='vendors'||view==='vendor')?'active':'', forecast:view==='forecast'?'active':'', settings:view==='settings'?'active':''},
+      go:{dashboard:()=>this.go('dashboard'), reorders:()=>this.go('reorders'), inventory:()=>this.go('inventory'), menu:()=>this.go('menu'), orders:()=>this.go('orders'), vendors:()=>this.go('vendors'), forecast:()=>this.go('forecast'), settings:()=>this.go('settings')},
+      isDashboard:view==='dashboard', isReorders:view==='reorders', isInventory:view==='inventory', isIngredient:view==='ingredient', isMenu:view==='menu', isOrders:view==='orders', isVendors:view==='vendors', isVendor:view==='vendor', isForecast:view==='forecast', isSettings:view==='settings', menuCards, allIngOpts, addMenuItem:()=>this.addMenuItem(),
       posLabel, posClass:S.posConnected?'pos-on':'', posBtn:S.posConnected?'Disconnect':'Connect POS', posHint:S.posConnected?('Live — '+S.posProvider+' syncing as tickets close.'):'Connect to sync counts automatically.',
       openPos:()=>this.setState({modal:{kind:'pos'}}), modalPos, posGo, modalCal,
       dlgStyle:{background:this.props.modalBg||'#e9e9ea'}, emailDlgStyle:{background:this.props.modalBg||'#e9e9ea',width:'min(560px,100%)'},
