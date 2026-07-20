@@ -330,6 +330,36 @@ body{margin:0}
 </div></sc-if>
 </div></sc-if>
 
+<sc-if value="{{ isMenu }}" hint-placeholder-val="{{ false }}"><div>
+<div class="phead"><div><h1>Menu</h1><div class="sub">Every item on the truck and how it draws down inventory, serving by serving.</div></div><button class="btn btn-primary" onClick="{{ addMenuItem }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>Add menu item</button></div>
+<div class="menu-callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg><div><div class="mc-t">Options are decided at the register</div><div class="mc-b">Where an item has a choice — rice, beans, protein, tortilla — every option is listed with its portion. The POS records which one each ticket rang up, so inventory only draws down the ingredient that was actually served.</div></div></div>
+<div class="menu-grid">
+<sc-for list="{{ menuCards }}" as="m" hint-placeholder-count="6"><div class="panel blueprint menu-card"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<sc-if value="{{ m.notEditing }}" hint-placeholder-val="{{ true }}"><div>
+<div class="menu-head"><div><div class="rowcat">{{ m.kicker }}</div><h3>{{ m.name }}</h3></div><div class="menu-price">{{ m.price }}</div></div>
+<div class="menu-desc">{{ m.desc }}</div>
+<sc-for list="{{ m.comps }}" as="c" hint-placeholder-count="5"><div class="build-row"><div><div class="build-qty">{{ c.qty }}</div><div class="build-label">{{ c.label }}</div></div><div><sc-if value="{{ c.choice }}" hint-placeholder-val="{{ true }}"><div><div class="opt-chips"><sc-for list="{{ c.opts }}" as="o" hint-placeholder-count="3"><span class="opt-chip">{{ o.name }}</span></sc-for></div><div class="opt-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"></rect><path d="M9 12l2 2 4-4"></path></svg>POS records the pick</div></div></sc-if><sc-if value="{{ c.singleShow }}" hint-placeholder-val="{{ false }}"><div class="opt-single">{{ c.single }}</div></sc-if></div></div></sc-for>
+<div class="menu-foot"><button class="btn btn-secondary" onClick="{{ m.edit }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>Edit item</button><button class="btn btn-ghost" onClick="{{ m.removeItem }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path></svg>Delete</button></div>
+</div></sc-if>
+<sc-if value="{{ m.editing }}" hint-placeholder-val="{{ false }}"><div>
+<div class="eyebrow-ed">Editing item</div>
+<div class="mrow2"><div class="mfield" style="margin-bottom:0"><label>Item name</label><input class="input sm" value="{{ m.name }}" onChange="{{ m.setName }}" placeholder="Name"></div><div class="mfield" style="margin-bottom:0"><label>Price ($)</label><input class="input sm" type="number" step="0.25" value="{{ m.priceRaw }}" onChange="{{ m.setPrice }}"></div></div>
+<div class="mrow2" style="margin-top:var(--space-3)"><div class="mfield" style="margin-bottom:0"><label>Tagline</label><input class="input sm" value="{{ m.kicker }}" onChange="{{ m.setKicker }}" placeholder="e.g. Wrapped"></div></div>
+<div class="mfield" style="margin-top:var(--space-3)"><label>Description</label><input class="input sm" value="{{ m.desc }}" onChange="{{ m.setDesc }}" placeholder="Short description"></div>
+<div class="mfield"><label>Ingredients & serving sizes</label>
+<sc-for list="{{ m.comps }}" as="c" hint-placeholder-count="3"><div class="cedit">
+<div class="cedit-top"><input class="input sm" value="{{ c.qty }}" onChange="{{ c.setQty }}" placeholder="8 oz"><input class="input sm" value="{{ c.label }}" onChange="{{ c.setLabel }}" placeholder="Ingredient role"><button class="icon-x" onClick="{{ c.removeComp }}" title="Remove ingredient">×</button></div>
+<div class="ceopts"><sc-for list="{{ c.editOpts }}" as="o" hint-placeholder-count="1"><div class="ceopt"><select class="input sm" value="{{ o.value }}" onChange="{{ o.set }}"><sc-for list="{{ allIngOpts }}" as="ing" hint-placeholder-count="8"><option value="{{ ing.id }}">{{ ing.name }}</option></sc-for></select><sc-if value="{{ o.canRemove }}" hint-placeholder-val="{{ false }}"><button class="icon-x" onClick="{{ o.remove }}" title="Remove option">×</button></sc-if></div></sc-for>
+<button class="linkbtn" onClick="{{ c.addOpt }}">+ Add another option (choice)</button></div>
+</div></sc-for>
+<sc-if value="{{ m.noComps }}" hint-placeholder-val="{{ false }}"><div class="growl" style="padding:var(--space-2) 0">No ingredients yet. Add the first one below.</div></sc-if>
+<button class="linkbtn" onClick="{{ m.addComp }}">+ Add ingredient</button>
+</div>
+<div class="menu-foot"><button class="btn btn-primary" onClick="{{ m.done }}">Done</button></div>
+</div></sc-if>
+</div></sc-for>
+</div>
+</div></sc-if>
 <sc-if value="{{ isOrders }}" hint-placeholder-val="{{ false }}"><div>
 <div class="phead"><div><h1>Orders</h1><div class="sub">Grouped by vendor — mark a whole delivery received at once to add stock back.</div></div></div>
 <div class="stack"><sc-for list="{{ orderGroups }}" as="g" hint-placeholder-count="4"><div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
