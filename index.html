@@ -732,6 +732,44 @@ class Component extends DCLogic {
     return Math.round(mx*100)/100;
   }
   iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  rangeUsage(days){
+    let F=0;
+    for(let i=1;i<=days;i++){const d=new Date(this.today);d.setDate(d.getDate()-i);F+=this.adjFactor(d);}
+    return this.usageFromF(F);
+  }
+  rangeUsageDates(fromISO,toISO){
+    let a=new Date(fromISO+'T00:00:00'), b=new Date(toISO+'T00:00:00');
+    if(a>b){const t=a;a=b;b=t;}
+    let F=0;
+    for(let d=new Date(a); d<=b; d.setDate(d.getDate()+1)){F+=this.adjFactor(new Date(d));}
+    return this.usageFromF(F);
+  }
+  usageFromF(F){
+    const items=this.state.ingredients.map(i=>{const used=Math.round(i.perDay*F);return {id:i.id,name:i.name,cat:i.cat,unit:i.unit,used,servings:Math.round(used/(i.serving||1))};})
+      .filter(x=>x.servings>0).sort((a,b)=>b.servings-a.servings);
+    return {F,items,total:items.reduce((s,x)=>s+x.servings,0)};
+  }
+  usagePie(items, metric){
+    const key=metric==='volume'?'used':'servings';
+    const sorted=[...items].sort((a,b)=>b[key]-a[key]);
+    const total=sorted.reduce((s,x)=>s+x[key],0)||1;
+    const top=sorted.slice(0,12);
+    const rest=sorted.slice(12).reduce((s,x)=>s+x[key],0);
+    const segs=top.map(x=>({name:x.name.split(' (')[0],used:x[key]}));
+    if(rest>0)segs.push({name:'All other items',used:rest});
+    const palette=['var(--color-accent-900)','var(--color-accent-800)','var(--color-accent-700)','var(--color-accent-600)','var(--color-accent-500)','var(--color-accent-400)','var(--color-accent-300)','var(--color-accent-200)','var(--color-accent-100)','var(--color-neutral-600)','var(--color-neutral-500)','var(--color-neutral-400)','var(--color-neutral-300)'];
+    const cx=100,cy=100,r=96;
+    const pt=(a)=>[cx+r*Math.cos(a),cy+r*Math.sin(a)];
+    let a=-Math.PI/2;
+    return segs.map((s,idx)=>{
+      const frac=s.used/total, a1=a+frac*2*Math.PI;
+      const [x0,y0]=pt(a), [x1,y1]=pt(a1), large=(a1-a)>Math.PI?1:0;
+      const d=segs.length===1?`M${cx} ${cy-r} A${r} ${r} 0 1 1 ${cx-0.01} ${cy-r} Z`:`M${cx} ${cy} L${x0.toFixed(2)} ${y0.toFixed(2)} A${r} ${r} 0 ${large} 1 ${x1.toFixed(2)} ${y1.toFixed(2)} Z`;
+      a=a1;
+      const color=palette[idx%palette.length];
+      return {d, name:s.name, pct:Math.round(frac*100)+'%', fillStyle:{fill:color}, iStyle:{background:color}};
+    });
+  }
   applyForecast(){const p=Math.max(1,this.peakFactor());this.setState({boost:p});this.toast('Suggestions scaled to the '+p.toFixed(2)+'× peak');}
   addIngredient(){
     const n=this.state.newIng;
