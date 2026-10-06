@@ -1,0 +1,1020 @@
+[
+    {
+        "date":  "2026-09-05",
+        "day_of_week":  "Saturday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "no_event",
+        "baseline_expected_items":  248.6,
+        "expected_items":  248.6,
+        "actual_items":  289,
+        "actual_orders":  178,
+        "actual_revenue":  2702.5,
+        "actual_ingredient_cost":  755.88,
+        "expected_event_lift_pct":  0,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  1.078,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-06",
+        "day_of_week":  "Sunday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "no_event",
+        "baseline_expected_items":  187.4,
+        "expected_items":  187.4,
+        "actual_items":  194,
+        "actual_orders":  119,
+        "actual_revenue":  1771.5,
+        "actual_ingredient_cost":  470.14,
+        "expected_event_lift_pct":  0,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  1.024,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-07",
+        "day_of_week":  "Monday",
+        "open":  "11:00",
+        "close":  "23:00",
+        "label":  "event_lift_strong",
+        "baseline_expected_items":  128.4,
+        "expected_items":  155.9,
+        "actual_items":  149,
+        "actual_orders":  97,
+        "actual_revenue":  1355.5,
+        "actual_ingredient_cost":  370.7,
+        "expected_event_lift_pct":  31.5,
+        "multipliers":  {
+                            "day_adjustment":  0.9,
+                            "random_noise":  1.024,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "giants-2026-09-07",
+                           "name":  "Giants vs St. Louis Cardinals",
+                           "venue":  "Oracle Park",
+                           "start_time":  "17:10",
+                           "model":  "oracle",
+                           "peak_multiplier_k":  2,
+                           "expected_incremental_items":  40.4,
+                           "incremental_pct_of_baseline":  31.5,
+                           "true_effect":  "strong",
+                           "note":  "Labor Day"
+                       }
+                   ],
+        "notes":  [
+                      "Labor Day: offices closed, weaker baseline lunch"
+                  ]
+    },
+    {
+        "date":  "2026-09-08",
+        "day_of_week":  "Tuesday",
+        "open":  "11:00",
+        "close":  "23:00",
+        "label":  "event_lift_strong",
+        "baseline_expected_items":  137,
+        "expected_items":  222.8,
+        "actual_items":  248,
+        "actual_orders":  148,
+        "actual_revenue":  2239,
+        "actual_ingredient_cost":  629.04,
+        "expected_event_lift_pct":  62.7,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.992,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "giants-2026-09-08",
+                           "name":  "Giants vs St. Louis Cardinals",
+                           "venue":  "Oracle Park",
+                           "start_time":  "18:45",
+                           "model":  "oracle",
+                           "peak_multiplier_k":  1.6,
+                           "expected_incremental_items":  85.8,
+                           "incremental_pct_of_baseline":  62.7,
+                           "true_effect":  "strong",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-09",
+        "day_of_week":  "Wednesday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "event_lift_strong",
+        "baseline_expected_items":  145.6,
+        "expected_items":  226.3,
+        "actual_items":  210,
+        "actual_orders":  127,
+        "actual_revenue":  1909,
+        "actual_ingredient_cost":  545.4,
+        "expected_event_lift_pct":  55.1,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.949,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "giants-2026-09-09",
+                           "name":  "Giants vs St. Louis Cardinals",
+                           "venue":  "Oracle Park",
+                           "start_time":  "12:45",
+                           "model":  "oracle",
+                           "peak_multiplier_k":  1.5,
+                           "expected_incremental_items":  66,
+                           "incremental_pct_of_baseline":  45.3,
+                           "true_effect":  "strong",
+                           "note":  ""
+                       },
+                       {
+                           "event_id":  "weezer-2026-09-09",
+                           "name":  "Weezer with The Shins and Silversun Pickups",
+                           "venue":  "Chase Center",
+                           "start_time":  "19:00",
+                           "model":  "chase",
+                           "peak_multiplier_k":  0.35,
+                           "expected_incremental_items":  14.3,
+                           "incremental_pct_of_baseline":  9.8,
+                           "true_effect":  "weak",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-10",
+        "day_of_week":  "Thursday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "no_event",
+        "baseline_expected_items":  165.9,
+        "expected_items":  165.9,
+        "actual_items":  141,
+        "actual_orders":  94,
+        "actual_revenue":  1334.5,
+        "actual_ingredient_cost":  386.1,
+        "expected_event_lift_pct":  0,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.892,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-11",
+        "day_of_week":  "Friday",
+        "open":  "11:00",
+        "close":  "23:00",
+        "label":  "event_lift_strong",
+        "baseline_expected_items":  231.4,
+        "expected_items":  435.9,
+        "actual_items":  455,
+        "actual_orders":  254,
+        "actual_revenue":  4149.5,
+        "actual_ingredient_cost":  1132.07,
+        "expected_event_lift_pct":  88.4,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  1.046,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "giants-2026-09-11",
+                           "name":  "Giants vs San Diego Padres",
+                           "venue":  "Oracle Park",
+                           "start_time":  "19:15",
+                           "model":  "oracle",
+                           "peak_multiplier_k":  2,
+                           "expected_incremental_items":  204.5,
+                           "incremental_pct_of_baseline":  88.4,
+                           "true_effect":  "strong",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-12",
+        "day_of_week":  "Saturday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "event_lift_strong",
+        "baseline_expected_items":  248.6,
+        "expected_items":  409.3,
+        "actual_items":  438,
+        "actual_orders":  238,
+        "actual_revenue":  3893,
+        "actual_ingredient_cost":  1078.08,
+        "expected_event_lift_pct":  64.6,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  1.069,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "giants-2026-09-12",
+                           "name":  "Giants vs San Diego Padres",
+                           "venue":  "Oracle Park",
+                           "start_time":  "13:05",
+                           "model":  "oracle",
+                           "peak_multiplier_k":  2.2,
+                           "expected_incremental_items":  160.7,
+                           "incremental_pct_of_baseline":  64.6,
+                           "true_effect":  "strong",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-13",
+        "day_of_week":  "Sunday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "event_lift_strong",
+        "baseline_expected_items":  187.4,
+        "expected_items":  244.4,
+        "actual_items":  234,
+        "actual_orders":  146,
+        "actual_revenue":  2118,
+        "actual_ingredient_cost":  587.63,
+        "expected_event_lift_pct":  30.4,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  1.027,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "giants-2026-09-13",
+                           "name":  "Giants vs San Diego Padres",
+                           "venue":  "Oracle Park",
+                           "start_time":  "16:20",
+                           "model":  "oracle",
+                           "peak_multiplier_k":  2,
+                           "expected_incremental_items":  57,
+                           "incremental_pct_of_baseline":  30.4,
+                           "true_effect":  "strong",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-14",
+        "day_of_week":  "Monday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "no_event",
+        "baseline_expected_items":  128.4,
+        "expected_items":  128.4,
+        "actual_items":  116,
+        "actual_orders":  74,
+        "actual_revenue":  1059,
+        "actual_ingredient_cost":  299.08,
+        "expected_event_lift_pct":  0,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.96,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-15",
+        "day_of_week":  "Tuesday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "event_lift_moderate",
+        "baseline_expected_items":  137,
+        "expected_items":  161.1,
+        "actual_items":  141,
+        "actual_orders":  87,
+        "actual_revenue":  1285.5,
+        "actual_ingredient_cost":  359.18,
+        "expected_event_lift_pct":  17.6,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.885,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "dreamforce-2026-09-15",
+                           "name":  "Dreamforce 2026 (day 1)",
+                           "venue":  "Moscone Center",
+                           "start_time":  "09:00",
+                           "model":  "conference",
+                           "peak_multiplier_k":  0.35,
+                           "expected_incremental_items":  24.1,
+                           "incremental_pct_of_baseline":  17.6,
+                           "true_effect":  "moderate",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-16",
+        "day_of_week":  "Wednesday",
+        "open":  "11:00",
+        "close":  "23:00",
+        "label":  "event_lift_strong",
+        "baseline_expected_items":  145.6,
+        "expected_items":  261.1,
+        "actual_items":  267,
+        "actual_orders":  157,
+        "actual_revenue":  2477.5,
+        "actual_ingredient_cost":  686.83,
+        "expected_event_lift_pct":  75,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.985,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "dreamforce-2026-09-16",
+                           "name":  "Dreamforce 2026 (day 2)",
+                           "venue":  "Moscone Center",
+                           "start_time":  "09:00",
+                           "model":  "conference",
+                           "peak_multiplier_k":  0.35,
+                           "expected_incremental_items":  25.5,
+                           "incremental_pct_of_baseline":  17.5,
+                           "true_effect":  "moderate",
+                           "note":  ""
+                       },
+                       {
+                           "event_id":  "dreamfest-2026-09-16",
+                           "name":  "Dreamfest 2026 (Gwen Stefani, Usher)",
+                           "venue":  "Oracle Park",
+                           "start_time":  "18:00",
+                           "model":  "oracle",
+                           "peak_multiplier_k":  2.2,
+                           "expected_incremental_items":  83.7,
+                           "incremental_pct_of_baseline":  57.5,
+                           "true_effect":  "strong",
+                           "note":  "start is doors time; private Dreamforce attendee event"
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-17",
+        "day_of_week":  "Thursday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "event_lift_moderate",
+        "baseline_expected_items":  165.9,
+        "expected_items":  194.6,
+        "actual_items":  181,
+        "actual_orders":  105,
+        "actual_revenue":  1665,
+        "actual_ingredient_cost":  459.54,
+        "expected_event_lift_pct":  17.3,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.948,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "dreamforce-2026-09-17",
+                           "name":  "Dreamforce 2026 (day 3)",
+                           "venue":  "Moscone Center",
+                           "start_time":  "09:00",
+                           "model":  "conference",
+                           "peak_multiplier_k":  0.35,
+                           "expected_incremental_items":  28.7,
+                           "incremental_pct_of_baseline":  17.3,
+                           "true_effect":  "moderate",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-18",
+        "day_of_week":  "Friday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "event_lift_weak",
+        "baseline_expected_items":  231.4,
+        "expected_items":  249,
+        "actual_items":  264,
+        "actual_orders":  161,
+        "actual_revenue":  2506.5,
+        "actual_ingredient_cost":  696.99,
+        "expected_event_lift_pct":  7.6,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.993,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "valkyries-2026-09-18",
+                           "name":  "Valkyries vs Portland Fire",
+                           "venue":  "Chase Center",
+                           "start_time":  "19:00",
+                           "model":  "chase",
+                           "peak_multiplier_k":  0.25,
+                           "expected_incremental_items":  17.6,
+                           "incremental_pct_of_baseline":  7.6,
+                           "true_effect":  "weak",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-19",
+        "day_of_week":  "Saturday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "event_lift_weak",
+        "baseline_expected_items":  248.6,
+        "expected_items":  257.2,
+        "actual_items":  290,
+        "actual_orders":  176,
+        "actual_revenue":  2661,
+        "actual_ingredient_cost":  749.85,
+        "expected_event_lift_pct":  3.5,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  1.073,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "valkyries-2026-09-19",
+                           "name":  "Valkyries vs Seattle Storm",
+                           "venue":  "Chase Center",
+                           "start_time":  "17:30",
+                           "model":  "chase",
+                           "peak_multiplier_k":  0.25,
+                           "expected_incremental_items":  8.6,
+                           "incremental_pct_of_baseline":  3.5,
+                           "true_effect":  "weak",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-20",
+        "day_of_week":  "Sunday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "no_event",
+        "baseline_expected_items":  187.4,
+        "expected_items":  187.4,
+        "actual_items":  167,
+        "actual_orders":  114,
+        "actual_revenue":  1580,
+        "actual_ingredient_cost":  458.14,
+        "expected_event_lift_pct":  0,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.95,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-21",
+        "day_of_week":  "Monday",
+        "open":  "11:00",
+        "close":  "23:00",
+        "label":  "event_lift_strong",
+        "baseline_expected_items":  128.4,
+        "expected_items":  192.7,
+        "actual_items":  181,
+        "actual_orders":  120,
+        "actual_revenue":  1695,
+        "actual_ingredient_cost":  460.84,
+        "expected_event_lift_pct":  50.1,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.987,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "giants-2026-09-21",
+                           "name":  "Giants vs Minnesota Twins",
+                           "venue":  "Oracle Park",
+                           "start_time":  "18:45",
+                           "model":  "oracle",
+                           "peak_multiplier_k":  1.2,
+                           "expected_incremental_items":  64.3,
+                           "incremental_pct_of_baseline":  50.1,
+                           "true_effect":  "strong",
+                           "note":  "team already eliminated"
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-22",
+        "day_of_week":  "Tuesday",
+        "open":  "11:00",
+        "close":  "23:00",
+        "label":  "event_lift_muted",
+        "baseline_expected_items":  137,
+        "expected_items":  138.7,
+        "actual_items":  132,
+        "actual_orders":  83,
+        "actual_revenue":  1231.5,
+        "actual_ingredient_cost":  335.33,
+        "expected_event_lift_pct":  21.2,
+        "multipliers":  {
+                            "day_adjustment":  0.8,
+                            "random_noise":  1.023,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "giants-2026-09-22",
+                           "name":  "Giants vs Minnesota Twins",
+                           "venue":  "Oracle Park",
+                           "start_time":  "18:45",
+                           "model":  "oracle",
+                           "peak_multiplier_k":  0.4,
+                           "expected_incremental_items":  29.1,
+                           "incremental_pct_of_baseline":  21.2,
+                           "true_effect":  "moderate",
+                           "note":  "simulated cold, foggy night: thin crowd"
+                       }
+                   ],
+        "notes":  [
+                      "simulated weather: cold, foggy, windy evening"
+                  ]
+    },
+    {
+        "date":  "2026-09-23",
+        "day_of_week":  "Wednesday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "event_lift_strong",
+        "baseline_expected_items":  145.6,
+        "expected_items":  195.5,
+        "actual_items":  225,
+        "actual_orders":  127,
+        "actual_revenue":  2064.5,
+        "actual_ingredient_cost":  559.58,
+        "expected_event_lift_pct":  34.3,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  1.057,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "giants-2026-09-23",
+                           "name":  "Giants vs Minnesota Twins",
+                           "venue":  "Oracle Park",
+                           "start_time":  "12:45",
+                           "model":  "oracle",
+                           "peak_multiplier_k":  1.1,
+                           "expected_incremental_items":  47.8,
+                           "incremental_pct_of_baseline":  32.8,
+                           "true_effect":  "strong",
+                           "note":  ""
+                       },
+                       {
+                           "event_id":  "lily-allen-2026-09-23",
+                           "name":  "Lily Allen",
+                           "venue":  "Chase Center",
+                           "start_time":  "20:00",
+                           "model":  "chase",
+                           "peak_multiplier_k":  0.04,
+                           "expected_incremental_items":  2.1,
+                           "incremental_pct_of_baseline":  1.5,
+                           "true_effect":  "none",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-24",
+        "day_of_week":  "Thursday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "no_event",
+        "baseline_expected_items":  165.9,
+        "expected_items":  165.9,
+        "actual_items":  180,
+        "actual_orders":  119,
+        "actual_revenue":  1697.5,
+        "actual_ingredient_cost":  470.32,
+        "expected_event_lift_pct":  0,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  1.073,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-25",
+        "day_of_week":  "Friday",
+        "open":  "11:00",
+        "close":  "23:00",
+        "label":  "event_lift_strong",
+        "baseline_expected_items":  231.4,
+        "expected_items":  501.5,
+        "actual_items":  574,
+        "actual_orders":  318,
+        "actual_revenue":  5262.5,
+        "actual_ingredient_cost":  1458.51,
+        "expected_event_lift_pct":  116.7,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  1.081,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "giants-2026-09-25",
+                           "name":  "Giants vs Los Angeles Dodgers",
+                           "venue":  "Oracle Park",
+                           "start_time":  "19:15",
+                           "model":  "oracle",
+                           "peak_multiplier_k":  2.8,
+                           "expected_incremental_items":  270.1,
+                           "incremental_pct_of_baseline":  116.7,
+                           "true_effect":  "strong",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-26",
+        "day_of_week":  "Saturday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "event_lift_strong",
+        "baseline_expected_items":  248.6,
+        "expected_items":  468.8,
+        "actual_items":  468,
+        "actual_orders":  254,
+        "actual_revenue":  4364,
+        "actual_ingredient_cost":  1238.49,
+        "expected_event_lift_pct":  88.6,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.924,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "giants-2026-09-26",
+                           "name":  "Giants vs Los Angeles Dodgers",
+                           "venue":  "Oracle Park",
+                           "start_time":  "13:05",
+                           "model":  "oracle",
+                           "peak_multiplier_k":  3,
+                           "expected_incremental_items":  220.2,
+                           "incremental_pct_of_baseline":  88.6,
+                           "true_effect":  "strong",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-27",
+        "day_of_week":  "Sunday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "event_lift_strong",
+        "baseline_expected_items":  187.4,
+        "expected_items":  296.3,
+        "actual_items":  350,
+        "actual_orders":  197,
+        "actual_revenue":  3213.5,
+        "actual_ingredient_cost":  901.24,
+        "expected_event_lift_pct":  57.2,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  1.15,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "giants-2026-09-27",
+                           "name":  "Giants vs Los Angeles Dodgers",
+                           "venue":  "Oracle Park",
+                           "start_time":  "12:05",
+                           "model":  "oracle",
+                           "peak_multiplier_k":  2.8,
+                           "expected_incremental_items":  97.4,
+                           "incremental_pct_of_baseline":  52,
+                           "true_effect":  "strong",
+                           "note":  "season finale"
+                       },
+                       {
+                           "event_id":  "valkyries-2026-09-27",
+                           "name":  "WNBA Playoffs R1 G1: Valkyries vs Dallas Wings",
+                           "venue":  "Chase Center",
+                           "start_time":  "18:00",
+                           "model":  "chase",
+                           "peak_multiplier_k":  0.3,
+                           "expected_incremental_items":  9.8,
+                           "incremental_pct_of_baseline":  5.2,
+                           "true_effect":  "weak",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-28",
+        "day_of_week":  "Monday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "no_event",
+        "baseline_expected_items":  128.4,
+        "expected_items":  128.4,
+        "actual_items":  123,
+        "actual_orders":  82,
+        "actual_revenue":  1145,
+        "actual_ingredient_cost":  319.74,
+        "expected_event_lift_pct":  0,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.987,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-29",
+        "day_of_week":  "Tuesday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "no_event",
+        "baseline_expected_items":  137,
+        "expected_items":  137,
+        "actual_items":  111,
+        "actual_orders":  77,
+        "actual_revenue":  1065.5,
+        "actual_ingredient_cost":  298.87,
+        "expected_event_lift_pct":  0,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.9,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-09-30",
+        "day_of_week":  "Wednesday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "no_event_slow_day",
+        "baseline_expected_items":  145.6,
+        "expected_items":  104.8,
+        "actual_items":  111,
+        "actual_orders":  74,
+        "actual_revenue":  1019,
+        "actual_ingredient_cost":  287.11,
+        "expected_event_lift_pct":  0,
+        "multipliers":  {
+                            "day_adjustment":  0.72,
+                            "random_noise":  1.027,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+
+                   ],
+        "notes":  [
+                      "simulated weather: drizzle most of the day"
+                  ]
+    },
+    {
+        "date":  "2026-10-01",
+        "day_of_week":  "Thursday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "decoy_busy_no_event",
+        "baseline_expected_items":  165.9,
+        "expected_items":  216.4,
+        "actual_items":  216,
+        "actual_orders":  134,
+        "actual_revenue":  1979,
+        "actual_ingredient_cost":  550.43,
+        "expected_event_lift_pct":  0,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.996,
+                            "non_event_surge_items":  50.5
+                        },
+        "events":  [
+
+                   ],
+        "notes":  [
+                      "large walk-up group orders from a nearby office; no event"
+                  ]
+    },
+    {
+        "date":  "2026-10-02",
+        "day_of_week":  "Friday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "event_lift_weak",
+        "baseline_expected_items":  231.4,
+        "expected_items":  245.2,
+        "actual_items":  257,
+        "actual_orders":  163,
+        "actual_revenue":  2360,
+        "actual_ingredient_cost":  670.36,
+        "expected_event_lift_pct":  6,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  1.01,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "valkyries-2026-10-02",
+                           "name":  "WNBA Playoffs R1 G3: Valkyries vs Dallas Wings",
+                           "venue":  "Chase Center",
+                           "start_time":  "18:00",
+                           "model":  "chase",
+                           "peak_multiplier_k":  0.35,
+                           "expected_incremental_items":  13.8,
+                           "incremental_pct_of_baseline":  6,
+                           "true_effect":  "weak",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-10-03",
+        "day_of_week":  "Saturday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "event_lift_weak",
+        "baseline_expected_items":  248.6,
+        "expected_items":  259.9,
+        "actual_items":  221,
+        "actual_orders":  135,
+        "actual_revenue":  2053,
+        "actual_ingredient_cost":  580.5,
+        "expected_event_lift_pct":  4.5,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  0.87,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "disney-2026-10-03",
+                           "name":  "Disney Worlds Collide Concert Tour",
+                           "venue":  "Chase Center",
+                           "start_time":  "19:00",
+                           "model":  "chase",
+                           "peak_multiplier_k":  0.15,
+                           "expected_incremental_items":  11.3,
+                           "incremental_pct_of_baseline":  4.5,
+                           "true_effect":  "weak",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    },
+    {
+        "date":  "2026-10-04",
+        "day_of_week":  "Sunday",
+        "open":  "11:00",
+        "close":  "21:00",
+        "label":  "event_lift_weak",
+        "baseline_expected_items":  187.4,
+        "expected_items":  203.8,
+        "actual_items":  219,
+        "actual_orders":  134,
+        "actual_revenue":  2018.5,
+        "actual_ingredient_cost":  553.39,
+        "expected_event_lift_pct":  8.7,
+        "multipliers":  {
+                            "day_adjustment":  1,
+                            "random_noise":  1.079,
+                            "non_event_surge_items":  0
+                        },
+        "events":  [
+                       {
+                           "event_id":  "valkyries-2026-10-04",
+                           "name":  "WNBA Semifinals G1: Valkyries vs Las Vegas Aces",
+                           "venue":  "Chase Center",
+                           "start_time":  "13:00",
+                           "model":  "chase",
+                           "peak_multiplier_k":  0.3,
+                           "expected_incremental_items":  16.4,
+                           "incremental_pct_of_baseline":  8.7,
+                           "true_effect":  "weak",
+                           "note":  ""
+                       }
+                   ],
+        "notes":  [
+
+                  ]
+    }
+]
