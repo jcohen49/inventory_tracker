@@ -1,0 +1,388 @@
+{
+ "date": "2026-09-10",
+ "day_of_week": "Thursday",
+ "status": "past",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 165.9,
+ "expected_items": 165.9,
+ "expected_vs_baseline_pct": 0.0,
+ "expected_orders": 99,
+ "expected_revenue": 1527.41,
+ "range_items": [
+  146,
+  186
+ ],
+ "confidence": "high",
+ "peak_hour": "12:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  18.9,
+  38.0,
+  16.2,
+  7.0,
+  7.8,
+  8.5,
+  15.2,
+  29.8,
+  16.6,
+  8.0
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   5.0,
+   10.0,
+   4.3,
+   1.8,
+   2.0,
+   2.2,
+   4.0,
+   7.8,
+   4.4,
+   2.1
+  ],
+  "tacos": [
+   3.7,
+   7.4,
+   3.2,
+   1.4,
+   1.5,
+   1.7,
+   3.0,
+   5.8,
+   3.2,
+   1.6
+  ],
+  "bowl": [
+   2.8,
+   5.5,
+   2.4,
+   1.0,
+   1.1,
+   1.2,
+   2.2,
+   4.4,
+   2.4,
+   1.2
+  ],
+  "nachos": [
+   1.9,
+   3.8,
+   1.6,
+   0.7,
+   0.8,
+   0.8,
+   1.5,
+   3.0,
+   1.7,
+   0.8
+  ],
+  "quesadilla": [
+   1.7,
+   3.4,
+   1.5,
+   0.6,
+   0.7,
+   0.8,
+   1.4,
+   2.7,
+   1.5,
+   0.7
+  ],
+  "chips-guac": [
+   1.3,
+   2.7,
+   1.2,
+   0.5,
+   0.6,
+   0.6,
+   1.1,
+   2.1,
+   1.2,
+   0.6
+  ],
+  "chips-queso": [
+   1.1,
+   2.2,
+   0.9,
+   0.4,
+   0.4,
+   0.5,
+   0.9,
+   1.7,
+   0.9,
+   0.5
+  ],
+  "salad": [
+   0.7,
+   1.5,
+   0.6,
+   0.3,
+   0.3,
+   0.3,
+   0.6,
+   1.2,
+   0.6,
+   0.3
+  ],
+  "side-rice": [
+   0.4,
+   0.8,
+   0.3,
+   0.1,
+   0.2,
+   0.2,
+   0.3,
+   0.6,
+   0.3,
+   0.2
+  ],
+  "side-beans": [
+   0.4,
+   0.7,
+   0.3,
+   0.1,
+   0.1,
+   0.2,
+   0.3,
+   0.6,
+   0.3,
+   0.2
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 43.6,
+  "tacos": 32.5,
+  "bowl": 24.2,
+  "nachos": 16.6,
+  "quesadilla": 14.9,
+  "chips-guac": 11.8,
+  "chips-queso": 9.4,
+  "salad": 6.5,
+  "side-rice": 3.3,
+  "side-beans": 3.1
+ },
+ "drivers": [
+  {
+   "event_id": "ferry-farmers-2026-09-10",
+   "name": "Ferry Building Farmers Market",
+   "venue": "Ferry Building",
+   "distance_miles": 1.2,
+   "direction": "flat",
+   "expected_effect_pct": 0,
+   "start_time": "10:00",
+   "end_time": "14:00",
+   "explanation": "Ferry Building Farmers Market (1.2 mi away): not expected to move sales."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 44 Signature Burrito",
+  "Expect about 32 Street Tacos (3)",
+  "Expect about 24 Burrito Bowl"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "completed",
+  "runs_at": "21:30",
+  "note": "Completed at end of day.",
+  "summary": "Sold 141 items vs 166 expected (-15%). A typical Thursday runs about 166 items [1]. Ferry Building Farmers Market (1.2 mi away): not expected to move sales. [2] Memory has no close analogue, so the weekday baseline carries this one [3].",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Thursday'\n  AND  date < '2026-09-10'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Thursday",
+       165.9,
+       0
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "ferry-farmers-2026-09-10",
+    "query": "Ferry Building Farmers Market Ferry Building San Francisco Sep 10",
+    "title": "Ferry Building Farmers Market",
+    "url": "https://www.sftravel.com/",
+    "domain": "sftravel.com",
+    "snippet": "Community market at Ferry Building, 10:00 to 14:00 (start time not confirmed).",
+    "verified": false,
+    "placeholder": true
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_29b8dc2d87",
+    "query": "past sales near Ferry Building on community market days",
+    "memory": "No close past analogue for ferry building farmers market; falling back to the typical day-of-week baseline.",
+    "relevance": 0.41,
+    "avg_vs_baseline_pct": null,
+    "linked_days": []
+   }
+  ],
+  "adjustments": {
+   "stat": 166,
+   "rows": [
+    {
+     "label": "Ferry Building Farmers Market",
+     "event_id": "ferry-farmers-2026-09-10",
+     "delta": 0,
+     "kind": "flat"
+    }
+   ],
+   "forecast": 166,
+   "actual": 141,
+   "gap": -25,
+   "gap_note": "Not explained by any known event; flagged for the next run."
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "no_change",
+   "ingredient": null,
+   "change": "0",
+   "status": "completed",
+   "detail": "Left reorder alerts at standard par at end of day on Sep 10 (21:30).",
+   "runs_at": "21:30"
+  }
+ ],
+ "statistical": {
+  "method": "Thursday x hour seasonal average of past sales, events excluded",
+  "n_days": 0,
+  "total": 165.9,
+  "hourly": [
+   18.9,
+   38.0,
+   16.3,
+   7.0,
+   7.8,
+   8.5,
+   15.3,
+   29.9,
+   16.6,
+   8.0
+  ],
+  "low": [
+   15.5,
+   32.7,
+   13.1,
+   4.8,
+   5.5,
+   6.1,
+   12.2,
+   25.4,
+   13.4,
+   5.7
+  ],
+  "high": [
+   22.3,
+   43.3,
+   19.4,
+   9.2,
+   10.1,
+   10.8,
+   18.3,
+   34.3,
+   19.7,
+   10.3
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Thursday'\n  AND  date < '2026-09-10'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Thursday",
+      165.9,
+      0
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-09-10"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Chase Center events 2026-09-10"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Moscone Center events 2026-09-10"
+   }
+  ],
+  "other": [
+   {
+    "event_id": "ferry-farmers-2026-09-10",
+    "name": "Ferry Building Farmers Market",
+    "category": "Community market",
+    "venue": "Ferry Building",
+    "miles": 1.2,
+    "start": "10:00",
+    "end": "14:00",
+    "status": "took place",
+    "placeholder": true,
+    "effect_pct": 0,
+    "direction": "flat",
+    "tavily": {
+     "type": "tavily",
+     "event_id": "ferry-farmers-2026-09-10",
+     "query": "Ferry Building Farmers Market Ferry Building San Francisco Sep 10",
+     "title": "Ferry Building Farmers Market",
+     "url": "https://www.sftravel.com/",
+     "domain": "sftravel.com",
+     "snippet": "Community market at Ferry Building, 10:00 to 14:00 (start time not confirmed).",
+     "verified": false,
+     "placeholder": true
+    },
+    "source_id": 2,
+    "more": []
+   }
+  ]
+ },
+ "actual_items": 141,
+ "label": "no_event"
+}

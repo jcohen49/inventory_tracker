@@ -1,0 +1,582 @@
+{
+ "days": [
+  {
+   "date": "2026-09-05",
+   "status": "past",
+   "expected_items": 248.6,
+   "baseline_items": 248.6,
+   "expected_vs_baseline_pct": -0.0,
+   "events": []
+  },
+  {
+   "date": "2026-09-06",
+   "status": "past",
+   "expected_items": 187.4,
+   "baseline_items": 187.4,
+   "expected_vs_baseline_pct": 0.0,
+   "events": []
+  },
+  {
+   "date": "2026-09-07",
+   "status": "past",
+   "expected_items": 155.9,
+   "baseline_items": 128.4,
+   "expected_vs_baseline_pct": 21.4,
+   "events": [
+    "Giants vs St. Louis Cardinals"
+   ]
+  },
+  {
+   "date": "2026-09-08",
+   "status": "past",
+   "expected_items": 222.8,
+   "baseline_items": 137.0,
+   "expected_vs_baseline_pct": 62.6,
+   "events": [
+    "Giants vs St. Louis Cardinals"
+   ]
+  },
+  {
+   "date": "2026-09-09",
+   "status": "past",
+   "expected_items": 226.3,
+   "baseline_items": 145.6,
+   "expected_vs_baseline_pct": 55.4,
+   "events": [
+    "Giants vs St. Louis Cardinals",
+    "Weezer with The Shins and Silversun Pickups"
+   ]
+  },
+  {
+   "date": "2026-09-10",
+   "status": "past",
+   "expected_items": 165.9,
+   "baseline_items": 165.9,
+   "expected_vs_baseline_pct": 0.0,
+   "events": [
+    "Ferry Building Farmers Market"
+   ]
+  },
+  {
+   "date": "2026-09-11",
+   "status": "past",
+   "expected_items": 435.9,
+   "baseline_items": 231.4,
+   "expected_vs_baseline_pct": 88.4,
+   "events": [
+    "Giants vs San Diego Padres"
+   ]
+  },
+  {
+   "date": "2026-09-12",
+   "status": "past",
+   "expected_items": 409.3,
+   "baseline_items": 248.6,
+   "expected_vs_baseline_pct": 64.6,
+   "events": [
+    "Giants vs San Diego Padres"
+   ]
+  },
+  {
+   "date": "2026-09-13",
+   "status": "past",
+   "expected_items": 244.4,
+   "baseline_items": 187.4,
+   "expected_vs_baseline_pct": 30.4,
+   "events": [
+    "Giants vs San Diego Padres"
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "status": "past",
+   "expected_items": 123.3,
+   "baseline_items": 128.4,
+   "expected_vs_baseline_pct": -4.0,
+   "events": [
+    "Muni N-Judah track work: King St lane closure"
+   ]
+  },
+  {
+   "date": "2026-09-15",
+   "status": "past",
+   "expected_items": 161.1,
+   "baseline_items": 137.0,
+   "expected_vs_baseline_pct": 17.6,
+   "events": [
+    "Dreamforce 2026 (day 1)"
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "status": "past",
+   "expected_items": 261.1,
+   "baseline_items": 145.6,
+   "expected_vs_baseline_pct": 79.3,
+   "events": [
+    "Dreamforce 2026 (day 2)",
+    "Dreamfest 2026 (Gwen Stefani, Usher)"
+   ]
+  },
+  {
+   "date": "2026-09-17",
+   "status": "past",
+   "expected_items": 194.6,
+   "baseline_items": 165.9,
+   "expected_vs_baseline_pct": 17.3,
+   "events": [
+    "Dreamforce 2026 (day 3)"
+   ]
+  },
+  {
+   "date": "2026-09-18",
+   "status": "past",
+   "expected_items": 249.0,
+   "baseline_items": 231.4,
+   "expected_vs_baseline_pct": 7.6,
+   "events": [
+    "Valkyries vs Portland Fire"
+   ]
+  },
+  {
+   "date": "2026-09-19",
+   "status": "past",
+   "expected_items": 257.2,
+   "baseline_items": 248.6,
+   "expected_vs_baseline_pct": 3.5,
+   "events": [
+    "Valkyries vs Seattle Storm"
+   ]
+  },
+  {
+   "date": "2026-09-20",
+   "status": "past",
+   "expected_items": 187.4,
+   "baseline_items": 187.4,
+   "expected_vs_baseline_pct": 0.0,
+   "events": []
+  },
+  {
+   "date": "2026-09-21",
+   "status": "past",
+   "expected_items": 192.7,
+   "baseline_items": 128.4,
+   "expected_vs_baseline_pct": 50.1,
+   "events": [
+    "Giants vs Minnesota Twins"
+   ]
+  },
+  {
+   "date": "2026-09-22",
+   "status": "past",
+   "expected_items": 173.4,
+   "baseline_items": 137.0,
+   "expected_vs_baseline_pct": 26.6,
+   "events": [
+    "Giants vs Minnesota Twins"
+   ]
+  },
+  {
+   "date": "2026-09-23",
+   "status": "past",
+   "expected_items": 195.5,
+   "baseline_items": 145.6,
+   "expected_vs_baseline_pct": 34.3,
+   "events": [
+    "Giants vs Minnesota Twins",
+    "Lily Allen"
+   ]
+  },
+  {
+   "date": "2026-09-24",
+   "status": "past",
+   "expected_items": 165.9,
+   "baseline_items": 165.9,
+   "expected_vs_baseline_pct": 0.0,
+   "events": []
+  },
+  {
+   "date": "2026-09-25",
+   "status": "past",
+   "expected_items": 501.5,
+   "baseline_items": 231.4,
+   "expected_vs_baseline_pct": 116.7,
+   "events": [
+    "Giants vs Los Angeles Dodgers"
+   ]
+  },
+  {
+   "date": "2026-09-26",
+   "status": "past",
+   "expected_items": 468.8,
+   "baseline_items": 248.6,
+   "expected_vs_baseline_pct": 88.6,
+   "events": [
+    "Giants vs Los Angeles Dodgers"
+   ]
+  },
+  {
+   "date": "2026-09-27",
+   "status": "past",
+   "expected_items": 296.3,
+   "baseline_items": 187.4,
+   "expected_vs_baseline_pct": 58.1,
+   "events": [
+    "Giants vs Los Angeles Dodgers",
+    "WNBA Playoffs R1 G1: Valkyries vs Dallas Wings"
+   ]
+  },
+  {
+   "date": "2026-09-28",
+   "status": "past",
+   "expected_items": 128.4,
+   "baseline_items": 128.4,
+   "expected_vs_baseline_pct": 0.0,
+   "events": []
+  },
+  {
+   "date": "2026-09-29",
+   "status": "past",
+   "expected_items": 116.5,
+   "baseline_items": 137.0,
+   "expected_vs_baseline_pct": -15.0,
+   "events": [
+    "Light rain, 58F"
+   ]
+  },
+  {
+   "date": "2026-09-30",
+   "status": "past",
+   "expected_items": 145.6,
+   "baseline_items": 145.6,
+   "expected_vs_baseline_pct": -0.0,
+   "events": []
+  },
+  {
+   "date": "2026-10-01",
+   "status": "past",
+   "expected_items": 165.9,
+   "baseline_items": 165.9,
+   "expected_vs_baseline_pct": 0.0,
+   "events": []
+  },
+  {
+   "date": "2026-10-02",
+   "status": "past",
+   "expected_items": 245.2,
+   "baseline_items": 231.4,
+   "expected_vs_baseline_pct": 6.0,
+   "events": [
+    "WNBA Playoffs R1 G3: Valkyries vs Dallas Wings"
+   ]
+  },
+  {
+   "date": "2026-10-03",
+   "status": "past",
+   "expected_items": 259.9,
+   "baseline_items": 248.6,
+   "expected_vs_baseline_pct": 4.5,
+   "events": [
+    "Disney Worlds Collide Concert Tour"
+   ]
+  },
+  {
+   "date": "2026-10-04",
+   "status": "past",
+   "expected_items": 203.8,
+   "baseline_items": 187.4,
+   "expected_vs_baseline_pct": 8.8,
+   "events": [
+    "WNBA Semifinals G1: Valkyries vs Las Vegas Aces"
+   ]
+  },
+  {
+   "date": "2026-10-05",
+   "status": "today",
+   "expected_items": 122.6,
+   "baseline_items": 128.4,
+   "expected_vs_baseline_pct": -4.5,
+   "events": [
+    "Central Subway track work: King St lane closure"
+   ]
+  },
+  {
+   "date": "2026-10-06",
+   "status": "future",
+   "expected_items": 181.0,
+   "baseline_items": 137.0,
+   "expected_vs_baseline_pct": 32.1,
+   "events": [
+    "GNE 2026 (day 1)",
+    "Golden State Warriors vs. Los Angeles Lakers (preseason)"
+   ]
+  },
+  {
+   "date": "2026-10-07",
+   "status": "future",
+   "expected_items": 204.0,
+   "baseline_items": 145.6,
+   "expected_vs_baseline_pct": 40.1,
+   "events": [
+    "GNE 2026 (day 2)",
+    "WNBA Semifinals G2: Golden State Valkyries vs. Las Vegas Aces",
+    "Rod Wave: Don't Look Down Tour"
+   ]
+  },
+  {
+   "date": "2026-10-08",
+   "status": "future",
+   "expected_items": 194.3,
+   "baseline_items": 165.9,
+   "expected_vs_baseline_pct": 17.1,
+   "events": [
+    "GNE 2026 (day 3)",
+    "SF Fleet Week: Blue Angels practice"
+   ]
+  },
+  {
+   "date": "2026-10-09",
+   "status": "future",
+   "expected_items": 231.6,
+   "baseline_items": 231.4,
+   "expected_vs_baseline_pct": 0.1,
+   "events": []
+  },
+  {
+   "date": "2026-10-10",
+   "status": "future",
+   "expected_items": 316.0,
+   "baseline_items": 248.6,
+   "expected_vs_baseline_pct": 27.1,
+   "events": [
+    "SF Fleet Week: Air Show",
+    "Golden State Warriors vs. Sacramento Kings (preseason)"
+   ]
+  },
+  {
+   "date": "2026-10-11",
+   "status": "future",
+   "expected_items": 206.3,
+   "baseline_items": 187.4,
+   "expected_vs_baseline_pct": 10.1,
+   "events": [
+    "SF Fleet Week: Air Show"
+   ]
+  },
+  {
+   "date": "2026-10-12",
+   "status": "future",
+   "expected_items": 151.6,
+   "baseline_items": 128.4,
+   "expected_vs_baseline_pct": 18.1,
+   "events": [
+    "Concert at Chase Center (headliner TBA)"
+   ]
+  },
+  {
+   "date": "2026-10-13",
+   "status": "future",
+   "expected_items": 159.1,
+   "baseline_items": 137.0,
+   "expected_vs_baseline_pct": 16.1,
+   "events": [
+    "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 1)"
+   ]
+  },
+  {
+   "date": "2026-10-14",
+   "status": "future",
+   "expected_items": 164.0,
+   "baseline_items": 145.6,
+   "expected_vs_baseline_pct": 12.6,
+   "events": [
+    "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 2)",
+    "Third St Bridge maintenance: lane closure"
+   ]
+  },
+  {
+   "date": "2026-10-15",
+   "status": "future",
+   "expected_items": 192.6,
+   "baseline_items": 165.9,
+   "expected_vs_baseline_pct": 16.1,
+   "events": [
+    "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 3)"
+   ]
+  },
+  {
+   "date": "2026-10-16",
+   "status": "future",
+   "expected_items": 231.6,
+   "baseline_items": 231.4,
+   "expected_vs_baseline_pct": 0.1,
+   "events": []
+  },
+  {
+   "date": "2026-10-17",
+   "status": "future",
+   "expected_items": 463.1,
+   "baseline_items": 248.6,
+   "expected_vs_baseline_pct": 86.3,
+   "events": [
+    "Concert at Oracle Park (headliner TBA)"
+   ]
+  },
+  {
+   "date": "2026-10-18",
+   "status": "future",
+   "expected_items": 325.9,
+   "baseline_items": 187.4,
+   "expected_vs_baseline_pct": 73.9,
+   "events": [
+    "Concert at Oracle Park (headliner TBA), night 2"
+   ]
+  },
+  {
+   "date": "2026-10-19",
+   "status": "future",
+   "expected_items": 128.5,
+   "baseline_items": 128.4,
+   "expected_vs_baseline_pct": 0.1,
+   "events": []
+  },
+  {
+   "date": "2026-10-20",
+   "status": "future",
+   "expected_items": 109.7,
+   "baseline_items": 137.0,
+   "expected_vs_baseline_pct": -19.9,
+   "events": [
+    "Heavy rain forecast"
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "status": "future",
+   "expected_items": 145.7,
+   "baseline_items": 145.6,
+   "expected_vs_baseline_pct": 0.1,
+   "events": []
+  },
+  {
+   "date": "2026-10-22",
+   "status": "future",
+   "expected_items": 212.5,
+   "baseline_items": 165.9,
+   "expected_vs_baseline_pct": 28.1,
+   "events": [
+    "Warriors home opener"
+   ]
+  },
+  {
+   "date": "2026-10-23",
+   "status": "future",
+   "expected_items": 231.6,
+   "baseline_items": 231.4,
+   "expected_vs_baseline_pct": 0.1,
+   "events": []
+  },
+  {
+   "date": "2026-10-24",
+   "status": "future",
+   "expected_items": 313.5,
+   "baseline_items": 248.6,
+   "expected_vs_baseline_pct": 26.1,
+   "events": [
+    "Warriors home game"
+   ]
+  },
+  {
+   "date": "2026-10-25",
+   "status": "future",
+   "expected_items": 187.6,
+   "baseline_items": 187.4,
+   "expected_vs_baseline_pct": 0.1,
+   "events": []
+  },
+  {
+   "date": "2026-10-26",
+   "status": "future",
+   "expected_items": 128.5,
+   "baseline_items": 128.4,
+   "expected_vs_baseline_pct": 0.1,
+   "events": []
+  },
+  {
+   "date": "2026-10-27",
+   "status": "future",
+   "expected_items": 153.6,
+   "baseline_items": 137.0,
+   "expected_vs_baseline_pct": 12.1,
+   "events": [
+    "Moscone Center conference, day 1"
+   ]
+  },
+  {
+   "date": "2026-10-28",
+   "status": "future",
+   "expected_items": 163.2,
+   "baseline_items": 145.6,
+   "expected_vs_baseline_pct": 12.1,
+   "events": [
+    "Moscone Center conference, day 2"
+   ]
+  },
+  {
+   "date": "2026-10-29",
+   "status": "future",
+   "expected_items": 195.9,
+   "baseline_items": 165.9,
+   "expected_vs_baseline_pct": 18.1,
+   "events": [
+    "Concert at Chase Center (headliner TBA)"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "status": "future",
+   "expected_items": 231.6,
+   "baseline_items": 231.4,
+   "expected_vs_baseline_pct": 0.1,
+   "events": []
+  },
+  {
+   "date": "2026-10-31",
+   "status": "future",
+   "expected_items": 286.1,
+   "baseline_items": 248.6,
+   "expected_vs_baseline_pct": 15.1,
+   "events": [
+    "Halloween evening foot traffic"
+   ]
+  },
+  {
+   "date": "2026-11-01",
+   "status": "future",
+   "expected_items": 232.6,
+   "baseline_items": 187.4,
+   "expected_vs_baseline_pct": 24.1,
+   "events": [
+    "Warriors home game"
+   ]
+  },
+  {
+   "date": "2026-11-02",
+   "status": "future",
+   "expected_items": 128.5,
+   "baseline_items": 128.4,
+   "expected_vs_baseline_pct": 0.1,
+   "events": []
+  },
+  {
+   "date": "2026-11-03",
+   "status": "future",
+   "expected_items": 137.1,
+   "baseline_items": 137.0,
+   "expected_vs_baseline_pct": 0.1,
+   "events": [
+    "Election Day: polling places nearby"
+   ]
+  }
+ ]
+}

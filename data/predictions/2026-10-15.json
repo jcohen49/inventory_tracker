@@ -1,0 +1,426 @@
+{
+ "date": "2026-10-15",
+ "day_of_week": "Thursday",
+ "status": "future",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 165.9,
+ "expected_items": 192.6,
+ "expected_vs_baseline_pct": 16.1,
+ "expected_orders": 115,
+ "expected_revenue": 1757.11,
+ "range_items": [
+  169,
+  216
+ ],
+ "confidence": "medium",
+ "peak_hour": "12:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  22.4,
+  44.9,
+  23.2,
+  7.0,
+  7.8,
+  8.5,
+  19.9,
+  34.5,
+  16.6,
+  8.0
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   5.6,
+   11.2,
+   5.5,
+   1.8,
+   2.0,
+   2.2,
+   4.8,
+   8.7,
+   4.4,
+   2.1
+  ],
+  "tacos": [
+   4.8,
+   9.6,
+   5.3,
+   1.4,
+   1.5,
+   1.7,
+   4.5,
+   7.3,
+   3.2,
+   1.6
+  ],
+  "bowl": [
+   2.7,
+   5.5,
+   2.4,
+   1.0,
+   1.1,
+   1.2,
+   2.2,
+   4.3,
+   2.4,
+   1.2
+  ],
+  "nachos": [
+   2.6,
+   5.2,
+   3.0,
+   0.7,
+   0.8,
+   0.8,
+   2.5,
+   4.0,
+   1.7,
+   0.8
+  ],
+  "quesadilla": [
+   1.9,
+   3.8,
+   1.9,
+   0.6,
+   0.7,
+   0.8,
+   1.7,
+   3.0,
+   1.5,
+   0.7
+  ],
+  "chips-guac": [
+   1.7,
+   3.5,
+   1.9,
+   0.5,
+   0.6,
+   0.6,
+   1.6,
+   2.7,
+   1.2,
+   0.6
+  ],
+  "chips-queso": [
+   1.4,
+   2.9,
+   1.6,
+   0.4,
+   0.4,
+   0.5,
+   1.4,
+   2.2,
+   0.9,
+   0.5
+  ],
+  "salad": [
+   0.7,
+   1.4,
+   0.6,
+   0.3,
+   0.3,
+   0.3,
+   0.6,
+   1.1,
+   0.6,
+   0.3
+  ],
+  "side-rice": [
+   0.4,
+   0.9,
+   0.4,
+   0.1,
+   0.2,
+   0.2,
+   0.4,
+   0.7,
+   0.3,
+   0.2
+  ],
+  "side-beans": [
+   0.4,
+   0.8,
+   0.4,
+   0.1,
+   0.1,
+   0.2,
+   0.4,
+   0.6,
+   0.3,
+   0.2
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 48.4,
+  "tacos": 40.9,
+  "bowl": 24.1,
+  "nachos": 22.1,
+  "quesadilla": 16.6,
+  "chips-guac": 14.8,
+  "chips-queso": 12.3,
+  "salad": 6.2,
+  "side-rice": 3.7,
+  "side-beans": 3.5
+ },
+ "drivers": [
+  {
+   "event_id": "moscone-2026-10-15",
+   "name": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 3)",
+   "venue": "Moscone Center",
+   "distance_miles": 0.9,
+   "direction": "up",
+   "expected_effect_pct": 16,
+   "start_time": "09:00",
+   "end_time": "17:00",
+   "explanation": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 3) (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +16%."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 48 Signature Burrito",
+  "Expect about 41 Street Tacos (3)",
+  "Expect about 24 Burrito Bowl",
+  "Pre-portion nachos, chips and tortillas before the rush window"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "scheduled",
+  "runs_at": "end of day",
+  "note": "Scheduled to run at the end of the day on Oct 15 (21:30); this is the forecast it will start from.",
+  "summary": "Expected about 193 items (+16% vs a typical Thursday of 166 [1]), peaking around 12:00. SEMICON West 2026 and TechCrunch Disrupt 2026 (day 3) (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +16%. [2] Memory recall of similar days: <<2026-09-17|Sep 17>> +9% (181 items), <<2026-09-16|Sep 16>> +83% (267 items), <<2026-09-15|Sep 15>> +3% (141 items) [3].",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Thursday'\n  AND  date < '2026-10-15'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Thursday",
+       165.9,
+       4
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "moscone-2026-10-15",
+    "query": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 3) Moscone Center San Francisco Oct 15",
+    "title": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 3)",
+    "url": "https://www.moscone.com",
+    "domain": "moscone.com",
+    "snippet": "Conference at Moscone Center, 09:00 to 17:00.",
+    "verified": true,
+    "placeholder": false
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_7daa31a070",
+    "query": "past sales near Moscone Center on conference days",
+    "memory": "Comparable Moscone Center days (conference): the truck averaged +32% vs baseline over the last 3 day(s); most recent <<2026-09-17|Sep 17>> at 181 items.",
+    "relevance": 0.93,
+    "avg_vs_baseline_pct": 31.8,
+    "linked_days": [
+     {
+      "date": "2026-09-17",
+      "event": "Dreamforce 2026 (day 3)",
+      "category": "Conference",
+      "actual_items": 181,
+      "expected_items": 195,
+      "baseline_items": 166,
+      "vs_baseline_pct": 9.1,
+      "revenue": 1665
+     },
+     {
+      "date": "2026-09-16",
+      "event": "Dreamforce 2026 (day 2)",
+      "category": "Conference",
+      "actual_items": 267,
+      "expected_items": 261,
+      "baseline_items": 146,
+      "vs_baseline_pct": 83.4,
+      "revenue": 2477.5
+     },
+     {
+      "date": "2026-09-15",
+      "event": "Dreamforce 2026 (day 1)",
+      "category": "Conference",
+      "actual_items": 141,
+      "expected_items": 161,
+      "baseline_items": 137,
+      "vs_baseline_pct": 2.9,
+      "revenue": 1285.5
+     }
+    ]
+   }
+  ],
+  "adjustments": {
+   "stat": 166,
+   "rows": [
+    {
+     "label": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 3)",
+     "event_id": "moscone-2026-10-15",
+     "delta": 27,
+     "kind": "up"
+    }
+   ],
+   "forecast": 193,
+   "actual": null,
+   "gap": null,
+   "gap_note": ""
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Large Flour Tortilla",
+   "change": "+32 tortillas",
+   "status": "scheduled",
+   "detail": "Will raise the Large Flour Tortilla reorder alert by 32 tortillas to cover the expected rush at the end of the day on Oct 15.",
+   "runs_at": "end of day"
+  },
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Tortilla Chips",
+   "change": "+3 bags",
+   "status": "scheduled",
+   "detail": "Will raise the Tortilla Chips reorder alert by 3 bags to cover the expected rush at the end of the day on Oct 15.",
+   "runs_at": "end of day"
+  }
+ ],
+ "statistical": {
+  "method": "Thursday x hour seasonal average of past sales, events excluded",
+  "n_days": 4,
+  "total": 165.9,
+  "hourly": [
+   18.9,
+   38.0,
+   16.3,
+   7.0,
+   7.8,
+   8.5,
+   15.3,
+   29.9,
+   16.6,
+   8.0
+  ],
+  "low": [
+   15.5,
+   32.7,
+   13.1,
+   4.8,
+   5.5,
+   6.1,
+   12.2,
+   25.4,
+   13.4,
+   5.7
+  ],
+  "high": [
+   22.3,
+   43.3,
+   19.4,
+   9.2,
+   10.1,
+   10.8,
+   18.3,
+   34.3,
+   19.7,
+   10.3
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Thursday'\n  AND  date < '2026-10-15'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Thursday",
+      165.9,
+      4
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-10-15"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Chase Center events 2026-10-15"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "event",
+    "items": [
+     {
+      "event_id": "moscone-2026-10-15",
+      "name": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 3)",
+      "category": "Conference",
+      "venue": "Moscone Center",
+      "miles": 0.9,
+      "start": "09:00",
+      "end": "17:00",
+      "status": "scheduled",
+      "placeholder": false,
+      "effect_pct": 16,
+      "direction": "up",
+      "tavily": {
+       "type": "tavily",
+       "event_id": "moscone-2026-10-15",
+       "query": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 3) Moscone Center San Francisco Oct 15",
+       "title": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 3)",
+       "url": "https://www.moscone.com",
+       "domain": "moscone.com",
+       "snippet": "Conference at Moscone Center, 09:00 to 17:00.",
+       "verified": true,
+       "placeholder": false
+      },
+      "source_id": 2,
+      "more": []
+     }
+    ],
+    "check": "Moscone Center events 2026-10-15"
+   }
+  ],
+  "other": []
+ }
+}

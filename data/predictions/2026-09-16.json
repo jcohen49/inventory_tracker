@@ -1,0 +1,541 @@
+{
+ "date": "2026-09-16",
+ "day_of_week": "Wednesday",
+ "status": "past",
+ "open": "11:00",
+ "close": "23:00",
+ "baseline_items": 145.6,
+ "expected_items": 261.1,
+ "expected_vs_baseline_pct": 79.3,
+ "expected_orders": 156,
+ "expected_revenue": 2365.99,
+ "range_items": [
+  230,
+  292
+ ],
+ "confidence": "high",
+ "peak_hour": "17:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00",
+  "21:00",
+  "22:00"
+ ],
+ "hourly_expected": [
+  22.9,
+  46.0,
+  23.9,
+  7.1,
+  9.8,
+  22.7,
+  48.2,
+  30.0,
+  14.3,
+  6.9,
+  2.9,
+  26.4
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   5.7,
+   11.5,
+   5.7,
+   1.9,
+   2.4,
+   5.2,
+   11.2,
+   7.5,
+   3.8,
+   1.8,
+   0.8,
+   6.1
+  ],
+  "tacos": [
+   4.9,
+   9.9,
+   5.6,
+   1.4,
+   2.2,
+   5.5,
+   11.6,
+   6.5,
+   2.8,
+   1.3,
+   0.6,
+   6.4
+  ],
+  "bowl": [
+   2.8,
+   5.6,
+   2.4,
+   1.0,
+   1.1,
+   2.0,
+   4.3,
+   3.6,
+   2.1,
+   1.0,
+   0.4,
+   2.4
+  ],
+  "nachos": [
+   2.7,
+   5.4,
+   3.2,
+   0.7,
+   1.2,
+   3.2,
+   6.8,
+   3.5,
+   1.4,
+   0.7,
+   0.3,
+   3.7
+  ],
+  "quesadilla": [
+   2.0,
+   3.9,
+   1.9,
+   0.6,
+   0.8,
+   1.8,
+   3.8,
+   2.6,
+   1.3,
+   0.6,
+   0.3,
+   2.1
+  ],
+  "chips-guac": [
+   1.8,
+   3.6,
+   2.0,
+   0.5,
+   0.8,
+   2.0,
+   4.2,
+   2.4,
+   1.0,
+   0.5,
+   0.2,
+   2.3
+  ],
+  "chips-queso": [
+   1.5,
+   3.0,
+   1.7,
+   0.4,
+   0.7,
+   1.7,
+   3.6,
+   2.0,
+   0.8,
+   0.4,
+   0.2,
+   2.0
+  ],
+  "salad": [
+   0.7,
+   1.4,
+   0.6,
+   0.3,
+   0.3,
+   0.5,
+   1.0,
+   0.9,
+   0.6,
+   0.3,
+   0.1,
+   0.5
+  ],
+  "side-rice": [
+   0.4,
+   0.9,
+   0.4,
+   0.1,
+   0.2,
+   0.4,
+   0.8,
+   0.6,
+   0.3,
+   0.1,
+   0.1,
+   0.5
+  ],
+  "side-beans": [
+   0.4,
+   0.8,
+   0.4,
+   0.1,
+   0.2,
+   0.4,
+   0.8,
+   0.5,
+   0.3,
+   0.1,
+   0.1,
+   0.4
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 63.4,
+  "tacos": 58.6,
+  "bowl": 28.8,
+  "nachos": 32.8,
+  "quesadilla": 21.7,
+  "chips-guac": 21.2,
+  "chips-queso": 17.9,
+  "salad": 7.1,
+  "side-rice": 4.8,
+  "side-beans": 4.6
+ },
+ "drivers": [
+  {
+   "event_id": "dreamforce-2026-09-16",
+   "name": "Dreamforce 2026 (day 2)",
+   "venue": "Moscone Center",
+   "distance_miles": 0.9,
+   "direction": "up",
+   "expected_effect_pct": 17,
+   "start_time": "09:00",
+   "end_time": "18:00",
+   "explanation": "Dreamforce 2026 (day 2) (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +17%."
+  },
+  {
+   "event_id": "dreamfest-2026-09-16",
+   "name": "Dreamfest 2026 (Gwen Stefani, Usher)",
+   "venue": "Oracle Park",
+   "distance_miles": 0.1,
+   "direction": "up",
+   "expected_effect_pct": 40,
+   "start_time": "18:00",
+   "end_time": "22:45",
+   "explanation": "Dreamfest 2026 (Gwen Stefani, Usher) at Oracle Park (0.1 mi away, starts 18:00): expect a rush from about 15:30, a lull while the crowd is inside, and a bump after the end. Roughly +40% on the day."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 63 Signature Burrito",
+  "Expect about 59 Street Tacos (3)",
+  "Expect about 33 Loaded Nachos",
+  "Pre-portion nachos, chips and tortillas before the rush window"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "completed",
+  "runs_at": "21:30",
+  "note": "Completed at end of day.",
+  "summary": "Sold 267 items vs 261 expected (+2%). A typical Wednesday runs about 146 items [1]. Dreamforce 2026 (day 2) (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +17%. [2] Memory recall of similar days: <<2026-09-15|Sep 15>> +3% (141 items) [3]. Dreamfest 2026 (Gwen Stefani, Usher) at Oracle Park (0.1 mi away, starts 18:00): expect a rush from about 15:30, a lull while the crowd is inside, and a bump after the end. Roughly +40% on the day. [4] Memory recall of similar days: <<2026-09-13|Sep 13>> +25% (234 items), <<2026-09-12|Sep 12>> +76% (438 items), <<2026-09-11|Sep 11>> +97% (455 items) [5].",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Wednesday'\n  AND  date < '2026-09-16'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Wednesday",
+       145.6,
+       1
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "dreamforce-2026-09-16",
+    "query": "Dreamforce 2026 (day 2) Moscone Center San Francisco Sep 16",
+    "title": "Dreamforce 2026 (day 2)",
+    "url": "https://www.sfmta.com/reports/dreamforce-2026",
+    "domain": "sfmta.com",
+    "snippet": "Conference at Moscone Center, 09:00 to 18:00 (start time not confirmed).",
+    "verified": true,
+    "placeholder": false
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_2c307af94d",
+    "query": "past sales near Moscone Center on conference days",
+    "memory": "Comparable Moscone Center days (conference): the truck averaged +3% vs baseline over the last 1 day(s); most recent <<2026-09-15|Sep 15>> at 141 items.",
+    "relevance": 0.87,
+    "avg_vs_baseline_pct": 2.9,
+    "linked_days": [
+     {
+      "date": "2026-09-15",
+      "event": "Dreamforce 2026 (day 1)",
+      "category": "Conference",
+      "actual_items": 141,
+      "expected_items": 161,
+      "baseline_items": 137,
+      "vs_baseline_pct": 2.9,
+      "revenue": 1285.5
+     }
+    ]
+   },
+   {
+    "id": 4,
+    "type": "tavily",
+    "event_id": "dreamfest-2026-09-16",
+    "query": "Dreamfest 2026 (Gwen Stefani, Usher) Oracle Park San Francisco Sep 16",
+    "title": "Dreamfest 2026 (Gwen Stefani, Usher)",
+    "url": "https://www.nbcbayarea.com/news/local/gwen-stefani-usher-dreamfest-oracle-park/4134617/",
+    "domain": "nbcbayarea.com",
+    "snippet": "Concert at Oracle Park, 18:00 to 22:45.",
+    "verified": true,
+    "placeholder": false
+   },
+   {
+    "id": 5,
+    "type": "mem0",
+    "memory_id": "mem_356094bbcc",
+    "query": "past sales near Oracle Park on concert days",
+    "memory": "Comparable Oracle Park days (mlb game): the truck averaged +66% vs baseline over the last 3 day(s); most recent <<2026-09-13|Sep 13>> at 234 items.",
+    "relevance": 0.93,
+    "avg_vs_baseline_pct": 65.9,
+    "linked_days": [
+     {
+      "date": "2026-09-13",
+      "event": "Giants vs San Diego Padres",
+      "category": "MLB game",
+      "actual_items": 234,
+      "expected_items": 244,
+      "baseline_items": 187,
+      "vs_baseline_pct": 24.9,
+      "revenue": 2118
+     },
+     {
+      "date": "2026-09-12",
+      "event": "Giants vs San Diego Padres",
+      "category": "MLB game",
+      "actual_items": 438,
+      "expected_items": 409,
+      "baseline_items": 249,
+      "vs_baseline_pct": 76.2,
+      "revenue": 3893
+     },
+     {
+      "date": "2026-09-11",
+      "event": "Giants vs San Diego Padres",
+      "category": "MLB game",
+      "actual_items": 455,
+      "expected_items": 436,
+      "baseline_items": 231,
+      "vs_baseline_pct": 96.6,
+      "revenue": 4149.5
+     }
+    ]
+   }
+  ],
+  "adjustments": {
+   "stat": 146,
+   "rows": [
+    {
+     "label": "Dreamforce 2026 (day 2)",
+     "event_id": "dreamforce-2026-09-16",
+     "delta": 28,
+     "kind": "up"
+    },
+    {
+     "label": "Dreamfest 2026 (Gwen Stefani, Usher)",
+     "event_id": "dreamfest-2026-09-16",
+     "delta": 64,
+     "kind": "up"
+    },
+    {
+     "label": "Overlap, late hours and other known factors",
+     "event_id": null,
+     "delta": 23,
+     "kind": "up"
+    }
+   ],
+   "forecast": 261,
+   "actual": 267,
+   "gap": 6,
+   "gap_note": "Within normal daily noise (about +/-7%)."
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Large Flour Tortilla",
+   "change": "+124 tortillas",
+   "status": "completed",
+   "detail": "Raised the Large Flour Tortilla reorder alert by 124 tortillas to cover the expected rush at end of day on Sep 16 (21:30).",
+   "runs_at": "21:30"
+  },
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Tortilla Chips",
+   "change": "+10 bags",
+   "status": "completed",
+   "detail": "Raised the Tortilla Chips reorder alert by 10 bags to cover the expected rush at end of day on Sep 16 (21:30).",
+   "runs_at": "21:30"
+  }
+ ],
+ "statistical": {
+  "method": "Wednesday x hour seasonal average of past sales, events excluded",
+  "n_days": 1,
+  "total": 145.6,
+  "hourly": [
+   16.6,
+   33.3,
+   14.3,
+   6.1,
+   6.8,
+   7.4,
+   13.4,
+   26.2,
+   14.6,
+   7.0,
+   2.9,
+   2.9
+  ],
+  "low": [
+   13.4,
+   28.5,
+   11.3,
+   4.0,
+   4.7,
+   5.2,
+   10.6,
+   22.1,
+   11.6,
+   4.8,
+   1.1,
+   1.1
+  ],
+  "high": [
+   19.8,
+   38.2,
+   17.2,
+   8.2,
+   9.0,
+   9.7,
+   16.2,
+   30.3,
+   17.5,
+   9.2,
+   4.7,
+   4.7
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Wednesday'\n  AND  date < '2026-09-16'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Wednesday",
+      145.6,
+      1
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "event",
+    "items": [
+     {
+      "event_id": "dreamfest-2026-09-16",
+      "name": "Dreamfest 2026 (Gwen Stefani, Usher)",
+      "category": "Concert",
+      "venue": "Oracle Park",
+      "miles": 0.1,
+      "start": "18:00",
+      "end": "22:45",
+      "status": "took place",
+      "placeholder": false,
+      "effect_pct": 40,
+      "direction": "up",
+      "tavily": {
+       "type": "tavily",
+       "event_id": "dreamfest-2026-09-16",
+       "query": "Dreamfest 2026 (Gwen Stefani, Usher) Oracle Park San Francisco Sep 16",
+       "title": "Dreamfest 2026 (Gwen Stefani, Usher)",
+       "url": "https://www.nbcbayarea.com/news/local/gwen-stefani-usher-dreamfest-oracle-park/4134617/",
+       "domain": "nbcbayarea.com",
+       "snippet": "Concert at Oracle Park, 18:00 to 22:45.",
+       "verified": true,
+       "placeholder": false
+      },
+      "source_id": 4,
+      "more": []
+     }
+    ],
+    "check": "Oracle Park events 2026-09-16"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Chase Center events 2026-09-16"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "event",
+    "items": [
+     {
+      "event_id": "dreamforce-2026-09-16",
+      "name": "Dreamforce 2026 (day 2)",
+      "category": "Conference",
+      "venue": "Moscone Center",
+      "miles": 0.9,
+      "start": "09:00",
+      "end": "18:00",
+      "status": "took place",
+      "placeholder": false,
+      "effect_pct": 17,
+      "direction": "up",
+      "tavily": {
+       "type": "tavily",
+       "event_id": "dreamforce-2026-09-16",
+       "query": "Dreamforce 2026 (day 2) Moscone Center San Francisco Sep 16",
+       "title": "Dreamforce 2026 (day 2)",
+       "url": "https://www.sfmta.com/reports/dreamforce-2026",
+       "domain": "sfmta.com",
+       "snippet": "Conference at Moscone Center, 09:00 to 18:00 (start time not confirmed).",
+       "verified": true,
+       "placeholder": false
+      },
+      "source_id": 2,
+      "more": []
+     }
+    ],
+    "check": "Moscone Center events 2026-09-16"
+   }
+  ],
+  "other": []
+ },
+ "actual_items": 267,
+ "label": "event_lift_strong"
+}

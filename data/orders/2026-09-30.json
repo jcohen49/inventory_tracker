@@ -1,0 +1,6497 @@
+{
+ "date": "2026-09-30",
+ "day_of_week": "Wednesday",
+ "partial": false,
+ "as_of": null,
+ "totals": {
+  "orders": 74,
+  "items": 111,
+  "revenue": 1019.0,
+  "ingredient_cost": 287.11
+ },
+ "orders": [
+  {
+   "order_id": "O-20260930-0001",
+   "timestamp": "2026-09-30T11:17:23-07:00",
+   "items": [
+    {
+     "sale_id": "S006129",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.77,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0002",
+   "timestamp": "2026-09-30T11:27:53-07:00",
+   "items": [
+    {
+     "sale_id": "S006130",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 2.83,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0003",
+   "timestamp": "2026-09-30T11:37:36-07:00",
+   "items": [
+    {
+     "sale_id": "S006131",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.07,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-refried",
+       "name": "Refried Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.525
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.2813
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0004",
+   "timestamp": "2026-09-30T11:39:01-07:00",
+   "items": [
+    {
+     "sale_id": "S006132",
+     "menu_item_id": "side-beans",
+     "menu_item": "Side of Beans",
+     "price": 3.0,
+     "ingredient_cost": 0.68,
+     "ingredients": [
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "cup-lg",
+       "name": "Cups — Large",
+       "role": "Cup",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.208
+      }
+     ]
+    },
+    {
+     "sale_id": "S006133",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.89,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0005",
+   "timestamp": "2026-09-30T11:47:57-07:00",
+   "items": [
+    {
+     "sale_id": "S006134",
+     "menu_item_id": "side-beans",
+     "menu_item": "Side of Beans",
+     "price": 3.0,
+     "ingredient_cost": 0.68,
+     "ingredients": [
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "cup-lg",
+       "name": "Cups — Large",
+       "role": "Cup",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.208
+      }
+     ]
+    },
+    {
+     "sale_id": "S006135",
+     "menu_item_id": "quesadilla",
+     "menu_item": "Quesadilla",
+     "price": 8.5,
+     "ingredient_cost": 0.96,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.675
+      }
+     ]
+    },
+    {
+     "sale_id": "S006136",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 4.66,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-refried",
+       "name": "Refried Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.525
+      },
+      {
+       "ingredient_id": "shrimp",
+       "name": "Shrimp",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 2.875
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0006",
+   "timestamp": "2026-09-30T11:51:27-07:00",
+   "items": [
+    {
+     "sale_id": "S006137",
+     "menu_item_id": "side-beans",
+     "menu_item": "Side of Beans",
+     "price": 3.0,
+     "ingredient_cost": 0.73,
+     "ingredients": [
+      {
+       "ingredient_id": "bean-refried",
+       "name": "Refried Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.525
+      },
+      {
+       "ingredient_id": "cup-lg",
+       "name": "Cups — Large",
+       "role": "Cup",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.208
+      }
+     ]
+    },
+    {
+     "sale_id": "S006138",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.99,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.2813
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0007",
+   "timestamp": "2026-09-30T11:52:28-07:00",
+   "items": [
+    {
+     "sale_id": "S006139",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.56,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 1.4625
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0008",
+   "timestamp": "2026-09-30T11:53:31-07:00",
+   "items": [
+    {
+     "sale_id": "S006140",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.89,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0009",
+   "timestamp": "2026-09-30T12:01:09-07:00",
+   "items": [
+    {
+     "sale_id": "S006141",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 2.91,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    },
+    {
+     "sale_id": "S006142",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 3.69,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "shrimp",
+       "name": "Shrimp",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 2.5875
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0010",
+   "timestamp": "2026-09-30T12:07:05-07:00",
+   "items": [
+    {
+     "sale_id": "S006143",
+     "menu_item_id": "side-rice",
+     "menu_item": "Side of Rice",
+     "price": 3.0,
+     "ingredient_cost": 0.55,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.3375
+      },
+      {
+       "ingredient_id": "cup-lg",
+       "name": "Cups — Large",
+       "role": "Cup",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.208
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0011",
+   "timestamp": "2026-09-30T12:07:59-07:00",
+   "items": [
+    {
+     "sale_id": "S006144",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 3.69,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "shrimp",
+       "name": "Shrimp",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 2.5875
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    },
+    {
+     "sale_id": "S006145",
+     "menu_item_id": "chips-guac",
+     "menu_item": "Chips & Guacamole",
+     "price": 5.5,
+     "ingredient_cost": 1.96,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 1.2
+      },
+      {
+       "ingredient_id": "bowl-sm",
+       "name": "Paper Bowls — Small",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.164
+      }
+     ]
+    },
+    {
+     "sale_id": "S006146",
+     "menu_item_id": "quesadilla",
+     "menu_item": "Quesadilla",
+     "price": 8.5,
+     "ingredient_cost": 1.59,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.675
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6375
+      }
+     ]
+    },
+    {
+     "sale_id": "S006147",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.85,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-refried",
+       "name": "Refried Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.525
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0012",
+   "timestamp": "2026-09-30T12:19:51-07:00",
+   "items": [
+    {
+     "sale_id": "S006148",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.26,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 1.1531
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    },
+    {
+     "sale_id": "S006149",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.06,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 0.9563
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0013",
+   "timestamp": "2026-09-30T12:26:53-07:00",
+   "items": [
+    {
+     "sale_id": "S006150",
+     "menu_item_id": "nachos",
+     "menu_item": "Loaded Nachos",
+     "price": 10.0,
+     "ingredient_cost": 2.67,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.8
+      },
+      {
+       "ingredient_id": "queso",
+       "name": "Queso Dip",
+       "role": "Queso",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.2813
+      },
+      {
+       "ingredient_id": "bean-refried",
+       "name": "Refried Beans",
+       "role": "Beans",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.2625
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.7688
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "jalapeno",
+       "name": "Jalapeños",
+       "role": "Jalapeño",
+       "qty": 0.5,
+       "unit": "oz",
+       "cost": 0.0406
+      },
+      {
+       "ingredient_id": "sourcream",
+       "name": "Sour Cream",
+       "role": "Sour cream",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.0508
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    },
+    {
+     "sale_id": "S006151",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 4.7,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-refried",
+       "name": "Refried Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.525
+      },
+      {
+       "ingredient_id": "shrimp",
+       "name": "Shrimp",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 2.875
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0014",
+   "timestamp": "2026-09-30T12:28:38-07:00",
+   "items": [
+    {
+     "sale_id": "S006152",
+     "menu_item_id": "quesadilla",
+     "menu_item": "Quesadilla",
+     "price": 8.5,
+     "ingredient_cost": 2.68,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.675
+      },
+      {
+       "ingredient_id": "shrimp",
+       "name": "Shrimp",
+       "role": "Protein",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 1.725
+      }
+     ]
+    },
+    {
+     "sale_id": "S006153",
+     "menu_item_id": "chips-guac",
+     "menu_item": "Chips & Guacamole",
+     "price": 5.5,
+     "ingredient_cost": 1.96,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 1.2
+      },
+      {
+       "ingredient_id": "bowl-sm",
+       "name": "Paper Bowls — Small",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.164
+      }
+     ]
+    },
+    {
+     "sale_id": "S006154",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.06,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 0.9563
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0015",
+   "timestamp": "2026-09-30T12:32:05-07:00",
+   "items": [
+    {
+     "sale_id": "S006155",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.79,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0016",
+   "timestamp": "2026-09-30T12:37:24-07:00",
+   "items": [
+    {
+     "sale_id": "S006156",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.33,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0017",
+   "timestamp": "2026-09-30T12:39:06-07:00",
+   "items": [
+    {
+     "sale_id": "S006157",
+     "menu_item_id": "salad",
+     "menu_item": "Taco Salad",
+     "price": 11.0,
+     "ingredient_cost": 3.2,
+     "ingredients": [
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.3
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 1.3
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.2344
+      },
+      {
+       "ingredient_id": "corn",
+       "name": "Corn",
+       "role": "Corn",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.0688
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0018",
+   "timestamp": "2026-09-30T12:47:57-07:00",
+   "items": [
+    {
+     "sale_id": "S006158",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.28,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-gf",
+       "name": "Gluten-Free Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.2813
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0019",
+   "timestamp": "2026-09-30T12:54:43-07:00",
+   "items": [
+    {
+     "sale_id": "S006159",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 3.37,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.625
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0020",
+   "timestamp": "2026-09-30T12:55:13-07:00",
+   "items": [
+    {
+     "sale_id": "S006160",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 2.98,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "bean-refried",
+       "name": "Refried Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.525
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0021",
+   "timestamp": "2026-09-30T12:59:37-07:00",
+   "items": [
+    {
+     "sale_id": "S006161",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.77,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0022",
+   "timestamp": "2026-09-30T13:01:19-07:00",
+   "items": [
+    {
+     "sale_id": "S006162",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.35,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0023",
+   "timestamp": "2026-09-30T13:04:27-07:00",
+   "items": [
+    {
+     "sale_id": "S006163",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 2.91,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0024",
+   "timestamp": "2026-09-30T13:09:09-07:00",
+   "items": [
+    {
+     "sale_id": "S006164",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.41,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-refried",
+       "name": "Refried Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.525
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0025",
+   "timestamp": "2026-09-30T13:11:43-07:00",
+   "items": [
+    {
+     "sale_id": "S006165",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.01,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.2813
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0026",
+   "timestamp": "2026-09-30T13:15:24-07:00",
+   "items": [
+    {
+     "sale_id": "S006166",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.06,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 0.9563
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0027",
+   "timestamp": "2026-09-30T13:22:29-07:00",
+   "items": [
+    {
+     "sale_id": "S006167",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.79,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0028",
+   "timestamp": "2026-09-30T13:26:00-07:00",
+   "items": [
+    {
+     "sale_id": "S006168",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.85,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-refried",
+       "name": "Refried Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.525
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0029",
+   "timestamp": "2026-09-30T13:51:18-07:00",
+   "items": [
+    {
+     "sale_id": "S006169",
+     "menu_item_id": "quesadilla",
+     "menu_item": "Quesadilla",
+     "price": 8.5,
+     "ingredient_cost": 0.96,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.675
+      }
+     ]
+    },
+    {
+     "sale_id": "S006170",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 3.69,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "shrimp",
+       "name": "Shrimp",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 2.5875
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0030",
+   "timestamp": "2026-09-30T14:15:16-07:00",
+   "items": [
+    {
+     "sale_id": "S006171",
+     "menu_item_id": "side-rice",
+     "menu_item": "Side of Rice",
+     "price": 3.0,
+     "ingredient_cost": 0.55,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.3375
+      },
+      {
+       "ingredient_id": "cup-lg",
+       "name": "Cups — Large",
+       "role": "Cup",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.208
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0031",
+   "timestamp": "2026-09-30T14:56:35-07:00",
+   "items": [
+    {
+     "sale_id": "S006172",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.06,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 0.9563
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0032",
+   "timestamp": "2026-09-30T15:08:32-07:00",
+   "items": [
+    {
+     "sale_id": "S006173",
+     "menu_item_id": "chips-guac",
+     "menu_item": "Chips & Guacamole",
+     "price": 5.5,
+     "ingredient_cost": 1.96,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 1.2
+      },
+      {
+       "ingredient_id": "bowl-sm",
+       "name": "Paper Bowls — Small",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.164
+      }
+     ]
+    },
+    {
+     "sale_id": "S006174",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.07,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-ww",
+       "name": "Whole Wheat Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.34
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.2813
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0033",
+   "timestamp": "2026-09-30T15:16:27-07:00",
+   "items": [
+    {
+     "sale_id": "S006175",
+     "menu_item_id": "chips-guac",
+     "menu_item": "Chips & Guacamole",
+     "price": 5.5,
+     "ingredient_cost": 1.96,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 1.2
+      },
+      {
+       "ingredient_id": "bowl-sm",
+       "name": "Paper Bowls — Small",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.164
+      }
+     ]
+    },
+    {
+     "sale_id": "S006176",
+     "menu_item_id": "salad",
+     "menu_item": "Taco Salad",
+     "price": 11.0,
+     "ingredient_cost": 2.74,
+     "ingredients": [
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.3
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.85
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "corn",
+       "name": "Corn",
+       "role": "Corn",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.0688
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0034",
+   "timestamp": "2026-09-30T15:23:00-07:00",
+   "items": [
+    {
+     "sale_id": "S006177",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.35,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0035",
+   "timestamp": "2026-09-30T15:28:55-07:00",
+   "items": [
+    {
+     "sale_id": "S006178",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.79,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0036",
+   "timestamp": "2026-09-30T15:39:28-07:00",
+   "items": [
+    {
+     "sale_id": "S006179",
+     "menu_item_id": "chips-guac",
+     "menu_item": "Chips & Guacamole",
+     "price": 5.5,
+     "ingredient_cost": 1.96,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 1.2
+      },
+      {
+       "ingredient_id": "bowl-sm",
+       "name": "Paper Bowls — Small",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.164
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0037",
+   "timestamp": "2026-09-30T15:49:07-07:00",
+   "items": [
+    {
+     "sale_id": "S006180",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.87,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0038",
+   "timestamp": "2026-09-30T16:00:15-07:00",
+   "items": [
+    {
+     "sale_id": "S006181",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 2.83,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0039",
+   "timestamp": "2026-09-30T16:04:17-07:00",
+   "items": [
+    {
+     "sale_id": "S006182",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.56,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 1.4625
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0040",
+   "timestamp": "2026-09-30T16:10:08-07:00",
+   "items": [
+    {
+     "sale_id": "S006183",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.77,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0041",
+   "timestamp": "2026-09-30T16:16:12-07:00",
+   "items": [
+    {
+     "sale_id": "S006184",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.06,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 0.9563
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0042",
+   "timestamp": "2026-09-30T16:36:28-07:00",
+   "items": [
+    {
+     "sale_id": "S006185",
+     "menu_item_id": "salad",
+     "menu_item": "Taco Salad",
+     "price": 11.0,
+     "ingredient_cost": 2.75,
+     "ingredients": [
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.3
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.85
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.2344
+      },
+      {
+       "ingredient_id": "corn",
+       "name": "Corn",
+       "role": "Corn",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.0688
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    },
+    {
+     "sale_id": "S006186",
+     "menu_item_id": "nachos",
+     "menu_item": "Loaded Nachos",
+     "price": 10.0,
+     "ingredient_cost": 2.64,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.8
+      },
+      {
+       "ingredient_id": "queso",
+       "name": "Queso Dip",
+       "role": "Queso",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.2813
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.7688
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "jalapeno",
+       "name": "Jalapeños",
+       "role": "Jalapeño",
+       "qty": 0.5,
+       "unit": "oz",
+       "cost": 0.0406
+      },
+      {
+       "ingredient_id": "sourcream",
+       "name": "Sour Cream",
+       "role": "Sour cream",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.0508
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0043",
+   "timestamp": "2026-09-30T16:37:49-07:00",
+   "items": [
+    {
+     "sale_id": "S006187",
+     "menu_item_id": "chips-guac",
+     "menu_item": "Chips & Guacamole",
+     "price": 5.5,
+     "ingredient_cost": 1.96,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 1.2
+      },
+      {
+       "ingredient_id": "bowl-sm",
+       "name": "Paper Bowls — Small",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.164
+      }
+     ]
+    },
+    {
+     "sale_id": "S006188",
+     "menu_item_id": "quesadilla",
+     "menu_item": "Quesadilla",
+     "price": 8.5,
+     "ingredient_cost": 0.96,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.675
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0044",
+   "timestamp": "2026-09-30T17:08:21-07:00",
+   "items": [
+    {
+     "sale_id": "S006189",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.06,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 0.9563
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0045",
+   "timestamp": "2026-09-30T17:12:42-07:00",
+   "items": [
+    {
+     "sale_id": "S006190",
+     "menu_item_id": "chips-queso",
+     "menu_item": "Chips & Queso",
+     "price": 5.0,
+     "ingredient_cost": 1.14,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "queso",
+       "name": "Queso Dip",
+       "role": "Queso",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.375
+      },
+      {
+       "ingredient_id": "bowl-sm",
+       "name": "Paper Bowls — Small",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.164
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0046",
+   "timestamp": "2026-09-30T17:13:28-07:00",
+   "items": [
+    {
+     "sale_id": "S006191",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 4.64,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-ww",
+       "name": "Whole Wheat Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.34
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "shrimp",
+       "name": "Shrimp",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 2.875
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0047",
+   "timestamp": "2026-09-30T17:28:04-07:00",
+   "items": [
+    {
+     "sale_id": "S006192",
+     "menu_item_id": "nachos",
+     "menu_item": "Loaded Nachos",
+     "price": 10.0,
+     "ingredient_cost": 2.84,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.8
+      },
+      {
+       "ingredient_id": "queso",
+       "name": "Queso Dip",
+       "role": "Queso",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.2813
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.975
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "jalapeno",
+       "name": "Jalapeños",
+       "role": "Jalapeño",
+       "qty": 0.5,
+       "unit": "oz",
+       "cost": 0.0406
+      },
+      {
+       "ingredient_id": "sourcream",
+       "name": "Sour Cream",
+       "role": "Sour cream",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.0508
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    },
+    {
+     "sale_id": "S006193",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.06,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 0.9563
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0048",
+   "timestamp": "2026-09-30T17:29:19-07:00",
+   "items": [
+    {
+     "sale_id": "S006194",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 3.03,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.2813
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0049",
+   "timestamp": "2026-09-30T17:43:29-07:00",
+   "items": [
+    {
+     "sale_id": "S006195",
+     "menu_item_id": "chips-queso",
+     "menu_item": "Chips & Queso",
+     "price": 5.0,
+     "ingredient_cost": 1.14,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "queso",
+       "name": "Queso Dip",
+       "role": "Queso",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.375
+      },
+      {
+       "ingredient_id": "bowl-sm",
+       "name": "Paper Bowls — Small",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.164
+      }
+     ]
+    },
+    {
+     "sale_id": "S006196",
+     "menu_item_id": "salad",
+     "menu_item": "Taco Salad",
+     "price": 11.0,
+     "ingredient_cost": 2.74,
+     "ingredients": [
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.3
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.85
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "corn",
+       "name": "Corn",
+       "role": "Corn",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.0688
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0050",
+   "timestamp": "2026-09-30T17:45:25-07:00",
+   "items": [
+    {
+     "sale_id": "S006197",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.45,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0051",
+   "timestamp": "2026-09-30T17:52:13-07:00",
+   "items": [
+    {
+     "sale_id": "S006198",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.85,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-refried",
+       "name": "Refried Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.525
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    },
+    {
+     "sale_id": "S006199",
+     "menu_item_id": "side-beans",
+     "menu_item": "Side of Beans",
+     "price": 3.0,
+     "ingredient_cost": 0.66,
+     "ingredients": [
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "cup-lg",
+       "name": "Cups — Large",
+       "role": "Cup",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.208
+      }
+     ]
+    },
+    {
+     "sale_id": "S006200",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.45,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0052",
+   "timestamp": "2026-09-30T17:55:24-07:00",
+   "items": [
+    {
+     "sale_id": "S006201",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 2.93,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    },
+    {
+     "sale_id": "S006202",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.56,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 1.4625
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0053",
+   "timestamp": "2026-09-30T17:58:01-07:00",
+   "items": [
+    {
+     "sale_id": "S006203",
+     "menu_item_id": "chips-guac",
+     "menu_item": "Chips & Guacamole",
+     "price": 5.5,
+     "ingredient_cost": 1.96,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 1.2
+      },
+      {
+       "ingredient_id": "bowl-sm",
+       "name": "Paper Bowls — Small",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.164
+      }
+     ]
+    },
+    {
+     "sale_id": "S006204",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.33,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0054",
+   "timestamp": "2026-09-30T18:01:53-07:00",
+   "items": [
+    {
+     "sale_id": "S006205",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.89,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0055",
+   "timestamp": "2026-09-30T18:04:38-07:00",
+   "items": [
+    {
+     "sale_id": "S006206",
+     "menu_item_id": "nachos",
+     "menu_item": "Loaded Nachos",
+     "price": 10.0,
+     "ingredient_cost": 2.84,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.8
+      },
+      {
+       "ingredient_id": "queso",
+       "name": "Queso Dip",
+       "role": "Queso",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.2813
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.975
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "jalapeno",
+       "name": "Jalapeños",
+       "role": "Jalapeño",
+       "qty": 0.5,
+       "unit": "oz",
+       "cost": 0.0406
+      },
+      {
+       "ingredient_id": "sourcream",
+       "name": "Sour Cream",
+       "role": "Sour cream",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.0508
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    },
+    {
+     "sale_id": "S006207",
+     "menu_item_id": "side-rice",
+     "menu_item": "Side of Rice",
+     "price": 3.0,
+     "ingredient_cost": 0.62,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4125
+      },
+      {
+       "ingredient_id": "cup-lg",
+       "name": "Cups — Large",
+       "role": "Cup",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.208
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0056",
+   "timestamp": "2026-09-30T18:09:35-07:00",
+   "items": [
+    {
+     "sale_id": "S006208",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 4.6,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "shrimp",
+       "name": "Shrimp",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 2.875
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    },
+    {
+     "sale_id": "S006209",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 4.64,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "shrimp",
+       "name": "Shrimp",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 2.875
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    },
+    {
+     "sale_id": "S006210",
+     "menu_item_id": "salad",
+     "menu_item": "Taco Salad",
+     "price": 11.0,
+     "ingredient_cost": 3.23,
+     "ingredients": [
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.3
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 1.3
+      },
+      {
+       "ingredient_id": "bean-refried",
+       "name": "Refried Beans",
+       "role": "Beans",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.2625
+      },
+      {
+       "ingredient_id": "corn",
+       "name": "Corn",
+       "role": "Corn",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.0688
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0057",
+   "timestamp": "2026-09-30T18:14:34-07:00",
+   "items": [
+    {
+     "sale_id": "S006211",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 3.39,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.625
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    },
+    {
+     "sale_id": "S006212",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 3.05,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.2813
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0058",
+   "timestamp": "2026-09-30T18:18:50-07:00",
+   "items": [
+    {
+     "sale_id": "S006213",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 3.05,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.2813
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0059",
+   "timestamp": "2026-09-30T18:23:34-07:00",
+   "items": [
+    {
+     "sale_id": "S006214",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.26,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 1.1531
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0060",
+   "timestamp": "2026-09-30T18:23:43-07:00",
+   "items": [
+    {
+     "sale_id": "S006215",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.06,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 0.9563
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0061",
+   "timestamp": "2026-09-30T18:44:15-07:00",
+   "items": [
+    {
+     "sale_id": "S006216",
+     "menu_item_id": "nachos",
+     "menu_item": "Loaded Nachos",
+     "price": 10.0,
+     "ingredient_cost": 2.51,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.8
+      },
+      {
+       "ingredient_id": "queso",
+       "name": "Queso Dip",
+       "role": "Queso",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.2813
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6375
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "jalapeno",
+       "name": "Jalapeños",
+       "role": "Jalapeño",
+       "qty": 0.5,
+       "unit": "oz",
+       "cost": 0.0406
+      },
+      {
+       "ingredient_id": "sourcream",
+       "name": "Sour Cream",
+       "role": "Sour cream",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.0508
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    },
+    {
+     "sale_id": "S006217",
+     "menu_item_id": "chips-guac",
+     "menu_item": "Chips & Guacamole",
+     "price": 5.5,
+     "ingredient_cost": 1.96,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 1.2
+      },
+      {
+       "ingredient_id": "bowl-sm",
+       "name": "Paper Bowls — Small",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.164
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0062",
+   "timestamp": "2026-09-30T18:44:55-07:00",
+   "items": [
+    {
+     "sale_id": "S006218",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 3.49,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.625
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0063",
+   "timestamp": "2026-09-30T18:51:09-07:00",
+   "items": [
+    {
+     "sale_id": "S006219",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.83,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-ww",
+       "name": "Whole Wheat Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.34
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    },
+    {
+     "sale_id": "S006220",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 2.81,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0064",
+   "timestamp": "2026-09-30T18:53:00-07:00",
+   "items": [
+    {
+     "sale_id": "S006221",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 3.05,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.2813
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0065",
+   "timestamp": "2026-09-30T18:53:19-07:00",
+   "items": [
+    {
+     "sale_id": "S006222",
+     "menu_item_id": "quesadilla",
+     "menu_item": "Quesadilla",
+     "price": 8.5,
+     "ingredient_cost": 0.96,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.675
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0066",
+   "timestamp": "2026-09-30T19:01:54-07:00",
+   "items": [
+    {
+     "sale_id": "S006223",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.79,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    },
+    {
+     "sale_id": "S006224",
+     "menu_item_id": "side-rice",
+     "menu_item": "Side of Rice",
+     "price": 3.0,
+     "ingredient_cost": 0.62,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4125
+      },
+      {
+       "ingredient_id": "cup-lg",
+       "name": "Cups — Large",
+       "role": "Cup",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.208
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0067",
+   "timestamp": "2026-09-30T19:03:18-07:00",
+   "items": [
+    {
+     "sale_id": "S006225",
+     "menu_item_id": "quesadilla",
+     "menu_item": "Quesadilla",
+     "price": 8.5,
+     "ingredient_cost": 1.93,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.675
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.975
+      }
+     ]
+    },
+    {
+     "sale_id": "S006226",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.51,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-ww",
+       "name": "Whole Wheat Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.34
+      },
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0068",
+   "timestamp": "2026-09-30T19:23:32-07:00",
+   "items": [
+    {
+     "sale_id": "S006227",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 3.39,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.625
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    },
+    {
+     "sale_id": "S006228",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 2.85,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-refried",
+       "name": "Refried Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.525
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0069",
+   "timestamp": "2026-09-30T19:24:06-07:00",
+   "items": [
+    {
+     "sale_id": "S006229",
+     "menu_item_id": "nachos",
+     "menu_item": "Loaded Nachos",
+     "price": 10.0,
+     "ingredient_cost": 2.51,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.8
+      },
+      {
+       "ingredient_id": "queso",
+       "name": "Queso Dip",
+       "role": "Queso",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.2813
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6375
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "jalapeno",
+       "name": "Jalapeños",
+       "role": "Jalapeño",
+       "qty": 0.5,
+       "unit": "oz",
+       "cost": 0.0406
+      },
+      {
+       "ingredient_id": "sourcream",
+       "name": "Sour Cream",
+       "role": "Sour cream",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.0508
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    },
+    {
+     "sale_id": "S006230",
+     "menu_item_id": "side-rice",
+     "menu_item": "Side of Rice",
+     "price": 3.0,
+     "ingredient_cost": 0.55,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.3375
+      },
+      {
+       "ingredient_id": "cup-lg",
+       "name": "Cups — Large",
+       "role": "Cup",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.208
+      }
+     ]
+    },
+    {
+     "sale_id": "S006231",
+     "menu_item_id": "salad",
+     "menu_item": "Taco Salad",
+     "price": 11.0,
+     "ingredient_cost": 4.2,
+     "ingredients": [
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 0.3
+      },
+      {
+       "ingredient_id": "shrimp",
+       "name": "Shrimp",
+       "role": "Protein",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 2.3
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.2344
+      },
+      {
+       "ingredient_id": "corn",
+       "name": "Corn",
+       "role": "Corn",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.0688
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    },
+    {
+     "sale_id": "S006232",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.26,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-gf",
+       "name": "Gluten-Free Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-pinto",
+       "name": "Pinto Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.2813
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0070",
+   "timestamp": "2026-09-30T19:46:06-07:00",
+   "items": [
+    {
+     "sale_id": "S006233",
+     "menu_item_id": "chips-guac",
+     "menu_item": "Chips & Guacamole",
+     "price": 5.5,
+     "ingredient_cost": 1.96,
+     "ingredients": [
+      {
+       "ingredient_id": "chips",
+       "name": "Tortilla Chips",
+       "role": "Chips",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6
+      },
+      {
+       "ingredient_id": "guac",
+       "name": "Guacamole",
+       "role": "Guacamole",
+       "qty": 4,
+       "unit": "oz",
+       "cost": 1.2
+      },
+      {
+       "ingredient_id": "bowl-sm",
+       "name": "Paper Bowls — Small",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.164
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0071",
+   "timestamp": "2026-09-30T20:04:41-07:00",
+   "items": [
+    {
+     "sale_id": "S006234",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 3.05,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.2813
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    },
+    {
+     "sale_id": "S006235",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 2.83,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.0625
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0072",
+   "timestamp": "2026-09-30T20:08:50-07:00",
+   "items": [
+    {
+     "sale_id": "S006236",
+     "menu_item_id": "quesadilla",
+     "menu_item": "Quesadilla",
+     "price": 8.5,
+     "ingredient_cost": 1.59,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.675
+      },
+      {
+       "ingredient_id": "chicken",
+       "name": "Chicken",
+       "role": "Protein",
+       "qty": 3,
+       "unit": "oz",
+       "cost": 0.6375
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0073",
+   "timestamp": "2026-09-30T20:25:05-07:00",
+   "items": [
+    {
+     "sale_id": "S006237",
+     "menu_item_id": "tacos",
+     "menu_item": "Street Tacos (3)",
+     "price": 9.5,
+     "ingredient_cost": 2.56,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 3,
+       "unit": "ea",
+       "cost": 0.84
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 4.5,
+       "unit": "oz",
+       "cost": 1.4625
+      },
+      {
+       "ingredient_id": "onion",
+       "name": "Onions",
+       "role": "Onion",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.05
+      },
+      {
+       "ingredient_id": "cilantro",
+       "name": "Cilantro",
+       "role": "Cilantro",
+       "qty": 0.3,
+       "unit": "oz",
+       "cost": 0.09
+      },
+      {
+       "ingredient_id": "salsa-verde",
+       "name": "Salsa Verde",
+       "role": "Salsa",
+       "qty": 1.5,
+       "unit": "oz",
+       "cost": 0.1219
+      }
+     ]
+    },
+    {
+     "sale_id": "S006238",
+     "menu_item_id": "bowl",
+     "menu_item": "Burrito Bowl",
+     "price": 11.0,
+     "ingredient_cost": 3.15,
+     "ingredients": [
+      {
+       "ingredient_id": "rice-brown",
+       "name": "Brown Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.55
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "pork",
+       "name": "Pork",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.2813
+      },
+      {
+       "ingredient_id": "lettuce",
+       "name": "Lettuce",
+       "role": "Lettuce",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.15
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "bowl-lg",
+       "name": "Paper Bowls — Large",
+       "role": "Bowl",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.196
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "order_id": "O-20260930-0074",
+   "timestamp": "2026-09-30T20:59:38-07:00",
+   "items": [
+    {
+     "sale_id": "S006239",
+     "menu_item_id": "burrito",
+     "menu_item": "Signature Burrito",
+     "price": 10.5,
+     "ingredient_cost": 3.35,
+     "ingredients": [
+      {
+       "ingredient_id": "tor-flour",
+       "name": "Large Flour Tortilla",
+       "role": "Tortilla",
+       "qty": 1,
+       "unit": "ea",
+       "cost": 0.28
+      },
+      {
+       "ingredient_id": "rice-white",
+       "name": "White Rice",
+       "role": "Rice",
+       "qty": 8,
+       "unit": "oz",
+       "cost": 0.45
+      },
+      {
+       "ingredient_id": "bean-black",
+       "name": "Black Beans",
+       "role": "Beans",
+       "qty": 6,
+       "unit": "oz",
+       "cost": 0.4688
+      },
+      {
+       "ingredient_id": "beef",
+       "name": "Beef",
+       "role": "Protein",
+       "qty": 5,
+       "unit": "oz",
+       "cost": 1.625
+      },
+      {
+       "ingredient_id": "cheese-blend",
+       "name": "Mexican Blend Cheese",
+       "role": "Cheese",
+       "qty": 1,
+       "unit": "oz",
+       "cost": 0.225
+      },
+      {
+       "ingredient_id": "pico",
+       "name": "Pico de Gallo",
+       "role": "Salsa",
+       "qty": 2,
+       "unit": "oz",
+       "cost": 0.275
+      },
+      {
+       "ingredient_id": "foil",
+       "name": "Aluminum Foil",
+       "role": "Wrap",
+       "qty": 1,
+       "unit": "sheet",
+       "cost": 0.029
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,426 @@
+{
+ "date": "2026-10-12",
+ "day_of_week": "Monday",
+ "status": "future",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 128.4,
+ "expected_items": 151.6,
+ "expected_vs_baseline_pct": 18.1,
+ "expected_orders": 91,
+ "expected_revenue": 1383.89,
+ "range_items": [
+  133,
+  170
+ ],
+ "confidence": "low",
+ "peak_hour": "18:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  14.6,
+  29.4,
+  12.6,
+  5.4,
+  6.0,
+  6.5,
+  14.4,
+  31.2,
+  25.3,
+  6.2
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   3.8,
+   7.7,
+   3.3,
+   1.4,
+   1.6,
+   1.7,
+   3.6,
+   7.5,
+   5.9,
+   1.6
+  ],
+  "tacos": [
+   2.9,
+   5.8,
+   2.5,
+   1.1,
+   1.2,
+   1.3,
+   3.1,
+   7.1,
+   6.1,
+   1.2
+  ],
+  "bowl": [
+   2.1,
+   4.3,
+   1.8,
+   0.8,
+   0.9,
+   1.0,
+   1.7,
+   3.4,
+   2.3,
+   0.9
+  ],
+  "nachos": [
+   1.5,
+   2.9,
+   1.3,
+   0.5,
+   0.6,
+   0.7,
+   1.7,
+   4.0,
+   3.6,
+   0.6
+  ],
+  "quesadilla": [
+   1.3,
+   2.6,
+   1.1,
+   0.5,
+   0.5,
+   0.6,
+   1.2,
+   2.6,
+   2.0,
+   0.6
+  ],
+  "chips-guac": [
+   1.0,
+   2.1,
+   0.9,
+   0.4,
+   0.4,
+   0.5,
+   1.1,
+   2.6,
+   2.2,
+   0.4
+  ],
+  "chips-queso": [
+   0.8,
+   1.7,
+   0.7,
+   0.3,
+   0.3,
+   0.4,
+   0.9,
+   2.2,
+   1.9,
+   0.4
+  ],
+  "salad": [
+   0.6,
+   1.1,
+   0.5,
+   0.2,
+   0.2,
+   0.3,
+   0.4,
+   0.8,
+   0.5,
+   0.2
+  ],
+  "side-rice": [
+   0.3,
+   0.6,
+   0.3,
+   0.1,
+   0.1,
+   0.1,
+   0.3,
+   0.6,
+   0.4,
+   0.1
+  ],
+  "side-beans": [
+   0.3,
+   0.6,
+   0.2,
+   0.1,
+   0.1,
+   0.1,
+   0.3,
+   0.5,
+   0.4,
+   0.1
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 38.2,
+  "tacos": 32.1,
+  "bowl": 19.1,
+  "nachos": 17.3,
+  "quesadilla": 13.1,
+  "chips-guac": 11.6,
+  "chips-queso": 9.6,
+  "salad": 4.9,
+  "side-rice": 2.9,
+  "side-beans": 2.8
+ },
+ "drivers": [
+  {
+   "event_id": "chase-2026-10-12",
+   "name": "Concert at Chase Center (headliner TBA)",
+   "venue": "Chase Center",
+   "distance_miles": 0.9,
+   "direction": "up",
+   "expected_effect_pct": 18,
+   "start_time": "20:00",
+   "end_time": "22:30",
+   "explanation": "Concert at Chase Center (headliner TBA) (0.9 mi away, starts 20:00): a pre-event lift in the three hours before the start, roughly +18%."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 38 Signature Burrito",
+  "Expect about 32 Street Tacos (3)",
+  "Expect about 19 Burrito Bowl",
+  "Pre-portion nachos, chips and tortillas before the rush window"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "scheduled",
+  "runs_at": "end of day",
+  "note": "Scheduled to run at the end of the day on Oct 12 (21:30); this is the forecast it will start from.",
+  "summary": "Expected about 152 items (+18% vs a typical Monday of 128 [1]), peaking around 18:00. Concert at Chase Center (headliner TBA) (0.9 mi away, starts 20:00): a pre-event lift in the three hours before the start, roughly +18%. [2] Memory recall of similar days: <<2026-10-04|Oct 4>> +17% (219 items), <<2026-10-03|Oct 3>> -11% (221 items), <<2026-10-02|Oct 2>> +11% (257 items) [3].",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Monday'\n  AND  date < '2026-10-12'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Monday",
+       128.4,
+       4
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "chase-2026-10-12",
+    "query": "Concert at Chase Center (headliner TBA) Chase Center San Francisco Oct 12",
+    "title": "Concert at Chase Center (headliner TBA)",
+    "url": "https://www.chasecenter.com/events",
+    "domain": "chasecenter.com",
+    "snippet": "Concert at Chase Center, 20:00 to 22:30 (start time not confirmed).",
+    "verified": false,
+    "placeholder": true
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_f5851ff64f",
+    "query": "past sales near Chase Center on concert days",
+    "memory": "Comparable Chase Center days (wnba playoff game / concert): the truck averaged +6% vs baseline over the last 3 day(s); most recent <<2026-10-04|Oct 4>> at 219 items.",
+    "relevance": 0.93,
+    "avg_vs_baseline_pct": 5.6,
+    "linked_days": [
+     {
+      "date": "2026-10-04",
+      "event": "WNBA Semifinals G1: Valkyries vs Las Vegas Aces",
+      "category": "WNBA playoff game",
+      "actual_items": 219,
+      "expected_items": 204,
+      "baseline_items": 187,
+      "vs_baseline_pct": 16.9,
+      "revenue": 2018.5
+     },
+     {
+      "date": "2026-10-03",
+      "event": "Disney Worlds Collide Concert Tour",
+      "category": "Concert",
+      "actual_items": 221,
+      "expected_items": 260,
+      "baseline_items": 249,
+      "vs_baseline_pct": -11.1,
+      "revenue": 2053
+     },
+     {
+      "date": "2026-10-02",
+      "event": "WNBA Playoffs R1 G3: Valkyries vs Dallas Wings",
+      "category": "WNBA playoff game",
+      "actual_items": 257,
+      "expected_items": 245,
+      "baseline_items": 231,
+      "vs_baseline_pct": 11.1,
+      "revenue": 2360
+     }
+    ]
+   }
+  ],
+  "adjustments": {
+   "stat": 128,
+   "rows": [
+    {
+     "label": "Concert at Chase Center (headliner TBA)",
+     "event_id": "chase-2026-10-12",
+     "delta": 23,
+     "kind": "up"
+    }
+   ],
+   "forecast": 152,
+   "actual": null,
+   "gap": null,
+   "gap_note": ""
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Large Flour Tortilla",
+   "change": "+27 tortillas",
+   "status": "scheduled",
+   "detail": "Will raise the Large Flour Tortilla reorder alert by 27 tortillas to cover the expected rush at the end of the day on Oct 12.",
+   "runs_at": "end of day"
+  },
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Tortilla Chips",
+   "change": "+2 bags",
+   "status": "scheduled",
+   "detail": "Will raise the Tortilla Chips reorder alert by 2 bags to cover the expected rush at the end of the day on Oct 12.",
+   "runs_at": "end of day"
+  }
+ ],
+ "statistical": {
+  "method": "Monday x hour seasonal average of past sales, events excluded",
+  "n_days": 4,
+  "total": 128.4,
+  "hourly": [
+   14.6,
+   29.4,
+   12.6,
+   5.4,
+   6.0,
+   6.5,
+   11.8,
+   23.1,
+   12.8,
+   6.2
+  ],
+  "low": [
+   11.7,
+   25.0,
+   9.8,
+   3.4,
+   3.9,
+   4.4,
+   9.1,
+   19.3,
+   10.1,
+   4.0
+  ],
+  "high": [
+   17.6,
+   33.8,
+   15.3,
+   7.4,
+   8.1,
+   8.7,
+   14.5,
+   26.9,
+   15.6,
+   8.3
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Monday'\n  AND  date < '2026-10-12'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Monday",
+      128.4,
+      4
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-10-12"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "event",
+    "items": [
+     {
+      "event_id": "chase-2026-10-12",
+      "name": "Concert at Chase Center (headliner TBA)",
+      "category": "Concert",
+      "venue": "Chase Center",
+      "miles": 0.9,
+      "start": "20:00",
+      "end": "22:30",
+      "status": "scheduled",
+      "placeholder": true,
+      "effect_pct": 18,
+      "direction": "up",
+      "tavily": {
+       "type": "tavily",
+       "event_id": "chase-2026-10-12",
+       "query": "Concert at Chase Center (headliner TBA) Chase Center San Francisco Oct 12",
+       "title": "Concert at Chase Center (headliner TBA)",
+       "url": "https://www.chasecenter.com/events",
+       "domain": "chasecenter.com",
+       "snippet": "Concert at Chase Center, 20:00 to 22:30 (start time not confirmed).",
+       "verified": false,
+       "placeholder": true
+      },
+      "source_id": 2,
+      "more": []
+     }
+    ],
+    "check": "Chase Center events 2026-10-12"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Moscone Center events 2026-10-12"
+   }
+  ],
+  "other": []
+ }
+}

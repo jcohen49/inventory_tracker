@@ -1,0 +1,425 @@
+{
+ "date": "2026-10-20",
+ "day_of_week": "Tuesday",
+ "status": "future",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 137.0,
+ "expected_items": 109.7,
+ "expected_vs_baseline_pct": -19.9,
+ "expected_orders": 66,
+ "expected_revenue": 1010.07,
+ "range_items": [
+  97,
+  123
+ ],
+ "confidence": "low",
+ "peak_hour": "12:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  12.5,
+  25.1,
+  10.7,
+  4.6,
+  5.2,
+  5.6,
+  10.1,
+  19.7,
+  11.0,
+  5.3
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   3.3,
+   6.6,
+   2.8,
+   1.2,
+   1.4,
+   1.5,
+   2.6,
+   5.2,
+   2.9,
+   1.4
+  ],
+  "tacos": [
+   2.4,
+   4.9,
+   2.1,
+   0.9,
+   1.0,
+   1.1,
+   2.0,
+   3.9,
+   2.1,
+   1.0
+  ],
+  "bowl": [
+   1.8,
+   3.7,
+   1.6,
+   0.7,
+   0.8,
+   0.8,
+   1.5,
+   2.9,
+   1.6,
+   0.8
+  ],
+  "nachos": [
+   1.2,
+   2.5,
+   1.1,
+   0.5,
+   0.5,
+   0.6,
+   1.0,
+   2.0,
+   1.1,
+   0.5
+  ],
+  "quesadilla": [
+   1.1,
+   2.3,
+   1.0,
+   0.4,
+   0.5,
+   0.5,
+   0.9,
+   1.8,
+   1.0,
+   0.5
+  ],
+  "chips-guac": [
+   0.9,
+   1.8,
+   0.8,
+   0.3,
+   0.4,
+   0.4,
+   0.7,
+   1.4,
+   0.8,
+   0.4
+  ],
+  "chips-queso": [
+   0.7,
+   1.4,
+   0.6,
+   0.3,
+   0.3,
+   0.3,
+   0.6,
+   1.1,
+   0.6,
+   0.3
+  ],
+  "salad": [
+   0.5,
+   1.0,
+   0.4,
+   0.2,
+   0.2,
+   0.2,
+   0.4,
+   0.8,
+   0.4,
+   0.2
+  ],
+  "side-rice": [
+   0.2,
+   0.5,
+   0.2,
+   0.1,
+   0.1,
+   0.1,
+   0.2,
+   0.4,
+   0.2,
+   0.1
+  ],
+  "side-beans": [
+   0.2,
+   0.5,
+   0.2,
+   0.1,
+   0.1,
+   0.1,
+   0.2,
+   0.4,
+   0.2,
+   0.1
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 28.8,
+  "tacos": 21.5,
+  "bowl": 16.0,
+  "nachos": 11.0,
+  "quesadilla": 9.9,
+  "chips-guac": 7.8,
+  "chips-queso": 6.2,
+  "salad": 4.3,
+  "side-rice": 2.2,
+  "side-beans": 2.1
+ },
+ "drivers": [
+  {
+   "event_id": "weather-rain-2026-10-20",
+   "name": "Heavy rain forecast",
+   "venue": "San Francisco",
+   "distance_miles": 0.0,
+   "direction": "down",
+   "expected_effect_pct": -20,
+   "start_time": "06:00",
+   "end_time": "23:00",
+   "explanation": "Heavy rain forecast: people stay indoors, roughly -20% across the day."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 29 Signature Burrito",
+  "Expect about 21 Street Tacos (3)",
+  "Expect about 16 Burrito Bowl"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "scheduled",
+  "runs_at": "end of day",
+  "note": "Scheduled to run at the end of the day on Oct 20 (21:30); this is the forecast it will start from.",
+  "summary": "Expected about 110 items (-20% vs a typical Tuesday of 137 [1]), peaking around 12:00. Heavy rain forecast: people stay indoors, roughly -20% across the day. [2] Memory recall of similar days: <<2026-09-29|Sep 29>> -19% (111 items), <<2026-09-30|Sep 30>> -24% (111 items), <<2026-09-22|Sep 22>> -4% (132 items) [3].",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Tuesday'\n  AND  date < '2026-10-20'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Tuesday",
+       137.0,
+       4
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "weather-rain-2026-10-20",
+    "query": "Heavy rain forecast San Francisco San Francisco Oct 20",
+    "title": "Heavy rain forecast",
+    "url": "https://www.weather.gov/mtr/",
+    "domain": "weather.gov",
+    "snippet": "Weather at San Francisco, 06:00 to 23:00 (start time not confirmed).",
+    "verified": false,
+    "placeholder": true
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_03e2fc20c2",
+    "query": "past sales near San Francisco on weather days",
+    "memory": "Comparable San Francisco days (weather): the truck averaged -15% vs baseline over the last 3 day(s); most recent <<2026-09-29|Sep 29>> at 111 items.",
+    "relevance": 0.93,
+    "avg_vs_baseline_pct": -15.5,
+    "linked_days": [
+     {
+      "date": "2026-09-29",
+      "event": "Light rain, 58F",
+      "category": "Weather",
+      "actual_items": 111,
+      "expected_items": 137,
+      "baseline_items": 137,
+      "vs_baseline_pct": -19.0,
+      "revenue": 1065.5
+     },
+     {
+      "date": "2026-09-30",
+      "event": "Weather: drizzle most of the day",
+      "category": "Weather",
+      "actual_items": 111,
+      "expected_items": 105,
+      "baseline_items": 146,
+      "vs_baseline_pct": -23.8,
+      "revenue": 1019
+     },
+     {
+      "date": "2026-09-22",
+      "event": "Weather: cold, foggy, windy evening",
+      "category": "Weather",
+      "actual_items": 132,
+      "expected_items": 139,
+      "baseline_items": 137,
+      "vs_baseline_pct": -3.6,
+      "revenue": 1231.5
+     }
+    ]
+   }
+  ],
+  "adjustments": {
+   "stat": 137,
+   "rows": [
+    {
+     "label": "Heavy rain forecast",
+     "event_id": "weather-rain-2026-10-20",
+     "delta": -27,
+     "kind": "down"
+    }
+   ],
+   "forecast": 110,
+   "actual": null,
+   "gap": null,
+   "gap_note": ""
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "reorder_alert_deferred",
+   "ingredient": "Large Flour Tortilla",
+   "change": "-26 tortillas",
+   "status": "scheduled",
+   "detail": "Will defer the Large Flour Tortilla reorder alert (about 26 tortillas less needed) at the end of the day on Oct 20.",
+   "runs_at": "end of day"
+  },
+  {
+   "type": "reorder_alert_deferred",
+   "ingredient": "Tortilla Chips",
+   "change": "-2 bags",
+   "status": "scheduled",
+   "detail": "Will defer the Tortilla Chips reorder alert (about 2 bags less needed) at the end of the day on Oct 20.",
+   "runs_at": "end of day"
+  }
+ ],
+ "statistical": {
+  "method": "Tuesday x hour seasonal average of past sales, events excluded",
+  "n_days": 4,
+  "total": 137.0,
+  "hourly": [
+   15.6,
+   31.4,
+   13.4,
+   5.8,
+   6.4,
+   7.0,
+   12.6,
+   24.7,
+   13.7,
+   6.6
+  ],
+  "low": [
+   12.6,
+   26.7,
+   10.6,
+   3.7,
+   4.3,
+   4.8,
+   9.8,
+   20.7,
+   10.8,
+   4.4
+  ],
+  "high": [
+   18.7,
+   36.0,
+   16.3,
+   7.8,
+   8.6,
+   9.2,
+   15.4,
+   28.6,
+   16.6,
+   8.7
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Tuesday'\n  AND  date < '2026-10-20'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Tuesday",
+      137.0,
+      4
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-10-20"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Chase Center events 2026-10-20"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Moscone Center events 2026-10-20"
+   }
+  ],
+  "other": [
+   {
+    "event_id": "weather-rain-2026-10-20",
+    "name": "Heavy rain forecast",
+    "category": "Weather",
+    "venue": "San Francisco",
+    "miles": 0.0,
+    "start": "06:00",
+    "end": "23:00",
+    "status": "scheduled",
+    "placeholder": true,
+    "effect_pct": -20,
+    "direction": "down",
+    "tavily": {
+     "type": "tavily",
+     "event_id": "weather-rain-2026-10-20",
+     "query": "Heavy rain forecast San Francisco San Francisco Oct 20",
+     "title": "Heavy rain forecast",
+     "url": "https://www.weather.gov/mtr/",
+     "domain": "weather.gov",
+     "snippet": "Weather at San Francisco, 06:00 to 23:00 (start time not confirmed).",
+     "verified": false,
+     "placeholder": true
+    },
+    "source_id": 2,
+    "more": []
+   }
+  ]
+ }
+}

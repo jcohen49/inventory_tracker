@@ -104,3 +104,16 @@ powershell -ExecutionPolicy Bypass -File data/build_sales_daily.ps1
 ```
 
 The seed is fixed, so output is identical each run. Pass `-Seed <n>` for a different draw. The script prints a per-day summary and reports a problem if any sale falls outside operating hours, any item costs more than its price, or the row count disagrees with the ground truth.
+
+## Agentic Insights research (recorded, not live)
+
+The Agentic Insights page is static. The external lookups were run once by scripts and their raw results saved here; `index.html` never calls Tavily or Mem0 and ships no keys.
+
+| Script | Does | Writes |
+|---|---|---|
+| `research_tavily.py` | Tavily searches: Moscone Center, Oracle Park and other events for Oct 6, 7, 10; one check per listed event; a calamity news check for every day Sep 5 to Oct 4 | `research/tavily.json` |
+| `research_mem0.py` | Seeds Mem0 with past sales memories (one per day plus lessons), then records the retrievals the page cites | `research/mem0.json` |
+| `generate_orders_predictions.py` | Orders, predictions and placeholder events | `orders/`, `predictions/`, `events.json` |
+| `build_agentic_page_data.py` | Rolls everything, plus `research_overlay.py`, up for the page | `agentic_insights.js` |
+
+Both research scripts read `MEM0_API_KEY` and `TAVILY_KEY` from the repo-root `.env` (gitignored). To refresh, delete the matching file in `research/` and re-run, then rerun the build script.

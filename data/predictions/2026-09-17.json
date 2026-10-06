@@ -1,0 +1,418 @@
+{
+ "date": "2026-09-17",
+ "day_of_week": "Thursday",
+ "status": "past",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 165.9,
+ "expected_items": 194.6,
+ "expected_vs_baseline_pct": 17.3,
+ "expected_orders": 117,
+ "expected_revenue": 1774.45,
+ "range_items": [
+  171,
+  218
+ ],
+ "confidence": "high",
+ "peak_hour": "12:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  22.6,
+  45.4,
+  23.6,
+  7.0,
+  7.8,
+  8.5,
+  20.2,
+  34.9,
+  16.6,
+  8.0
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   5.6,
+   11.3,
+   5.6,
+   1.8,
+   2.1,
+   2.2,
+   4.9,
+   8.7,
+   4.4,
+   2.1
+  ],
+  "tacos": [
+   4.9,
+   9.8,
+   5.5,
+   1.4,
+   1.5,
+   1.7,
+   4.6,
+   7.4,
+   3.3,
+   1.6
+  ],
+  "bowl": [
+   2.7,
+   5.5,
+   2.4,
+   1.0,
+   1.1,
+   1.2,
+   2.2,
+   4.3,
+   2.4,
+   1.2
+  ],
+  "nachos": [
+   2.7,
+   5.3,
+   3.1,
+   0.7,
+   0.8,
+   0.8,
+   2.6,
+   4.0,
+   1.7,
+   0.8
+  ],
+  "quesadilla": [
+   1.9,
+   3.9,
+   1.9,
+   0.6,
+   0.7,
+   0.8,
+   1.7,
+   3.0,
+   1.5,
+   0.7
+  ],
+  "chips-guac": [
+   1.8,
+   3.5,
+   2.0,
+   0.5,
+   0.6,
+   0.6,
+   1.6,
+   2.7,
+   1.2,
+   0.6
+  ],
+  "chips-queso": [
+   1.5,
+   2.9,
+   1.7,
+   0.4,
+   0.4,
+   0.5,
+   1.4,
+   2.2,
+   0.9,
+   0.5
+  ],
+  "salad": [
+   0.7,
+   1.4,
+   0.6,
+   0.3,
+   0.3,
+   0.3,
+   0.6,
+   1.1,
+   0.6,
+   0.3
+  ],
+  "side-rice": [
+   0.4,
+   0.9,
+   0.4,
+   0.1,
+   0.2,
+   0.2,
+   0.4,
+   0.7,
+   0.3,
+   0.2
+  ],
+  "side-beans": [
+   0.4,
+   0.8,
+   0.4,
+   0.1,
+   0.1,
+   0.2,
+   0.4,
+   0.6,
+   0.3,
+   0.2
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 48.8,
+  "tacos": 41.5,
+  "bowl": 24.2,
+  "nachos": 22.5,
+  "quesadilla": 16.7,
+  "chips-guac": 15.0,
+  "chips-queso": 12.4,
+  "salad": 6.2,
+  "side-rice": 3.7,
+  "side-beans": 3.5
+ },
+ "drivers": [
+  {
+   "event_id": "dreamforce-2026-09-17",
+   "name": "Dreamforce 2026 (day 3)",
+   "venue": "Moscone Center",
+   "distance_miles": 0.9,
+   "direction": "up",
+   "expected_effect_pct": 17,
+   "start_time": "09:00",
+   "end_time": "18:00",
+   "explanation": "Dreamforce 2026 (day 3) (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +17%."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 49 Signature Burrito",
+  "Expect about 42 Street Tacos (3)",
+  "Expect about 24 Burrito Bowl",
+  "Pre-portion nachos, chips and tortillas before the rush window"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "completed",
+  "runs_at": "21:30",
+  "note": "Completed at end of day.",
+  "summary": "Sold 181 items vs 195 expected (-7%). A typical Thursday runs about 166 items [1]. Dreamforce 2026 (day 3) (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +17%. [2] Memory recall of similar days: <<2026-09-16|Sep 16>> +83% (267 items), <<2026-09-15|Sep 15>> +3% (141 items) [3].",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Thursday'\n  AND  date < '2026-09-17'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Thursday",
+       165.9,
+       1
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "dreamforce-2026-09-17",
+    "query": "Dreamforce 2026 (day 3) Moscone Center San Francisco Sep 17",
+    "title": "Dreamforce 2026 (day 3)",
+    "url": "https://www.sfmta.com/reports/dreamforce-2026",
+    "domain": "sfmta.com",
+    "snippet": "Conference at Moscone Center, 09:00 to 18:00 (start time not confirmed).",
+    "verified": true,
+    "placeholder": false
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_eebf77e1e1",
+    "query": "past sales near Moscone Center on conference days",
+    "memory": "Comparable Moscone Center days (conference): the truck averaged +43% vs baseline over the last 2 day(s); most recent <<2026-09-16|Sep 16>> at 267 items.",
+    "relevance": 0.87,
+    "avg_vs_baseline_pct": 43.2,
+    "linked_days": [
+     {
+      "date": "2026-09-16",
+      "event": "Dreamforce 2026 (day 2)",
+      "category": "Conference",
+      "actual_items": 267,
+      "expected_items": 261,
+      "baseline_items": 146,
+      "vs_baseline_pct": 83.4,
+      "revenue": 2477.5
+     },
+     {
+      "date": "2026-09-15",
+      "event": "Dreamforce 2026 (day 1)",
+      "category": "Conference",
+      "actual_items": 141,
+      "expected_items": 161,
+      "baseline_items": 137,
+      "vs_baseline_pct": 2.9,
+      "revenue": 1285.5
+     }
+    ]
+   }
+  ],
+  "adjustments": {
+   "stat": 166,
+   "rows": [
+    {
+     "label": "Dreamforce 2026 (day 3)",
+     "event_id": "dreamforce-2026-09-17",
+     "delta": 28,
+     "kind": "up"
+    }
+   ],
+   "forecast": 195,
+   "actual": 181,
+   "gap": -14,
+   "gap_note": "Within normal daily noise (about +/-7%)."
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Large Flour Tortilla",
+   "change": "+34 tortillas",
+   "status": "completed",
+   "detail": "Raised the Large Flour Tortilla reorder alert by 34 tortillas to cover the expected rush at end of day on Sep 17 (21:30).",
+   "runs_at": "21:30"
+  },
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Tortilla Chips",
+   "change": "+3 bags",
+   "status": "completed",
+   "detail": "Raised the Tortilla Chips reorder alert by 3 bags to cover the expected rush at end of day on Sep 17 (21:30).",
+   "runs_at": "21:30"
+  }
+ ],
+ "statistical": {
+  "method": "Thursday x hour seasonal average of past sales, events excluded",
+  "n_days": 1,
+  "total": 165.9,
+  "hourly": [
+   18.9,
+   38.0,
+   16.3,
+   7.0,
+   7.8,
+   8.5,
+   15.3,
+   29.9,
+   16.6,
+   8.0
+  ],
+  "low": [
+   15.5,
+   32.7,
+   13.1,
+   4.8,
+   5.5,
+   6.1,
+   12.2,
+   25.4,
+   13.4,
+   5.7
+  ],
+  "high": [
+   22.3,
+   43.3,
+   19.4,
+   9.2,
+   10.1,
+   10.8,
+   18.3,
+   34.3,
+   19.7,
+   10.3
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Thursday'\n  AND  date < '2026-09-17'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Thursday",
+      165.9,
+      1
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-09-17"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Chase Center events 2026-09-17"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "event",
+    "items": [
+     {
+      "event_id": "dreamforce-2026-09-17",
+      "name": "Dreamforce 2026 (day 3)",
+      "category": "Conference",
+      "venue": "Moscone Center",
+      "miles": 0.9,
+      "start": "09:00",
+      "end": "18:00",
+      "status": "took place",
+      "placeholder": false,
+      "effect_pct": 17,
+      "direction": "up",
+      "tavily": {
+       "type": "tavily",
+       "event_id": "dreamforce-2026-09-17",
+       "query": "Dreamforce 2026 (day 3) Moscone Center San Francisco Sep 17",
+       "title": "Dreamforce 2026 (day 3)",
+       "url": "https://www.sfmta.com/reports/dreamforce-2026",
+       "domain": "sfmta.com",
+       "snippet": "Conference at Moscone Center, 09:00 to 18:00 (start time not confirmed).",
+       "verified": true,
+       "placeholder": false
+      },
+      "source_id": 2,
+      "more": []
+     }
+    ],
+    "check": "Moscone Center events 2026-09-17"
+   }
+  ],
+  "other": []
+ },
+ "actual_items": 181,
+ "label": "event_lift_moderate"
+}

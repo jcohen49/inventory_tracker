@@ -1,0 +1,434 @@
+{
+ "date": "2026-09-12",
+ "day_of_week": "Saturday",
+ "status": "past",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 248.6,
+ "expected_items": 409.3,
+ "expected_vs_baseline_pct": 64.6,
+ "expected_orders": 245,
+ "expected_revenue": 3707.13,
+ "range_items": [
+  360,
+  458
+ ],
+ "confidence": "high",
+ "peak_hour": "12:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  58.3,
+  117.6,
+  28.7,
+  10.6,
+  19.2,
+  42.3,
+  34.7,
+  53.7,
+  29.8,
+  14.3
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   13.5,
+   27.2,
+   7.2,
+   2.8,
+   4.5,
+   9.8,
+   8.5,
+   14.1,
+   7.8,
+   3.8
+  ],
+  "tacos": [
+   14.1,
+   28.4,
+   6.1,
+   2.1,
+   4.6,
+   10.2,
+   7.7,
+   10.5,
+   5.8,
+   2.8
+  ],
+  "bowl": [
+   5.2,
+   10.6,
+   3.6,
+   1.6,
+   1.8,
+   3.8,
+   4.0,
+   7.8,
+   4.3,
+   2.1
+  ],
+  "nachos": [
+   8.2,
+   16.5,
+   3.3,
+   1.1,
+   2.7,
+   6.0,
+   4.3,
+   5.4,
+   3.0,
+   1.4
+  ],
+  "quesadilla": [
+   4.6,
+   9.3,
+   2.5,
+   1.0,
+   1.5,
+   3.4,
+   2.9,
+   4.8,
+   2.7,
+   1.3
+  ],
+  "chips-guac": [
+   5.1,
+   10.3,
+   2.2,
+   0.8,
+   1.7,
+   3.7,
+   2.8,
+   3.8,
+   2.1,
+   1.0
+  ],
+  "chips-queso": [
+   4.4,
+   8.8,
+   1.8,
+   0.6,
+   1.4,
+   3.2,
+   2.3,
+   3.1,
+   1.7,
+   0.8
+  ],
+  "salad": [
+   1.2,
+   2.4,
+   0.9,
+   0.4,
+   0.4,
+   0.9,
+   1.0,
+   2.1,
+   1.2,
+   0.6
+  ],
+  "side-rice": [
+   1.0,
+   2.1,
+   0.5,
+   0.2,
+   0.3,
+   0.7,
+   0.6,
+   1.1,
+   0.6,
+   0.3
+  ],
+  "side-beans": [
+   1.0,
+   2.0,
+   0.5,
+   0.2,
+   0.3,
+   0.7,
+   0.6,
+   1.0,
+   0.6,
+   0.3
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 99.2,
+  "tacos": 92.3,
+  "bowl": 44.8,
+  "nachos": 51.8,
+  "quesadilla": 33.9,
+  "chips-guac": 33.4,
+  "chips-queso": 28.2,
+  "salad": 11.0,
+  "side-rice": 7.5,
+  "side-beans": 7.2
+ },
+ "drivers": [
+  {
+   "event_id": "giants-2026-09-12",
+   "name": "Giants vs San Diego Padres",
+   "venue": "Oracle Park",
+   "distance_miles": 0.1,
+   "direction": "up",
+   "expected_effect_pct": 40,
+   "start_time": "13:05",
+   "end_time": "15:45",
+   "explanation": "Giants vs San Diego Padres at Oracle Park (0.1 mi away, starts 13:05): expect a rush from about 10:35, a lull while the crowd is inside, and a bump after the end. Roughly +40% on the day."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 99 Signature Burrito",
+  "Expect about 92 Street Tacos (3)",
+  "Expect about 52 Loaded Nachos",
+  "Pre-portion nachos, chips and tortillas before the rush window"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "completed",
+  "runs_at": "21:30",
+  "note": "Completed at end of day.",
+  "summary": "Sold 438 items vs 409 expected (+7%). A typical Saturday runs about 249 items [1]. Giants vs San Diego Padres at Oracle Park (0.1 mi away, starts 13:05): expect a rush from about 10:35, a lull while the crowd is inside, and a bump after the end. Roughly +40% on the day. [2] Memory recall of similar days: <<2026-09-11|Sep 11>> +97% (455 items), <<2026-09-09|Sep 9>> +44% (210 items), <<2026-09-08|Sep 8>> +81% (248 items) [3].",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Saturday'\n  AND  date < '2026-09-12'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Saturday",
+       248.6,
+       1
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "giants-2026-09-12",
+    "query": "Giants vs San Diego Padres Oracle Park San Francisco Sep 12",
+    "title": "Giants vs San Diego Padres",
+    "url": "https://www.espn.com/mlb/team/schedule/_/name/sf/season/2026/seasontype/2/half/2",
+    "domain": "espn.com",
+    "snippet": "MLB game at Oracle Park, 13:05 to 15:45 (start time not confirmed).",
+    "verified": true,
+    "placeholder": false
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_f74e395070",
+    "query": "past sales near Oracle Park on mlb game days",
+    "memory": "Comparable Oracle Park days (mlb game): the truck averaged +74% vs baseline over the last 3 day(s); most recent <<2026-09-11|Sep 11>> at 455 items.",
+    "relevance": 0.93,
+    "avg_vs_baseline_pct": 73.9,
+    "linked_days": [
+     {
+      "date": "2026-09-11",
+      "event": "Giants vs San Diego Padres",
+      "category": "MLB game",
+      "actual_items": 455,
+      "expected_items": 436,
+      "baseline_items": 231,
+      "vs_baseline_pct": 96.6,
+      "revenue": 4149.5
+     },
+     {
+      "date": "2026-09-09",
+      "event": "Giants vs St. Louis Cardinals",
+      "category": "MLB game",
+      "actual_items": 210,
+      "expected_items": 226,
+      "baseline_items": 146,
+      "vs_baseline_pct": 44.2,
+      "revenue": 1909
+     },
+     {
+      "date": "2026-09-08",
+      "event": "Giants vs St. Louis Cardinals",
+      "category": "MLB game",
+      "actual_items": 248,
+      "expected_items": 223,
+      "baseline_items": 137,
+      "vs_baseline_pct": 81.0,
+      "revenue": 2239
+     }
+    ]
+   }
+  ],
+  "adjustments": {
+   "stat": 249,
+   "rows": [
+    {
+     "label": "Giants vs San Diego Padres",
+     "event_id": "giants-2026-09-12",
+     "delta": 111,
+     "kind": "up"
+    },
+    {
+     "label": "Overlap, late hours and other known factors",
+     "event_id": null,
+     "delta": 49,
+     "kind": "up"
+    }
+   ],
+   "forecast": 409,
+   "actual": 438,
+   "gap": 29,
+   "gap_note": "Within normal daily noise (about +/-7%)."
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Large Flour Tortilla",
+   "change": "+176 tortillas",
+   "status": "completed",
+   "detail": "Raised the Large Flour Tortilla reorder alert by 176 tortillas to cover the expected rush at end of day on Sep 12 (21:30).",
+   "runs_at": "21:30"
+  },
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Tortilla Chips",
+   "change": "+14 bags",
+   "status": "completed",
+   "detail": "Raised the Tortilla Chips reorder alert by 14 bags to cover the expected rush at end of day on Sep 12 (21:30).",
+   "runs_at": "21:30"
+  }
+ ],
+ "statistical": {
+  "method": "Saturday x hour seasonal average of past sales, events excluded",
+  "n_days": 1,
+  "total": 248.6,
+  "hourly": [
+   28.3,
+   56.9,
+   24.4,
+   10.4,
+   11.7,
+   12.7,
+   22.9,
+   44.7,
+   24.9,
+   11.9
+  ],
+  "low": [
+   24.0,
+   49.7,
+   20.4,
+   7.9,
+   9.0,
+   9.9,
+   19.1,
+   38.8,
+   20.9,
+   9.2
+  ],
+  "high": [
+   32.7,
+   64.1,
+   28.3,
+   13.0,
+   14.4,
+   15.4,
+   26.7,
+   50.7,
+   28.8,
+   14.6
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Saturday'\n  AND  date < '2026-09-12'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Saturday",
+      248.6,
+      1
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "event",
+    "items": [
+     {
+      "event_id": "giants-2026-09-12",
+      "name": "Giants vs San Diego Padres",
+      "category": "MLB game",
+      "venue": "Oracle Park",
+      "miles": 0.1,
+      "start": "13:05",
+      "end": "15:45",
+      "status": "took place",
+      "placeholder": false,
+      "effect_pct": 40,
+      "direction": "up",
+      "tavily": {
+       "type": "tavily",
+       "event_id": "giants-2026-09-12",
+       "query": "Giants vs San Diego Padres Oracle Park San Francisco Sep 12",
+       "title": "Giants vs San Diego Padres",
+       "url": "https://www.espn.com/mlb/team/schedule/_/name/sf/season/2026/seasontype/2/half/2",
+       "domain": "espn.com",
+       "snippet": "MLB game at Oracle Park, 13:05 to 15:45 (start time not confirmed).",
+       "verified": true,
+       "placeholder": false
+      },
+      "source_id": 2,
+      "more": []
+     }
+    ],
+    "check": "Oracle Park events 2026-09-12"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Chase Center events 2026-09-12"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Moscone Center events 2026-09-12"
+   }
+  ],
+  "other": []
+ },
+ "actual_items": 438,
+ "label": "event_lift_strong"
+}
