@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<script src="./data/sales_daily.js"></script>
 </head>
 <body>
 <x-dc>
@@ -179,39 +180,40 @@ body{margin:0}
 .linkbtn{background:none;border:none;color:var(--color-accent);font-family:var(--font-heading);font-weight:600;font-size:12.5px;cursor:pointer;padding:4px 0;text-align:left}
 .linkbtn:hover{color:var(--color-accent-700)}
 .eyebrow-ed{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent);font-family:var(--font-heading);font-weight:600;margin-bottom:var(--space-2)}
-.usage-wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:var(--space-5);align-items:stretch}
-.usage-chart{display:flex;flex-direction:column}
+.sales-plot{--sales-c1:#2a78d6;--sales-c2:#eb6834;--sales-c3:#1baf7a;--sales-c4:#eda100;--sales-c5:#e87ba4;--sales-c6:#008300;--sales-c7:#4a3aa7;--sales-c8:#e34948;--sales-c9:#6b6b6e;--sales-c10:#8a5a2b;position:relative;cursor:crosshair}
+.sales-legend{--sales-c1:#2a78d6;--sales-c2:#eb6834;--sales-c3:#1baf7a;--sales-c4:#eda100;--sales-c5:#e87ba4;--sales-c6:#008300;--sales-c7:#4a3aa7;--sales-c8:#e34948;--sales-c9:#6b6b6e;--sales-c10:#8a5a2b;display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:var(--space-3)}
+.sales-plot svg{display:block;width:100%;height:auto}
+.sales-grid{stroke:color-mix(in srgb,var(--color-text) 8%,transparent);stroke-width:1}
+.sales-base{stroke:var(--color-neutral-400);stroke-width:1}
+.sales-ax{position:absolute;pointer-events:none;font-size:11px;line-height:1;color:var(--color-neutral-600);font-variant-numeric:tabular-nums;white-space:nowrap}
+.sales-ax-y{left:0;text-align:right;transform:translateY(-50%)}
+.sales-ax-x{transform:translateX(-50%)}
+.sales-line{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.sales-dot{stroke:var(--color-bg);stroke-width:2}
+.sales-guide{stroke:var(--color-neutral-500);stroke-width:1;vector-effect:non-scaling-stroke}
+.sales-tip{position:absolute;top:8px;pointer-events:none;background:var(--color-bg);border:1px solid var(--color-accent-900);padding:8px 10px;min-width:170px;font-size:12.5px;z-index:2}
+.sales-tip-h{font-family:var(--font-heading);font-weight:600;font-size:13px;margin-bottom:5px}
+.sales-tip-row{display:grid;grid-template-columns:10px 1fr auto;gap:8px;align-items:center;line-height:1.55}
+.sales-tip-row i{width:10px;height:10px;display:block}
+.sales-tip-row b{font-family:var(--font-heading);font-weight:600;font-variant-numeric:tabular-nums}
+.sales-tip-row span{color:var(--color-neutral-700);white-space:nowrap}
+.sales-tip-tot{border-top:1px solid var(--color-divider);margin-top:4px;padding-top:3px}
+.sales-empty{position:absolute;left:0;right:0;top:42%;text-align:center;pointer-events:none}
+.sales-leg{display:inline-flex;align-items:center;gap:7px;height:30px;padding:0 10px;border:1px solid var(--color-divider);background:transparent;cursor:pointer;color:var(--color-text);font-family:var(--font-body);font-size:12.5px}
+.sales-leg:hover{background:color-mix(in srgb,var(--color-text) 6%,transparent)}
+.sales-leg i{width:10px;height:10px;display:block;border:2px solid;box-sizing:border-box}
+.sales-leg b{font-family:var(--font-heading);font-weight:600;font-variant-numeric:tabular-nums}
+.sales-leg.off span,.sales-leg.off b{color:var(--color-neutral-500)}
+.sales-leg.off span{text-decoration:line-through}
+.sales-leg-all{display:inline-flex;gap:var(--space-3);margin-left:var(--space-2)}
 .usage-controls{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap}
 .date-range{display:flex;align-items:center;gap:6px}
 .date-in{width:148px;font-size:13px;font-family:var(--font-body)}
-.date-sep{color:var(--color-neutral-500)}.rankrow{display:grid;grid-template-columns:26px 1fr auto;gap:var(--space-3);align-items:center;padding:9px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent)}
-.rankrow:last-child{border-bottom:none}
-.rank-n{font-family:var(--font-heading);font-weight:600;font-size:15px;color:var(--color-accent);font-variant-numeric:tabular-nums}
-.rank-name{font-family:var(--font-heading);font-weight:600;font-size:15px}
-.rank-bar{height:5px;background:var(--color-neutral-200);position:relative;margin-top:6px;width:100%}
-.rank-bar>span{position:absolute;left:0;top:0;bottom:0;background:var(--color-accent-500)}
-.rank-used{font-family:var(--font-heading);font-weight:600;font-size:17px;font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;line-height:1.1}
-.rank-used small{display:block;font-size:11px;color:var(--color-text);font-weight:400;text-transform:none}
-.rank-used .rank-vol{font-size:10.5px;color:var(--color-neutral-400);margin-top:1px}
+.date-sep{color:var(--color-neutral-500)}
 .chart-kick{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--color-accent);margin-bottom:var(--space-3)}
 .list-head{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);margin-bottom:var(--space-3)}
-.metric-toggle{display:inline-flex;border:1px solid var(--color-divider);flex:none;height:36px}
-.sec-title:has(.metric-toggle) h2{white-space:nowrap}
 .usage-controls .chip{height:36px;display:inline-flex;align-items:center}
 .date-in{width:148px;font-size:13px;font-family:var(--font-body);height:36px;box-sizing:border-box}
-.metric-toggle button{font-family:var(--font-heading);font-weight:600;font-size:11px;padding:5px 11px;border:none;background:transparent;color:var(--color-text);cursor:pointer}
-.metric-toggle button:hover{background:color-mix(in srgb,var(--color-text) 6%,transparent)}
-.metric-toggle button.on{background:var(--color-accent-900);color:var(--color-bg)}
-.pie-box{position:relative;width:100%;max-width:220px;margin:0 auto}
-.pie-box svg{display:block;width:100%;height:auto}
-.pie-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
-.pie-tot{font-family:var(--font-heading);font-weight:600;font-size:30px;line-height:1}
-.pie-tot-l{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-500);margin-top:3px}
-.pie-legend{display:flex;flex-direction:column;gap:7px;margin-top:var(--space-4);flex:1;justify-content:space-between}
-.pie-leg-row{display:grid;grid-template-columns:12px 1fr auto;gap:9px;align-items:center;font-size:12.5px}
-.pie-leg-row i{width:12px;height:12px;display:block}
-.pie-leg-name{color:var(--color-neutral-700);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.pie-leg-pct{font-variant-numeric:tabular-nums;color:var(--color-neutral-600);font-family:var(--font-heading);font-weight:600}
 </style>
 </helmet>
 <div class="app">
@@ -240,22 +242,29 @@ body{margin:0}
 <button class="stat statbtn blueprint elev-sm" onClick="{{ go.orders }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">Open orders</div><div class="n">{{ stats.pending }}</div><div class="s">{{ stats.pendingSub }}</div></button>
 <button class="stat statbtn blueprint elev-sm" onClick="{{ go.forecast }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">Peak this week</div><div class="n">{{ stats.peak }}</div><div class="s">{{ stats.peakDay }}</div></button>
 </div>
+<div class="sec-title"><h2>Menu item sales</h2><div class="usage-controls"><div class="date-range"><input type="date" class="input date-in" aria-label="Start date" value="{{ sales.fromVal }}" min="{{ sales.min }}" max="{{ sales.max }}" onChange="{{ sales.setFrom }}"><span class="date-sep">–</span><input type="date" class="input date-in" aria-label="End date" value="{{ sales.toVal }}" min="{{ sales.min }}" max="{{ sales.max }}" onChange="{{ sales.setTo }}"></div><div class="filters" style="margin-bottom:0"><sc-for list="{{ sales.chips }}" as="c" hint-placeholder-count="3"><button class="chip {{ c.cls }}" onClick="{{ c.set }}">{{ c.label }}</button></sc-for></div></div></div>
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="chart-kick">Items sold per day · {{ sales.rangeLabel }} · {{ sales.totalDisp }} shown</div>
+<div class="sales-plot" onMouseMove="{{ sales.move }}" onMouseLeave="{{ sales.leave }}">
+<svg viewBox="0 0 960 320" role="img" aria-label="Line chart of items sold per day for each menu item">
+<sc-for list="{{ sales.yTicks }}" as="t" hint-placeholder-count="5"><g><line class="sales-grid" x1="{{ sales.x0 }}" x2="{{ sales.x1 }}" y1="{{ t.y }}" y2="{{ t.y }}"></line></g></sc-for>
+<line class="sales-base" x1="{{ sales.x0 }}" x2="{{ sales.x1 }}" y1="{{ sales.yBase }}" y2="{{ sales.yBase }}"></line>
+<sc-for list="{{ sales.lines }}" as="s" hint-placeholder-count="10"><polyline class="sales-line" points="{{ s.points }}" style="{{ s.style }}"></polyline></sc-for>
+<sc-for list="{{ sales.dots }}" as="d" hint-placeholder-count="0"><circle class="sales-dot" cx="{{ d.cx }}" cy="{{ d.cy }}" r="3" style="{{ d.style }}"></circle></sc-for>
+<sc-if value="{{ sales.hover }}" hint-placeholder-val="{{ false }}"><g><line class="sales-guide" x1="{{ sales.hover.x }}" x2="{{ sales.hover.x }}" y1="{{ sales.yTop }}" y2="{{ sales.yBase }}"></line><sc-for list="{{ sales.hover.dots }}" as="d" hint-placeholder-count="0"><circle class="sales-dot" cx="{{ d.cx }}" cy="{{ d.cy }}" r="4.5" style="{{ d.style }}"></circle></sc-for></g></sc-if>
+</svg>
+<sc-for list="{{ sales.yTicks }}" as="t" hint-placeholder-count="5"><div class="sales-ax sales-ax-y" style="{{ t.style }}">{{ t.label }}</div></sc-for>
+<sc-for list="{{ sales.xTicks }}" as="t" hint-placeholder-count="8"><div class="sales-ax sales-ax-x" style="{{ t.style }}">{{ t.label }}</div></sc-for>
+<sc-if value="{{ sales.hover }}" hint-placeholder-val="{{ false }}"><div class="sales-tip" style="{{ sales.hover.tipStyle }}"><div class="sales-tip-h">{{ sales.hover.title }}</div><sc-for list="{{ sales.hover.rows }}" as="r" hint-placeholder-count="0"><div class="sales-tip-row"><i style="{{ r.swStyle }}"></i><span>{{ r.name }}</span><b>{{ r.val }}</b></div></sc-for><sc-if value="{{ sales.hover.multi }}" hint-placeholder-val="{{ false }}"><div class="sales-tip-row sales-tip-tot"><i></i><span>Total</span><b>{{ sales.hover.total }}</b></div></sc-if></div></sc-if>
+<sc-if value="{{ sales.noneVisible }}" hint-placeholder-val="{{ false }}"><div class="sales-empty growl">Pick a menu item below to plot it.</div></sc-if>
+<sc-if value="{{ sales.noData }}" hint-placeholder-val="{{ false }}"><div class="sales-empty growl">No sales recorded for these dates.</div></sc-if>
+</div>
+<div class="sales-legend"><sc-for list="{{ sales.legend }}" as="l" hint-placeholder-count="10"><button class="sales-leg {{ l.cls }}" aria-pressed="{{ l.pressed }}" onClick="{{ l.toggle }}"><i style="{{ l.swStyle }}"></i><span>{{ l.name }}</span><b>{{ l.totalDisp }}</b></button></sc-for><span class="sales-leg-all"><button class="linkbtn" onClick="{{ sales.showAll }}">Show all</button><button class="linkbtn" onClick="{{ sales.showNone }}">Hide all</button></span></div>
+</div>
 <div class="sec-title"><h2>Reorder reminders</h2><button class="btn btn-ghost" onClick="{{ go.reorders }}">Review all →</button></div>
 <div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
 <sc-for list="{{ topAlerts }}" as="a" hint-placeholder-count="4"><div class="alert-row"><div><div class="alert-name">{{ a.name }} <span class="st {{ a.statusClass }}">{{ a.statusLabel }}</span></div><div class="alert-meta">{{ a.countDisp }} left · about {{ a.daysDisp }} of cover · from {{ a.vendorName }}</div></div><div class="deliv">Suggest {{ a.sugDisp }}</div><button class="btn btn-primary" onClick="{{ a.reorder }}">Review order</button></div></sc-for>
 <sc-if value="{{ noAlerts }}" hint-placeholder-val="{{ false }}"><div class="growl">Everything is above its reorder point. Nice.</div></sc-if>
-</div>
-<div class="sec-title"><h2>Most popular items</h2><div class="metric-toggle"><button class="{{ mServCls }}" onClick="{{ setMetricServ }}">Servings</button><button class="{{ mVolCls }}" onClick="{{ setMetricVol }}">Volume</button></div><div class="usage-controls"><div class="date-range"><input type="date" class="input date-in" value="{{ usageFromVal }}" onChange="{{ setUsageFrom }}"><span class="date-sep">–</span><input type="date" class="input date-in" value="{{ usageToVal }}" onChange="{{ setUsageTo }}"></div><div class="filters" style="margin-bottom:0"><sc-for list="{{ usageChips }}" as="c" hint-placeholder-count="4"><button class="chip {{ c.cls }}" onClick="{{ c.set }}">{{ c.label }}</button></sc-for></div></div></div>
-<div class="usage-wrap">
-<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-<div class="chart-kick">Top 10 · {{ metricWord }} sold over {{ usageRangeLabel }}</div>
-<sc-for list="{{ popItems }}" as="p" hint-placeholder-count="10"><div class="rankrow"><div class="rank-n">{{ p.rank }}</div><div><div class="rank-name">{{ p.name }}</div><div class="rank-bar"><span style="{{ p.barStyle }}"></span></div></div><div class="rank-used"><sc-if value="{{ metricServings }}" hint-placeholder-val="{{ true }}"><div>{{ p.servingsDisp }}<small>servings</small></div></sc-if><sc-if value="{{ metricVolume }}" hint-placeholder-val="{{ false }}"><div>{{ p.volNumDisp }}<small>{{ p.unit }}</small></div></sc-if></div></div></sc-for>
-</div>
-<div class="panel blueprint usage-chart"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-<div class="chart-kick">Ingredient usage share</div>
-<div class="pie-box"><svg viewBox="0 0 200 200"><sc-for list="{{ usagePie }}" as="s" hint-placeholder-count="6"><path d="{{ s.d }}" style="{{ s.fillStyle }}" stroke="var(--color-bg)" stroke-width="1.5"></path></sc-for><circle cx="100" cy="100" r="52" style="fill:var(--color-bg)"></circle></svg><div class="pie-center"><div class="pie-tot">{{ usageTotalDisp }}</div><div class="pie-tot-l">{{ pieCenterLabel }}</div></div></div>
-<div class="pie-legend"><sc-for list="{{ usagePie }}" as="s" hint-placeholder-count="6"><div class="pie-leg-row"><i style="{{ s.iStyle }}"></i><span class="pie-leg-name">{{ s.name }}</span><span class="pie-leg-pct">{{ s.pct }}</span></div></sc-for></div>
-</div>
 </div>
 </div></sc-if>
 
@@ -419,7 +428,7 @@ body{margin:0}
 <div class="two">
 <div class="stack">
 <div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-<div class="sec-title" style="margin:0 0 var(--space-3)"><h2 style="font-size:19px">July 2026</h2><span class="growl">Click a day to mark it busy · slow · closed</span></div>
+<div class="sec-title" style="margin:0 0 var(--space-3)"><h2 style="font-size:19px">{{ calMonthLabel }}</h2><span class="growl">Click a day to mark it busy · slow · closed</span></div>
 <div class="cal"><sc-for list="{{ dayHeads }}" as="d" hint-placeholder-count="7"><div class="dh">{{ d }}</div></sc-for><sc-for list="{{ calCells }}" as="c" hint-placeholder-count="35"><div class="cell {{ c.cls }}" onClick="{{ c.click }}">{{ c.num }}<sc-if value="{{ c.isToday }}" hint-placeholder-val="{{ false }}"><span class="today-m"></span></sc-if><div class="cl">{{ c.label }}</div></div></sc-for></div>
 <div class="legend"><span><i style="background:var(--color-accent-200)"></i>Busy</span><span><i style="background:var(--color-neutral-100)"></i>Slow</span><span><i style="background:var(--color-neutral-300)"></i>Closed</span><span><i style="background:var(--color-accent-100)"></i>Mixed dayparts</span></div>
 </div>
@@ -555,17 +564,17 @@ class Component extends DCLogic {
       V('v-old-paper','Border Paper & Pack','Owen Diaz','sales@borderpaperpack.com','(915) 555-0142','4 days',false)
     ];
     const orders=[
-      {id:'o1',ingId:'beef',vendorId:'v-meat',qty:120,date:'Jul 8',eta:'Jul 10',status:'Delivered'},
-      {id:'o2',ingId:'cheese-blend',vendorId:'v-dairy',qty:100,date:'Jul 9',eta:'Jul 11',status:'Delivered'},
-      {id:'o3',ingId:'shrimp',vendorId:'v-sea',qty:60,date:'Jul 13',eta:'Jul 17',status:'Pending'},
-      {id:'o4',ingId:'cilantro',vendorId:'v-produce',qty:50,date:'Jul 14',eta:'Jul 15',status:'Pending'}
+      {id:'o1',ingId:'beef',vendorId:'v-meat',qty:120,date:'Sep 29',eta:'Oct 1',status:'Delivered'},
+      {id:'o2',ingId:'cheese-blend',vendorId:'v-dairy',qty:100,date:'Sep 30',eta:'Oct 2',status:'Delivered'},
+      {id:'o3',ingId:'shrimp',vendorId:'v-sea',qty:60,date:'Oct 4',eta:'Oct 8',status:'Pending'},
+      {id:'o4',ingId:'cilantro',vendorId:'v-produce',qty:50,date:'Oct 5',eta:'Oct 6',status:'Pending'}
     ];
     this.state={
       view:(props.defaultView||'dashboard'), selectedIng:null, selectedVendor:null,
       ingredients, vendors, orders,
-      calendar:{'2026-07-04':{lunch:'busy',afternoon:'busy',dinner:'busy',late:'busy'},'2026-07-05':{lunch:'slow',afternoon:'slow',dinner:'slow',late:'slow'},'2026-07-18':{lunch:'normal',afternoon:'normal',dinner:'busy',late:'busy'},'2026-07-20':{lunch:'closed',afternoon:'closed',dinner:'closed',late:'closed'},'2026-07-25':{lunch:'busy',afternoon:'busy',dinner:'busy',late:'busy'}},
+      calendar:{'2026-10-10':{lunch:'busy',afternoon:'busy',dinner:'busy',late:'busy'},'2026-10-11':{lunch:'slow',afternoon:'slow',dinner:'slow',late:'slow'},'2026-10-17':{lunch:'normal',afternoon:'normal',dinner:'busy',late:'busy'},'2026-10-19':{lunch:'closed',afternoon:'closed',dinner:'closed',late:'closed'},'2026-10-24':{lunch:'busy',afternoon:'busy',dinner:'busy',late:'busy'}},
       dowParts:{0:{lunch:1.2,afternoon:1.0,dinner:1.1,late:0.6},1:{lunch:0.8,afternoon:0.6,dinner:0.8,late:0.5},2:{lunch:0.85,afternoon:0.65,dinner:0.85,late:0.55},3:{lunch:0.9,afternoon:0.7,dinner:0.9,late:0.6},4:{lunch:1.0,afternoon:0.8,dinner:1.05,late:0.7},5:{lunch:1.3,afternoon:1.0,dinner:1.6,late:1.1},6:{lunch:1.4,afternoon:1.1,dinner:1.7,late:1.2}},
-      boost:1, posConnected:false, posProvider:null, autoDec:true, alertsOn:true, usageRange:7, usageMetric:'servings',
+      boost:1, posConnected:false, posProvider:null, autoDec:true, alertsOn:true, salesRange:30, salesFrom:null, salesTo:null, salesHidden:{}, salesHover:null,
       newIng:{name:'',unit:'lbs',cat:'Produce',vendorId:'v-produce',count:0,low:10,par:40,crit:5,perDay:3,price:1},
       newVendor:{name:'',contact:'',email:'',phone:'',leadTime:'2 days'},
       addIngOpen:false, addVendorOpen:false,
@@ -646,7 +655,7 @@ class Component extends DCLogic {
     this.state.editingMenu=null;
     this.filter='All';
     this.sort={key:null,dir:'asc'};
-    this.today=new Date(2026,6,14);
+    this.today=new Date(2026,9,5);
     this._t=null;
   }
   fmt(n){return Number.isInteger(n)?String(n):(Math.round(n*10)/10).toString();}
@@ -682,7 +691,7 @@ class Component extends DCLogic {
     const i=this.state.ingredients.find(x=>x.id===id);
     const v=this.state.vendors.find(x=>x.id===i.vendorId);
     const oid='o'+Date.now();
-    const order={id:oid,ingId:id,vendorId:i.vendorId,qty,date:'Jul 14',eta:'Jul '+(14+ (parseInt(v.leadTime)||2)),status:'Pending'};
+    const order={id:oid,ingId:id,vendorId:i.vendorId,qty,date:this.fmtDay(0),eta:this.fmtDay(parseInt(v.leadTime)||2),status:'Pending'};
     this.setState(s=>({orders:[order,...s.orders]}));
     if(alsoEmail){
       this.openEmail(i.vendorId,{orderIds:[oid],subject:'Purchase order — '+this.fmt(qty)+' '+i.unit+' '+i.name,body:'Hi '+v.contact+',\n\nPlease supply the following:\n\n\u2022 '+i.name+' — '+this.fmt(qty)+' '+i.unit+'\n\nDeliver to Mauricio’s Burrito’s at your earliest. Confirm pricing and ETA.\n\nThanks,\nMauricio’s Burrito’s'});
@@ -697,7 +706,7 @@ class Component extends DCLogic {
       .map(i=>({i,qty:Math.max(0,Math.ceil((i.par-i.count)*this.state.boost))})).filter(x=>x.qty>0);
     if(!items.length)return this.toast('Nothing to reorder from '+v.name);
     const stamp=Date.now();
-    const orders=items.map((x,n)=>({id:'o'+(stamp+n),ingId:x.i.id,vendorId,qty:x.qty,date:'Jul 14',eta:'Jul '+(14+(parseInt(v.leadTime)||2)),status:'Pending'}));
+    const orders=items.map((x,n)=>({id:'o'+(stamp+n),ingId:x.i.id,vendorId,qty:x.qty,date:this.fmtDay(0),eta:this.fmtDay(parseInt(v.leadTime)||2),status:'Pending'}));
     this.setState(s=>({orders:[...orders,...s.orders]}));
     const lines=items.map(x=>'\u2022 '+x.i.name+' — '+this.fmt(x.qty)+' '+x.i.unit).join('\n');
     this.openEmail(vendorId,{orderIds:orders.map(o=>o.id),subject:'Purchase order — '+items.length+' items for Mauricio’s Burrito’s',body:'Hi '+v.contact+',\n\nWe\u2019d like to place a combined order for the following:\n\n'+lines+'\n\nDeliver to Mauricio’s Burrito’s at your earliest. Please confirm pricing and ETA.\n\nThanks,\nMauricio’s Burrito’s'});
@@ -732,43 +741,62 @@ class Component extends DCLogic {
     return Math.round(mx*100)/100;
   }
   iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
-  rangeUsage(days){
-    let F=0;
-    for(let i=1;i<=days;i++){const d=new Date(this.today);d.setDate(d.getDate()-i);F+=this.adjFactor(d);}
-    return this.usageFromF(F);
-  }
-  rangeUsageDates(fromISO,toISO){
-    let a=new Date(fromISO+'T00:00:00'), b=new Date(toISO+'T00:00:00');
-    if(a>b){const t=a;a=b;b=t;}
-    let F=0;
-    for(let d=new Date(a); d<=b; d.setDate(d.getDate()+1)){F+=this.adjFactor(new Date(d));}
-    return this.usageFromF(F);
-  }
-  usageFromF(F){
-    const items=this.state.ingredients.map(i=>{const used=Math.round(i.perDay*F);return {id:i.id,name:i.name,cat:i.cat,unit:i.unit,used,servings:Math.round(used/(i.serving||1))};})
-      .filter(x=>x.servings>0).sort((a,b)=>b.servings-a.servings);
-    return {F,items,total:items.reduce((s,x)=>s+x.servings,0)};
-  }
-  usagePie(items, metric){
-    const key=metric==='volume'?'used':'servings';
-    const sorted=[...items].sort((a,b)=>b[key]-a[key]);
-    const total=sorted.reduce((s,x)=>s+x[key],0)||1;
-    const top=sorted.slice(0,12);
-    const rest=sorted.slice(12).reduce((s,x)=>s+x[key],0);
-    const segs=top.map(x=>({name:x.name.split(' (')[0],used:x[key]}));
-    if(rest>0)segs.push({name:'All other items',used:rest});
-    const palette=['var(--color-accent-900)','var(--color-accent-800)','var(--color-accent-700)','var(--color-accent-600)','var(--color-accent-500)','var(--color-accent-400)','var(--color-accent-300)','var(--color-accent-200)','var(--color-accent-100)','var(--color-neutral-600)','var(--color-neutral-500)','var(--color-neutral-400)','var(--color-neutral-300)'];
-    const cx=100,cy=100,r=96;
-    const pt=(a)=>[cx+r*Math.cos(a),cy+r*Math.sin(a)];
-    let a=-Math.PI/2;
-    return segs.map((s,idx)=>{
-      const frac=s.used/total, a1=a+frac*2*Math.PI;
-      const [x0,y0]=pt(a), [x1,y1]=pt(a1), large=(a1-a)>Math.PI?1:0;
-      const d=segs.length===1?`M${cx} ${cy-r} A${r} ${r} 0 1 1 ${cx-0.01} ${cy-r} Z`:`M${cx} ${cy} L${x0.toFixed(2)} ${y0.toFixed(2)} A${r} ${r} 0 ${large} 1 ${x1.toFixed(2)} ${y1.toFixed(2)} Z`;
-      a=a1;
-      const color=palette[idx%palette.length];
-      return {d, name:s.name, pct:Math.round(frac*100)+'%', fillStyle:{fill:color}, iStyle:{background:color}};
+  fmtDay(offset){const d=new Date(this.today);d.setDate(d.getDate()+offset);return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});}
+  // menu item sales over time, from data/sales_daily.js
+  salesChart(){
+    const S=this.state, D=window.SALES_DAILY||{dates:[],items:{}};
+    const all=D.dates, W=960, H=320, L=44, R=18, T=12, B=30;
+    const custom=!!(S.salesFrom&&S.salesTo);
+    let a,b;
+    if(custom){a=S.salesFrom;b=S.salesTo;if(a>b){const t=a;a=b;b=t;}}
+    else{const s=new Date(this.today);s.setDate(s.getDate()-S.salesRange);const e=new Date(this.today);e.setDate(e.getDate()-1);a=this.iso(s);b=this.iso(e);}
+    const i0=all.findIndex(d=>d>=a);
+    let i1=-1;for(let i=all.length-1;i>=0;i--){if(all[i]<=b){i1=i;break;}}
+    const dates=(i0<0||i1<i0)?[]:all.slice(i0,i1+1), n=dates.length;
+    const slot={burrito:1,tacos:2,bowl:3,nachos:4,quesadilla:5,'chips-guac':6,'chips-queso':7,salad:8,'side-rice':9,'side-beans':10};
+    const series=S.menu.map((m,k)=>{
+      const src=D.items[m.id], c=slot[m.id]||(k%10+1);
+      const vals=dates.map((_,j)=>src?(src[i0+j]||0):0);
+      return {id:m.id, name:m.name, color:'var(--sales-c'+c+')', dash:c>8?'5 4':'none', vals, total:vals.reduce((s,v)=>s+v,0), on:!S.salesHidden[m.id]};
     });
+    const vis=series.filter(s=>s.on);
+    const rawMax=Math.max(1,...vis.map(s=>Math.max(0,...s.vals)));
+    const pow=Math.pow(10,Math.floor(Math.log10(rawMax/4))), f=rawMax/4/pow;
+    const step=Math.max(1,(f<=1?1:f<=2?2:f<=5?5:10)*pow), yMax=Math.ceil(rawMax/step)*step;
+    const x=j=>n<=1?L+(W-L-R)/2:L+(W-L-R)*j/(n-1);
+    const y=v=>T+(H-T-B)*(1-v/yMax);
+    const day=(iso,opt)=>new Date(iso+'T00:00:00').toLocaleDateString('en-US',opt);
+    const short={month:'short',day:'numeric'};
+    const yTicks=[];for(let v=0;v<=yMax;v+=step)yTicks.push({y:y(v), style:{top:(y(v)/H*100)+'%', width:((L-8)/W*100)+'%'}, label:v.toLocaleString('en-US')});
+    const every=Math.max(1,Math.ceil(n/8));
+    const xTicks=dates.map((d,j)=>({style:{left:(x(j)/W*100)+'%', top:((H-B+7)/H*100)+'%'}, label:day(d,short), j})).filter(t=>t.j%every===0);
+    const lines=vis.map(s=>({points:s.vals.map((v,j)=>x(j).toFixed(1)+','+y(v).toFixed(1)).join(' '), style:{stroke:s.color, strokeDasharray:s.dash}}));
+    const dots=n<=14?vis.flatMap(s=>s.vals.map((v,j)=>({cx:x(j), cy:y(v), style:{fill:s.color}}))):[];
+    const hj=(S.salesHover==null||!n)?null:Math.min(n-1,S.salesHover);
+    const hover=hj==null?null:{x:x(hj), title:day(dates[hj],{weekday:'short',month:'short',day:'numeric'}),
+      dots:vis.map(s=>({cx:x(hj), cy:y(s.vals[hj]), style:{fill:s.color}})),
+      rows:[...vis].sort((p,q)=>q.vals[hj]-p.vals[hj]).map(s=>({name:s.name, val:s.vals[hj], swStyle:{background:s.color}})),
+      total:vis.reduce((t,s)=>t+s.vals[hj],0), multi:vis.length>1,
+      tipStyle:{left:(x(hj)/W*100)+'%', transform:x(hj)>W/2?'translateX(calc(-100% - 14px))':'translateX(14px)'}};
+    const setHidden=h=>this.setState({salesHidden:h});
+    return {
+      x0:L, x1:W-R, yTop:T, yBase:H-B,
+      yTicks, xTicks, lines, dots, hover,
+      move:e=>{if(!n)return;const r=e.currentTarget.getBoundingClientRect();const px=(e.clientX-r.left)/r.width*W;
+        const j=n<=1?0:Math.max(0,Math.min(n-1,Math.round((px-L)/((W-L-R)/(n-1)))));if(j!==this.state.salesHover)this.setState({salesHover:j});},
+      leave:()=>{if(this.state.salesHover!=null)this.setState({salesHover:null});},
+      legend:series.map(s=>({name:s.name, totalDisp:s.total.toLocaleString('en-US'), cls:s.on?'':'off', pressed:s.on?'true':'false',
+        swStyle:s.on?{background:s.color,borderColor:s.color}:{background:'transparent',borderColor:s.color},
+        toggle:()=>setHidden({...S.salesHidden,[s.id]:s.on})})),
+      showAll:()=>setHidden({}), showNone:()=>setHidden(Object.fromEntries(S.menu.map(m=>[m.id,true]))),
+      noneVisible:n>0&&vis.length===0, noData:n===0,
+      rangeLabel:n?(day(dates[0],short)+(n>1?' – '+day(dates[n-1],short):'')):'no data in range',
+      totalDisp:vis.reduce((t,s)=>t+s.total,0).toLocaleString('en-US'),
+      fromVal:a, toVal:b, min:all[0]||'', max:all[all.length-1]||'',
+      setFrom:e=>this.setState({salesFrom:e.target.value||null, salesTo:S.salesTo||b, salesHover:null}),
+      setTo:e=>this.setState({salesTo:e.target.value||null, salesFrom:S.salesFrom||a, salesHover:null}),
+      chips:[['Week',7],['2 weeks',14],['Month',30]].map(([label,days])=>({label, cls:(!custom&&S.salesRange===days)?'on':'', set:()=>this.setState({salesRange:days,salesFrom:null,salesTo:null,salesHover:null})}))
+    };
   }
   applyForecast(){const p=Math.max(1,this.peakFactor());this.setState({boost:p});this.toast('Suggestions scaled to the '+p.toFixed(2)+'× peak');}
   addIngredient(){
@@ -847,14 +875,14 @@ class Component extends DCLogic {
 
     // forecast
     const dayHeads=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-    const first=new Date(2026,6,1);
+    const calY=this.today.getFullYear(), calM=this.today.getMonth(), first=new Date(calY,calM,1), calDays=new Date(calY,calM+1,0).getDate();
     const startDay=first.getDay();
     const calCells=[];
     for(let b=0;b<startDay;b++)calCells.push({blank:true,cls:'blank',num:'',label:'',click:()=>{}});
     const todayISO=this.iso(this.today);
     const calSumm=(c)=>{if(!c)return {cls:'',label:''};const keys=['lunch','afternoon','dinner','late'];const vals=keys.map(k=>c[k]||'normal');const uniq=[...new Set(vals)];if(uniq.length===1){const l=uniq[0];return l==='normal'?{cls:'',label:''}:{cls:l,label:{busy:'Busy',slow:'Slow',closed:'Closed'}[l]};}return {cls:'custom',label:'Mixed'};};
-    for(let d=1;d<=31;d++){
-      const date=new Date(2026,6,d), iso=this.iso(date), t=S.calendar[iso];const sm=calSumm(t);
+    for(let d=1;d<=calDays;d++){
+      const date=new Date(calY,calM,d), iso=this.iso(date), t=S.calendar[iso];const sm=calSumm(t);
       calCells.push({num:d, cls:sm.cls, label:sm.label, isToday:iso===todayISO, click:()=>this.openCal(iso)});
     }
     const partDefs=[['lunch','Lunch'],['afternoon','Afternoon'],['dinner','Dinner'],['late','Late night']];
@@ -864,16 +892,6 @@ class Component extends DCLogic {
     for(let i=0;i<7;i++){const date=new Date(this.today);date.setDate(date.getDate()+i);const f=Math.round(this.adjFactor(date)*100)/100;const pct=Math.max(3,Math.min(100,Math.round(f/2*100)));forecastDays.push({label:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][date.getDay()]+' '+date.getDate(), disp:f.toFixed(2)+'×', style:{width:pct+'%'}, hi:f>=1.35?'hi':''});}
     const peak=this.peakFactor();
 
-     // popular items + usage share
-    const rangePresets=[['Week',7],['2 weeks',14],['Month',30],['2 months',60]];
-    const usageRange=S.usageRange;
-    const custom=!!(S.usageFrom&&S.usageTo);
-    const usage=custom?this.rangeUsageDates(S.usageFrom,S.usageTo):this.rangeUsage(usageRange);
-    const maxUsed=usage.items.length?usage.items[0].servings:1;
-    const popItems=usage.items.slice(0,10).map((x,idx)=>({rank:idx+1, name:x.name, cat:x.cat, servingsDisp:x.servings.toLocaleString('en-US'), volNumDisp:x.used.toLocaleString('en-US'), unit:x.unit, volDisp:x.used.toLocaleString('en-US')+' '+x.unit, barStyle:{width:Math.max(4,Math.round(x.servings/maxUsed*100))+'%'}}));
-    const usagePieSlices=this.usagePie(usage.items, S.usageMetric);
-    const volTotal=usage.items.reduce((s,x)=>s+x.used,0);
-    const usageChips=rangePresets.map(([label,days])=>({label, cls:(!custom&&usageRange===days)?'on':'', set:()=>this.setState({usageRange:days,usageFrom:null,usageTo:null})}));
 
     // menu
     const ingName=id=>{const i=S.ingredients.find(x=>x.id===id);return i?i.name.split(' (')[0]:id;};
@@ -886,8 +904,6 @@ class Component extends DCLogic {
       comps:m.comps.map((c,ci)=>{const choice=c.opts.length>1; return {qty:c.qty, label:c.label, choice, singleShow:!choice, single:choice?'':ingName(c.opts[0]), opts:choice?c.opts.map(o=>({name:optShort[o]||ingName(o)})):[],
         setQty:e=>this.updComp(m.id,ci,{qty:e.target.value}), setLabel:e=>this.updComp(m.id,ci,{label:e.target.value}), removeComp:()=>this.removeMenuComp(m.id,ci), addOpt:()=>this.addCompOpt(m.id,ci),
         editOpts:c.opts.map((o,oi)=>({value:o, set:e=>this.setCompOpt(m.id,ci,oi,e.target.value), remove:()=>this.removeCompOpt(m.id,ci,oi), canRemove:c.opts.length>1}))};})};});
-    const fmtD=(iso)=>new Date(iso+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
-    const rangeWord=custom?(fmtD(S.usageFrom)+' – '+fmtD(S.usageTo)):({7:'the last 7 days',14:'the last 2 weeks',30:'the last month',60:'the last 2 months'}[usageRange]||('the last '+usageRange+' days'));
     // detail
     let detail=null;
     if(view==='ingredient'&&S.selectedIng){
@@ -980,18 +996,13 @@ class Component extends DCLogic {
       autoClass:S.autoDec?'on':'', alertsClass:S.alertsOn?'on':'',
       toggleAuto:()=>this.setState(s=>({autoDec:!s.autoDec})), toggleAlerts:()=>this.setState(s=>({alertsOn:!s.alertsOn})),
       simulateDay:()=>this.simulateDay(),
-      todayLabel:'Tuesday, July 14', todayDemand:this.dayFactor(this.today.getDay()).toFixed(2)+'×',
+      todayLabel:this.today.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}), todayDemand:this.dayFactor(this.today.getDay()).toFixed(2)+'×',
       stats:{total:all.length, catCount:this.cats.length, attention:alerts.length, critCount:all.filter(r=>r.s==='crit').length, lowCount:all.filter(r=>r.s==='low').length, pending:pendingOrders.length, pendingSub:pendingOrders.length?'awaiting delivery':'none open', peak:peak.toFixed(2)+'×', peakDay:'over the next 7 days'},
       topAlerts:alerts.slice(0,5), allAlerts:alerts, alertGroups:(()=>{const g={};alerts.forEach(a=>{(g[a.vendorId]=g[a.vendorId]||{vendorId:a.vendorId,vendorName:a.vendorName,items:[]}).items.push(a);});return Object.values(g).map(grp=>({...grp, count:grp.items.length, multi:grp.items.length>1, orderAll:()=>this.placeVendorOrders(grp.vendorId)}));})(), alertCount:alerts.length||undefined, noAlerts:alerts.length===0,
       filterChips:chips, invRows, sortHead, sortArw,
       detail, vdetail, vendorRows, inactiveVendorRows, hasInactive:inactiveVendorRows.length>0, orderRows, orderGroups,
-      dayHeads, calCells, dowGrid, partHeads, forecastDays, boostDisp:S.boost.toFixed(2)+'×',
-      popItems, usagePie:usagePieSlices, usageChips, usageRangeLabel:rangeWord, usageTotalDisp:(S.usageMetric==='volume'?volTotal:usage.total).toLocaleString('en-US'), pieCenterLabel:S.usageMetric==='volume'?'units':'servings',
-      usageFromVal:S.usageFrom||'', usageToVal:S.usageTo||'',
-      metricServings:S.usageMetric!=='volume', metricVolume:S.usageMetric==='volume', metricWord:S.usageMetric==='volume'?'volume':'servings',
-      mServCls:S.usageMetric!=='volume'?'on':'', mVolCls:S.usageMetric==='volume'?'on':'',
-      setMetricServ:()=>this.setState({usageMetric:'servings'}), setMetricVol:()=>this.setState({usageMetric:'volume'}),
-      setUsageFrom:e=>this.setState({usageFrom:e.target.value||null}), setUsageTo:e=>this.setState({usageTo:e.target.value||null}),
+      dayHeads, calCells, calMonthLabel:first.toLocaleDateString('en-US',{month:'long',year:'numeric'}), dowGrid, partHeads, forecastDays, boostDisp:S.boost.toFixed(2)+'×',
+      sales:this.salesChart(),
       applyForecast:()=>this.applyForecast(),
       cats:this.cats, catalogRows:all.map(mk),
       nw:{name:nw.name,unit:nw.unit,cat:nw.cat,vendorId:nw.vendorId,count:nw.count,low:nw.low,par:nw.par,crit:nw.crit,perDay:nw.perDay,price:nw.price,
