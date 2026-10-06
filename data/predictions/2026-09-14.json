@@ -1,0 +1,388 @@
+{
+ "date": "2026-09-14",
+ "day_of_week": "Monday",
+ "status": "past",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 128.4,
+ "expected_items": 123.3,
+ "expected_vs_baseline_pct": -4.0,
+ "expected_orders": 74,
+ "expected_revenue": 1134.87,
+ "range_items": [
+  108,
+  138
+ ],
+ "confidence": "high",
+ "peak_hour": "12:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  14.0,
+  28.0,
+  12.0,
+  5.1,
+  5.8,
+  6.2,
+  11.3,
+  22.0,
+  12.7,
+  6.1
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   3.7,
+   7.4,
+   3.2,
+   1.4,
+   1.5,
+   1.6,
+   3.0,
+   5.8,
+   3.3,
+   1.6
+  ],
+  "tacos": [
+   2.7,
+   5.5,
+   2.3,
+   1.0,
+   1.1,
+   1.2,
+   2.2,
+   4.3,
+   2.5,
+   1.2
+  ],
+  "bowl": [
+   2.0,
+   4.1,
+   1.7,
+   0.7,
+   0.8,
+   0.9,
+   1.6,
+   3.2,
+   1.9,
+   0.9
+  ],
+  "nachos": [
+   1.4,
+   2.8,
+   1.2,
+   0.5,
+   0.6,
+   0.6,
+   1.1,
+   2.2,
+   1.3,
+   0.6
+  ],
+  "quesadilla": [
+   1.3,
+   2.5,
+   1.1,
+   0.5,
+   0.5,
+   0.6,
+   1.0,
+   2.0,
+   1.1,
+   0.6
+  ],
+  "chips-guac": [
+   1.0,
+   2.0,
+   0.9,
+   0.4,
+   0.4,
+   0.4,
+   0.8,
+   1.6,
+   0.9,
+   0.4
+  ],
+  "chips-queso": [
+   0.8,
+   1.6,
+   0.7,
+   0.3,
+   0.3,
+   0.4,
+   0.6,
+   1.3,
+   0.7,
+   0.3
+  ],
+  "salad": [
+   0.5,
+   1.1,
+   0.5,
+   0.2,
+   0.2,
+   0.2,
+   0.4,
+   0.9,
+   0.5,
+   0.2
+  ],
+  "side-rice": [
+   0.3,
+   0.6,
+   0.2,
+   0.1,
+   0.1,
+   0.1,
+   0.2,
+   0.4,
+   0.3,
+   0.1
+  ],
+  "side-beans": [
+   0.3,
+   0.5,
+   0.2,
+   0.1,
+   0.1,
+   0.1,
+   0.2,
+   0.4,
+   0.2,
+   0.1
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 32.4,
+  "tacos": 24.1,
+  "bowl": 18.0,
+  "nachos": 12.3,
+  "quesadilla": 11.1,
+  "chips-guac": 8.7,
+  "chips-queso": 7.0,
+  "salad": 4.8,
+  "side-rice": 2.5,
+  "side-beans": 2.3
+ },
+ "drivers": [
+  {
+   "event_id": "muni-trackwork-2026-09-14",
+   "name": "Muni N-Judah track work: King St lane closure",
+   "venue": "King St & 4th St",
+   "distance_miles": 0.2,
+   "direction": "down",
+   "expected_effect_pct": -4,
+   "start_time": "07:00",
+   "end_time": "19:00",
+   "explanation": "Muni N-Judah track work: King St lane closure (07:00 to 19:00): fewer walk-ups while access is restricted, roughly -4% over that window."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 32 Signature Burrito",
+  "Expect about 24 Street Tacos (3)",
+  "Expect about 18 Burrito Bowl"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "completed",
+  "runs_at": "21:30",
+  "note": "Completed at end of day.",
+  "summary": "Sold 116 items vs 123 expected (-6%). A typical Monday runs about 128 items [1]. Muni N-Judah track work: King St lane closure (07:00 to 19:00): fewer walk-ups while access is restricted, roughly -4% over that window. [2] Memory has no close analogue, so the weekday baseline carries this one [3].",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Monday'\n  AND  date < '2026-09-14'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Monday",
+       128.4,
+       1
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "muni-trackwork-2026-09-14",
+    "query": "Muni N-Judah track work: King St lane closure King St & 4th St San Francisco Sep 14",
+    "title": "Muni N-Judah track work: King St lane closure",
+    "url": "https://www.sfmta.com/",
+    "domain": "sfmta.com",
+    "snippet": "Road closure at King St & 4th St, 07:00 to 19:00 (start time not confirmed).",
+    "verified": false,
+    "placeholder": true
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_179fda359e",
+    "query": "past sales near King St & 4th St on road closure days",
+    "memory": "No close past analogue for muni n-judah track work: king st lane closure; falling back to the typical day-of-week baseline.",
+    "relevance": 0.41,
+    "avg_vs_baseline_pct": null,
+    "linked_days": []
+   }
+  ],
+  "adjustments": {
+   "stat": 128,
+   "rows": [
+    {
+     "label": "Muni N-Judah track work: King St lane closure",
+     "event_id": "muni-trackwork-2026-09-14",
+     "delta": -4,
+     "kind": "down"
+    }
+   ],
+   "forecast": 123,
+   "actual": 116,
+   "gap": -7,
+   "gap_note": "Within normal daily noise (about +/-7%)."
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "no_change",
+   "ingredient": null,
+   "change": "0",
+   "status": "completed",
+   "detail": "Left reorder alerts at standard par at end of day on Sep 14 (21:30).",
+   "runs_at": "21:30"
+  }
+ ],
+ "statistical": {
+  "method": "Monday x hour seasonal average of past sales, events excluded",
+  "n_days": 1,
+  "total": 128.4,
+  "hourly": [
+   14.6,
+   29.4,
+   12.6,
+   5.4,
+   6.0,
+   6.5,
+   11.8,
+   23.1,
+   12.8,
+   6.2
+  ],
+  "low": [
+   11.7,
+   25.0,
+   9.8,
+   3.4,
+   3.9,
+   4.4,
+   9.1,
+   19.3,
+   10.1,
+   4.0
+  ],
+  "high": [
+   17.6,
+   33.8,
+   15.3,
+   7.4,
+   8.1,
+   8.7,
+   14.5,
+   26.9,
+   15.6,
+   8.3
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Monday'\n  AND  date < '2026-09-14'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Monday",
+      128.4,
+      1
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-09-14"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Chase Center events 2026-09-14"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Moscone Center events 2026-09-14"
+   }
+  ],
+  "other": [
+   {
+    "event_id": "muni-trackwork-2026-09-14",
+    "name": "Muni N-Judah track work: King St lane closure",
+    "category": "Road closure",
+    "venue": "King St & 4th St",
+    "miles": 0.2,
+    "start": "07:00",
+    "end": "19:00",
+    "status": "took place",
+    "placeholder": true,
+    "effect_pct": -4,
+    "direction": "down",
+    "tavily": {
+     "type": "tavily",
+     "event_id": "muni-trackwork-2026-09-14",
+     "query": "Muni N-Judah track work: King St lane closure King St & 4th St San Francisco Sep 14",
+     "title": "Muni N-Judah track work: King St lane closure",
+     "url": "https://www.sfmta.com/",
+     "domain": "sfmta.com",
+     "snippet": "Road closure at King St & 4th St, 07:00 to 19:00 (start time not confirmed).",
+     "verified": false,
+     "placeholder": true
+    },
+    "source_id": 2,
+    "more": []
+   }
+  ]
+ },
+ "actual_items": 116,
+ "label": "no_event"
+}

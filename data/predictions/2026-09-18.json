@@ -1,0 +1,414 @@
+{
+ "date": "2026-09-18",
+ "day_of_week": "Friday",
+ "status": "past",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 231.4,
+ "expected_items": 249.0,
+ "expected_vs_baseline_pct": 7.6,
+ "expected_orders": 149,
+ "expected_revenue": 2273.41,
+ "range_items": [
+  219,
+  279
+ ],
+ "confidence": "high",
+ "peak_hour": "18:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  24.7,
+  49.5,
+  21.2,
+  9.1,
+  10.2,
+  14.6,
+  31.3,
+  56.4,
+  21.6,
+  10.4
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   6.5,
+   13.0,
+   5.6,
+   2.4,
+   2.7,
+   3.5,
+   7.3,
+   13.4,
+   5.7,
+   2.7
+  ],
+  "tacos": [
+   4.8,
+   9.7,
+   4.2,
+   1.8,
+   2.0,
+   3.3,
+   7.4,
+   13.1,
+   4.2,
+   2.0
+  ],
+  "bowl": [
+   3.6,
+   7.2,
+   3.1,
+   1.3,
+   1.5,
+   1.6,
+   3.0,
+   5.7,
+   3.2,
+   1.5
+  ],
+  "nachos": [
+   2.5,
+   4.9,
+   2.1,
+   0.9,
+   1.0,
+   1.8,
+   4.3,
+   7.5,
+   2.2,
+   1.0
+  ],
+  "quesadilla": [
+   2.2,
+   4.5,
+   1.9,
+   0.8,
+   0.9,
+   1.2,
+   2.5,
+   4.6,
+   1.9,
+   0.9
+  ],
+  "chips-guac": [
+   1.7,
+   3.5,
+   1.5,
+   0.6,
+   0.7,
+   1.2,
+   2.7,
+   4.7,
+   1.5,
+   0.7
+  ],
+  "chips-queso": [
+   1.4,
+   2.8,
+   1.2,
+   0.5,
+   0.6,
+   1.0,
+   2.3,
+   4.0,
+   1.2,
+   0.6
+  ],
+  "salad": [
+   1.0,
+   1.9,
+   0.8,
+   0.4,
+   0.4,
+   0.4,
+   0.7,
+   1.4,
+   0.8,
+   0.4
+  ],
+  "side-rice": [
+   0.5,
+   1.0,
+   0.4,
+   0.2,
+   0.2,
+   0.3,
+   0.6,
+   1.0,
+   0.4,
+   0.2
+  ],
+  "side-beans": [
+   0.5,
+   0.9,
+   0.4,
+   0.2,
+   0.2,
+   0.3,
+   0.5,
+   1.0,
+   0.4,
+   0.2
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 62.8,
+  "tacos": 52.5,
+  "bowl": 31.7,
+  "nachos": 28.3,
+  "quesadilla": 21.5,
+  "chips-guac": 19.0,
+  "chips-queso": 15.7,
+  "salad": 8.2,
+  "side-rice": 4.8,
+  "side-beans": 4.5
+ },
+ "drivers": [
+  {
+   "event_id": "valkyries-2026-09-18",
+   "name": "Valkyries vs Portland Fire",
+   "venue": "Chase Center",
+   "distance_miles": 0.9,
+   "direction": "up",
+   "expected_effect_pct": 15,
+   "start_time": "19:00",
+   "end_time": "21:10",
+   "explanation": "Valkyries vs Portland Fire at Chase Center (0.9 mi away, starts 19:00): a pre-event lift in the three hours before the start, roughly +15%."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 63 Signature Burrito",
+  "Expect about 53 Street Tacos (3)",
+  "Expect about 32 Burrito Bowl",
+  "Pre-portion nachos, chips and tortillas before the rush window"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "completed",
+  "runs_at": "21:30",
+  "note": "Completed at end of day.",
+  "summary": "Sold 264 items vs 249 expected (+6%). A typical Friday runs about 231 items [1]. Valkyries vs Portland Fire at Chase Center (0.9 mi away, starts 19:00): a pre-event lift in the three hours before the start, roughly +15%. [2] Memory recall of similar days: <<2026-09-09|Sep 9>> +44% (210 items) [3].",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Friday'\n  AND  date < '2026-09-18'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Friday",
+       231.4,
+       1
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "valkyries-2026-09-18",
+    "query": "Valkyries vs Portland Fire Chase Center San Francisco Sep 18",
+    "title": "Valkyries vs Portland Fire",
+    "url": "https://www.basketball-reference.com/wnba/teams/GSV/2026_games.html",
+    "domain": "basketball-reference.com",
+    "snippet": "WNBA game at Chase Center, 19:00 to 21:10 (start time not confirmed).",
+    "verified": true,
+    "placeholder": false
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_9bbb696fcf",
+    "query": "past sales near Chase Center on wnba game days",
+    "memory": "Comparable Chase Center days (concert): the truck averaged +44% vs baseline over the last 1 day(s); most recent <<2026-09-09|Sep 9>> at 210 items.",
+    "relevance": 0.87,
+    "avg_vs_baseline_pct": 44.2,
+    "linked_days": [
+     {
+      "date": "2026-09-09",
+      "event": "Weezer with The Shins and Silversun Pickups",
+      "category": "Concert",
+      "actual_items": 210,
+      "expected_items": 226,
+      "baseline_items": 146,
+      "vs_baseline_pct": 44.2,
+      "revenue": 1909
+     }
+    ]
+   }
+  ],
+  "adjustments": {
+   "stat": 231,
+   "rows": [
+    {
+     "label": "Valkyries vs Portland Fire",
+     "event_id": "valkyries-2026-09-18",
+     "delta": 32,
+     "kind": "up"
+    },
+    {
+     "label": "Overlap, late hours and other known factors",
+     "event_id": null,
+     "delta": -14,
+     "kind": "down"
+    }
+   ],
+   "forecast": 249,
+   "actual": 264,
+   "gap": 15,
+   "gap_note": "Within normal daily noise (about +/-7%)."
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Large Flour Tortilla",
+   "change": "+24 tortillas",
+   "status": "completed",
+   "detail": "Raised the Large Flour Tortilla reorder alert by 24 tortillas to cover the expected rush at end of day on Sep 18 (21:30).",
+   "runs_at": "21:30"
+  },
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Tortilla Chips",
+   "change": "+3 bags",
+   "status": "completed",
+   "detail": "Raised the Tortilla Chips reorder alert by 3 bags to cover the expected rush at end of day on Sep 18 (21:30).",
+   "runs_at": "21:30"
+  }
+ ],
+ "statistical": {
+  "method": "Friday x hour seasonal average of past sales, events excluded",
+  "n_days": 1,
+  "total": 231.4,
+  "hourly": [
+   26.4,
+   53.0,
+   22.7,
+   9.7,
+   10.9,
+   11.8,
+   21.3,
+   41.7,
+   23.1,
+   11.1
+  ],
+  "low": [
+   22.2,
+   46.2,
+   18.9,
+   7.2,
+   8.3,
+   9.1,
+   17.7,
+   36.0,
+   19.3,
+   8.5
+  ],
+  "high": [
+   30.5,
+   59.8,
+   26.4,
+   12.2,
+   13.5,
+   14.5,
+   24.9,
+   47.3,
+   27.0,
+   13.7
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Friday'\n  AND  date < '2026-09-18'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Friday",
+      231.4,
+      1
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-09-18"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "event",
+    "items": [
+     {
+      "event_id": "valkyries-2026-09-18",
+      "name": "Valkyries vs Portland Fire",
+      "category": "WNBA game",
+      "venue": "Chase Center",
+      "miles": 0.9,
+      "start": "19:00",
+      "end": "21:10",
+      "status": "took place",
+      "placeholder": false,
+      "effect_pct": 15,
+      "direction": "up",
+      "tavily": {
+       "type": "tavily",
+       "event_id": "valkyries-2026-09-18",
+       "query": "Valkyries vs Portland Fire Chase Center San Francisco Sep 18",
+       "title": "Valkyries vs Portland Fire",
+       "url": "https://www.basketball-reference.com/wnba/teams/GSV/2026_games.html",
+       "domain": "basketball-reference.com",
+       "snippet": "WNBA game at Chase Center, 19:00 to 21:10 (start time not confirmed).",
+       "verified": true,
+       "placeholder": false
+      },
+      "source_id": 2,
+      "more": []
+     }
+    ],
+    "check": "Chase Center events 2026-09-18"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Moscone Center events 2026-09-18"
+   }
+  ],
+  "other": []
+ },
+ "actual_items": 264,
+ "label": "event_lift_weak"
+}

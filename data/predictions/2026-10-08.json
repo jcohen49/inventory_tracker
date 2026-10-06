@@ -1,0 +1,387 @@
+{
+ "date": "2026-10-08",
+ "day_of_week": "Thursday",
+ "status": "future",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 165.9,
+ "expected_items": 174.4,
+ "expected_vs_baseline_pct": 5.1,
+ "expected_orders": 104,
+ "expected_revenue": 1600.18,
+ "range_items": [
+  153,
+  195
+ ],
+ "confidence": "low",
+ "peak_hour": "12:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  18.9,
+  40.7,
+  19.2,
+  9.7,
+  7.8,
+  8.5,
+  15.3,
+  29.9,
+  16.6,
+  8.0
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   5.0,
+   10.5,
+   4.8,
+   2.3,
+   2.0,
+   2.2,
+   4.0,
+   7.8,
+   4.4,
+   2.1
+  ],
+  "tacos": [
+   3.7,
+   8.3,
+   4.1,
+   2.2,
+   1.5,
+   1.7,
+   3.0,
+   5.8,
+   3.2,
+   1.6
+  ],
+  "bowl": [
+   2.8,
+   5.5,
+   2.4,
+   1.0,
+   1.1,
+   1.2,
+   2.2,
+   4.4,
+   2.4,
+   1.2
+  ],
+  "nachos": [
+   1.9,
+   4.4,
+   2.2,
+   1.3,
+   0.8,
+   0.8,
+   1.5,
+   3.0,
+   1.7,
+   0.8
+  ],
+  "quesadilla": [
+   1.7,
+   3.6,
+   1.6,
+   0.8,
+   0.7,
+   0.8,
+   1.4,
+   2.7,
+   1.5,
+   0.7
+  ],
+  "chips-guac": [
+   1.3,
+   3.0,
+   1.5,
+   0.8,
+   0.6,
+   0.6,
+   1.1,
+   2.1,
+   1.2,
+   0.6
+  ],
+  "chips-queso": [
+   1.1,
+   2.5,
+   1.2,
+   0.7,
+   0.4,
+   0.5,
+   0.9,
+   1.7,
+   0.9,
+   0.5
+  ],
+  "salad": [
+   0.7,
+   1.4,
+   0.6,
+   0.2,
+   0.3,
+   0.3,
+   0.6,
+   1.2,
+   0.6,
+   0.3
+  ],
+  "side-rice": [
+   0.4,
+   0.8,
+   0.4,
+   0.2,
+   0.2,
+   0.2,
+   0.3,
+   0.6,
+   0.3,
+   0.2
+  ],
+  "side-beans": [
+   0.4,
+   0.8,
+   0.3,
+   0.2,
+   0.1,
+   0.2,
+   0.3,
+   0.6,
+   0.3,
+   0.2
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 45.1,
+  "tacos": 35.2,
+  "bowl": 24.2,
+  "nachos": 18.3,
+  "quesadilla": 15.4,
+  "chips-guac": 12.7,
+  "chips-queso": 10.3,
+  "salad": 6.4,
+  "side-rice": 3.4,
+  "side-beans": 3.3
+ },
+ "drivers": [
+  {
+   "event_id": "fleet-2026-10-08",
+   "name": "SF Fleet Week: Blue Angels practice",
+   "venue": "Marina / Embarcadero",
+   "distance_miles": 3.0,
+   "direction": "up",
+   "expected_effect_pct": 5,
+   "start_time": "12:00",
+   "end_time": "15:00",
+   "explanation": "SF Fleet Week: Blue Angels practice (3.0 mi away, 12:00 to 15:00): mostly crowds up the waterfront, only a small spillover, roughly +5%."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 45 Signature Burrito",
+  "Expect about 35 Street Tacos (3)",
+  "Expect about 24 Burrito Bowl",
+  "Pre-portion nachos, chips and tortillas before the rush window"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "scheduled",
+  "runs_at": "end of day",
+  "note": "Scheduled to run at the end of the day on Oct 8 (21:30); this is the forecast it will start from.",
+  "summary": "Expected about 174 items (+5% vs a typical Thursday of 166 [1]), peaking around 12:00. SF Fleet Week: Blue Angels practice (3.0 mi away, 12:00 to 15:00): mostly crowds up the waterfront, only a small spillover, roughly +5%. [2] Memory has no close analogue, so the weekday baseline carries this one [3].",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Thursday'\n  AND  date < '2026-10-08'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Thursday",
+       165.9,
+       4
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "fleet-2026-10-08",
+    "query": "SF Fleet Week: Blue Angels practice Marina / Embarcadero San Francisco Oct 8",
+    "title": "SF Fleet Week: Blue Angels practice",
+    "url": "https://fleetweek.us/",
+    "domain": "fleetweek.us",
+    "snippet": "Festival at Marina / Embarcadero, 12:00 to 15:00 (start time not confirmed).",
+    "verified": false,
+    "placeholder": true
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_5049a307f4",
+    "query": "past sales near Marina / Embarcadero on festival days",
+    "memory": "No close past analogue for sf fleet week: blue angels practice; falling back to the typical day-of-week baseline.",
+    "relevance": 0.41,
+    "avg_vs_baseline_pct": null,
+    "linked_days": []
+   }
+  ],
+  "adjustments": {
+   "stat": 166,
+   "rows": [
+    {
+     "label": "SF Fleet Week: Blue Angels practice",
+     "event_id": "fleet-2026-10-08",
+     "delta": 8,
+     "kind": "up"
+    }
+   ],
+   "forecast": 174,
+   "actual": null,
+   "gap": null,
+   "gap_note": ""
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "no_change",
+   "ingredient": null,
+   "change": "0",
+   "status": "scheduled",
+   "detail": "Will leave reorder alerts at standard par at the end of the day on Oct 8.",
+   "runs_at": "end of day"
+  }
+ ],
+ "statistical": {
+  "method": "Thursday x hour seasonal average of past sales, events excluded",
+  "n_days": 4,
+  "total": 165.9,
+  "hourly": [
+   18.9,
+   38.0,
+   16.3,
+   7.0,
+   7.8,
+   8.5,
+   15.3,
+   29.9,
+   16.6,
+   8.0
+  ],
+  "low": [
+   15.5,
+   32.7,
+   13.1,
+   4.8,
+   5.5,
+   6.1,
+   12.2,
+   25.4,
+   13.4,
+   5.7
+  ],
+  "high": [
+   22.3,
+   43.3,
+   19.4,
+   9.2,
+   10.1,
+   10.8,
+   18.3,
+   34.3,
+   19.7,
+   10.3
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Thursday'\n  AND  date < '2026-10-08'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Thursday",
+      165.9,
+      4
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-10-08"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Chase Center events 2026-10-08"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Moscone Center events 2026-10-08"
+   }
+  ],
+  "other": [
+   {
+    "event_id": "fleet-2026-10-08",
+    "name": "SF Fleet Week: Blue Angels practice",
+    "category": "Festival",
+    "venue": "Marina / Embarcadero",
+    "miles": 3.0,
+    "start": "12:00",
+    "end": "15:00",
+    "status": "scheduled",
+    "placeholder": true,
+    "effect_pct": 5,
+    "direction": "up",
+    "tavily": {
+     "type": "tavily",
+     "event_id": "fleet-2026-10-08",
+     "query": "SF Fleet Week: Blue Angels practice Marina / Embarcadero San Francisco Oct 8",
+     "title": "SF Fleet Week: Blue Angels practice",
+     "url": "https://fleetweek.us/",
+     "domain": "fleetweek.us",
+     "snippet": "Festival at Marina / Embarcadero, 12:00 to 15:00 (start time not confirmed).",
+     "verified": false,
+     "placeholder": true
+    },
+    "source_id": 2,
+    "more": []
+   }
+  ]
+ }
+}

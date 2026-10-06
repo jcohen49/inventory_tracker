@@ -1,0 +1,313 @@
+{
+ "date": "2026-10-05",
+ "day_of_week": "Monday",
+ "status": "today",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 128.4,
+ "expected_items": 122.6,
+ "expected_vs_baseline_pct": -4.5,
+ "expected_orders": 73,
+ "expected_revenue": 1128.39,
+ "range_items": [
+  108,
+  137
+ ],
+ "confidence": "medium",
+ "peak_hour": "12:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  13.5,
+  27.1,
+  11.6,
+  5.0,
+  5.6,
+  6.0,
+  11.8,
+  23.1,
+  12.8,
+  6.2
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   3.5,
+   7.1,
+   3.0,
+   1.3,
+   1.5,
+   1.6,
+   3.1,
+   6.1,
+   3.4,
+   1.6
+  ],
+  "tacos": [
+   2.6,
+   5.3,
+   2.3,
+   1.0,
+   1.1,
+   1.2,
+   2.3,
+   4.5,
+   2.5,
+   1.2
+  ],
+  "bowl": [
+   2.0,
+   3.9,
+   1.7,
+   0.7,
+   0.8,
+   0.9,
+   1.7,
+   3.4,
+   1.9,
+   0.9
+  ],
+  "nachos": [
+   1.3,
+   2.7,
+   1.2,
+   0.5,
+   0.6,
+   0.6,
+   1.2,
+   2.3,
+   1.3,
+   0.6
+  ],
+  "quesadilla": [
+   1.2,
+   2.4,
+   1.0,
+   0.4,
+   0.5,
+   0.5,
+   1.1,
+   2.1,
+   1.2,
+   0.6
+  ],
+  "chips-guac": [
+   1.0,
+   1.9,
+   0.8,
+   0.4,
+   0.4,
+   0.4,
+   0.8,
+   1.6,
+   0.9,
+   0.4
+  ],
+  "chips-queso": [
+   0.8,
+   1.5,
+   0.7,
+   0.3,
+   0.3,
+   0.3,
+   0.7,
+   1.3,
+   0.7,
+   0.4
+  ],
+  "salad": [
+   0.5,
+   1.1,
+   0.5,
+   0.2,
+   0.2,
+   0.2,
+   0.5,
+   0.9,
+   0.5,
+   0.2
+  ],
+  "side-rice": [
+   0.3,
+   0.5,
+   0.2,
+   0.1,
+   0.1,
+   0.1,
+   0.2,
+   0.5,
+   0.3,
+   0.1
+  ],
+  "side-beans": [
+   0.3,
+   0.5,
+   0.2,
+   0.1,
+   0.1,
+   0.1,
+   0.2,
+   0.4,
+   0.2,
+   0.1
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 32.2,
+  "tacos": 24.0,
+  "bowl": 17.9,
+  "nachos": 12.2,
+  "quesadilla": 11.0,
+  "chips-guac": 8.7,
+  "chips-queso": 7.0,
+  "salad": 4.8,
+  "side-rice": 2.4,
+  "side-beans": 2.3
+ },
+ "drivers": [
+  {
+   "event_id": "muni-trackwork-2026-10-05",
+   "name": "Central Subway track work: King St lane closure",
+   "venue": "King St & 3rd St",
+   "distance_miles": 0.2,
+   "direction": "down",
+   "expected_effect_pct": -8,
+   "start_time": "11:00",
+   "end_time": "17:00",
+   "explanation": "Central Subway track work: King St lane closure (11:00 to 17:00): fewer walk-ups while access is restricted, roughly -8% over that window."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 32 Signature Burrito",
+  "Expect about 24 Street Tacos (3)",
+  "Expect about 18 Burrito Bowl"
+ ],
+ "placeholder": true,
+ "agentic_insight": null,
+ "agentic_actions": [],
+ "agentic_pending": "Agentic insights and actions for today will be generated at the end of the day.",
+ "statistical": {
+  "method": "Monday x hour seasonal average of past sales, events excluded",
+  "n_days": 4,
+  "total": 128.4,
+  "hourly": [
+   14.6,
+   29.4,
+   12.6,
+   5.4,
+   6.0,
+   6.5,
+   11.8,
+   23.1,
+   12.8,
+   6.2
+  ],
+  "low": [
+   11.7,
+   25.0,
+   9.8,
+   3.4,
+   3.9,
+   4.4,
+   9.1,
+   19.3,
+   10.1,
+   4.0
+  ],
+  "high": [
+   17.6,
+   33.8,
+   15.3,
+   7.4,
+   8.1,
+   8.7,
+   14.5,
+   26.9,
+   15.6,
+   8.3
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Monday'\n  AND  date < '2026-10-05'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Monday",
+      128.4,
+      4
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-10-05"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Chase Center events 2026-10-05"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Moscone Center events 2026-10-05"
+   }
+  ],
+  "other": [
+   {
+    "event_id": "muni-trackwork-2026-10-05",
+    "name": "Central Subway track work: King St lane closure",
+    "category": "Road closure",
+    "venue": "King St & 3rd St",
+    "miles": 0.2,
+    "start": "11:00",
+    "end": "17:00",
+    "status": "in progress",
+    "placeholder": true,
+    "effect_pct": -8,
+    "direction": "down",
+    "tavily": {
+     "type": "tavily",
+     "event_id": "muni-trackwork-2026-10-05",
+     "query": "Central Subway track work: King St lane closure King St & 3rd St San Francisco Oct 5",
+     "title": "Central Subway track work: King St lane closure",
+     "url": "https://www.sfmta.com/",
+     "domain": "sfmta.com",
+     "snippet": "Road closure at King St & 3rd St, 11:00 to 17:00.",
+     "verified": false,
+     "placeholder": true
+    },
+    "source_id": null,
+    "more": []
+   }
+  ]
+ }
+}

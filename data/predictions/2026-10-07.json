@@ -1,0 +1,541 @@
+{
+ "date": "2026-10-07",
+ "day_of_week": "Wednesday",
+ "status": "future",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 145.6,
+ "expected_items": 169.0,
+ "expected_vs_baseline_pct": 16.1,
+ "expected_orders": 101,
+ "expected_revenue": 1543.1,
+ "range_items": [
+  149,
+  189
+ ],
+ "confidence": "medium",
+ "peak_hour": "18:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  16.6,
+  33.3,
+  14.3,
+  6.1,
+  7.6,
+  12.6,
+  23.4,
+  33.6,
+  14.6,
+  7.0
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   4.4,
+   8.8,
+   3.7,
+   1.6,
+   1.9,
+   2.9,
+   5.4,
+   8.2,
+   3.8,
+   1.8
+  ],
+  "tacos": [
+   3.3,
+   6.5,
+   2.8,
+   1.2,
+   1.6,
+   3.0,
+   5.6,
+   7.5,
+   2.9,
+   1.4
+  ],
+  "bowl": [
+   2.4,
+   4.9,
+   2.1,
+   0.9,
+   1.0,
+   1.1,
+   2.1,
+   3.8,
+   2.1,
+   1.0
+  ],
+  "nachos": [
+   1.7,
+   3.3,
+   1.4,
+   0.6,
+   0.9,
+   1.8,
+   3.3,
+   4.1,
+   1.5,
+   0.7
+  ],
+  "quesadilla": [
+   1.5,
+   3.0,
+   1.3,
+   0.5,
+   0.7,
+   1.0,
+   1.8,
+   2.8,
+   1.3,
+   0.6
+  ],
+  "chips-guac": [
+   1.2,
+   2.4,
+   1.0,
+   0.4,
+   0.6,
+   1.1,
+   2.0,
+   2.7,
+   1.0,
+   0.5
+  ],
+  "chips-queso": [
+   0.9,
+   1.9,
+   0.8,
+   0.3,
+   0.5,
+   0.9,
+   1.8,
+   2.3,
+   0.8,
+   0.4
+  ],
+  "salad": [
+   0.6,
+   1.3,
+   0.6,
+   0.2,
+   0.3,
+   0.3,
+   0.5,
+   1.0,
+   0.6,
+   0.3
+  ],
+  "side-rice": [
+   0.3,
+   0.7,
+   0.3,
+   0.1,
+   0.1,
+   0.2,
+   0.4,
+   0.6,
+   0.3,
+   0.1
+  ],
+  "side-beans": [
+   0.3,
+   0.6,
+   0.3,
+   0.1,
+   0.1,
+   0.2,
+   0.4,
+   0.6,
+   0.3,
+   0.1
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 42.6,
+  "tacos": 35.7,
+  "bowl": 21.4,
+  "nachos": 19.2,
+  "quesadilla": 14.6,
+  "chips-guac": 12.9,
+  "chips-queso": 10.7,
+  "salad": 5.5,
+  "side-rice": 3.2,
+  "side-beans": 3.1
+ },
+ "drivers": [
+  {
+   "event_id": "valkyries-2026-10-07",
+   "name": "Golden State Valkyries vs. Las Vegas Aces (WNBA playoffs)",
+   "venue": "Chase Center",
+   "distance_miles": 0.9,
+   "direction": "up",
+   "expected_effect_pct": 16,
+   "start_time": "18:30",
+   "end_time": "20:40",
+   "explanation": "Golden State Valkyries vs. Las Vegas Aces (WNBA playoffs) at Chase Center (0.9 mi away, starts 18:30): a pre-event lift in the three hours before the start, roughly +16%."
+  },
+  {
+   "event_id": "rodwave-2026-10-07",
+   "name": "Rod Wave",
+   "venue": "Oakland Arena",
+   "distance_miles": 9.1,
+   "direction": "up",
+   "expected_effect_pct": 1,
+   "start_time": "20:00",
+   "end_time": "22:30",
+   "explanation": "Rod Wave (9.1 mi away): not expected to move sales."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 43 Signature Burrito",
+  "Expect about 36 Street Tacos (3)",
+  "Expect about 21 Burrito Bowl",
+  "Pre-portion nachos, chips and tortillas before the rush window"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "scheduled",
+  "runs_at": "end of day",
+  "note": "Scheduled to run at the end of the day on Oct 7 (21:30); this is the forecast it will start from.",
+  "summary": "Statistical prediction for a Wednesday is 146 items [1]. The agent forecasts 169 (+16%), a lift of about 23 items, all from the Valkyries game. Tavily shows two events tonight: Valkyries vs Aces at Chase Center, 18:30, 0.9 mi away [2], and Rod Wave at 20:00 [3]. Rod Wave's listing is at Oakland Arena, 9.1 mi away. Mem0 recalls the Valkyries' recent playoff nights: <<2026-10-02|Oct 2>> +11% and the semifinal opener <<2026-10-04|Oct 4>> +17% [4]. The agent treats +87% on <<2026-09-27|Sep 27>> as a Giants day-game effect, not a Valkyries one. Why a lift near +16%: a playoff semifinal crowd arrives early, so sales build from about 15:30 and peak 17:30 to 18:30. Why Rod Wave adds almost nothing: it is across the bay and the two events do not share a crowd, and a past concert outside the ballpark area gave no lift [5]. It does not expect the two events to cannibalise each other. Dry, mild evening [6], so no weather adjustment.",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Wednesday'\n  AND  date < '2026-10-07'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Wednesday",
+       145.6,
+       4
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "valkyries-2026-10-07",
+    "query": "Golden State Valkyries vs. Las Vegas Aces (WNBA playoffs) Chase Center San Francisco Oct 7",
+    "title": "Golden State Valkyries vs. Las Vegas Aces (WNBA playoffs)",
+    "url": "https://www.chasecenter.com/events",
+    "domain": "chasecenter.com",
+    "snippet": "WNBA playoff game at Chase Center, 18:30 to 20:40.",
+    "verified": false,
+    "placeholder": true
+   },
+   {
+    "id": 3,
+    "type": "tavily",
+    "event_id": "rodwave-2026-10-07",
+    "query": "Rod Wave Oakland Arena San Francisco Oct 7",
+    "title": "Rod Wave",
+    "url": "https://www.sftravel.com/",
+    "domain": "sftravel.com",
+    "snippet": "Concert at Oakland Arena, 20:00 to 22:30.",
+    "verified": false,
+    "placeholder": true
+   },
+   {
+    "id": 4,
+    "type": "mem0",
+    "memory_id": "mem_7c35d4e5eb",
+    "query": "past sales near Chase Center on Valkyries playoff games",
+    "memory": "Valkyries playoff nights moved the truck <<2026-10-02|Oct 2>> +11% and <<2026-10-04|Oct 4>> +17%. The +87% on <<2026-09-27|Sep 27>> was the Giants-Dodgers day game at 12:05, so it is discounted.",
+    "relevance": 0.91,
+    "avg_vs_baseline_pct": 38.3,
+    "linked_days": [
+     {
+      "date": "2026-10-02",
+      "event": "WNBA Playoffs R1 G3: Valkyries vs Dallas Wings (Fri 18:00)",
+      "category": "",
+      "actual_items": 257,
+      "expected_items": 245,
+      "baseline_items": 231,
+      "vs_baseline_pct": 11.1,
+      "revenue": 2360
+     },
+     {
+      "date": "2026-10-04",
+      "event": "WNBA Semifinals G1: Valkyries vs Las Vegas Aces (Sun 13:00)",
+      "category": "",
+      "actual_items": 219,
+      "expected_items": 204,
+      "baseline_items": 187,
+      "vs_baseline_pct": 16.9,
+      "revenue": 2018.5
+     },
+     {
+      "date": "2026-09-27",
+      "event": "WNBA Playoffs R1 G1 (Sun 18:00), Giants day game same day",
+      "category": "",
+      "actual_items": 350,
+      "expected_items": 296,
+      "baseline_items": 187,
+      "vs_baseline_pct": 86.8,
+      "revenue": 3213.5
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "type": "mem0",
+    "memory_id": "mem_a81ef169ad",
+    "query": "does a concert outside the Oracle Park / Chase Center area move sales",
+    "memory": "The one Chase Center concert on a weekend, <<2026-10-03|Oct 3>>, came in -11% against trend. No past event 9 miles away has moved the truck.",
+    "relevance": 0.66,
+    "avg_vs_baseline_pct": -11.1,
+    "linked_days": [
+     {
+      "date": "2026-10-03",
+      "event": "Disney Worlds Collide Concert Tour (Sat 19:00)",
+      "category": "",
+      "actual_items": 221,
+      "expected_items": 260,
+      "baseline_items": 249,
+      "vs_baseline_pct": -11.1,
+      "revenue": 2053
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "type": "tavily",
+    "event_id": null,
+    "query": "San Francisco weather forecast October 7 2026",
+    "title": "San Francisco forecast",
+    "url": "https://www.weather.gov/mtr/",
+    "domain": "weather.gov",
+    "snippet": "Partly cloudy and 63F. Dry evening.",
+    "verified": false,
+    "placeholder": true
+   }
+  ],
+  "adjustments": {
+   "stat": 146,
+   "rows": [
+    {
+     "label": "Golden State Valkyries vs. Las Vegas Aces (WNBA playoffs)",
+     "event_id": "valkyries-2026-10-07",
+     "delta": 23,
+     "kind": "up"
+    },
+    {
+     "label": "Rod Wave",
+     "event_id": "rodwave-2026-10-07",
+     "delta": 0,
+     "kind": "flat"
+    }
+   ],
+   "forecast": 169,
+   "actual": null,
+   "gap": null,
+   "gap_note": ""
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Large Flour Tortilla",
+   "change": "+27 tortillas",
+   "status": "scheduled",
+   "detail": "Will raise the Large Flour Tortilla reorder alert by 27 tortillas to cover the expected rush at the end of the day on Oct 7.",
+   "runs_at": "end of day"
+  },
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Tortilla Chips",
+   "change": "+2 bags",
+   "status": "scheduled",
+   "detail": "Will raise the Tortilla Chips reorder alert by 2 bags to cover the expected rush at the end of the day on Oct 7.",
+   "runs_at": "end of day"
+  }
+ ],
+ "statistical": {
+  "method": "Wednesday x hour seasonal average of past sales, events excluded",
+  "n_days": 4,
+  "total": 145.6,
+  "hourly": [
+   16.6,
+   33.3,
+   14.3,
+   6.1,
+   6.8,
+   7.4,
+   13.4,
+   26.2,
+   14.6,
+   7.0
+  ],
+  "low": [
+   13.4,
+   28.5,
+   11.3,
+   4.0,
+   4.7,
+   5.2,
+   10.6,
+   22.1,
+   11.6,
+   4.8
+  ],
+  "high": [
+   19.8,
+   38.2,
+   17.2,
+   8.2,
+   9.0,
+   9.7,
+   16.2,
+   30.3,
+   17.5,
+   9.2
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Wednesday'\n  AND  date < '2026-10-07'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Wednesday",
+      145.6,
+      4
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-10-07"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "event",
+    "items": [
+     {
+      "event_id": "valkyries-2026-10-07",
+      "name": "Golden State Valkyries vs. Las Vegas Aces (WNBA playoffs)",
+      "category": "WNBA playoff game",
+      "venue": "Chase Center",
+      "miles": 0.9,
+      "start": "18:30",
+      "end": "20:40",
+      "status": "scheduled",
+      "placeholder": true,
+      "effect_pct": 16,
+      "direction": "up",
+      "tavily": {
+       "type": "tavily",
+       "event_id": "valkyries-2026-10-07",
+       "query": "Golden State Valkyries vs. Las Vegas Aces (WNBA playoffs) Chase Center San Francisco Oct 7",
+       "title": "Golden State Valkyries vs. Las Vegas Aces (WNBA playoffs)",
+       "url": "https://www.chasecenter.com/events",
+       "domain": "chasecenter.com",
+       "snippet": "WNBA playoff game at Chase Center, 18:30 to 20:40.",
+       "verified": false,
+       "placeholder": true
+      },
+      "source_id": 2,
+      "more": []
+     }
+    ],
+    "check": "Chase Center events 2026-10-07"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Moscone Center events 2026-10-07"
+   }
+  ],
+  "other": [
+   {
+    "event_id": "rodwave-2026-10-07",
+    "name": "Rod Wave",
+    "category": "Concert",
+    "venue": "Oakland Arena",
+    "miles": 9.1,
+    "start": "20:00",
+    "end": "22:30",
+    "status": "scheduled",
+    "placeholder": true,
+    "effect_pct": 1,
+    "direction": "up",
+    "tavily": {
+     "type": "tavily",
+     "event_id": "rodwave-2026-10-07",
+     "query": "Rod Wave Oakland Arena San Francisco Oct 7",
+     "title": "Rod Wave",
+     "url": "https://www.sftravel.com/",
+     "domain": "sftravel.com",
+     "snippet": "Concert at Oakland Arena, 20:00 to 22:30.",
+     "verified": false,
+     "placeholder": true
+    },
+    "source_id": 3,
+    "more": []
+   },
+   {
+    "name": "Weather: Partly cloudy and 63F",
+    "category": "Weather",
+    "venue": "San Francisco",
+    "miles": 0.0,
+    "start": "08:00",
+    "end": "22:00",
+    "status": "scheduled",
+    "placeholder": true,
+    "effect_pct": 0,
+    "direction": "flat",
+    "event_id": null,
+    "source_id": 6,
+    "tavily": {
+     "type": "tavily",
+     "event_id": null,
+     "query": "San Francisco weather forecast October 7 2026",
+     "title": "San Francisco forecast",
+     "url": "https://www.weather.gov/mtr/",
+     "domain": "weather.gov",
+     "snippet": "Partly cloudy and 63F. Dry evening.",
+     "verified": false,
+     "placeholder": true
+    },
+    "note": "No weather effect expected."
+   }
+  ]
+ }
+}

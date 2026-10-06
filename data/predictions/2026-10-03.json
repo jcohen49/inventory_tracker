@@ -1,0 +1,426 @@
+{
+ "date": "2026-10-03",
+ "day_of_week": "Saturday",
+ "status": "past",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 248.6,
+ "expected_items": 259.9,
+ "expected_vs_baseline_pct": 4.5,
+ "expected_orders": 156,
+ "expected_revenue": 2372.93,
+ "range_items": [
+  229,
+  291
+ ],
+ "confidence": "high",
+ "peak_hour": "18:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  25.7,
+  51.7,
+  22.1,
+  9.5,
+  10.6,
+  15.3,
+  32.6,
+  58.9,
+  22.6,
+  10.8
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   6.8,
+   13.6,
+   5.8,
+   2.5,
+   2.8,
+   3.7,
+   7.6,
+   14.0,
+   5.9,
+   2.8
+  ],
+  "tacos": [
+   5.0,
+   10.1,
+   4.3,
+   1.9,
+   2.1,
+   3.4,
+   7.8,
+   13.7,
+   4.4,
+   2.1
+  ],
+  "bowl": [
+   3.8,
+   7.5,
+   3.2,
+   1.4,
+   1.5,
+   1.7,
+   3.1,
+   6.0,
+   3.3,
+   1.6
+  ],
+  "nachos": [
+   2.6,
+   5.2,
+   2.2,
+   0.9,
+   1.1,
+   1.9,
+   4.5,
+   7.8,
+   2.3,
+   1.1
+  ],
+  "quesadilla": [
+   2.3,
+   4.6,
+   2.0,
+   0.9,
+   1.0,
+   1.3,
+   2.6,
+   4.8,
+   2.0,
+   1.0
+  ],
+  "chips-guac": [
+   1.8,
+   3.7,
+   1.6,
+   0.7,
+   0.8,
+   1.2,
+   2.8,
+   5.0,
+   1.6,
+   0.8
+  ],
+  "chips-queso": [
+   1.5,
+   2.9,
+   1.3,
+   0.5,
+   0.6,
+   1.0,
+   2.4,
+   4.2,
+   1.3,
+   0.6
+  ],
+  "salad": [
+   1.0,
+   2.0,
+   0.9,
+   0.4,
+   0.4,
+   0.4,
+   0.7,
+   1.4,
+   0.9,
+   0.4
+  ],
+  "side-rice": [
+   0.5,
+   1.0,
+   0.4,
+   0.2,
+   0.2,
+   0.3,
+   0.6,
+   1.1,
+   0.5,
+   0.2
+  ],
+  "side-beans": [
+   0.5,
+   1.0,
+   0.4,
+   0.2,
+   0.2,
+   0.3,
+   0.6,
+   1.0,
+   0.4,
+   0.2
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 65.6,
+  "tacos": 54.8,
+  "bowl": 33.1,
+  "nachos": 29.5,
+  "quesadilla": 22.4,
+  "chips-guac": 19.9,
+  "chips-queso": 16.4,
+  "salad": 8.5,
+  "side-rice": 5.0,
+  "side-beans": 4.7
+ },
+ "drivers": [
+  {
+   "event_id": "disney-2026-10-03",
+   "name": "Disney Worlds Collide Concert Tour",
+   "venue": "Chase Center",
+   "distance_miles": 0.9,
+   "direction": "up",
+   "expected_effect_pct": 15,
+   "start_time": "19:00",
+   "end_time": "21:30",
+   "explanation": "Disney Worlds Collide Concert Tour at Chase Center (0.9 mi away, starts 19:00): a pre-event lift in the three hours before the start, roughly +15%."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 66 Signature Burrito",
+  "Expect about 55 Street Tacos (3)",
+  "Expect about 33 Burrito Bowl",
+  "Pre-portion nachos, chips and tortillas before the rush window"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "completed",
+  "runs_at": "21:30",
+  "note": "Completed at end of day.",
+  "summary": "Sold 221 items vs 260 expected (-15%). A typical Saturday runs about 249 items [1]. Disney Worlds Collide Concert Tour at Chase Center (0.9 mi away, starts 19:00): a pre-event lift in the three hours before the start, roughly +15%. [2] Memory recall of similar days: <<2026-10-02|Oct 2>> +11% (257 items), <<2026-09-27|Sep 27>> +87% (350 items), <<2026-09-23|Sep 23>> +54% (225 items) [3].",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Saturday'\n  AND  date < '2026-10-03'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Saturday",
+       248.6,
+       4
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "disney-2026-10-03",
+    "query": "Disney Worlds Collide Concert Tour Chase Center San Francisco Oct 3",
+    "title": "Disney Worlds Collide Concert Tour",
+    "url": "https://www.chasecenter.com/events/disney-worlds-collide-concert-tour-20261003/",
+    "domain": "chasecenter.com",
+    "snippet": "Concert at Chase Center, 19:00 to 21:30.",
+    "verified": true,
+    "placeholder": false
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_71aab8d8d0",
+    "query": "past sales near Chase Center on concert days",
+    "memory": "Comparable Chase Center days (wnba playoff game / concert): the truck averaged +51% vs baseline over the last 3 day(s); most recent <<2026-10-02|Oct 2>> at 257 items.",
+    "relevance": 0.93,
+    "avg_vs_baseline_pct": 50.8,
+    "linked_days": [
+     {
+      "date": "2026-10-02",
+      "event": "WNBA Playoffs R1 G3: Valkyries vs Dallas Wings",
+      "category": "WNBA playoff game",
+      "actual_items": 257,
+      "expected_items": 245,
+      "baseline_items": 231,
+      "vs_baseline_pct": 11.1,
+      "revenue": 2360
+     },
+     {
+      "date": "2026-09-27",
+      "event": "WNBA Playoffs R1 G1: Valkyries vs Dallas Wings",
+      "category": "WNBA playoff game",
+      "actual_items": 350,
+      "expected_items": 296,
+      "baseline_items": 187,
+      "vs_baseline_pct": 86.8,
+      "revenue": 3213.5
+     },
+     {
+      "date": "2026-09-23",
+      "event": "Lily Allen",
+      "category": "Concert",
+      "actual_items": 225,
+      "expected_items": 196,
+      "baseline_items": 146,
+      "vs_baseline_pct": 54.5,
+      "revenue": 2064.5
+     }
+    ]
+   }
+  ],
+  "adjustments": {
+   "stat": 249,
+   "rows": [
+    {
+     "label": "Disney Worlds Collide Concert Tour",
+     "event_id": "disney-2026-10-03",
+     "delta": 34,
+     "kind": "up"
+    },
+    {
+     "label": "Overlap, late hours and other known factors",
+     "event_id": null,
+     "delta": -23,
+     "kind": "down"
+    }
+   ],
+   "forecast": 260,
+   "actual": 221,
+   "gap": -39,
+   "gap_note": "Not explained by any known event; flagged for the next run."
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "no_change",
+   "ingredient": null,
+   "change": "0",
+   "status": "completed",
+   "detail": "Left reorder alerts at standard par at end of day on Oct 3 (21:30).",
+   "runs_at": "21:30"
+  }
+ ],
+ "statistical": {
+  "method": "Saturday x hour seasonal average of past sales, events excluded",
+  "n_days": 4,
+  "total": 248.6,
+  "hourly": [
+   28.3,
+   56.9,
+   24.4,
+   10.4,
+   11.7,
+   12.7,
+   22.9,
+   44.7,
+   24.9,
+   11.9
+  ],
+  "low": [
+   24.0,
+   49.7,
+   20.4,
+   7.9,
+   9.0,
+   9.9,
+   19.1,
+   38.8,
+   20.9,
+   9.2
+  ],
+  "high": [
+   32.7,
+   64.1,
+   28.3,
+   13.0,
+   14.4,
+   15.4,
+   26.7,
+   50.7,
+   28.8,
+   14.6
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Saturday'\n  AND  date < '2026-10-03'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Saturday",
+      248.6,
+      4
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-10-03"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "event",
+    "items": [
+     {
+      "event_id": "disney-2026-10-03",
+      "name": "Disney Worlds Collide Concert Tour",
+      "category": "Concert",
+      "venue": "Chase Center",
+      "miles": 0.9,
+      "start": "19:00",
+      "end": "21:30",
+      "status": "took place",
+      "placeholder": false,
+      "effect_pct": 15,
+      "direction": "up",
+      "tavily": {
+       "type": "tavily",
+       "event_id": "disney-2026-10-03",
+       "query": "Disney Worlds Collide Concert Tour Chase Center San Francisco Oct 3",
+       "title": "Disney Worlds Collide Concert Tour",
+       "url": "https://www.chasecenter.com/events/disney-worlds-collide-concert-tour-20261003/",
+       "domain": "chasecenter.com",
+       "snippet": "Concert at Chase Center, 19:00 to 21:30.",
+       "verified": true,
+       "placeholder": false
+      },
+      "source_id": 2,
+      "more": []
+     }
+    ],
+    "check": "Chase Center events 2026-10-03"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Moscone Center events 2026-10-03"
+   }
+  ],
+  "other": []
+ },
+ "actual_items": 221,
+ "label": "event_lift_weak"
+}

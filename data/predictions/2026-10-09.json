@@ -1,0 +1,328 @@
+{
+ "date": "2026-10-09",
+ "day_of_week": "Friday",
+ "status": "future",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 231.4,
+ "expected_items": 231.6,
+ "expected_vs_baseline_pct": 0.1,
+ "expected_orders": 139,
+ "expected_revenue": 2132.58,
+ "range_items": [
+  204,
+  259
+ ],
+ "confidence": "medium",
+ "peak_hour": "12:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  26.4,
+  53.0,
+  22.7,
+  9.7,
+  10.9,
+  11.8,
+  21.3,
+  41.7,
+  23.1,
+  11.1
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   6.9,
+   13.9,
+   6.0,
+   2.6,
+   2.9,
+   3.1,
+   5.6,
+   10.9,
+   6.1,
+   2.9
+  ],
+  "tacos": [
+   5.2,
+   10.4,
+   4.4,
+   1.9,
+   2.1,
+   2.3,
+   4.2,
+   8.2,
+   4.5,
+   2.2
+  ],
+  "bowl": [
+   3.8,
+   7.7,
+   3.3,
+   1.4,
+   1.6,
+   1.7,
+   3.1,
+   6.1,
+   3.4,
+   1.6
+  ],
+  "nachos": [
+   2.6,
+   5.3,
+   2.3,
+   1.0,
+   1.1,
+   1.2,
+   2.1,
+   4.2,
+   2.3,
+   1.1
+  ],
+  "quesadilla": [
+   2.4,
+   4.8,
+   2.0,
+   0.9,
+   1.0,
+   1.1,
+   1.9,
+   3.7,
+   2.1,
+   1.0
+  ],
+  "chips-guac": [
+   1.9,
+   3.8,
+   1.6,
+   0.7,
+   0.8,
+   0.8,
+   1.5,
+   3.0,
+   1.6,
+   0.8
+  ],
+  "chips-queso": [
+   1.5,
+   3.0,
+   1.3,
+   0.6,
+   0.6,
+   0.7,
+   1.2,
+   2.4,
+   1.3,
+   0.6
+  ],
+  "salad": [
+   1.0,
+   2.1,
+   0.9,
+   0.4,
+   0.4,
+   0.5,
+   0.8,
+   1.6,
+   0.9,
+   0.4
+  ],
+  "side-rice": [
+   0.5,
+   1.1,
+   0.5,
+   0.2,
+   0.2,
+   0.2,
+   0.4,
+   0.8,
+   0.5,
+   0.2
+  ],
+  "side-beans": [
+   0.5,
+   1.0,
+   0.4,
+   0.2,
+   0.2,
+   0.2,
+   0.4,
+   0.8,
+   0.4,
+   0.2
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 60.9,
+  "tacos": 45.4,
+  "bowl": 33.8,
+  "nachos": 23.1,
+  "quesadilla": 20.8,
+  "chips-guac": 16.4,
+  "chips-queso": 13.2,
+  "salad": 9.0,
+  "side-rice": 4.6,
+  "side-beans": 4.4
+ },
+ "drivers": [],
+ "prep_notes": [
+  "Expect about 61 Signature Burrito",
+  "Expect about 45 Street Tacos (3)",
+  "Expect about 34 Burrito Bowl"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "scheduled",
+  "runs_at": "end of day",
+  "note": "Scheduled to run at the end of the day on Oct 9 (21:30); this is the forecast it will start from.",
+  "summary": "Expected about 232 items (+0% vs a typical Friday of 231 [1]), peaking around 12:00. No events within a mile, so this follows the plain weekday trend. No event-free Friday on record yet; using the trend baseline. [2]",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Friday'\n  AND  date < '2026-10-09'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Friday",
+       231.4,
+       4
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "mem0",
+    "memory_id": "mem_d75fd78dde",
+    "query": "typical Friday sales with no nearby events",
+    "memory": "No event-free Friday on record yet; using the trend baseline.",
+    "relevance": 0.4,
+    "avg_vs_baseline_pct": null,
+    "linked_days": []
+   }
+  ],
+  "adjustments": {
+   "stat": 231,
+   "rows": [],
+   "forecast": 232,
+   "actual": null,
+   "gap": null,
+   "gap_note": ""
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "no_change",
+   "ingredient": null,
+   "change": "0",
+   "status": "scheduled",
+   "detail": "Will leave reorder alerts at standard par at the end of the day on Oct 9.",
+   "runs_at": "end of day"
+  }
+ ],
+ "statistical": {
+  "method": "Friday x hour seasonal average of past sales, events excluded",
+  "n_days": 4,
+  "total": 231.4,
+  "hourly": [
+   26.4,
+   53.0,
+   22.7,
+   9.7,
+   10.9,
+   11.8,
+   21.3,
+   41.7,
+   23.1,
+   11.1
+  ],
+  "low": [
+   22.2,
+   46.2,
+   18.9,
+   7.2,
+   8.3,
+   9.1,
+   17.7,
+   36.0,
+   19.3,
+   8.5
+  ],
+  "high": [
+   30.5,
+   59.8,
+   26.4,
+   12.2,
+   13.5,
+   14.5,
+   24.9,
+   47.3,
+   27.0,
+   13.7
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Friday'\n  AND  date < '2026-10-09'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Friday",
+      231.4,
+      4
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Chase Center events"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Moscone Center events"
+   }
+  ],
+  "other": []
+ }
+}

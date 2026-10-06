@@ -212,6 +212,140 @@ body{margin:0}
 .pie-leg-row i{width:12px;height:12px;display:block}
 .pie-leg-name{color:var(--color-neutral-700);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .pie-leg-pct{font-variant-numeric:tabular-nums;color:var(--color-neutral-600);font-family:var(--font-heading);font-weight:600}
+.ag-wrap{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:var(--space-6);align-items:start}
+.ag-notes{display:flex;flex-direction:column;gap:var(--space-4);min-width:0}
+.ag-side{position:sticky;top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-4);min-width:0}
+.ag-daytitle{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap}
+.ag-daytitle h2{font-size:28px;margin:0}
+.ag-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border:1px solid var(--color-divider);color:var(--color-neutral-700)}
+.ag-tag.live{background:var(--color-accent-900);color:var(--color-bg);border-color:var(--color-accent-900)}
+.ag-tag.fc{background:var(--color-accent-100);color:var(--color-accent-800);border-color:var(--color-accent-200)}
+.ag-tag.done{background:var(--color-neutral-100)}
+.ag-tag.warn{background:var(--color-accent-100);color:var(--color-accent-800)}
+.ag-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--color-divider);border:1px solid var(--color-divider)}
+.ag-stat{background:var(--color-bg);padding:var(--space-3)}
+.ag-stat .k{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600)}
+.ag-stat .n{font-family:var(--font-heading);font-weight:600;font-size:26px;line-height:1.1;margin-top:3px;font-variant-numeric:tabular-nums}
+.ag-stat .s{font-size:11.5px;color:var(--color-neutral-600);margin-top:1px}
+.ag-evs{display:flex;flex-direction:column;gap:6px}
+.ag-ev{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:center;font-size:13px}
+.ag-ev .nb{width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:600;font-size:12px;background:var(--color-accent-200);color:var(--color-accent-900)}
+.ag-ev .nm{font-family:var(--font-heading);font-weight:600;font-size:14.5px}
+.ag-ev .mt{font-size:12px;color:var(--color-neutral-600)}
+.ag-chart{position:relative}
+.ag-chart svg{display:block;width:100%;height:auto;overflow:visible}
+.ag-lbl{position:absolute;font-size:10.5px;color:var(--color-neutral-600);transform:translate(-50%,-50%);pointer-events:none;white-space:nowrap;line-height:1}
+.ag-lbl.r{transform:translate(-100%,-50%)}
+.ag-lbl.bn{transform:none;font-family:var(--font-heading);font-weight:600;font-size:12px;color:var(--color-accent-900);background:var(--color-accent-200);padding:2px 5px}
+.ag-lbl.now{transform:translate(-50%,-100%);color:var(--color-accent-900);font-weight:600}
+.ag-pills{display:flex;gap:var(--space-2);flex-wrap:wrap}
+.ag-pills .pos-pill{width:auto;margin:0}
+.ag-legend{display:flex;flex-wrap:wrap;gap:6px 8px;margin-top:var(--space-3)}
+.ag-lg{display:inline-flex;align-items:center;gap:7px;font-size:12px;padding:3px 8px;border:1px solid var(--color-divider);background:transparent;cursor:pointer;color:var(--color-text);font-family:var(--font-body)}
+.ag-lg:hover{background:color-mix(in srgb,var(--color-text) 6%,transparent)}
+.ag-lg.off{opacity:.4;text-decoration:line-through}
+.ag-lg i{display:inline-block;width:16px;height:0;border-top:2px solid}
+.ag-lg.fixed{cursor:default}
+.ag-lg.fixed:hover{background:transparent}
+.ag-read{min-height:44px;margin-top:var(--space-3);padding:var(--space-2) var(--space-3);border:1px dashed var(--color-divider);font-size:12.5px;color:var(--color-neutral-700);display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline}
+.ag-read b{font-family:var(--font-heading);font-weight:600;font-size:14px;color:var(--color-text)}
+.ag-read i{display:inline-block;width:8px;height:8px;margin-right:5px}
+.ag-dd{display:flex;align-items:center;gap:var(--space-3);width:100%;background:none;border:none;padding:0;cursor:pointer;text-align:left;color:var(--color-text)}
+.ag-dd h4{margin:0;flex:1}
+.ag-dd .sm{font-size:12.5px;color:var(--color-neutral-600)}
+.ag-dd svg{width:18px;height:18px;transition:transform .15s}
+.ag-dd.open svg{transform:rotate(180deg)}
+.ag-tbl{margin-top:var(--space-3)}
+.ag-tbl td.r,.ag-tbl th.r{text-align:right;font-variant-numeric:tabular-nums}
+.ag-tbl tr.tot td{font-family:var(--font-heading);font-weight:600;border-top:1px solid var(--color-text);border-bottom:none}
+.ag-hd{display:flex;align-items:center;gap:var(--space-3);flex-wrap:wrap;margin-bottom:var(--space-3)}
+.ag-hd h4{margin:0;flex:1;min-width:140px}
+.ag-trace{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:var(--space-3)}
+.ag-step{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;padding:3px 8px;background:var(--color-neutral-100);color:var(--color-neutral-700)}
+.ag-step b{font-family:var(--font-heading);font-weight:600}
+.ag-mk{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;font-family:var(--font-heading);font-weight:700;font-size:10px;flex:none}
+.ag-mk.sql{background:var(--color-neutral-700);color:var(--color-bg)}
+.ag-mk.tv{background:#dcebff;color:#1b57c4}
+.ag-mk.m0{background:#ebe5ff;color:#4a2fd0}
+.ag-sum{font-size:14.5px;line-height:1.65}
+.ag-cite{display:inline-flex;align-items:center;justify-content:center;min-width:19px;height:17px;margin:0 2px;padding:0 4px;font-size:11px;font-family:var(--font-heading);font-weight:600;vertical-align:1px;cursor:pointer;border:1px solid var(--color-accent-300);background:var(--color-accent-100);color:var(--color-accent-800)}
+.ag-cite:hover,.ag-cite.on{background:var(--color-accent-900);color:var(--color-bg);border-color:var(--color-accent-900)}
+.ag-srcs{display:flex;flex-direction:column;gap:var(--space-2);margin-top:var(--space-4)}
+.ag-src{border:1px solid var(--color-divider);padding:var(--space-3);display:grid;grid-template-columns:26px minmax(0,1fr);gap:var(--space-3)}
+.ag-src.on{border-color:var(--color-accent);background:color-mix(in srgb,var(--color-accent) 7%,transparent)}
+.ag-src .id{font-family:var(--font-heading);font-weight:600;font-size:13px;color:var(--color-neutral-600)}
+.ag-src .by{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600);display:flex;align-items:center;gap:7px;margin-bottom:4px}
+.ag-src .tt{font-family:var(--font-heading);font-weight:600;font-size:15px;line-height:1.25}
+.ag-src .qq{font-size:12px;color:var(--color-neutral-600);margin-top:2px}
+.ag-src .qq code,.ag-src .mm code{font-size:11.5px;background:var(--color-neutral-100);padding:1px 5px}
+.ag-src a{font-size:12px;word-break:break-all}
+.ag-src .sn{font-size:13px;margin-top:5px}
+.ag-sql{margin:6px 0 0;padding:var(--space-3);background:var(--color-neutral-900);color:var(--color-neutral-100);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;line-height:1.55;overflow-x:auto}
+.ag-sql div{white-space:pre}
+.ag-sql .kw{color:var(--color-accent-300);font-weight:600}
+.ag-res{margin-top:6px;width:100%;border-collapse:collapse;font-size:12px}
+.ag-res th{text-align:left;font-weight:600;color:var(--color-neutral-600);padding:3px 8px 3px 0;border-bottom:1px solid var(--color-divider)}
+.ag-res td{padding:3px 8px 3px 0;font-variant-numeric:tabular-nums}
+.ag-mm{margin-top:6px;border-top:1px solid var(--color-divider)}
+.ag-mm .row{display:grid;grid-template-columns:54px minmax(0,1fr) auto auto;gap:8px;font-size:12px;padding:4px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent);align-items:baseline}
+.ag-mm .row .dd{font-family:var(--font-heading);font-weight:600}
+.ag-mm .row .up{color:var(--color-accent-800);font-weight:600}
+.ag-mm .row .dn{color:var(--color-neutral-700);font-weight:600}
+.ag-act{display:grid;grid-template-columns:30px minmax(0,1fr) auto;gap:var(--space-3);padding:var(--space-3) 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent);align-items:start}
+.ag-act:last-child{border-bottom:none}
+.ag-act .ic2{width:28px;height:28px;display:flex;align-items:center;justify-content:center;background:var(--color-accent-100);color:var(--color-accent-800)}
+.ag-act .ic2 svg{width:16px;height:16px}
+.ag-act .tx{font-size:13.5px}
+.ag-act .tx b{font-family:var(--font-heading);font-weight:600;font-size:15px}
+.ag-pend{font-size:13.5px;color:var(--color-neutral-700);display:flex;gap:10px;align-items:flex-start}
+.ag-pend svg{width:18px;height:18px;flex:none;margin-top:2px}
+.ag-cal .cell{min-height:62px;padding:5px 6px}
+.ag-cal .cell.off{color:var(--color-neutral-400);cursor:default}
+.ag-cal .cell.off:hover{outline:none}
+.ag-cal .cell.sel{outline:2px solid var(--color-accent-900);outline-offset:-2px;z-index:1}
+.ag-cal .cell.now{box-shadow:inset 0 0 0 1px var(--color-accent-900)}
+.ag-cal .cl{text-transform:none;letter-spacing:0;font-size:11px;font-weight:600;color:var(--color-neutral-700)}
+.ag-cal .evd{position:absolute;right:6px;bottom:6px;display:flex;gap:2px}
+.ag-cal .evd i{width:6px;height:6px;background:var(--color-accent-900);display:block}
+.ag-month{display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3)}
+.ag-month h3{margin:0;font-size:21px}
+.ag-up{display:grid;grid-template-columns:48px minmax(0,1fr);gap:8px;padding:7px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent);cursor:pointer;font-size:13px;align-items:baseline}
+.ag-up:last-child{border-bottom:none}
+.ag-up:hover .nm{color:var(--color-accent)}
+.ag-up .dd{font-family:var(--font-heading);font-weight:600;color:var(--color-neutral-700)}
+.ag-up .nm{font-family:var(--font-heading);font-weight:600;font-size:14px;line-height:1.25}
+.ag-up .mt{font-size:11.5px;color:var(--color-neutral-600)}
+.ag-sub{font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600);margin:var(--space-4) 0 var(--space-2)}
+.ag-hot{border:1px solid var(--color-divider);padding:var(--space-3);margin-bottom:var(--space-2)}
+.ag-hot-h{display:flex;justify-content:space-between;align-items:center;gap:var(--space-3)}
+.ag-hot-h .nm,.ag-inf .nm{font-family:var(--font-heading);font-weight:600;font-size:16px}
+.ag-hot-h .mt,.ag-inf .mt{font-size:12px;color:var(--color-neutral-600)}
+.ag-quiet{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--color-neutral-600);margin-top:var(--space-2)}
+.ag-quiet code,.ag-tvi code{font-size:11.5px;background:var(--color-neutral-100);padding:1px 5px;color:var(--color-neutral-800)}
+.ag-inf{margin-top:var(--space-3);padding-top:var(--space-3);border-top:1px solid color-mix(in srgb,var(--color-text) 8%,transparent)}
+.ag-inf-h{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--space-3)}
+.ag-tvi{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px;margin-top:var(--space-2);padding:8px 10px;background:var(--color-neutral-100);font-size:12.5px}
+.ag-tvi.on{background:color-mix(in srgb,var(--color-accent) 14%,transparent);outline:1px solid var(--color-accent)}
+.ag-tvi .sn{margin-top:3px;color:var(--color-text)}
+.ag-tvi .qq{margin-top:3px;font-size:11.5px;color:var(--color-neutral-600)}
+.ag-tvi a{font-size:12px;word-break:break-all}
+.ag-tvi .ver{font-size:11px;color:var(--color-neutral-600)}
+.ag-wf{display:flex;flex-direction:column}
+.ag-wf-r{display:grid;grid-template-columns:minmax(0,1fr) 120px 56px;gap:var(--space-3);align-items:center;padding:6px 0;border-bottom:1px solid color-mix(in srgb,var(--color-text) 8%,transparent);font-size:13.5px}
+.ag-wf-r .vl{text-align:right;font-family:var(--font-heading);font-weight:600;font-size:16px;font-variant-numeric:tabular-nums}
+.ag-wf-r .bar{height:8px;background:transparent;display:block}
+.ag-wf-r .bar i{display:block;height:8px}
+.ag-wf-r.base .lb,.ag-wf-r.total .lb{font-family:var(--font-heading);font-weight:600;font-size:15px}
+.ag-wf-r.total{border-bottom:1px solid var(--color-text)}
+.ag-wf-r.up .vl{color:var(--color-accent-800)}
+.ag-wf-r.down .vl{color:var(--color-neutral-700)}
+.ag-dl{display:inline;padding:0;border:none;border-bottom:1px solid var(--color-accent);background:none;color:var(--color-accent-800);font:inherit;font-weight:600;cursor:pointer}
+.ag-dl:hover{background:var(--color-accent-100)}
+.ag-mm .row .ag-dl.dd{font-family:var(--font-heading);text-align:left;justify-self:start}
+.ag-cal .evd i.oth{background:transparent;box-shadow:inset 0 0 0 1px var(--color-accent-900)}
+.ag-load{padding:var(--space-8);text-align:center;color:var(--color-neutral-600)}
+@media (max-width:1100px){.ag-wrap{grid-template-columns:1fr}.ag-side{position:static;order:-1}}
+@media (max-width:640px){.ag-stats{grid-template-columns:repeat(2,1fr)}}
 </style>
 </helmet>
 <div class="app">
@@ -227,6 +361,7 @@ body{margin:0}
 <button class="nav-link {{ v.vendors }}" onClick="{{ go.vendors }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-4"></path><path d="M9 9v.01M9 12v.01M9 15v.01M9 18v.01"></path></svg>Vendors</button>
 <div class="side-sec">Plan</div>
 <button class="nav-link {{ v.forecast }}" onClick="{{ go.forecast }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>Forecasting</button>
+<button class="nav-link {{ v.insights }}" onClick="{{ go.insights }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"></path><path d="M5 3v4"></path><path d="M19 17v4"></path><path d="M3 5h4"></path><path d="M17 19h4"></path></svg>Agentic insights</button>
 <div class="f1"></div>
 <button class="pos-pill {{ posClass }}" style="justify-content:center;margin-top:var(--space-4)" onClick="{{ openPos }}"><span class="dot-i"></span>{{ posLabel }}</button>
 </aside>
@@ -414,6 +549,148 @@ body{margin:0}
 </div></sc-if>
 </div></sc-if>
 
+<sc-if value="{{ isInsights }}" hint-placeholder-val="{{ false }}"><div>
+<div class="phead"><div><h1>Agentic insights</h1><div class="sub">Daily notes written by the agent: how sales moved against the usual trend, why, and what it changed. Backed by your sales history, Mem0 memory and Tavily web search.</div></div>
+<div class="ag-pills"><span class="pos-pill pos-on"><span class="dot-i"></span>Mem0 memory · connected</span><span class="pos-pill pos-on"><span class="dot-i"></span>Tavily search · connected</span></div></div>
+
+<sc-if value="{{ ag.loading }}" hint-placeholder-val="{{ false }}"><div class="ag-load">Loading sales history…</div></sc-if>
+<sc-if value="{{ ag.failed }}" hint-placeholder-val="{{ false }}"><div class="ag-load">Could not load data/agentic_insights.js. Serve this folder over http or run data/build_agentic_page_data.py.</div></sc-if>
+
+<sc-if value="{{ ag.ready }}" hint-placeholder-val="{{ true }}"><div class="ag-wrap">
+
+<div class="ag-notes">
+<div class="ag-daytitle"><h2>{{ ag.dateLabel }}</h2><span class="ag-tag {{ ag.tagCls }}">{{ ag.tagText }}</span></div>
+<div class="ag-stats">
+<sc-for list="{{ ag.stats }}" as="t" hint-placeholder-count="4"><div class="ag-stat"><div class="k">{{ t.k }}</div><div class="n">{{ t.n }}</div><div class="s">{{ t.s }}</div></div></sc-for>
+</div>
+
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="ag-hd"><h4>{{ ag.chartTitle }}</h4><span class="growl">{{ ag.chartSub }}</span></div>
+<div class="ag-chart"><svg viewBox="0 0 680 270">
+<sc-for list="{{ ag.bands }}" as="b" hint-placeholder-count="1"><g><rect x="{{ b.x }}" y="{{ b.y }}" width="{{ b.w }}" height="{{ b.h }}" style="{{ b.style }}"></rect></g></sc-for>
+<sc-for list="{{ ag.gridLines }}" as="g" hint-placeholder-count="5"><line x1="{{ g.x1 }}" y1="{{ g.y }}" x2="{{ g.x2 }}" y2="{{ g.y }}" style="{{ g.style }}"></line></sc-for>
+<sc-if value="{{ ag.hasNow }}" hint-placeholder-val="{{ false }}"><line x1="{{ ag.nowX }}" y1="14" x2="{{ ag.nowX }}" y2="236" style="{{ ag.nowStyle }}"></line></sc-if>
+<sc-if value="{{ ag.hasHover }}" hint-placeholder-val="{{ false }}"><line x1="{{ ag.hoverX }}" y1="14" x2="{{ ag.hoverX }}" y2="236" style="{{ ag.hoverStyle }}"></line></sc-if>
+<sc-for list="{{ ag.lines }}" as="l" hint-placeholder-count="10"><path d="{{ l.d }}" style="{{ l.style }}"></path></sc-for>
+<sc-if value="{{ ag.showExp }}" hint-placeholder-val="{{ false }}"><path d="{{ ag.expD }}" style="{{ ag.expStyle }}"></path></sc-if>
+<path d="{{ ag.totalD }}" style="{{ ag.totalStyle }}"></path>
+<sc-for list="{{ ag.dots }}" as="p" hint-placeholder-count="10"><circle cx="{{ p.x }}" cy="{{ p.y }}" r="{{ p.r }}" style="{{ p.style }}"></circle></sc-for>
+<sc-for list="{{ ag.hoverRects }}" as="h" hint-placeholder-count="10"><rect x="{{ h.x }}" y="14" width="{{ h.w }}" height="222" style="fill:transparent" onMouseEnter="{{ h.enter }}" onMouseLeave="{{ h.leave }}"></rect></sc-for>
+</svg>
+<sc-for list="{{ ag.yLabels }}" as="g" hint-placeholder-count="5"><div class="ag-lbl r" style="{{ g.style }}">{{ g.t }}</div></sc-for>
+<sc-for list="{{ ag.xLabels }}" as="g" hint-placeholder-count="10"><div class="ag-lbl" style="{{ g.style }}">{{ g.t }}</div></sc-for>
+<sc-for list="{{ ag.bands }}" as="b" hint-placeholder-count="1"><div class="ag-lbl bn" style="{{ b.lstyle }}">{{ b.n }}</div></sc-for>
+<sc-if value="{{ ag.hasNow }}" hint-placeholder-val="{{ false }}"><div class="ag-lbl now" style="{{ ag.nowLblStyle }}">{{ ag.nowLabel }}</div></sc-if>
+</div>
+<div class="ag-read"><sc-if value="{{ ag.hasHover }}" hint-placeholder-val="{{ false }}"><b>{{ ag.hoverTitle }}</b><sc-for list="{{ ag.hoverRows }}" as="r" hint-placeholder-count="4"><span><i style="{{ r.sw }}"></i>{{ r.name }} <b>{{ r.v }}</b></span></sc-for></sc-if><sc-if value="{{ ag.noHover }}" hint-placeholder-val="{{ true }}"><span>Hover the chart to read an hour. Click a product below to show or hide its line.</span></sc-if></div>
+<div class="ag-legend">
+<span class="ag-lg fixed"><i style="{{ ag.lgTotal }}"></i>{{ ag.totalName }}</span>
+<sc-if value="{{ ag.showExp }}" hint-placeholder-val="{{ false }}"><span class="ag-lg fixed"><i style="{{ ag.lgExp }}"></i>Expected</span></sc-if>
+<sc-for list="{{ ag.legend }}" as="l" hint-placeholder-count="10"><button class="ag-lg {{ l.cls }}" onClick="{{ l.toggle }}"><i style="{{ l.sw }}"></i>{{ l.name }}</button></sc-for>
+</div>
+</div>
+
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<button class="ag-dd {{ ag.tblCls }}" onClick="{{ ag.toggleTbl }}"><h4>{{ ag.tblTitle }}</h4><span class="sm">{{ ag.tblSummary }}</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></button>
+<sc-if value="{{ ag.tblOpen }}" hint-placeholder-val="{{ false }}"><div class="ag-tbl"><table class="inv-t"><thead><tr><th>Menu item</th><th class="r">{{ ag.qtyHead }}</th><th class="r">Share</th><th class="r">Revenue</th><th class="r">Ingredient cost</th><th class="r">Margin</th></tr></thead>
+<tbody><sc-for list="{{ ag.rows }}" as="r" hint-placeholder-count="10"><tr><td><span class="rowname" style="cursor:default">{{ r.name }}</span></td><td class="r">{{ r.qty }}</td><td class="r">{{ r.share }}</td><td class="r">{{ r.revenue }}</td><td class="r">{{ r.cost }}</td><td class="r">{{ r.margin }}</td></tr></sc-for>
+<tr class="tot"><td>{{ ag.tot.name }}</td><td class="r">{{ ag.tot.qty }}</td><td class="r">{{ ag.tot.share }}</td><td class="r">{{ ag.tot.revenue }}</td><td class="r">{{ ag.tot.cost }}</td><td class="r">{{ ag.tot.margin }}</td></tr></tbody></table></div></sc-if>
+</div>
+
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="ag-hd"><h4>Statistical prediction</h4><span class="ag-tag done">{{ ag.statTag }}</span></div>
+<div class="growl">{{ ag.statMethod }}</div>
+<div class="ag-stats" style="margin-top:var(--space-3)">
+<sc-for list="{{ ag.statStats }}" as="t" hint-placeholder-count="4"><div class="ag-stat"><div class="k">{{ t.k }}</div><div class="n">{{ t.n }}</div><div class="s">{{ t.s }}</div></div></sc-for>
+</div>
+<div class="ag-chart" style="margin-top:var(--space-4)"><svg viewBox="0 0 680 250">
+<sc-for list="{{ ag.bands2 }}" as="b" hint-placeholder-count="1"><rect x="{{ b.x }}" y="{{ b.y }}" width="{{ b.w }}" height="{{ b.h }}" style="{{ b.style }}"></rect></sc-for>
+<sc-for list="{{ ag.gridLines2 }}" as="g" hint-placeholder-count="5"><line x1="{{ g.x1 }}" y1="{{ g.y }}" x2="{{ g.x2 }}" y2="{{ g.y }}" style="{{ g.style }}"></line></sc-for>
+<sc-if value="{{ ag.hasHover }}" hint-placeholder-val="{{ false }}"><line x1="{{ ag.hoverX }}" y1="14" x2="{{ ag.hoverX }}" y2="216" style="{{ ag.hoverStyle }}"></line></sc-if>
+<path d="{{ ag.bandD }}" style="fill:var(--color-neutral-500);opacity:.18;stroke:none"></path>
+<path d="{{ ag.statD }}" style="{{ ag.statStyle }}"></path>
+<path d="{{ ag.fcD }}" style="{{ ag.fcStyle }}"></path>
+<sc-if value="{{ ag.hasActual }}" hint-placeholder-val="{{ false }}"><path d="{{ ag.actD }}" style="{{ ag.actStyle }}"></path></sc-if>
+<sc-for list="{{ ag.hoverRects2 }}" as="h" hint-placeholder-count="10"><rect x="{{ h.x }}" y="14" width="{{ h.w }}" height="202" style="fill:transparent" onMouseEnter="{{ h.enter }}" onMouseLeave="{{ h.leave }}"></rect></sc-for>
+</svg>
+<sc-for list="{{ ag.yLabels2 }}" as="g" hint-placeholder-count="5"><div class="ag-lbl r" style="{{ g.style }}">{{ g.t }}</div></sc-for>
+<sc-for list="{{ ag.xLabels2 }}" as="g" hint-placeholder-count="10"><div class="ag-lbl" style="{{ g.style }}">{{ g.t }}</div></sc-for>
+<sc-for list="{{ ag.bands2 }}" as="b" hint-placeholder-count="1"><div class="ag-lbl bn" style="{{ b.lstyle }}">{{ b.n }}</div></sc-for>
+</div>
+<div class="ag-read"><sc-if value="{{ ag.hasHover }}" hint-placeholder-val="{{ false }}"><b>{{ ag.hoverTitle }}</b><sc-for list="{{ ag.hoverRows2 }}" as="r" hint-placeholder-count="3"><span><i style="{{ r.sw }}"></i>{{ r.name }} <b>{{ r.v }}</b></span></sc-for></sc-if><sc-if value="{{ ag.noHover }}" hint-placeholder-val="{{ true }}"><span>Hover to compare an hour. Shaded bands are the nearby events listed below.</span></sc-if></div>
+<div class="ag-legend">
+<span class="ag-lg fixed"><i style="border-top-color:var(--color-neutral-700);border-top-width:2px"></i>Statistical prediction</span>
+<span class="ag-lg fixed"><i style="background:var(--color-neutral-300);height:8px;border:none"></i>Statistical range</span>
+<span class="ag-lg fixed"><i style="{{ ag.lgFc }}"></i>Agent forecast (events included)</span>
+<sc-if value="{{ ag.hasActual }}" hint-placeholder-val="{{ false }}"><span class="ag-lg fixed"><i style="border-top-color:var(--color-accent-900);border-top-width:4px"></i>Actual</span></sc-if>
+</div>
+<div class="ag-srcs"><sc-for list="{{ ag.sqlCards }}" as="s" hint-placeholder-count="1"><div class="ag-src {{ s.cls }}" id="{{ s.elId }}"><div class="id">{{ s.idLabel }}</div><div>
+<div class="by"><span class="ag-mk sql">SQL</span>Sales database · {{ s.database }}</div><div class="tt">Weekday baseline from past sales</div>
+<div class="ag-sql"><sc-for list="{{ s.lines }}" as="ln" hint-placeholder-count="7"><div><sc-for list="{{ ln.toks }}" as="tk" hint-placeholder-count="2"><span class="{{ tk.cls }}">{{ tk.t }}</span></sc-for></div></sc-for></div>
+<table class="ag-res"><thead><tr><sc-for list="{{ s.cols }}" as="c" hint-placeholder-count="3"><th>{{ c }}</th></sc-for></tr></thead><tbody><sc-for list="{{ s.rows }}" as="r" hint-placeholder-count="1"><tr><sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="3"><td>{{ c }}</td></sc-for></tr></sc-for></tbody></table>
+<div class="qq">{{ s.note }}</div></div></div></sc-for></div>
+</div>
+
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="ag-hd"><h4>External influences</h4><span class="ag-tag"><span class="ag-mk tv">TV</span>from Tavily</span></div>
+<div class="growl">What the agent found outside the restaurant for this date.</div>
+<div class="ag-sub">Hotspots near the truck</div>
+<sc-for list="{{ ag.hotspots }}" as="h" hint-placeholder-count="3"><div class="ag-hot">
+<div class="ag-hot-h"><div><span class="nm">{{ h.venue }}</span><span class="mt"> · {{ h.miles }} mi from the truck</span></div><span class="ag-tag {{ h.tagCls }}">{{ h.tag }}</span></div>
+<sc-if value="{{ h.quiet }}" hint-placeholder-val="{{ false }}"><div class="ag-quiet"><span class="ag-mk tv">TV</span>No events found for this date. Query <code>{{ h.check }}</code></div></sc-if>
+<sc-for list="{{ h.items }}" as="i" hint-placeholder-count="1"><div class="ag-inf"><div class="ag-inf-h"><div><div class="nm">{{ i.name }}</div><div class="mt">{{ i.meta }}</div></div><span class="ag-tag {{ i.effCls }}">{{ i.eff }}</span></div>
+<div class="ag-tvi {{ i.tv.cls }}" id="{{ i.tv.elId }}"><span class="ag-mk tv">TV</span><div><sc-if value="{{ i.tv.hasId }}" hint-placeholder-val="{{ true }}"><button class="ag-cite {{ i.tv.citeCls }}" onClick="{{ i.tv.pick }}">{{ i.tv.idLabel }}</button></sc-if> <sc-if value="{{ i.tv.hasUrl }}" hint-placeholder-val="{{ true }}"><a href="{{ i.tv.url }}" target="_blank" rel="noopener">{{ i.tv.domain }}</a></sc-if><span class="ver">{{ i.tv.verTag }}</span><div class="sn">{{ i.tv.snippet }}</div><div class="qq">query <code>{{ i.tv.query }}</code></div></div></div><sc-for list="{{ i.more }}" as="m" hint-placeholder-count="0"><div class="ag-tvi {{ m.cls }}" id="{{ m.elId }}"><span class="ag-mk tv">TV</span><div><sc-if value="{{ m.hasId }}" hint-placeholder-val="{{ true }}"><button class="ag-cite {{ m.citeCls }}" onClick="{{ m.pick }}">{{ m.idLabel }}</button></sc-if> <sc-if value="{{ m.hasUrl }}" hint-placeholder-val="{{ true }}"><a href="{{ m.url }}" target="_blank" rel="noopener">{{ m.domain }}</a></sc-if><span class="ver">{{ m.verTag }}</span><div class="sn">{{ m.snippet }}</div><div class="qq">query <code>{{ m.query }}</code></div></div></div></sc-for></div></sc-for>
+</div></sc-for>
+<div class="ag-sub" style="margin-top:var(--space-4)">Other influences</div>
+<sc-if value="{{ ag.noOther }}" hint-placeholder-val="{{ false }}"><div class="growl">No closures, weather or civic events found.</div></sc-if>
+<sc-for list="{{ ag.others }}" as="i" hint-placeholder-count="2"><div class="ag-hot"><div class="ag-inf" style="margin:0;border:none;padding:0"><div class="ag-inf-h"><div><div class="nm">{{ i.name }}</div><div class="mt">{{ i.meta }}</div></div><span class="ag-tag {{ i.effCls }}">{{ i.eff }}</span></div>
+<div class="ag-tvi {{ i.tv.cls }}" id="{{ i.tv.elId }}"><span class="ag-mk tv">TV</span><div><sc-if value="{{ i.tv.hasId }}" hint-placeholder-val="{{ true }}"><button class="ag-cite {{ i.tv.citeCls }}" onClick="{{ i.tv.pick }}">{{ i.tv.idLabel }}</button></sc-if> <sc-if value="{{ i.tv.hasUrl }}" hint-placeholder-val="{{ true }}"><a href="{{ i.tv.url }}" target="_blank" rel="noopener">{{ i.tv.domain }}</a></sc-if><span class="ver">{{ i.tv.verTag }}</span><div class="sn">{{ i.tv.snippet }}</div><div class="qq">query <code>{{ i.tv.query }}</code></div></div></div><sc-for list="{{ i.more }}" as="m" hint-placeholder-count="0"><div class="ag-tvi {{ m.cls }}" id="{{ m.elId }}"><span class="ag-mk tv">TV</span><div><sc-if value="{{ m.hasId }}" hint-placeholder-val="{{ true }}"><button class="ag-cite {{ m.citeCls }}" onClick="{{ m.pick }}">{{ m.idLabel }}</button></sc-if> <sc-if value="{{ m.hasUrl }}" hint-placeholder-val="{{ true }}"><a href="{{ m.url }}" target="_blank" rel="noopener">{{ m.domain }}</a></sc-if><span class="ver">{{ m.verTag }}</span><div class="sn">{{ m.snippet }}</div><div class="qq">query <code>{{ m.query }}</code></div></div></div></sc-for></div></div></sc-for>
+</div>
+
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="ag-hd"><h4>Reasoning</h4><span class="ag-tag {{ ag.insTagCls }}">{{ ag.insTag }}</span></div>
+<sc-if value="{{ ag.hasInsight }}" hint-placeholder-val="{{ true }}"><div>
+<div class="ag-trace"><sc-for list="{{ ag.trace }}" as="t" hint-placeholder-count="3"><span class="ag-step"><span class="ag-mk {{ t.mk }}">{{ t.sym }}</span><b>{{ t.n }}</b> {{ t.label }}</span></sc-for></div>
+<div class="ag-sub">From the statistical prediction to the forecast</div>
+<div class="ag-wf"><sc-for list="{{ ag.wf }}" as="r" hint-placeholder-count="4"><div class="ag-wf-r {{ r.cls }}"><span class="lb">{{ r.label }}</span><span class="bar"><i style="{{ r.bar }}"></i></span><span class="vl">{{ r.val }}</span></div></sc-for></div>
+<sc-if value="{{ ag.wfNote }}" hint-placeholder-val="{{ false }}"><div class="growl" style="margin-top:var(--space-2)">{{ ag.wfNote }}</div></sc-if>
+<div class="ag-sub" style="margin-top:var(--space-4)">Why the agent expects this</div>
+<div class="ag-sum"><sc-for list="{{ ag.segs }}" as="g" hint-placeholder-count="12"><span><sc-if value="{{ g.isText }}" hint-placeholder-val="{{ true }}"><span>{{ g.text }}</span></sc-if><sc-if value="{{ g.isCite }}" hint-placeholder-val="{{ false }}"><button class="ag-cite {{ g.cls }}" onClick="{{ g.pick }}">{{ g.text }}</button></sc-if><sc-if value="{{ g.isDate }}" hint-placeholder-val="{{ false }}"><button class="ag-dl" onClick="{{ g.pick }}">{{ g.text }}</button></sc-if></span></sc-for></div>
+<div class="growl" style="margin-top:var(--space-3)">{{ ag.insightNote }}</div>
+<div class="ag-sub" style="margin-top:var(--space-4)">Mem0 memories linked to past days</div>
+<div class="ag-srcs" style="margin-top:var(--space-2)"><sc-for list="{{ ag.memCards }}" as="s" hint-placeholder-count="2"><div class="ag-src {{ s.cls }}" id="{{ s.elId }}"><div class="id">[{{ s.id }}]</div><div>
+<div class="by"><span class="ag-mk m0">M0</span>Mem0 retrieval · relevance {{ s.relevance }}</div>
+<div class="tt"><sc-for list="{{ s.memSegs }}" as="g" hint-placeholder-count="3"><span><sc-if value="{{ g.isText }}" hint-placeholder-val="{{ true }}"><span>{{ g.text }}</span></sc-if><sc-if value="{{ g.isDate }}" hint-placeholder-val="{{ false }}"><button class="ag-dl" onClick="{{ g.pick }}">{{ g.text }}</button></sc-if></span></sc-for></div>
+<div class="qq">query <code>{{ s.query }}</code> · <code>{{ s.memId }}</code></div>
+<sc-if value="{{ s.hasLinked }}" hint-placeholder-val="{{ true }}"><div class="ag-mm"><sc-for list="{{ s.linked }}" as="l" hint-placeholder-count="3"><div class="row"><button class="ag-dl dd" onClick="{{ l.pick }}">{{ l.date }}</button><span>{{ l.event }}</span><span>{{ l.items }}</span><span class="{{ l.cls }}">{{ l.vs }}</span></div></sc-for></div></sc-if></div></div></sc-for></div>
+</div></sc-if>
+<sc-if value="{{ ag.insightPending }}" hint-placeholder-val="{{ false }}"><div class="ag-pend"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><div>{{ ag.insightPending }}</div></div></sc-if>
+</div>
+
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="ag-hd"><h4>Agentic actions taken</h4><span class="ag-tag {{ ag.actTagCls }}">{{ ag.actTag }}</span></div>
+<sc-for list="{{ ag.actions }}" as="a" hint-placeholder-count="2"><div class="ag-act"><div class="ic2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></div><div class="tx"><b>{{ a.title }}</b><div>{{ a.detail }}</div></div><span class="ag-tag {{ a.tagCls }}">{{ a.tag }}</span></div></sc-for>
+<sc-if value="{{ ag.actionsPending }}" hint-placeholder-val="{{ false }}"><div class="ag-pend"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><div>{{ ag.actionsPending }}</div></div></sc-if>
+</div>
+</div>
+
+<div class="ag-side">
+<div class="panel blueprint ag-cal"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="ag-month"><button class="btn btn-ghost btn-icon" onClick="{{ ag.prevMonth }}" disabled="{{ ag.prevDis }}" aria-label="Previous month"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg></button><h3>{{ ag.monthLabel }}</h3><button class="btn btn-ghost btn-icon" onClick="{{ ag.nextMonth }}" disabled="{{ ag.nextDis }}" aria-label="Next month"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button></div>
+<div class="cal"><sc-for list="{{ ag.dayHeads }}" as="d" hint-placeholder-count="7"><div class="dh">{{ d }}</div></sc-for><sc-for list="{{ ag.cells }}" as="c" hint-placeholder-count="35"><div class="cell {{ c.cls }}" onClick="{{ c.click }}">{{ c.num }}<div class="cl">{{ c.label }}</div><sc-if value="{{ c.hasEv }}" hint-placeholder-val="{{ false }}"><div class="evd"><sc-for list="{{ c.evs }}" as="e" hint-placeholder-count="1"><i class="{{ e.cls }}"></i></sc-for></div></sc-if></div></sc-for></div>
+<div class="legend"><span><i style="background:var(--color-accent-200)"></i>Above expected</span><span><i style="background:var(--color-neutral-100)"></i>Below expected</span><span><i style="background:repeating-linear-gradient(45deg,var(--color-accent-100),var(--color-accent-100) 3px,var(--color-bg) 3px,var(--color-bg) 6px)"></i>Forecast</span><span><i style="background:var(--color-accent-900)"></i>Hotspot event</span><span><i style="box-shadow:inset 0 0 0 1px var(--color-accent-900)"></i>Other influence</span></div>
+<div class="growl" style="margin-top:var(--space-2)">Past days show items sold. Forecast days show expected items (~).</div>
+<div style="margin-top:var(--space-3)"><button class="btn btn-secondary btn-block" onClick="{{ ag.goToday }}">Jump to today</button></div>
+</div>
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<h4>Coming up</h4><div class="growl" style="margin-bottom:var(--space-2)">Events from Tavily searches that the agent is tracking.</div>
+<sc-for list="{{ ag.upcoming }}" as="u" hint-placeholder-count="6"><div class="ag-up" onClick="{{ u.pick }}"><span class="dd">{{ u.date }}</span><div><div class="nm">{{ u.name }}</div><div class="mt">{{ u.meta }}</div></div></div></sc-for>
+</div>
+</div>
+
+</div></sc-if>
+</div></sc-if>
+
 <sc-if value="{{ isForecast }}" hint-placeholder-val="{{ false }}"><div>
 <div class="phead"><div><h1>Forecasting</h1><div class="sub">Blend day-of-week patterns, holidays and local events into your reorder quantities.</div></div><button class="btn btn-primary" onClick="{{ applyForecast }}">Apply forecast to suggestions</button></div>
 <div class="two">
@@ -485,7 +762,7 @@ body{margin:0}
 </div></div></sc-if>
 <sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}"><div class="toast">{{ toast }}</div></sc-if>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;modalBg&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#e9e9ea&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Appearance&quot;,&quot;options&quot;:[&quot;#e9e9ea&quot;,&quot;#f5f5f8&quot;,&quot;#ffffff&quot;,&quot;#d6ebff&quot;]},&quot;defaultView&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;dashboard&quot;,&quot;reorders&quot;,&quot;inventory&quot;,&quot;orders&quot;,&quot;vendors&quot;,&quot;forecast&quot;],&quot;default&quot;:&quot;dashboard&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;lowAlertsInclude&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;modalBg&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#e9e9ea&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Appearance&quot;,&quot;options&quot;:[&quot;#e9e9ea&quot;,&quot;#f5f5f8&quot;,&quot;#ffffff&quot;,&quot;#d6ebff&quot;]},&quot;defaultView&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;dashboard&quot;,&quot;insights&quot;,&quot;reorders&quot;,&quot;inventory&quot;,&quot;orders&quot;,&quot;vendors&quot;,&quot;forecast&quot;],&quot;default&quot;:&quot;dashboard&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;lowAlertsInclude&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;}}">
 class Component extends DCLogic {
   constructor(props){
     super(props);
@@ -569,7 +846,8 @@ class Component extends DCLogic {
       newIng:{name:'',unit:'lbs',cat:'Produce',vendorId:'v-produce',count:0,low:10,par:40,crit:5,perDay:3,price:1},
       newVendor:{name:'',contact:'',email:'',phone:'',leadTime:'2 days'},
       addIngOpen:false, addVendorOpen:false,
-      modal:null, toast:''
+      modal:null, toast:'',
+      agDate:'2026-10-05', agMonth:'2026-10', agOpen:false, agHide:{}, agHover:null, agSrc:null, agReady:false, agFailed:false
     };
     this.cats=['Bases & Grains','Proteins','Produce','Dairy','Salsas & Condiments','Add-ons & Sides','Spices','Serving'];
     this.menu=[
@@ -970,9 +1248,9 @@ class Component extends DCLogic {
     }
     const posGo={toast:()=>this.connectPos('Toast'),square:()=>this.connectPos('Square'),shopify:()=>this.connectPos('Shopify'),clover:()=>this.connectPos('Clover'),lightspeed:()=>this.connectPos('Lightspeed')};
     return {
-            v:{dashboard:view==='dashboard'?'active':'', reorders:view==='reorders'?'active':'', inventory:(view==='inventory'||view==='ingredient')?'active':'', menu:view==='menu'?'active':'', orders:view==='orders'?'active':'', vendors:(view==='vendors'||view==='vendor')?'active':'', forecast:view==='forecast'?'active':'', settings:view==='settings'?'active':''},
-      go:{dashboard:()=>this.go('dashboard'), reorders:()=>this.go('reorders'), inventory:()=>this.go('inventory'), menu:()=>this.go('menu'), orders:()=>this.go('orders'), vendors:()=>this.go('vendors'), forecast:()=>this.go('forecast'), settings:()=>this.go('settings')},
-      isDashboard:view==='dashboard', isReorders:view==='reorders', isInventory:view==='inventory', isIngredient:view==='ingredient', isMenu:view==='menu', isOrders:view==='orders', isVendors:view==='vendors', isVendor:view==='vendor', isForecast:view==='forecast', isSettings:view==='settings', menuCards, allIngOpts, addMenuItem:()=>this.addMenuItem(),
+            v:{dashboard:view==='dashboard'?'active':'', reorders:view==='reorders'?'active':'', inventory:(view==='inventory'||view==='ingredient')?'active':'', menu:view==='menu'?'active':'', orders:view==='orders'?'active':'', vendors:(view==='vendors'||view==='vendor')?'active':'', forecast:view==='forecast'?'active':'', settings:view==='settings'?'active':'', insights:view==='insights'?'active':''},
+      go:{dashboard:()=>this.go('dashboard'), reorders:()=>this.go('reorders'), inventory:()=>this.go('inventory'), menu:()=>this.go('menu'), orders:()=>this.go('orders'), vendors:()=>this.go('vendors'), forecast:()=>this.go('forecast'), settings:()=>this.go('settings'), insights:()=>this.go('insights')},
+      isDashboard:view==='dashboard', isReorders:view==='reorders', isInventory:view==='inventory', isIngredient:view==='ingredient', isMenu:view==='menu', isOrders:view==='orders', isVendors:view==='vendors', isVendor:view==='vendor', isForecast:view==='forecast', isSettings:view==='settings', isInsights:view==='insights', ag:view==='insights'?this.agVals():{ready:false}, menuCards, allIngOpts, addMenuItem:()=>this.addMenuItem(),
       posLabel, posClass:S.posConnected?'pos-on':'', posBtn:S.posConnected?'Disconnect':'Connect POS', posHint:S.posConnected?('Live — '+S.posProvider+' syncing as tickets close.'):'Connect to sync counts automatically.',
       openPos:()=>this.setState({modal:{kind:'pos'}}), modalPos, posGo, modalCal,
       dlgStyle:{background:this.props.modalBg||'#e9e9ea'}, emailDlgStyle:{background:this.props.modalBg||'#e9e9ea',width:'min(560px,100%)'},
@@ -1004,6 +1282,228 @@ class Component extends DCLogic {
       nv:{name:S.newVendor.name,contact:S.newVendor.contact,email:S.newVendor.email,phone:S.newVendor.phone,leadTime:S.newVendor.leadTime,
         setName:e=>this.setNewV({name:e.target.value}), setContact:e=>this.setNewV({contact:e.target.value}), setEmail:e=>this.setNewV({email:e.target.value}), setPhone:e=>this.setNewV({phone:e.target.value}), setLead:e=>this.setNewV({leadTime:e.target.value})},
       modalReorder, modalEmail, closeModal:()=>this.closeModal(), stop:(e)=>e.stopPropagation(), toast:S.toast||undefined
+    };
+  }
+  componentDidMount(){
+    if(window.AGENTIC_DATA){this.setState({agReady:true});return;}
+    const sc=document.createElement('script');
+    sc.src='./data/agentic_insights.js';
+    sc.onload=()=>this.setState({agReady:true});
+    sc.onerror=()=>this.setState({agFailed:true});
+    document.head.appendChild(sc);
+  }
+  agPick(iso){this.setState({agDate:iso, agMonth:iso.slice(0,7), agSrc:null, agHover:null}); try{window.scrollTo({top:0,behavior:'smooth'});}catch(e){}}
+  agCite(id){
+    this.setState(s=>({agSrc:s.agSrc===id?null:id}));
+    setTimeout(()=>{const el=document.getElementById('ag-src-'+id); if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'center'});},60);
+  }
+  agVals(){
+    const S=this.state, D=window.AGENTIC_DATA;
+    if(!D) return {ready:false, loading:!S.agFailed, failed:!!S.agFailed};
+    const day=D.days[S.agDate];
+    const N=n=>Math.round(n).toLocaleString('en-US');
+    const M=n=>'$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+    const P=n=>(n>=0?'+':'−')+Math.abs(Math.round(n))+'%';
+    const long=iso=>new Date(iso+'T00:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
+    const short=iso=>new Date(iso+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
+    const hr=t=>{const [h,m]=t.split(':');return +h+(+m)/60;};
+    const h12=h=>h===12?'12p':h>12?(h-12)+'p':h+'a';
+    const mode=day.status, past=mode==='past', today=mode==='today', future=mode==='future';
+
+    // ---- headline numbers
+    const T=day.totals;
+    let stats;
+    if(future) stats=[
+      {k:'Expected items', n:N(day.expected), s:P(day.vs)+' vs a typical '+day.dow+' ('+N(day.baseline)+')'},
+      {k:'Expected orders', n:N(T.orders), s:'about '+(T.items/T.orders).toFixed(1)+' items per order'},
+      {k:'Expected revenue', n:M(T.revenue), s:'range '+day.range[0]+'–'+day.range[1]+' items'},
+      {k:'Confidence', n:day.confidence[0].toUpperCase()+day.confidence.slice(1), s:day.events.length?day.events.length+(day.events.length>1?' events':' event')+' nearby':'no events nearby'}];
+    else stats=[
+      {k:today?'Items sold so far':'Items sold', n:N(T.items), s:today?'through '+day.asOf+' · full day expected ~'+N(day.expected):P((T.items/day.expected-1)*100)+' vs '+N(day.expected)+' expected'},
+      {k:'Orders', n:N(T.orders), s:(T.items/T.orders).toFixed(1)+' items per order'},
+      {k:'Revenue', n:M(T.revenue), s:'avg order '+M(T.revenue/T.orders)},
+      {k:'Ingredient cost', n:M(T.cost), s:'gross margin '+Math.round((1-T.cost/T.revenue)*100)+'%'}];
+
+    // ---- chart
+    const hours=day.hours, n=hours.length, ml=40, plotW=626, top=14, base=236, plotH=base-top;
+    const COL={burrito:'#c2410c',tacos:'#0f766e',bowl:'#7c3aed',nachos:'#ca8a04',quesadilla:'#be185d','chips-guac':'#15803d','chips-queso':'#0891b2',salad:'#65a30d','side-rice':'#64748b','side-beans':'#92400e'};
+    const tot=future?day.expHourly:day.actHourly, byItem=future?day.expItems:day.actItems;
+    const showExp=!future;
+    const vis=D.items.filter(i=>!S.agHide[i.id]);
+    let mx=1;
+    tot.forEach(v=>{if(v!==null&&v>mx)mx=v;});
+    if(showExp)day.expHourly.forEach(v=>{if(v>mx)mx=v;});
+    const step=[5,10,20,25,50,100].find(s=>Math.ceil(mx*1.05/s)<=5)||100;
+    const yMax=Math.ceil(mx*1.05/step)*step;
+    const xOf=i=>ml+i*plotW/(n-1), yOf=v=>base-v/yMax*plotH, hx=h=>ml+(h-hours[0])/(hours[n-1]-hours[0])*plotW;
+    const path=arr=>{let d='',on=false;arr.forEach((v,i)=>{if(v===null||v===undefined){on=false;return;}d+=(on?'L':'M')+xOf(i).toFixed(1)+','+yOf(v).toFixed(1);on=true;});return d||'M0,0';};
+    const pos=(x,y)=>({left:(x/680*100)+'%',top:(y/270*100)+'%'});
+    const gridLines=[],yLabels=[];
+    for(let v=0;v<=yMax;v+=step){gridLines.push({x1:ml,x2:ml+plotW,y:yOf(v),style:{stroke:v===0?'var(--color-text)':'color-mix(in srgb,var(--color-text) 12%,transparent)',strokeWidth:1}});yLabels.push({style:pos(ml-7,yOf(v)),t:v});}
+    const xLabels=hours.map((h,i)=>({style:pos(xOf(i),base+14),t:h12(h),skip:n>12&&i%2===1})).filter(l=>!l.skip);
+    const bands=[];
+    day.events.forEach((e,i)=>{const dr=day.drivers[i]||{};const lo=Math.max(hr(e.start),hours[0]),hi=Math.min(hr(e.end),hours[n-1]);if(hi<=lo)return;
+      const down=dr.direction==='down';
+      bands.push({x:hx(lo),y:top,w:hx(hi)-hx(lo),h:plotH,n:i+1,lstyle:pos(hx(lo)+3,top+3+i*17),style:{fill:down?'var(--color-neutral-300)':'var(--color-accent-200)',opacity:.5}});});
+    const lines=vis.map(it=>({d:path(byItem[it.id]), style:{fill:'none',stroke:COL[it.id],strokeWidth:1.2,opacity:.9,strokeLinejoin:'round'}}));
+    const hv=S.agHover!==null&&S.agHover<n?S.agHover:null;
+    let hoverTitle='',hoverRows=[];
+    if(hv!==null){
+      const cur=tot[hv], ex=day.expHourly[hv];
+      hoverTitle=hours[hv]+':00–'+hours[hv]+':59';
+      if(cur===null) hoverRows=[{name:'Not sold yet · expected',v:ex.toFixed(0),sw:{background:'var(--color-neutral-600)'}}];
+      else{
+        hoverRows=[{name:future?'All products (expected)':'All products',v:future?cur.toFixed(0):String(cur)+(showExp?' (exp '+ex.toFixed(0)+')':''),sw:{background:'var(--color-accent-900)'}}];
+        D.items.map(it=>({it,v:byItem[it.id][hv]})).filter(x=>x.v>0.05).sort((a,b)=>b.v-a.v).forEach(x=>hoverRows.push({name:x.it.name,v:future?x.v.toFixed(1):String(x.v),sw:{background:COL[x.it.id]}}));
+      }
+    }
+    const slot=plotW/(n-1);
+    const hoverRects=hours.map((h,i)=>({x:xOf(i)-slot/2,w:slot,enter:()=>this.setState({agHover:i}),leave:()=>this.setState({agHover:null})}));
+    const dots=hv!==null&&tot[hv]!==null?[{x:xOf(hv),y:yOf(tot[hv]),r:4.5,style:{fill:'var(--color-bg)',stroke:'var(--color-accent-900)',strokeWidth:2.5}}]:[];
+    const asOfH=today&&day.asOf?+day.asOf.slice(0,2):null;
+
+    // ---- statistical prediction chart
+    const ST=day.stat, base2=216, plotH2=base2-top;
+    const hi2=ST.high, lo2=ST.low;
+    let mx2=1;
+    [...hi2,...day.expHourly].forEach(v=>{if(v>mx2)mx2=v;});
+    (day.actHourly||[]).forEach(v=>{if(v!==null&&v>mx2)mx2=v;});
+    const step2=[5,10,20,25,50,100].find(s=>Math.ceil(mx2*1.05/s)<=5)||100, yMax2=Math.ceil(mx2*1.05/step2)*step2;
+    const yOf2=v=>base2-v/yMax2*plotH2;
+    const pos2=(x,y)=>({left:(x/680*100)+'%',top:(y/250*100)+'%'});
+    const path2=arr=>{let d='',on=false;arr.forEach((v,i)=>{if(v===null||v===undefined){on=false;return;}d+=(on?'L':'M')+xOf(i).toFixed(1)+','+yOf2(v).toFixed(1);on=true;});return d||'M0,0';};
+    const bandD=hi2.map((v,i)=>(i?'L':'M')+xOf(i).toFixed(1)+','+yOf2(v).toFixed(1)).join('')+lo2.map((v,i)=>[v,i]).reverse().map(([v,i])=>'L'+xOf(i).toFixed(1)+','+yOf2(v).toFixed(1)).join('')+'Z';
+    const gridLines2=[],yLabels2=[];
+    for(let v=0;v<=yMax2;v+=step2){gridLines2.push({x1:ml,x2:ml+plotW,y:yOf2(v),style:{stroke:v===0?'var(--color-text)':'color-mix(in srgb,var(--color-text) 12%,transparent)',strokeWidth:1}});yLabels2.push({style:pos2(ml-7,yOf2(v)),t:v});}
+    const xLabels2=hours.map((h,i)=>({style:pos2(xOf(i),base2+14),t:h12(h),skip:n>12&&i%2===1})).filter(l=>!l.skip);
+    const bands2=[];
+    day.events.forEach((e,i)=>{const dr=day.drivers[i]||{};const lo=Math.max(hr(e.start),hours[0]),hi=Math.min(hr(e.end),hours[n-1]);if(hi<=lo)return;
+      bands2.push({x:hx(lo),y:top,w:hx(hi)-hx(lo),h:plotH2,n:i+1,lstyle:pos2(hx(lo)+3,top+3+i*17),style:{fill:dr.direction==='down'?'var(--color-neutral-300)':'var(--color-accent-200)',opacity:.5}});});
+    const hasActual=!future;
+    const hoverRows2=hv===null?[]:[
+      {name:'Statistical prediction',v:ST.hourly[hv].toFixed(0)+' ('+ST.low[hv].toFixed(0)+'–'+ST.high[hv].toFixed(0)+')',sw:{background:'var(--color-neutral-700)'}},
+      {name:'Agent forecast',v:day.expHourly[hv].toFixed(0)+' ('+((day.expHourly[hv]/ST.hourly[hv]-1)*100>=0?'+':'−')+Math.abs(Math.round((day.expHourly[hv]/ST.hourly[hv]-1)*100))+'%)',sw:{background:'var(--color-accent)'}}]
+      .concat(hasActual&&day.actHourly[hv]!==null?[{name:'Actual',v:String(day.actHourly[hv]),sw:{background:'var(--color-accent-900)'}}]:[]);
+    const hoverRects2=hours.map((h,i)=>({x:xOf(i)-slot/2,w:slot,enter:()=>this.setState({agHover:i}),leave:()=>this.setState({agHover:null})}));
+    const soFar=today&&asOfH!==null?hours.reduce((a,h,i)=>h<asOfH?a+ST.hourly[i]:a,0):null;
+    const sgn=v=>(v>=0?'+':'−')+Math.abs(Math.round(v));
+    const statStats=future?[
+      {k:'Statistical prediction',n:N(ST.total),s:'trend only, no events'},
+      {k:'Agent forecast',n:N(day.expected),s:P((day.expected/ST.total-1)*100)+' vs statistical'},
+      {k:'Events add',n:sgn(day.expected-ST.total),s:'items from '+day.events.length+(day.events.length===1?' event':' events')},
+      {k:'Forecast range',n:day.range[0]+'–'+day.range[1],s:'confidence '+day.confidence}]
+    :today?[
+      {k:'Statistical prediction',n:N(ST.total),s:'full day, trend only'},
+      {k:'Agent forecast',n:N(day.expected),s:P((day.expected/ST.total-1)*100)+' vs statistical'},
+      {k:'Actual so far',n:N(T.items),s:'through '+day.asOf},
+      {k:'On pace',n:P((T.items/soFar-1)*100),s:'vs statistical to '+day.asOf+' ('+N(soFar)+')'}]
+    :[
+      {k:'Statistical prediction',n:N(ST.total),s:'trend only, no events'},
+      {k:'Agent forecast',n:N(day.expected),s:P((day.expected/ST.total-1)*100)+' vs statistical'},
+      {k:'Actual sold',n:N(T.items),s:P((T.items/day.expected-1)*100)+' vs forecast'},
+      {k:'Actual vs statistical',n:P((T.items/ST.total-1)*100),s:sgn(T.items-ST.total)+' items'}];
+
+    // ---- table
+    const rowsRaw=[...day.table].sort((a,b)=>b.qty-a.qty);
+    const tq=rowsRaw.reduce((s,r)=>s+r.qty,0), tr=rowsRaw.reduce((s,r)=>s+r.revenue,0);
+    const hasCost=!future, tc=hasCost?rowsRaw.reduce((s,r)=>s+r.cost,0):null;
+    const rows=rowsRaw.map(r=>({name:r.name, qty:N(r.qty), share:Math.round(r.qty/tq*100)+'%', revenue:M(r.revenue), cost:hasCost?M(r.cost):'—', margin:hasCost?Math.round((1-r.cost/r.revenue)*100)+'%':'—'}));
+    const tot0={name:'Total', qty:N(tq), share:'100%', revenue:M(tr), cost:hasCost?M(tc):'—', margin:hasCost?Math.round((1-tc/tr)*100)+'%':'—'};
+
+    // ---- reasoning, sources
+    const DATERE=/(\[\d+\]|<<\d{4}-\d{2}-\d{2}\|[^>]+>>)/;
+    const rich=(text,cites)=>text.split(DATERE).filter(x=>x).map(x=>{
+      let m=x.match(/^\[(\d+)\]$/);
+      if(m&&cites) return {isText:false,isCite:true,isDate:false,text:x,cls:S.agSrc===+m[1]?'on':'',pick:()=>this.agCite(+m[1])};
+      m=x.match(/^<<(\d{4}-\d{2}-\d{2})\|([^>]+)>>$/);
+      if(m) return {isText:false,isCite:false,isDate:true,text:m[2],cls:'',pick:()=>this.agPick(m[1])};
+      return {isText:true,isCite:false,isDate:false,text:x};});
+    const ins=day.insight;
+    const KW=/\b(SELECT|FROM|WHERE|GROUP|BY|AND|AS|ROUND|AVG|COUNT)\b/;
+    const sqlCard=(s,idLabel,idNum)=>({id:idNum,idLabel,cls:idNum&&S.agSrc===idNum?'on':'',elId:'ag-src-'+(idNum||'sql'),database:s.database,note:s.note,cols:s.result.columns,rows:s.result.rows.map(r=>({cells:r.map(String)})),
+      lines:s.query.split('\n').map(l=>({toks:l.split(KW).filter(t=>t!=='').map(t=>({t,cls:KW.test(t)&&/^[A-Z]+$/.test(t)?'kw':''}))}))});
+    const sqlCards=[sqlCard(day.stat.sql, ins?'[1]':'', ins?1:0)];
+    let segs=[],memCards=[],trace=[],wf=[],wfNote='';
+    const tvInfo=(tv,sid)=>({cls:sid&&S.agSrc===sid?'on':'', citeCls:sid&&S.agSrc===sid?'on':'', elId:'ag-src-'+(sid||'x'+Math.random().toString(36).slice(2,7)), hasId:!!sid, idLabel:sid?'['+sid+']':'', pick:()=>this.agCite(sid),
+      hasUrl:!!tv.url, url:tv.url, domain:tv.domain, query:tv.query, snippet:tv.snippet, verTag:tv.placeholder?' · unverified placeholder':(tv.verified?' · source verified':'')});
+    if(ins){
+      segs=rich(ins.summary,true);
+      memCards=ins.sources.filter(s=>s.type==='mem0').map(s=>({id:s.id,cls:S.agSrc===s.id?'on':'',elId:'ag-src-'+s.id,memSegs:rich(s.memory,false),query:s.query,memId:s.memory_id,relevance:s.relevance.toFixed(2),hasLinked:s.linked_days.length>0,
+        linked:s.linked_days.map(l=>({date:short(l.date),event:l.event,items:l.actual_items+' items',vs:P(l.vs_baseline_pct),cls:l.vs_baseline_pct>=0?'up':'dn',pick:()=>this.agPick(l.date)}))}));
+      const cnt=t=>ins.sources.filter(s=>s.type===t).length;
+      trace=[{mk:'sql',sym:'SQL',n:cnt('sql'),label:cnt('sql')>1?'queries':'query'},{mk:'tv',sym:'TV',n:cnt('tavily'),label:'Tavily '+(cnt('tavily')===1?'search':'searches')},{mk:'m0',sym:'M0',n:cnt('mem0'),label:'Mem0 '+(cnt('mem0')===1?'recall':'recalls')}].filter(t=>t.n);
+      const A=ins.adjustments, mxd=Math.max(1,...A.rows.map(r=>Math.abs(r.delta)));
+      wf.push({label:'Statistical prediction',val:N(A.stat),cls:'base',bar:{width:'0%'}});
+      A.rows.forEach(r=>wf.push({label:r.label,val:(r.delta>0?'+':r.delta<0?'−':'')+Math.abs(r.delta),cls:r.kind,bar:{width:Math.max(4,Math.abs(r.delta)/mxd*100)+'%',background:r.kind==='up'?'var(--color-accent)':'var(--color-neutral-500)'}}));
+      wf.push({label:past?'Agent forecast':'Agent forecast for the day',val:N(A.forecast),cls:'total',bar:{width:'0%'}});
+      if(A.actual!==null){
+        wf.push({label:'Actual sold',val:N(A.actual),cls:'total',bar:{width:'0%'}});
+        wf.push({label:'Gap vs forecast',val:(A.gap>0?'+':A.gap<0?'−':'')+Math.abs(A.gap),cls:A.gap>0?'up':'down',bar:{width:Math.max(4,Math.min(100,Math.abs(A.gap)/mxd*100))+'%',background:A.gap>0?'var(--color-accent)':'var(--color-neutral-500)'}});
+        wfNote=A.gap_note;
+      }
+    }
+    // ---- external influences (Tavily)
+    const effOf=i=>({eff:i.direction==='flat'||Math.abs(i.effect_pct)<=1?'No effect':(i.effect_pct>0?'+':'−')+Math.abs(i.effect_pct)+'% sales',effCls:Math.abs(i.effect_pct)<=1?'done':i.direction==='up'?'fc':i.direction==='down'?'warn':'done'});
+    const itemOf=i=>({name:i.name,meta:i.category+' · '+i.venue+(i.miles?' · '+i.miles+' mi':'')+' · '+i.start+'–'+i.end+(i.note?' · '+i.note:''),...effOf(i),tv:tvInfo(i.tavily,i.source_id),more:(i.more||[]).map(m=>tvInfo(m.tavily,m.source_id))});
+    const hotspots=day.external.hotspots.map(h=>({venue:h.venue,miles:h.miles,quiet:h.status==='quiet',tag:h.status==='quiet'?'Quiet':h.items.length+(h.items.length>1?' events':' event'),tagCls:h.status==='quiet'?'done':'live',check:h.check,items:h.items.map(itemOf)}));
+    const others=day.external.other.map(itemOf);
+    const actions=day.actions.map(a=>({
+      title:a.type==='reorder_alert_updated'?'New reorder alert: '+a.ingredient+' '+a.change:a.type==='reorder_alert_deferred'?'Reorder alert deferred: '+a.ingredient+' '+a.change:'Reorder alerts unchanged',
+      detail:a.detail, tag:a.status==='completed'?'Done '+a.runs_at:'End of day', tagCls:a.status==='completed'?'done':'fc'}));
+
+    // ---- calendar
+    const months=['2026-09','2026-10','2026-11'], mi=months.indexOf(S.agMonth);
+    const [yy,mm]=S.agMonth.split('-').map(Number);
+    const first=new Date(yy,mm-1,1), dim=new Date(yy,mm,0).getDate();
+    const cells=[];
+    for(let b=0;b<first.getDay();b++)cells.push({cls:'blank',num:'',label:'',click:()=>{},hasEv:false,evs:[]});
+    for(let d=1;d<=dim;d++){
+      const iso=S.agMonth+'-'+String(d).padStart(2,'0'), c=D.days[iso];
+      if(!c){cells.push({cls:'off',num:d,label:'',click:()=>{},hasEv:false,evs:[]});continue;}
+      let cls='',label='';
+      if(c.status==='past'){const dv=c.actual/c.expected-1;cls=dv>=.1?'busy':dv<=-.1?'slow':'';label=N(c.actual);}
+      else if(c.status==='today'){label='live';}
+      else{cls='custom';label='~'+N(c.expected);}
+      if(c.status==='today')cls+=' now';
+      if(iso===S.agDate)cls+=' sel';
+      cells.push({cls,num:d,label,click:()=>this.agPick(iso),hasEv:c.events.length>0,evs:c.events.slice(0,3).map(e=>({cls:['Oracle Park','Chase Center','Moscone Center'].includes(e.venue)?'':'oth'}))});
+    }
+    const upcoming=[];
+    Object.keys(D.days).sort().forEach(iso=>{const c=D.days[iso];if(c.status!=='future')return;c.events.forEach(e=>upcoming.push({date:short(iso),name:e.name,meta:e.venue+(e.miles?' · '+e.miles+' mi':'')+' · '+e.start,pick:()=>this.agPick(iso)}));});
+
+    const insTag=past?'Completed at end of day · 21:30':'Scheduled · end of day';
+    return {
+      ready:true, loading:false, failed:false,
+      dateLabel:long(S.agDate), tagText:past?'Actual':today?'Today · live':'Forecast', tagCls:past?'done':today?'live':'fc',
+      stats,
+      chartTitle:past?'Sales through the day':today?'Sales so far today':'Expected sales through the day',
+      chartSub:'Items per hour · thick line is all products, thin lines are individual products',
+      bands, gridLines, yLabels, xLabels, lines,
+      totalD:path(tot), totalStyle:{fill:'none',stroke:'var(--color-accent-900)',strokeWidth:3.2,strokeLinejoin:'round',strokeLinecap:'round'},
+      showExp, expD:path(day.expHourly), expStyle:{fill:'none',stroke:'var(--color-neutral-600)',strokeWidth:2,strokeDasharray:'6 5'},
+      hasNow:asOfH!==null&&hours.includes(asOfH), nowX:asOfH!==null&&hours.includes(asOfH)?xOf(hours.indexOf(asOfH)):0, nowLabel:'now '+(day.asOf||''), nowLblStyle:pos(asOfH!==null&&hours.includes(asOfH)?xOf(hours.indexOf(asOfH)):0,top-2), nowStyle:{stroke:'var(--color-accent-900)',strokeWidth:1,strokeDasharray:'2 3'},
+      hasHover:hv!==null, noHover:hv===null, hoverX:hv!==null?xOf(hv):0, hoverStyle:{stroke:'var(--color-accent-900)',strokeWidth:1,opacity:.4},
+      hoverTitle, hoverRows, hoverRects, dots,
+      totalName:future?'All products (expected)':'All products',
+      lgTotal:{borderTopColor:'var(--color-accent-900)',borderTopWidth:'4px'}, lgExp:{borderTopColor:'var(--color-neutral-600)',borderTopStyle:'dashed'},
+      legend:D.items.map(it=>({name:it.name,cls:S.agHide[it.id]?'off':'',sw:{borderTopColor:COL[it.id]},toggle:()=>this.setState(s=>({agHide:{...s.agHide,[it.id]:!s.agHide[it.id]}}))})),
+      tblTitle:future?'Expected menu items':today?'Menu items sold so far':'All menu items sold', tblSummary:N(tq)+' items · '+M(tr), tblCls:S.agOpen?'open':'', tblOpen:S.agOpen,
+      toggleTbl:()=>this.setState(s=>({agOpen:!s.agOpen})), qtyHead:future?'Expected qty':'Qty sold', rows, tot:tot0,
+      statTag:today?'Live · full-day trend':past?'Completed day':'Forecast day', statMethod:ST.method+' · n = '+ST.n_days+' · band '+ST.band,
+      statStats, bands2, gridLines2, yLabels2, xLabels2, bandD, statD:path2(ST.hourly), statStyle:{fill:'none',stroke:'var(--color-neutral-700)',strokeWidth:2.2,strokeLinejoin:'round'},
+      fcD:path2(day.expHourly), fcStyle:{fill:'none',stroke:'var(--color-accent)',strokeWidth:future?3:2,strokeDasharray:future?'0':'6 4',strokeLinejoin:'round'},
+      lgFc:{borderTopColor:'var(--color-accent)',borderTopWidth:'3px',borderTopStyle:future?'solid':'dashed'},
+      hasActual, actD:path2(day.actHourly||[]), actStyle:{fill:'none',stroke:'var(--color-accent-900)',strokeWidth:3.2,strokeLinejoin:'round',strokeLinecap:'round'},
+      hoverRows2, hoverRects2, sqlCards,
+      hotspots, others, noOther:others.length===0,
+      hasInsight:!!ins, insTag:ins?insTag:'Scheduled · end of day', insTagCls:ins?(past?'done':'fc'):'warn', segs, memCards, trace, wf, wfNote,
+      insightNote:ins?ins.note:'', insightPending:ins?'':(day.pending||''),
+      actions, actTag:today?'Scheduled · end of day':past?'Completed':'Scheduled · end of day', actTagCls:today?'warn':past?'done':'fc',
+      actionsPending:today?'Agentic actions for today will be taken at the end of the day. Any reorder alert it updates will appear here.':'',
+      monthLabel:new Date(yy,mm-1,1).toLocaleDateString('en-US',{month:'long',year:'numeric'}),
+      prevMonth:()=>this.setState({agMonth:months[Math.max(0,mi-1)]}), nextMonth:()=>this.setState({agMonth:months[Math.min(months.length-1,mi+1)]}),
+      prevDis:mi<=0, nextDis:mi>=months.length-1, dayHeads:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], cells, upcoming:upcoming.slice(0,7),
+      goToday:()=>this.agPick(D.today)
     };
   }
   updV(id,p){this.setState(s=>({vendors:s.vendors.map(v=>v.id===id?{...v,...p}:v)}));}

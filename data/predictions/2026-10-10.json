@@ -1,0 +1,520 @@
+{
+ "date": "2026-10-10",
+ "day_of_week": "Saturday",
+ "status": "future",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 248.6,
+ "expected_items": 316.0,
+ "expected_vs_baseline_pct": 27.1,
+ "expected_orders": 189,
+ "expected_revenue": 2876.14,
+ "range_items": [
+  278,
+  354
+ ],
+ "confidence": "medium",
+ "peak_hour": "12:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  28.3,
+  63.1,
+  30.6,
+  18.1,
+  27.3,
+  30.8,
+  36.2,
+  44.7,
+  24.9,
+  11.9
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   7.4,
+   16.1,
+   7.5,
+   4.2,
+   6.3,
+   7.1,
+   8.5,
+   11.8,
+   6.5,
+   3.1
+  ],
+  "tacos": [
+   5.5,
+   13.1,
+   6.7,
+   4.4,
+   6.6,
+   7.4,
+   8.6,
+   8.8,
+   4.9,
+   2.3
+  ],
+  "bowl": [
+   4.1,
+   8.3,
+   3.5,
+   1.6,
+   2.5,
+   2.8,
+   3.4,
+   6.5,
+   3.6,
+   1.7
+  ],
+  "nachos": [
+   2.8,
+   7.0,
+   3.7,
+   2.5,
+   3.8,
+   4.3,
+   5.0,
+   4.5,
+   2.5,
+   1.2
+  ],
+  "quesadilla": [
+   2.5,
+   5.5,
+   2.6,
+   1.4,
+   2.2,
+   2.4,
+   2.9,
+   4.0,
+   2.2,
+   1.1
+  ],
+  "chips-guac": [
+   2.0,
+   4.8,
+   2.4,
+   1.6,
+   2.4,
+   2.7,
+   3.1,
+   3.2,
+   1.8,
+   0.8
+  ],
+  "chips-queso": [
+   1.6,
+   3.9,
+   2.0,
+   1.4,
+   2.1,
+   2.3,
+   2.7,
+   2.5,
+   1.4,
+   0.7
+  ],
+  "salad": [
+   1.1,
+   2.1,
+   0.9,
+   0.4,
+   0.6,
+   0.6,
+   0.8,
+   1.7,
+   1.0,
+   0.5
+  ],
+  "side-rice": [
+   0.6,
+   1.2,
+   0.6,
+   0.3,
+   0.5,
+   0.5,
+   0.6,
+   0.9,
+   0.5,
+   0.2
+  ],
+  "side-beans": [
+   0.5,
+   1.2,
+   0.5,
+   0.3,
+   0.5,
+   0.5,
+   0.6,
+   0.8,
+   0.5,
+   0.2
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 78.5,
+  "tacos": 68.4,
+  "bowl": 38.1,
+  "nachos": 37.4,
+  "quesadilla": 26.9,
+  "chips-guac": 24.8,
+  "chips-queso": 20.6,
+  "salad": 9.7,
+  "side-rice": 6.0,
+  "side-beans": 5.7
+ },
+ "drivers": [
+  {
+   "event_id": "fleet-2026-10-10",
+   "name": "SF Fleet Week: Air Show",
+   "venue": "Marina / Embarcadero",
+   "distance_miles": 3.0,
+   "direction": "up",
+   "expected_effect_pct": 10,
+   "start_time": "12:00",
+   "end_time": "16:00",
+   "explanation": "SF Fleet Week: Air Show (3.0 mi away, 12:00 to 16:00): mostly crowds up the waterfront, only a small spillover, roughly +10%."
+  },
+  {
+   "event_id": "warriors-2026-10-10",
+   "name": "Golden State Warriors vs. Sacramento Kings (preseason)",
+   "venue": "Chase Center",
+   "distance_miles": 0.9,
+   "direction": "up",
+   "expected_effect_pct": 17,
+   "start_time": "17:30",
+   "end_time": "19:45",
+   "explanation": "Golden State Warriors vs. Sacramento Kings (preseason) at Chase Center (0.9 mi away, starts 17:30): a pre-event lift in the three hours before the start, roughly +17%."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 79 Signature Burrito",
+  "Expect about 68 Street Tacos (3)",
+  "Expect about 38 Burrito Bowl",
+  "Pre-portion nachos, chips and tortillas before the rush window"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "scheduled",
+  "runs_at": "end of day",
+  "note": "Scheduled to run at the end of the day on Oct 10 (21:30); this is the forecast it will start from.",
+  "summary": "Statistical prediction for a Saturday is 249 items [1]. The agent forecasts 316 (+27%), a lift of about 67 items from two events. Tavily lists the Warriors vs Kings preseason game at Chase Center, tip-off 17:30 [2], and the Fleet Week Air Show, 12:00 to 16:00 [3]. Mem0's best match is the Valkyries' Saturday 17:30 game on <<2026-09-19|Sep 19>>, the same tip-off time: +17%, with sales rising from early afternoon [4]. There is no earlier Fleet Week to compare, so the air show gets a small +10% allowance [5]. Why this matters for the day's shape: a 17:30 tip-off pulls the pre-game rush to about 14:30 to 17:30, where it overlaps the tail of the Air Show. The usual 14:00 to 16:00 lull largely disappears: those hours run more than double the Saturday trend. The agent leans on Saturday's high base (249 items), so the lift is a smaller share than on a weekday. Sunny and warm [6], which helps both the air show and foot traffic.",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Saturday'\n  AND  date < '2026-10-10'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Saturday",
+       248.6,
+       5
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "warriors-2026-10-10",
+    "query": "Golden State Warriors vs. Sacramento Kings (preseason) Chase Center San Francisco Oct 10",
+    "title": "Golden State Warriors vs. Sacramento Kings (preseason)",
+    "url": "https://www.chasecenter.com/events",
+    "domain": "chasecenter.com",
+    "snippet": "NBA preseason game at Chase Center, 17:30 to 19:45.",
+    "verified": false,
+    "placeholder": true
+   },
+   {
+    "id": 3,
+    "type": "tavily",
+    "event_id": "fleet-2026-10-10",
+    "query": "SF Fleet Week: Air Show Marina / Embarcadero San Francisco Oct 10",
+    "title": "SF Fleet Week: Air Show",
+    "url": "https://fleetweek.us/",
+    "domain": "fleetweek.us",
+    "snippet": "Festival at Marina / Embarcadero, 12:00 to 16:00 (start time not confirmed).",
+    "verified": false,
+    "placeholder": true
+   },
+   {
+    "id": 4,
+    "type": "mem0",
+    "memory_id": "mem_4ae76a8248",
+    "query": "past sales near Chase Center on early Saturday evening games",
+    "memory": "The Valkyries' Saturday 17:30 game on <<2026-09-19|Sep 19>> sold 290 items, +17% over trend, with extra sales from 13:00 to 18:00 instead of a single spike. <<2026-10-03|Oct 3>>, a Saturday 19:00 concert, came in -11%.",
+    "relevance": 0.9,
+    "avg_vs_baseline_pct": 2.8,
+    "linked_days": [
+     {
+      "date": "2026-09-19",
+      "event": "Valkyries vs Seattle Storm (Sat 17:30)",
+      "category": "",
+      "actual_items": 290,
+      "expected_items": 257,
+      "baseline_items": 249,
+      "vs_baseline_pct": 16.7,
+      "revenue": 2661
+     },
+     {
+      "date": "2026-10-03",
+      "event": "Disney Worlds Collide Concert Tour (Sat 19:00)",
+      "category": "",
+      "actual_items": 221,
+      "expected_items": 260,
+      "baseline_items": 249,
+      "vs_baseline_pct": -11.1,
+      "revenue": 2053
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "type": "mem0",
+    "memory_id": "mem_bfc1f7190c",
+    "query": "Fleet Week Blue Angels air show crowds near the truck",
+    "memory": "No earlier Fleet Week day is in memory. The agent assumes a weak spillover, about +10% on the day, because the show is 3 miles up the waterfront.",
+    "relevance": 0.42,
+    "avg_vs_baseline_pct": null,
+    "linked_days": []
+   },
+   {
+    "id": 6,
+    "type": "tavily",
+    "event_id": null,
+    "query": "San Francisco weather forecast October 10 2026",
+    "title": "San Francisco forecast",
+    "url": "https://www.weather.gov/mtr/",
+    "domain": "weather.gov",
+    "snippet": "Sunny and 71F. Good air-show weather.",
+    "verified": false,
+    "placeholder": true
+   }
+  ],
+  "adjustments": {
+   "stat": 249,
+   "rows": [
+    {
+     "label": "SF Fleet Week: Air Show",
+     "event_id": "fleet-2026-10-10",
+     "delta": 25,
+     "kind": "up"
+    },
+    {
+     "label": "Golden State Warriors vs. Sacramento Kings (preseason)",
+     "event_id": "warriors-2026-10-10",
+     "delta": 42,
+     "kind": "up"
+    }
+   ],
+   "forecast": 316,
+   "actual": null,
+   "gap": null,
+   "gap_note": ""
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Large Flour Tortilla",
+   "change": "+77 tortillas",
+   "status": "scheduled",
+   "detail": "Will raise the Large Flour Tortilla reorder alert by 77 tortillas to cover the expected rush at the end of the day on Oct 10.",
+   "runs_at": "end of day"
+  },
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Tortilla Chips",
+   "change": "+7 bags",
+   "status": "scheduled",
+   "detail": "Will raise the Tortilla Chips reorder alert by 7 bags to cover the expected rush at the end of the day on Oct 10.",
+   "runs_at": "end of day"
+  }
+ ],
+ "statistical": {
+  "method": "Saturday x hour seasonal average of past sales, events excluded",
+  "n_days": 5,
+  "total": 248.6,
+  "hourly": [
+   28.3,
+   56.9,
+   24.4,
+   10.4,
+   11.7,
+   12.7,
+   22.9,
+   44.7,
+   24.9,
+   11.9
+  ],
+  "low": [
+   24.0,
+   49.7,
+   20.4,
+   7.9,
+   9.0,
+   9.9,
+   19.1,
+   38.8,
+   20.9,
+   9.2
+  ],
+  "high": [
+   32.7,
+   64.1,
+   28.3,
+   13.0,
+   14.4,
+   15.4,
+   26.7,
+   50.7,
+   28.8,
+   14.6
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Saturday'\n  AND  date < '2026-10-10'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Saturday",
+      248.6,
+      5
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-10-10"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "event",
+    "items": [
+     {
+      "event_id": "warriors-2026-10-10",
+      "name": "Golden State Warriors vs. Sacramento Kings (preseason)",
+      "category": "NBA preseason game",
+      "venue": "Chase Center",
+      "miles": 0.9,
+      "start": "17:30",
+      "end": "19:45",
+      "status": "scheduled",
+      "placeholder": true,
+      "effect_pct": 17,
+      "direction": "up",
+      "tavily": {
+       "type": "tavily",
+       "event_id": "warriors-2026-10-10",
+       "query": "Golden State Warriors vs. Sacramento Kings (preseason) Chase Center San Francisco Oct 10",
+       "title": "Golden State Warriors vs. Sacramento Kings (preseason)",
+       "url": "https://www.chasecenter.com/events",
+       "domain": "chasecenter.com",
+       "snippet": "NBA preseason game at Chase Center, 17:30 to 19:45.",
+       "verified": false,
+       "placeholder": true
+      },
+      "source_id": 2,
+      "more": []
+     }
+    ],
+    "check": "Chase Center events 2026-10-10"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Moscone Center events 2026-10-10"
+   }
+  ],
+  "other": [
+   {
+    "event_id": "fleet-2026-10-10",
+    "name": "SF Fleet Week: Air Show",
+    "category": "Festival",
+    "venue": "Marina / Embarcadero",
+    "miles": 3.0,
+    "start": "12:00",
+    "end": "16:00",
+    "status": "scheduled",
+    "placeholder": true,
+    "effect_pct": 10,
+    "direction": "up",
+    "tavily": {
+     "type": "tavily",
+     "event_id": "fleet-2026-10-10",
+     "query": "SF Fleet Week: Air Show Marina / Embarcadero San Francisco Oct 10",
+     "title": "SF Fleet Week: Air Show",
+     "url": "https://fleetweek.us/",
+     "domain": "fleetweek.us",
+     "snippet": "Festival at Marina / Embarcadero, 12:00 to 16:00 (start time not confirmed).",
+     "verified": false,
+     "placeholder": true
+    },
+    "source_id": 3,
+    "more": []
+   },
+   {
+    "name": "Weather: Sunny and 71F",
+    "category": "Weather",
+    "venue": "San Francisco",
+    "miles": 0.0,
+    "start": "08:00",
+    "end": "22:00",
+    "status": "scheduled",
+    "placeholder": true,
+    "effect_pct": 0,
+    "direction": "flat",
+    "event_id": null,
+    "source_id": 6,
+    "tavily": {
+     "type": "tavily",
+     "event_id": null,
+     "query": "San Francisco weather forecast October 10 2026",
+     "title": "San Francisco forecast",
+     "url": "https://www.weather.gov/mtr/",
+     "domain": "weather.gov",
+     "snippet": "Sunny and 71F. Good air-show weather.",
+     "verified": false,
+     "placeholder": true
+    },
+    "note": "No weather effect expected."
+   }
+  ]
+ }
+}
