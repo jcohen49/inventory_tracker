@@ -1,0 +1,426 @@
+{
+ "date": "2026-10-13",
+ "day_of_week": "Tuesday",
+ "status": "future",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 137.0,
+ "expected_items": 156.3,
+ "expected_vs_baseline_pct": 14.1,
+ "expected_orders": 94,
+ "expected_revenue": 1427.39,
+ "range_items": [
+  138,
+  175
+ ],
+ "confidence": "low",
+ "peak_hour": "12:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  18.1,
+  36.4,
+  18.4,
+  5.8,
+  6.4,
+  7.0,
+  16.0,
+  28.0,
+  13.7,
+  6.6
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   4.5,
+   9.1,
+   4.4,
+   1.5,
+   1.7,
+   1.8,
+   3.9,
+   7.1,
+   3.6,
+   1.7
+  ],
+  "tacos": [
+   3.9,
+   7.7,
+   4.2,
+   1.1,
+   1.3,
+   1.4,
+   3.5,
+   5.9,
+   2.7,
+   1.3
+  ],
+  "bowl": [
+   2.3,
+   4.5,
+   2.0,
+   0.8,
+   0.9,
+   1.0,
+   1.8,
+   3.6,
+   2.0,
+   1.0
+  ],
+  "nachos": [
+   2.1,
+   4.2,
+   2.4,
+   0.6,
+   0.6,
+   0.7,
+   2.0,
+   3.2,
+   1.4,
+   0.7
+  ],
+  "quesadilla": [
+   1.6,
+   3.1,
+   1.5,
+   0.5,
+   0.6,
+   0.6,
+   1.3,
+   2.4,
+   1.2,
+   0.6
+  ],
+  "chips-guac": [
+   1.4,
+   2.8,
+   1.5,
+   0.4,
+   0.5,
+   0.5,
+   1.3,
+   2.1,
+   1.0,
+   0.5
+  ],
+  "chips-queso": [
+   1.2,
+   2.3,
+   1.3,
+   0.3,
+   0.4,
+   0.4,
+   1.1,
+   1.8,
+   0.8,
+   0.4
+  ],
+  "salad": [
+   0.6,
+   1.2,
+   0.5,
+   0.2,
+   0.3,
+   0.3,
+   0.5,
+   0.9,
+   0.5,
+   0.3
+  ],
+  "side-rice": [
+   0.3,
+   0.7,
+   0.3,
+   0.1,
+   0.1,
+   0.1,
+   0.3,
+   0.5,
+   0.3,
+   0.1
+  ],
+  "side-beans": [
+   0.3,
+   0.7,
+   0.3,
+   0.1,
+   0.1,
+   0.1,
+   0.3,
+   0.5,
+   0.3,
+   0.1
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 39.5,
+  "tacos": 32.9,
+  "bowl": 19.9,
+  "nachos": 17.7,
+  "quesadilla": 13.5,
+  "chips-guac": 11.9,
+  "chips-queso": 9.8,
+  "salad": 5.1,
+  "side-rice": 3.0,
+  "side-beans": 2.9
+ },
+ "drivers": [
+  {
+   "event_id": "moscone-2026-10-13",
+   "name": "Moscone Center conference, day 1",
+   "venue": "Moscone Center",
+   "distance_miles": 0.9,
+   "direction": "up",
+   "expected_effect_pct": 14,
+   "start_time": "09:00",
+   "end_time": "18:00",
+   "explanation": "Moscone Center conference, day 1 (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +14%."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 39 Signature Burrito",
+  "Expect about 33 Street Tacos (3)",
+  "Expect about 20 Burrito Bowl",
+  "Pre-portion nachos, chips and tortillas before the rush window"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "scheduled",
+  "runs_at": "end of day",
+  "note": "Scheduled to run at the end of the day on Oct 13 (21:30); this is the forecast it will start from.",
+  "summary": "Expected about 156 items (+14% vs a typical Tuesday of 137 [1]), peaking around 12:00. Moscone Center conference, day 1 (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +14%. [2] Memory recall of similar days: <<2026-09-17|Sep 17>> +9% (181 items), <<2026-09-16|Sep 16>> +83% (267 items), <<2026-09-15|Sep 15>> +3% (141 items) [3].",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Tuesday'\n  AND  date < '2026-10-13'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Tuesday",
+       137.0,
+       4
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "moscone-2026-10-13",
+    "query": "Moscone Center conference, day 1 Moscone Center San Francisco Oct 13",
+    "title": "Moscone Center conference, day 1",
+    "url": "https://www.sftravel.com/",
+    "domain": "sftravel.com",
+    "snippet": "Conference at Moscone Center, 09:00 to 18:00 (start time not confirmed).",
+    "verified": false,
+    "placeholder": true
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_f96899c446",
+    "query": "past sales near Moscone Center on conference days",
+    "memory": "Comparable Moscone Center days (conference): the truck averaged +32% vs baseline over the last 3 day(s); most recent <<2026-09-17|Sep 17>> at 181 items.",
+    "relevance": 0.93,
+    "avg_vs_baseline_pct": 31.8,
+    "linked_days": [
+     {
+      "date": "2026-09-17",
+      "event": "Dreamforce 2026 (day 3)",
+      "category": "Conference",
+      "actual_items": 181,
+      "expected_items": 195,
+      "baseline_items": 166,
+      "vs_baseline_pct": 9.1,
+      "revenue": 1665
+     },
+     {
+      "date": "2026-09-16",
+      "event": "Dreamforce 2026 (day 2)",
+      "category": "Conference",
+      "actual_items": 267,
+      "expected_items": 261,
+      "baseline_items": 146,
+      "vs_baseline_pct": 83.4,
+      "revenue": 2477.5
+     },
+     {
+      "date": "2026-09-15",
+      "event": "Dreamforce 2026 (day 1)",
+      "category": "Conference",
+      "actual_items": 141,
+      "expected_items": 161,
+      "baseline_items": 137,
+      "vs_baseline_pct": 2.9,
+      "revenue": 1285.5
+     }
+    ]
+   }
+  ],
+  "adjustments": {
+   "stat": 137,
+   "rows": [
+    {
+     "label": "Moscone Center conference, day 1",
+     "event_id": "moscone-2026-10-13",
+     "delta": 19,
+     "kind": "up"
+    }
+   ],
+   "forecast": 156,
+   "actual": null,
+   "gap": null,
+   "gap_note": ""
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Large Flour Tortilla",
+   "change": "+23 tortillas",
+   "status": "scheduled",
+   "detail": "Will raise the Large Flour Tortilla reorder alert by 23 tortillas to cover the expected rush at the end of the day on Oct 13.",
+   "runs_at": "end of day"
+  },
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Tortilla Chips",
+   "change": "+2 bags",
+   "status": "scheduled",
+   "detail": "Will raise the Tortilla Chips reorder alert by 2 bags to cover the expected rush at the end of the day on Oct 13.",
+   "runs_at": "end of day"
+  }
+ ],
+ "statistical": {
+  "method": "Tuesday x hour seasonal average of past sales, events excluded",
+  "n_days": 4,
+  "total": 137.0,
+  "hourly": [
+   15.6,
+   31.4,
+   13.4,
+   5.8,
+   6.4,
+   7.0,
+   12.6,
+   24.7,
+   13.7,
+   6.6
+  ],
+  "low": [
+   12.6,
+   26.7,
+   10.6,
+   3.7,
+   4.3,
+   4.8,
+   9.8,
+   20.7,
+   10.8,
+   4.4
+  ],
+  "high": [
+   18.7,
+   36.0,
+   16.3,
+   7.8,
+   8.6,
+   9.2,
+   15.4,
+   28.6,
+   16.6,
+   8.7
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Tuesday'\n  AND  date < '2026-10-13'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Tuesday",
+      137.0,
+      4
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-10-13"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Chase Center events 2026-10-13"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "event",
+    "items": [
+     {
+      "event_id": "moscone-2026-10-13",
+      "name": "Moscone Center conference, day 1",
+      "category": "Conference",
+      "venue": "Moscone Center",
+      "miles": 0.9,
+      "start": "09:00",
+      "end": "18:00",
+      "status": "scheduled",
+      "placeholder": true,
+      "effect_pct": 14,
+      "direction": "up",
+      "tavily": {
+       "type": "tavily",
+       "event_id": "moscone-2026-10-13",
+       "query": "Moscone Center conference, day 1 Moscone Center San Francisco Oct 13",
+       "title": "Moscone Center conference, day 1",
+       "url": "https://www.sftravel.com/",
+       "domain": "sftravel.com",
+       "snippet": "Conference at Moscone Center, 09:00 to 18:00 (start time not confirmed).",
+       "verified": false,
+       "placeholder": true
+      },
+      "source_id": 2,
+      "more": []
+     }
+    ],
+    "check": "Moscone Center events 2026-10-13"
+   }
+  ],
+  "other": []
+ }
+}

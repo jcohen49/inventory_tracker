@@ -1,0 +1,426 @@
+{
+ "date": "2026-10-24",
+ "day_of_week": "Saturday",
+ "status": "future",
+ "open": "11:00",
+ "close": "21:00",
+ "baseline_items": 248.6,
+ "expected_items": 313.5,
+ "expected_vs_baseline_pct": 26.1,
+ "expected_orders": 188,
+ "expected_revenue": 2854.98,
+ "range_items": [
+  276,
+  351
+ ],
+ "confidence": "low",
+ "peak_hour": "18:00",
+ "hours": [
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00"
+ ],
+ "hourly_expected": [
+  28.3,
+  56.9,
+  24.4,
+  10.4,
+  13.9,
+  27.0,
+  50.5,
+  65.2,
+  24.9,
+  11.9
+ ],
+ "hourly_expected_by_item": {
+  "burrito": [
+   7.4,
+   15.0,
+   6.4,
+   2.7,
+   3.5,
+   6.3,
+   11.7,
+   15.5,
+   6.5,
+   3.1
+  ],
+  "tacos": [
+   5.5,
+   11.1,
+   4.8,
+   2.0,
+   3.0,
+   6.5,
+   12.2,
+   15.1,
+   4.9,
+   2.3
+  ],
+  "bowl": [
+   4.1,
+   8.3,
+   3.6,
+   1.5,
+   1.7,
+   2.4,
+   4.5,
+   6.6,
+   3.6,
+   1.7
+  ],
+  "nachos": [
+   2.8,
+   5.7,
+   2.4,
+   1.0,
+   1.6,
+   3.8,
+   7.1,
+   8.6,
+   2.5,
+   1.2
+  ],
+  "quesadilla": [
+   2.5,
+   5.1,
+   2.2,
+   0.9,
+   1.2,
+   2.1,
+   4.0,
+   5.3,
+   2.2,
+   1.1
+  ],
+  "chips-guac": [
+   2.0,
+   4.0,
+   1.7,
+   0.7,
+   1.1,
+   2.4,
+   4.4,
+   5.5,
+   1.8,
+   0.8
+  ],
+  "chips-queso": [
+   1.6,
+   3.2,
+   1.4,
+   0.6,
+   0.9,
+   2.0,
+   3.8,
+   4.7,
+   1.4,
+   0.7
+  ],
+  "salad": [
+   1.1,
+   2.2,
+   0.9,
+   0.4,
+   0.4,
+   0.6,
+   1.0,
+   1.6,
+   1.0,
+   0.5
+  ],
+  "side-rice": [
+   0.6,
+   1.1,
+   0.5,
+   0.2,
+   0.3,
+   0.5,
+   0.9,
+   1.2,
+   0.5,
+   0.2
+  ],
+  "side-beans": [
+   0.5,
+   1.1,
+   0.5,
+   0.2,
+   0.3,
+   0.5,
+   0.8,
+   1.1,
+   0.5,
+   0.2
+  ]
+ },
+ "expected_items_by_item": {
+  "burrito": 78.1,
+  "tacos": 67.6,
+  "bowl": 38.1,
+  "nachos": 36.9,
+  "quesadilla": 26.7,
+  "chips-guac": 24.5,
+  "chips-queso": 20.3,
+  "salad": 9.7,
+  "side-rice": 5.9,
+  "side-beans": 5.6
+ },
+ "drivers": [
+  {
+   "event_id": "warriors-2026-10-24",
+   "name": "Warriors home game",
+   "venue": "Chase Center",
+   "distance_miles": 0.9,
+   "direction": "up",
+   "expected_effect_pct": 26,
+   "start_time": "18:30",
+   "end_time": "21:00",
+   "explanation": "Warriors home game at Chase Center (0.9 mi away, starts 18:30): a pre-event lift in the three hours before the start, roughly +26%."
+  }
+ ],
+ "prep_notes": [
+  "Expect about 78 Signature Burrito",
+  "Expect about 68 Street Tacos (3)",
+  "Expect about 38 Burrito Bowl",
+  "Pre-portion nachos, chips and tortillas before the rush window"
+ ],
+ "placeholder": true,
+ "agentic_insight": {
+  "status": "scheduled",
+  "runs_at": "end of day",
+  "note": "Scheduled to run at the end of the day on Oct 24 (21:30); this is the forecast it will start from.",
+  "summary": "Expected about 313 items (+26% vs a typical Saturday of 249 [1]), peaking around 18:00. Warriors home game at Chase Center (0.9 mi away, starts 18:30): a pre-event lift in the three hours before the start, roughly +26%. [2] Memory recall of similar days: <<2026-10-04|Oct 4>> +17% (219 items), <<2026-10-03|Oct 3>> -11% (221 items), <<2026-10-02|Oct 2>> +11% (257 items) [3].",
+  "sources": [
+   {
+    "id": 1,
+    "type": "sql",
+    "database": "sales_history",
+    "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Saturday'\n  AND  date < '2026-10-24'\nGROUP  BY day_of_week;",
+    "result": {
+     "columns": [
+      "day_of_week",
+      "baseline_items",
+      "n_days"
+     ],
+     "rows": [
+      [
+       "Saturday",
+       248.6,
+       5
+      ]
+     ]
+    },
+    "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+   },
+   {
+    "id": 2,
+    "type": "tavily",
+    "event_id": "warriors-2026-10-24",
+    "query": "Warriors home game Chase Center San Francisco Oct 24",
+    "title": "Warriors home game",
+    "url": "https://www.chasecenter.com/events",
+    "domain": "chasecenter.com",
+    "snippet": "NBA game at Chase Center, 18:30 to 21:00 (start time not confirmed).",
+    "verified": false,
+    "placeholder": true
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_d387f703c8",
+    "query": "past sales near Chase Center on nba game days",
+    "memory": "Comparable Chase Center days (wnba playoff game / concert): the truck averaged +6% vs baseline over the last 3 day(s); most recent <<2026-10-04|Oct 4>> at 219 items.",
+    "relevance": 0.93,
+    "avg_vs_baseline_pct": 5.6,
+    "linked_days": [
+     {
+      "date": "2026-10-04",
+      "event": "WNBA Semifinals G1: Valkyries vs Las Vegas Aces",
+      "category": "WNBA playoff game",
+      "actual_items": 219,
+      "expected_items": 204,
+      "baseline_items": 187,
+      "vs_baseline_pct": 16.9,
+      "revenue": 2018.5
+     },
+     {
+      "date": "2026-10-03",
+      "event": "Disney Worlds Collide Concert Tour",
+      "category": "Concert",
+      "actual_items": 221,
+      "expected_items": 260,
+      "baseline_items": 249,
+      "vs_baseline_pct": -11.1,
+      "revenue": 2053
+     },
+     {
+      "date": "2026-10-02",
+      "event": "WNBA Playoffs R1 G3: Valkyries vs Dallas Wings",
+      "category": "WNBA playoff game",
+      "actual_items": 257,
+      "expected_items": 245,
+      "baseline_items": 231,
+      "vs_baseline_pct": 11.1,
+      "revenue": 2360
+     }
+    ]
+   }
+  ],
+  "adjustments": {
+   "stat": 249,
+   "rows": [
+    {
+     "label": "Warriors home game",
+     "event_id": "warriors-2026-10-24",
+     "delta": 65,
+     "kind": "up"
+    }
+   ],
+   "forecast": 313,
+   "actual": null,
+   "gap": null,
+   "gap_note": ""
+  }
+ },
+ "agentic_actions": [
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Large Flour Tortilla",
+   "change": "+74 tortillas",
+   "status": "scheduled",
+   "detail": "Will raise the Large Flour Tortilla reorder alert by 74 tortillas to cover the expected rush at the end of the day on Oct 24.",
+   "runs_at": "end of day"
+  },
+  {
+   "type": "reorder_alert_updated",
+   "ingredient": "Tortilla Chips",
+   "change": "+6 bags",
+   "status": "scheduled",
+   "detail": "Will raise the Tortilla Chips reorder alert by 6 bags to cover the expected rush at the end of the day on Oct 24.",
+   "runs_at": "end of day"
+  }
+ ],
+ "statistical": {
+  "method": "Saturday x hour seasonal average of past sales, events excluded",
+  "n_days": 5,
+  "total": 248.6,
+  "hourly": [
+   28.3,
+   56.9,
+   24.4,
+   10.4,
+   11.7,
+   12.7,
+   22.9,
+   44.7,
+   24.9,
+   11.9
+  ],
+  "low": [
+   24.0,
+   49.7,
+   20.4,
+   7.9,
+   9.0,
+   9.9,
+   19.1,
+   38.8,
+   20.9,
+   9.2
+  ],
+  "high": [
+   32.7,
+   64.1,
+   28.3,
+   13.0,
+   14.4,
+   15.4,
+   26.7,
+   50.7,
+   28.8,
+   14.6
+  ],
+  "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "sql": {
+   "type": "sql",
+   "database": "sales_history",
+   "query": "SELECT day_of_week,\n       ROUND(AVG(baseline_items), 1) AS baseline_items,\n       COUNT(*)                      AS n_days\nFROM   daily_trend\nWHERE  day_of_week = 'Saturday'\n  AND  date < '2026-10-24'\nGROUP  BY day_of_week;",
+   "result": {
+    "columns": [
+     "day_of_week",
+     "baseline_items",
+     "n_days"
+    ],
+    "rows": [
+     [
+      "Saturday",
+      248.6,
+      5
+     ]
+    ]
+   },
+   "note": "daily_trend rolls the sales table up per day; baseline_items is the no-event trend for that weekday."
+  }
+ },
+ "external": {
+  "hotspots": [
+   {
+    "venue": "Oracle Park",
+    "miles": 0.1,
+    "status": "quiet",
+    "items": [],
+    "check": "Oracle Park events 2026-10-24"
+   },
+   {
+    "venue": "Chase Center",
+    "miles": 0.9,
+    "status": "event",
+    "items": [
+     {
+      "event_id": "warriors-2026-10-24",
+      "name": "Warriors home game",
+      "category": "NBA game",
+      "venue": "Chase Center",
+      "miles": 0.9,
+      "start": "18:30",
+      "end": "21:00",
+      "status": "scheduled",
+      "placeholder": true,
+      "effect_pct": 26,
+      "direction": "up",
+      "tavily": {
+       "type": "tavily",
+       "event_id": "warriors-2026-10-24",
+       "query": "Warriors home game Chase Center San Francisco Oct 24",
+       "title": "Warriors home game",
+       "url": "https://www.chasecenter.com/events",
+       "domain": "chasecenter.com",
+       "snippet": "NBA game at Chase Center, 18:30 to 21:00 (start time not confirmed).",
+       "verified": false,
+       "placeholder": true
+      },
+      "source_id": 2,
+      "more": []
+     }
+    ],
+    "check": "Chase Center events 2026-10-24"
+   },
+   {
+    "venue": "Moscone Center",
+    "miles": 0.9,
+    "status": "quiet",
+    "items": [],
+    "check": "Moscone Center events 2026-10-24"
+   }
+  ],
+  "other": []
+ }
+}
