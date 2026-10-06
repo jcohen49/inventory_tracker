@@ -158,8 +158,6 @@ body{margin:0}
 .opt-single{font-size:14px;font-family:var(--font-heading);font-weight:600}
 .opt-chips{display:flex;gap:5px;flex-wrap:wrap}
 .opt-chip{font-size:12.5px;padding:3px 9px;border:1px solid var(--color-divider);background:transparent;white-space:nowrap}
-.opt-note{display:flex;align-items:center;gap:5px;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--color-accent);margin-top:7px}
-.opt-note svg{width:12px;height:12px;flex:none}
 .menu-foot{display:flex;gap:var(--space-3);justify-content:space-between;align-items:center;padding-top:var(--space-3);margin-top:var(--space-2);border-top:1px solid var(--color-divider)}
 .mform-head{display:flex;gap:var(--space-3);align-items:flex-start;justify-content:space-between;margin-bottom:var(--space-3)}
 .mfield{margin-bottom:var(--space-3)}
@@ -484,7 +482,7 @@ body{margin:0}
 <sc-if value="{{ m.notEditing }}" hint-placeholder-val="{{ true }}"><div>
 <div class="menu-head"><div><div class="rowcat">{{ m.kicker }}</div><h3>{{ m.name }}</h3></div><div class="menu-price">{{ m.price }}</div></div>
 <div class="menu-desc">{{ m.desc }}</div>
-<sc-for list="{{ m.comps }}" as="c" hint-placeholder-count="5"><div class="build-row"><div><div class="build-qty">{{ c.qty }}</div><div class="build-label">{{ c.label }}</div></div><div><sc-if value="{{ c.choice }}" hint-placeholder-val="{{ true }}"><div><div class="opt-chips"><sc-for list="{{ c.opts }}" as="o" hint-placeholder-count="3"><span class="opt-chip">{{ o.name }}</span></sc-for></div><div class="opt-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"></rect><path d="M9 12l2 2 4-4"></path></svg>POS records the pick</div></div></sc-if><sc-if value="{{ c.singleShow }}" hint-placeholder-val="{{ false }}"><div class="opt-single">{{ c.single }}</div></sc-if></div></div></sc-for>
+<sc-for list="{{ m.comps }}" as="c" hint-placeholder-count="5"><div class="build-row"><div><div class="build-qty">{{ c.qty }}</div><div class="build-label">{{ c.label }}</div></div><div><sc-if value="{{ c.choice }}" hint-placeholder-val="{{ true }}"><div><div class="opt-chips"><sc-for list="{{ c.opts }}" as="o" hint-placeholder-count="3"><span class="opt-chip">{{ o.name }}</span></sc-for></div></div></sc-if><sc-if value="{{ c.singleShow }}" hint-placeholder-val="{{ false }}"><div class="opt-single">{{ c.single }}</div></sc-if></div></div></sc-for>
 <div class="menu-foot"><button class="btn btn-secondary" onClick="{{ m.edit }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>Edit item</button><button class="btn btn-ghost" onClick="{{ m.removeItem }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path></svg>Delete</button></div>
 </div></sc-if>
 <sc-if value="{{ m.editing }}" hint-placeholder-val="{{ false }}"><div>
