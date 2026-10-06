@@ -97,4 +97,10 @@ The quesadilla's protein is optional in the app; 70% of simulated quesadillas in
 powershell -ExecutionPolicy Bypass -File data/generate_sales.ps1
 ```
 
+Then rebuild `sales_daily.js`, the per-day, per-item counts that the dashboard's sales graph in `index.html` loads:
+
+```bash
+powershell -ExecutionPolicy Bypass -File data/build_sales_daily.ps1
+```
+
 The seed is fixed, so output is identical each run. Pass `-Seed <n>` for a different draw. The script prints a per-day summary and reports a problem if any sale falls outside operating hours, any item costs more than its price, or the row count disagrees with the ground truth.
