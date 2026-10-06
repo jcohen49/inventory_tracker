@@ -237,10 +237,10 @@ body{margin:0}
 <sc-if value="{{ isDashboard }}" hint-placeholder-val="{{ true }}"><div>
 <div class="phead"><div><h1>Good morning, Mauricio</h1><div class="sub">{{ todayLabel }} · projected demand {{ todayDemand }} vs. an average day</div></div><div class="hstack"><button class="btn btn-secondary" onClick="{{ simulateDay }}"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.7 9.7 0 0 0-6.7 2.7L3 8"></path><path d="M3 3v5h5"></path></svg>Simulate a sales day</button></div></div>
 <div class="statgrid">
-<button class="stat statbtn blueprint elev-sm" onClick="{{ go.inventory }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">Tracked items</div><div class="n">{{ stats.total }}</div><div class="s">across {{ stats.catCount }} categories</div></button>
-<button class="stat statbtn blueprint elev-sm" onClick="{{ go.reorders }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">Need attention</div><div class="n">{{ stats.attention }}</div><div class="s">{{ stats.critCount }} critical · {{ stats.lowCount }} low</div></button>
-<button class="stat statbtn blueprint elev-sm" onClick="{{ go.orders }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">Open orders</div><div class="n">{{ stats.pending }}</div><div class="s">{{ stats.pendingSub }}</div></button>
-<button class="stat statbtn blueprint elev-sm" onClick="{{ go.forecast }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">Peak this week</div><div class="n">{{ stats.peak }}</div><div class="s">{{ stats.peakDay }}</div></button>
+<button class="stat statbtn blueprint elev-sm" onClick="{{ go.reorders }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">Reorders</div><div class="n">{{ stats.attention }}</div><div class="s">{{ stats.critCount }} critical · {{ stats.lowCount }} low</div></button>
+<button class="stat statbtn blueprint elev-sm" onClick="{{ go.orders }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">Orders en route</div><div class="n">{{ stats.pending }}</div><div class="s">{{ stats.pendingSub }}</div></button>
+<div class="stat blueprint elev-sm"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">7 day revenue</div><div class="n">{{ stats.revenue }}</div><div class="s">{{ stats.revenueSub }}</div></div>
+<button class="stat statbtn blueprint elev-sm" onClick="{{ go.forecast }}"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="k">Upcoming events</div><div class="n">{{ stats.events }}</div><div class="s">nearby over the next 7 days</div></button>
 </div>
 <div class="sec-title"><h2>Menu item sales</h2><div class="usage-controls"><div class="date-range"><input type="date" class="input date-in" aria-label="Start date" value="{{ sales.fromVal }}" min="{{ sales.min }}" max="{{ sales.max }}" onChange="{{ sales.setFrom }}"><span class="date-sep">–</span><input type="date" class="input date-in" aria-label="End date" value="{{ sales.toVal }}" min="{{ sales.min }}" max="{{ sales.max }}" onChange="{{ sales.setTo }}"></div><div class="filters" style="margin-bottom:0"><sc-for list="{{ sales.chips }}" as="c" hint-placeholder-count="3"><button class="chip {{ c.cls }}" onClick="{{ c.set }}">{{ c.label }}</button></sc-for></div></div></div>
 <div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
@@ -890,7 +890,10 @@ class Component extends DCLogic {
     const dowGrid=[0,1,2,3,4,5,6].map(k=>{const p=S.dowParts[k];const avg=(p.lunch+p.afternoon+p.dinner+p.late)/4;return {name:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][k], avgDisp:avg.toFixed(2)+'×', parts:partDefs.map(([pk,pn])=>({key:pk, name:pn, factor:p[pk], disp:p[pk].toFixed(2)+'×', set:(e)=>{const val=+e.target.value;this.setState(st=>({dowParts:{...st.dowParts,[k]:{...st.dowParts[k],[pk]:val}}}));}}))};});
     const forecastDays=[];
     for(let i=0;i<7;i++){const date=new Date(this.today);date.setDate(date.getDate()+i);const f=Math.round(this.adjFactor(date)*100)/100;const pct=Math.max(3,Math.min(100,Math.round(f/2*100)));forecastDays.push({label:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][date.getDay()]+' '+date.getDate(), disp:f.toFixed(2)+'×', style:{width:pct+'%'}, hi:f>=1.35?'hi':''});}
-    const peak=this.peakFactor();
+    // 7 day revenue from data/sales_daily.js; upcoming events is a placeholder until an events feed is wired in
+    const SD=window.SALES_DAILY||{dates:[],revenue:[]};const revTo=new Date(this.today);revTo.setDate(revTo.getDate()-1);const revFrom=new Date(this.today);revFrom.setDate(revFrom.getDate()-7);
+    const rev7Sum=SD.dates.reduce((s,d,j)=>(d>=this.iso(revFrom)&&d<=this.iso(revTo))?s+(SD.revenue[j]||0):s,0);
+    const rev7={revenue:'$'+Math.round(rev7Sum).toLocaleString('en-US'), revenueSub:this.fmtDay(-7)+' – '+this.fmtDay(-1), events:4};
 
 
     // menu
@@ -997,7 +1000,7 @@ class Component extends DCLogic {
       toggleAuto:()=>this.setState(s=>({autoDec:!s.autoDec})), toggleAlerts:()=>this.setState(s=>({alertsOn:!s.alertsOn})),
       simulateDay:()=>this.simulateDay(),
       todayLabel:this.today.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}), todayDemand:this.dayFactor(this.today.getDay()).toFixed(2)+'×',
-      stats:{total:all.length, catCount:this.cats.length, attention:alerts.length, critCount:all.filter(r=>r.s==='crit').length, lowCount:all.filter(r=>r.s==='low').length, pending:pendingOrders.length, pendingSub:pendingOrders.length?'awaiting delivery':'none open', peak:peak.toFixed(2)+'×', peakDay:'over the next 7 days'},
+      stats:{total:all.length, catCount:this.cats.length, attention:alerts.length, critCount:all.filter(r=>r.s==='crit').length, lowCount:all.filter(r=>r.s==='low').length, pending:pendingOrders.length, pendingSub:pendingOrders.length?'awaiting delivery':'none open', ...rev7},
       topAlerts:alerts.slice(0,5), allAlerts:alerts, alertGroups:(()=>{const g={};alerts.forEach(a=>{(g[a.vendorId]=g[a.vendorId]||{vendorId:a.vendorId,vendorName:a.vendorName,items:[]}).items.push(a);});return Object.values(g).map(grp=>({...grp, count:grp.items.length, multi:grp.items.length>1, orderAll:()=>this.placeVendorOrders(grp.vendorId)}));})(), alertCount:alerts.length||undefined, noAlerts:alerts.length===0,
       filterChips:chips, invRows, sortHead, sortArw,
       detail, vdetail, vendorRows, inactiveVendorRows, hasInactive:inactiveVendorRows.length>0, orderRows, orderGroups,
