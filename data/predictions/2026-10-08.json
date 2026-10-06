@@ -197,6 +197,50 @@
    "explanation": "SF Fleet Week: Blue Angels practice (3.0 mi away, 12:00 to 15:00): mostly crowds up the waterfront, only a small spillover, roughly +5%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "gne-2026-10-08",
+   "label": "GNE 2026 (day 3)",
+   "items": 20,
+   "pct_of_stat": 12.0,
+   "revenue": 181.53,
+   "window": "11:00 to 19:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    2.6,
+    5.2,
+    5.2,
+    0.0,
+    0.0,
+    0.0,
+    3.5,
+    3.5,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "event_id": "fleet-2026-10-08",
+   "label": "SF Fleet Week: Blue Angels practice",
+   "items": 8,
+   "pct_of_stat": 5.0,
+   "revenue": 75.64,
+   "window": "12:00 to 15:00",
+   "peak_hour": "13:00",
+   "hourly": [
+    0.0,
+    2.7,
+    2.9,
+    2.7,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 49 Signature Burrito",
   "Expect about 41 Street Tacos (3)",
@@ -388,6 +432,18 @@
    10.3
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 43.6,
+   "tacos": 32.5,
+   "bowl": 24.2,
+   "nachos": 16.6,
+   "quesadilla": 14.9,
+   "chips-guac": 11.8,
+   "chips-queso": 9.5,
+   "salad": 6.5,
+   "side-rice": 3.3,
+   "side-beans": 3.2
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

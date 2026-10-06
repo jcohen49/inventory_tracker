@@ -197,6 +197,50 @@
    "explanation": "WNBA Playoffs R1 G1: Valkyries vs Dallas Wings at Chase Center (0.9 mi away, starts 18:00): a pre-event lift in the three hours before the start, roughly +15%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "giants-2026-09-27",
+   "label": "Giants vs Los Angeles Dodgers",
+   "items": 68,
+   "pct_of_stat": 36.4,
+   "revenue": 618.94,
+   "window": "11:00 to 16:00",
+   "peak_hour": "11:00",
+   "hourly": [
+    47.7,
+    -3.0,
+    -2.9,
+    3.6,
+    18.0,
+    4.9,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "event_id": "valkyries-2026-09-27",
+   "label": "WNBA Playoffs R1 G1: Valkyries vs Dallas Wings",
+   "items": 30,
+   "pct_of_stat": 15.9,
+   "revenue": 269.38,
+   "window": "16:00 to 18:00",
+   "peak_hour": "17:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.3,
+    10.4,
+    16.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 72 Signature Burrito",
   "Expect about 66 Street Tacos (3)",
@@ -425,6 +469,18 @@
    11.4
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 49.3,
+   "tacos": 36.7,
+   "bowl": 27.4,
+   "nachos": 18.7,
+   "quesadilla": 16.9,
+   "chips-guac": 13.3,
+   "chips-queso": 10.7,
+   "salad": 7.3,
+   "side-rice": 3.7,
+   "side-beans": 3.6
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

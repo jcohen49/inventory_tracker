@@ -322,6 +322,7 @@ def stat_block(d, hours, base, truth):
     return {'method': f'{dow} x hour seasonal average of past sales, events excluded', 'n_days': n, 'total': round(base, 1),
             'hourly': [round(v, 1) for v in h], 'low': [round(max(0, v - (.10 * v + 1.5)), 1) for v in h],
             'high': [round(v + .10 * v + 1.5, 1) for v in h], 'band': '+/-10% plus 1.5 items (about one standard deviation)',
+            'by_item': {i: round(base * MIX[i], 1) for i in MIX},
             'sql': baseline_sql(d.isoformat(), dow, base, truth)}
 
 def adjustments(d, evs, base, total, actual, label):
@@ -519,6 +520,19 @@ def main():
         lift_pct = round((total / base - 1) * 100, 1)
         status = 'past' if d < TODAY else 'today' if d == TODAY else 'future'
         peak_h = max(exp, key=exp.get)
+        _, exp_all, _, _ = day_model(d, evs)
+        scale_all = total / sum(exp_all.values()) if exp_all else 1
+        avg_price = sum(item_tot[i] * PRICE[i] for i in MIX) / total
+        influence_stats = []
+        for ev in evs:
+            wo = day_model(d, [e for e in evs if e is not ev])[1]
+            dh = [(exp_all[h] - wo.get(h, 0)) * scale_all for h in hours]
+            top = max(abs(x) for x in dh) or 1
+            on = [h for h, x in zip(hours, dh) if abs(x) >= .25 * top]
+            ditems = sum(dh)
+            influence_stats.append({'event_id': ev['event_id'], 'label': ev['name'], 'items': round(ditems), 'pct_of_stat': round(ditems / base * 100, 1),
+                                    'revenue': round(ditems * avg_price, 2), 'window': f'{on[0]:02d}:00 to {on[-1] + 1:02d}:00' if on else '',
+                                    'peak_hour': f'{hours[max(range(len(dh)), key=lambda k: abs(dh[k]))]:02d}:00' if any(dh) else '', 'hourly': [round(x, 1) for x in dh]})
         doc = {
             'date': iso, 'day_of_week': d.strftime('%A'), 'status': status,
             'open': '11:00', 'close': f'{hours[-1] + 1:02d}:00',
@@ -533,6 +547,7 @@ def main():
             'hourly_expected_by_item': {i: [round(x, 1) for x in v] for i, v in items.items()},
             'expected_items_by_item': {i: round(v, 1) for i, v in item_tot.items()},
             'drivers': drivers_for(evs),
+            'influence_stats': influence_stats,
             'prep_notes': prep_notes(item_tot, any(r > .05 for r in rush.values())),
             'placeholder': True,
         }

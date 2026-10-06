@@ -186,6 +186,29 @@
    "explanation": "Election Day: polling places nearby (0.4 mi away): not expected to move sales."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "election-2026-11-03",
+   "label": "Election Day: polling places nearby",
+   "items": 0,
+   "pct_of_stat": 0.0,
+   "revenue": 0.0,
+   "window": "",
+   "peak_hour": "",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 36 Signature Burrito",
   "Expect about 27 Street Tacos (3)",
@@ -320,6 +343,18 @@
    8.7
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 36.0,
+   "tacos": 26.9,
+   "bowl": 20.0,
+   "nachos": 13.7,
+   "quesadilla": 12.3,
+   "chips-guac": 9.7,
+   "chips-queso": 7.8,
+   "salad": 5.3,
+   "side-rice": 2.7,
+   "side-beans": 2.6
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

@@ -210,6 +210,31 @@
    "explanation": "Giants vs St. Louis Cardinals at Oracle Park (0.1 mi away, starts 18:45): expect a rush from about 16:15, a lull while the crowd is inside, and a bump after the end. Roughly +40% on the day."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "giants-2026-09-08",
+   "label": "Giants vs St. Louis Cardinals",
+   "items": 66,
+   "pct_of_stat": 47.9,
+   "revenue": 596.08,
+   "window": "17:00 to 23:00",
+   "peak_hour": "18:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.9,
+    16.3,
+    20.6,
+    -2.4,
+    -1.1,
+    11.9,
+    16.3
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 55 Signature Burrito",
   "Expect about 49 Street Tacos (3)",
@@ -365,6 +390,18 @@
    4.5
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 36.0,
+   "tacos": 26.9,
+   "bowl": 20.0,
+   "nachos": 13.7,
+   "quesadilla": 12.3,
+   "chips-guac": 9.7,
+   "chips-queso": 7.8,
+   "salad": 5.3,
+   "side-rice": 2.7,
+   "side-beans": 2.6
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

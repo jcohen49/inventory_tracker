@@ -197,6 +197,50 @@
    "explanation": "Golden State Warriors vs. Los Angeles Lakers (preseason) at Chase Center (0.9 mi away, starts 19:00): a pre-event lift in the three hours before the start, roughly +20%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "gne-2026-10-06",
+   "label": "GNE 2026 (day 1)",
+   "items": 16,
+   "pct_of_stat": 12.0,
+   "revenue": 149.19,
+   "window": "11:00 to 19:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    2.1,
+    4.3,
+    4.3,
+    0.0,
+    0.0,
+    0.0,
+    2.9,
+    2.9,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "event_id": "warriors-2026-10-06",
+   "label": "Golden State Warriors vs. Los Angeles Lakers (preseason)",
+   "items": 27,
+   "pct_of_stat": 20.0,
+   "revenue": 248.65,
+   "window": "17:00 to 19:00",
+   "peak_hour": "18:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.0,
+    9.6,
+    14.8,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 44 Signature Burrito",
   "Expect about 40 Street Tacos (3)",
@@ -419,6 +463,18 @@
    8.7
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 36.0,
+   "tacos": 26.9,
+   "bowl": 20.0,
+   "nachos": 13.7,
+   "quesadilla": 12.3,
+   "chips-guac": 9.7,
+   "chips-queso": 7.8,
+   "salad": 5.3,
+   "side-rice": 2.7,
+   "side-beans": 2.6
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

@@ -186,6 +186,29 @@
    "explanation": "Dreamforce 2026 (day 3) (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +17%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "dreamforce-2026-09-17",
+   "label": "Dreamforce 2026 (day 3)",
+   "items": 28,
+   "pct_of_stat": 17.0,
+   "revenue": 257.61,
+   "window": "11:00 to 19:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    3.7,
+    7.3,
+    7.3,
+    0.0,
+    0.0,
+    0.0,
+    4.9,
+    4.9,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 49 Signature Burrito",
   "Expect about 42 Street Tacos (3)",
@@ -339,6 +362,18 @@
    10.3
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 43.6,
+   "tacos": 32.5,
+   "bowl": 24.2,
+   "nachos": 16.6,
+   "quesadilla": 14.9,
+   "chips-guac": 11.8,
+   "chips-queso": 9.5,
+   "salad": 6.5,
+   "side-rice": 3.3,
+   "side-beans": 3.2
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

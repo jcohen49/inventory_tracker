@@ -186,6 +186,29 @@
    "explanation": "WNBA Playoffs R1 G3: Valkyries vs Dallas Wings at Chase Center (0.9 mi away, starts 18:00): a pre-event lift in the three hours before the start, roughly +15%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "valkyries-2026-10-02",
+   "label": "WNBA Playoffs R1 G3: Valkyries vs Dallas Wings",
+   "items": 32,
+   "pct_of_stat": 13.8,
+   "revenue": 292.16,
+   "window": "16:00 to 18:00",
+   "peak_hour": "17:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.5,
+    11.2,
+    17.2,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 62 Signature Burrito",
   "Expect about 51 Street Tacos (3)",
@@ -347,6 +370,18 @@
    13.7
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 60.9,
+   "tacos": 45.4,
+   "bowl": 33.8,
+   "nachos": 23.1,
+   "quesadilla": 20.8,
+   "chips-guac": 16.4,
+   "chips-queso": 13.2,
+   "salad": 9.0,
+   "side-rice": 4.6,
+   "side-beans": 4.4
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

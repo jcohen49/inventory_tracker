@@ -186,6 +186,29 @@
    "explanation": "SF Fleet Week: Air Show (3.0 mi away, 12:00 to 16:00): mostly crowds up the waterfront, only a small spillover, roughly +10%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "fleet-2026-10-11",
+   "label": "SF Fleet Week: Air Show",
+   "items": 19,
+   "pct_of_stat": 10.0,
+   "revenue": 171.51,
+   "window": "12:00 to 16:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    0.0,
+    4.7,
+    4.7,
+    4.7,
+    4.7,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 53 Signature Burrito",
   "Expect about 43 Street Tacos (3)",
@@ -318,6 +341,18 @@
    11.4
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 49.3,
+   "tacos": 36.7,
+   "bowl": 27.4,
+   "nachos": 18.7,
+   "quesadilla": 16.9,
+   "chips-guac": 13.3,
+   "chips-queso": 10.7,
+   "salad": 7.3,
+   "side-rice": 3.7,
+   "side-beans": 3.6
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

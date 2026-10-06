@@ -197,6 +197,50 @@
    "explanation": "Lily Allen at Chase Center (0.9 mi away, starts 20:00): a pre-event lift in the three hours before the start, roughly +15%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "giants-2026-09-23",
+   "label": "Giants vs Minnesota Twins",
+   "items": 48,
+   "pct_of_stat": 33.3,
+   "revenue": 437.18,
+   "window": "11:00 to 17:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    14.7,
+    18.5,
+    -1.9,
+    -0.8,
+    7.2,
+    10.7,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "event_id": "lily-allen-2026-09-23",
+   "label": "Lily Allen",
+   "items": 19,
+   "pct_of_stat": 13.2,
+   "revenue": 173.02,
+   "window": "18:00 to 20:00",
+   "peak_hour": "19:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.1,
+    6.7,
+    10.3,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 47 Signature Burrito",
   "Expect about 45 Street Tacos (3)",
@@ -425,6 +469,18 @@
    9.2
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 38.3,
+   "tacos": 28.5,
+   "bowl": 21.3,
+   "nachos": 14.6,
+   "quesadilla": 13.1,
+   "chips-guac": 10.3,
+   "chips-queso": 8.3,
+   "salad": 5.7,
+   "side-rice": 2.9,
+   "side-beans": 2.8
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

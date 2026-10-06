@@ -186,6 +186,29 @@
    "explanation": "Moscone Center conference, day 1 (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +12%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "moscone-2026-10-27",
+   "label": "Moscone Center conference, day 1",
+   "items": 16,
+   "pct_of_stat": 12.0,
+   "revenue": 150.27,
+   "window": "11:00 to 19:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    2.1,
+    4.3,
+    4.3,
+    0.0,
+    0.0,
+    0.0,
+    2.9,
+    2.9,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 39 Signature Burrito",
   "Expect about 32 Street Tacos (3)",
@@ -349,6 +372,18 @@
    8.7
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 36.0,
+   "tacos": 26.9,
+   "bowl": 20.0,
+   "nachos": 13.7,
+   "quesadilla": 12.3,
+   "chips-guac": 9.7,
+   "chips-queso": 7.8,
+   "salad": 5.3,
+   "side-rice": 2.7,
+   "side-beans": 2.6
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

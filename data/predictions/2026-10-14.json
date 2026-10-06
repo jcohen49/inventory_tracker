@@ -197,6 +197,50 @@
    "explanation": "Third St Bridge maintenance: lane closure (12:00 to 16:00): fewer walk-ups while access is restricted, roughly -7% over that window."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "moscone-2026-10-14",
+   "label": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 2)",
+   "items": 22,
+   "pct_of_stat": 15.4,
+   "revenue": 204.73,
+   "window": "11:00 to 19:00",
+   "peak_hour": "13:00",
+   "hourly": [
+    3.0,
+    5.6,
+    5.6,
+    0.0,
+    0.0,
+    0.0,
+    4.1,
+    4.1,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "event_id": "thirdst-2026-10-14",
+   "label": "Third St Bridge maintenance: lane closure",
+   "items": -5,
+   "pct_of_stat": -3.5,
+   "revenue": -46.4,
+   "window": "12:00 to 14:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    0.0,
+    -2.8,
+    -1.4,
+    -0.4,
+    -0.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 41 Signature Burrito",
   "Expect about 35 Street Tacos (3)",
@@ -399,6 +443,18 @@
    9.2
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 38.3,
+   "tacos": 28.5,
+   "bowl": 21.3,
+   "nachos": 14.6,
+   "quesadilla": 13.1,
+   "chips-guac": 10.3,
+   "chips-queso": 8.3,
+   "salad": 5.7,
+   "side-rice": 2.9,
+   "side-beans": 2.8
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

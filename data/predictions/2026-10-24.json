@@ -186,6 +186,29 @@
    "explanation": "Warriors home game at Chase Center (0.9 mi away, starts 18:30): a pre-event lift in the three hours before the start, roughly +26%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "warriors-2026-10-24",
+   "label": "Warriors home game",
+   "items": 65,
+   "pct_of_stat": 26.0,
+   "revenue": 588.65,
+   "window": "16:00 to 19:00",
+   "peak_hour": "17:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.2,
+    14.3,
+    27.7,
+    20.4,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 78 Signature Burrito",
   "Expect about 68 Street Tacos (3)",
@@ -349,6 +372,18 @@
    14.6
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 65.4,
+   "tacos": 48.7,
+   "bowl": 36.3,
+   "nachos": 24.9,
+   "quesadilla": 22.4,
+   "chips-guac": 17.7,
+   "chips-queso": 14.2,
+   "salad": 9.7,
+   "side-rice": 5.0,
+   "side-beans": 4.7
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

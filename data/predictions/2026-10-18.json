@@ -210,6 +210,31 @@
    "explanation": "Concert at Oracle Park (headliner TBA), night 2 (0.1 mi away, starts 18:30): expect a rush from about 16:00, a lull while the crowd is inside, and a bump after the end. Roughly +75% on the day."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "oracle-2026-10-18",
+   "label": "Concert at Oracle Park (headliner TBA), night 2",
+   "items": 138,
+   "pct_of_stat": 73.8,
+   "revenue": 1253.5,
+   "window": "16:00 to 23:00",
+   "peak_hour": "22:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    15.2,
+    43.7,
+    27.5,
+    -2.8,
+    -1.3,
+    3.2,
+    52.9
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 79 Signature Burrito",
   "Expect about 73 Street Tacos (3)",
@@ -379,6 +404,18 @@
    5.6
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 49.3,
+   "tacos": 36.7,
+   "bowl": 27.4,
+   "nachos": 18.7,
+   "quesadilla": 16.9,
+   "chips-guac": 13.3,
+   "chips-queso": 10.7,
+   "salad": 7.3,
+   "side-rice": 3.7,
+   "side-beans": 3.6
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

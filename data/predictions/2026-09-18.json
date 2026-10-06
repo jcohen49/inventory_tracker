@@ -186,6 +186,29 @@
    "explanation": "Valkyries vs Portland Fire at Chase Center (0.9 mi away, starts 19:00): a pre-event lift in the three hours before the start, roughly +15%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "valkyries-2026-09-18",
+   "label": "Valkyries vs Portland Fire",
+   "items": 32,
+   "pct_of_stat": 14.0,
+   "revenue": 296.27,
+   "window": "17:00 to 19:00",
+   "peak_hour": "18:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.6,
+    11.4,
+    17.5,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 63 Signature Burrito",
   "Expect about 53 Street Tacos (3)",
@@ -335,6 +358,18 @@
    13.7
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 60.9,
+   "tacos": 45.4,
+   "bowl": 33.8,
+   "nachos": 23.1,
+   "quesadilla": 20.8,
+   "chips-guac": 16.4,
+   "chips-queso": 13.2,
+   "salad": 9.0,
+   "side-rice": 4.6,
+   "side-beans": 4.4
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

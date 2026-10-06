@@ -186,6 +186,29 @@
    "explanation": "Heavy rain forecast: people stay indoors, roughly -20% across the day."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "weather-rain-2026-10-20",
+   "label": "Heavy rain forecast",
+   "items": -27,
+   "pct_of_stat": -20.0,
+   "revenue": -252.52,
+   "window": "11:00 to 20:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    -3.1,
+    -6.3,
+    -2.7,
+    -1.2,
+    -1.3,
+    -1.4,
+    -2.5,
+    -4.9,
+    -2.7,
+    -1.3
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 29 Signature Burrito",
   "Expect about 21 Street Tacos (3)",
@@ -348,6 +371,18 @@
    8.7
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 36.0,
+   "tacos": 26.9,
+   "bowl": 20.0,
+   "nachos": 13.7,
+   "quesadilla": 12.3,
+   "chips-guac": 9.7,
+   "chips-queso": 7.8,
+   "salad": 5.3,
+   "side-rice": 2.7,
+   "side-beans": 2.6
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

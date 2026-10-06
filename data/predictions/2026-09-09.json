@@ -197,6 +197,50 @@
    "explanation": "Weezer with The Shins and Silversun Pickups at Chase Center (0.9 mi away, starts 19:00): a pre-event lift in the three hours before the start, roughly +15%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "giants-2026-09-09",
+   "label": "Giants vs St. Louis Cardinals",
+   "items": 56,
+   "pct_of_stat": 38.5,
+   "revenue": 506.11,
+   "window": "11:00 to 17:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    17.0,
+    21.5,
+    -2.2,
+    -0.9,
+    8.3,
+    12.4,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "event_id": "weezer-2026-09-09",
+   "label": "Weezer with The Shins and Silversun Pickups",
+   "items": 22,
+   "pct_of_stat": 15.2,
+   "revenue": 200.31,
+   "window": "17:00 to 19:00",
+   "peak_hour": "18:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.5,
+    7.8,
+    12.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 54 Signature Burrito",
   "Expect about 52 Street Tacos (3)",
@@ -384,6 +428,18 @@
    9.2
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 38.3,
+   "tacos": 28.5,
+   "bowl": 21.3,
+   "nachos": 14.6,
+   "quesadilla": 13.1,
+   "chips-guac": 10.3,
+   "chips-queso": 8.3,
+   "salad": 5.7,
+   "side-rice": 2.9,
+   "side-beans": 2.8
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

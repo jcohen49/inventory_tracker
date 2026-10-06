@@ -186,6 +186,29 @@
    "explanation": "Concert at Chase Center (headliner TBA) (0.9 mi away, starts 20:00): a pre-event lift in the three hours before the start, roughly +18%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "chase-2026-10-29",
+   "label": "Concert at Chase Center (headliner TBA)",
+   "items": 30,
+   "pct_of_stat": 18.0,
+   "revenue": 272.52,
+   "window": "18:00 to 20:00",
+   "peak_hour": "19:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.3,
+    10.5,
+    16.1,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 49 Signature Burrito",
   "Expect about 41 Street Tacos (3)",
@@ -349,6 +372,18 @@
    10.3
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 43.6,
+   "tacos": 32.5,
+   "bowl": 24.2,
+   "nachos": 16.6,
+   "quesadilla": 14.9,
+   "chips-guac": 11.8,
+   "chips-queso": 9.5,
+   "salad": 6.5,
+   "side-rice": 3.3,
+   "side-beans": 3.2
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

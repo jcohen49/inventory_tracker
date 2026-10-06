@@ -186,6 +186,29 @@
    "explanation": "Central Subway track work: King St lane closure (11:00 to 17:00): fewer walk-ups while access is restricted, roughly -8% over that window."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "muni-trackwork-2026-10-05",
+   "label": "Central Subway track work: King St lane closure",
+   "items": -6,
+   "pct_of_stat": -4.6,
+   "revenue": -54.95,
+   "window": "11:00 to 14:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    -1.2,
+    -2.4,
+    -1.0,
+    -0.4,
+    -0.5,
+    -0.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 32 Signature Burrito",
   "Expect about 24 Street Tacos (3)",
@@ -236,6 +259,18 @@
    8.3
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 33.8,
+   "tacos": 25.2,
+   "bowl": 18.7,
+   "nachos": 12.8,
+   "quesadilla": 11.6,
+   "chips-guac": 9.1,
+   "chips-queso": 7.3,
+   "salad": 5.0,
+   "side-rice": 2.6,
+   "side-beans": 2.4
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

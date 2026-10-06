@@ -210,6 +210,31 @@
    "explanation": "Giants vs San Diego Padres at Oracle Park (0.1 mi away, starts 19:15): expect a rush from about 16:45, a lull while the crowd is inside, and a bump after the end. Roughly +40% on the day."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "giants-2026-09-11",
+   "label": "Giants vs San Diego Padres",
+   "items": 128,
+   "pct_of_stat": 55.2,
+   "revenue": 1159.49,
+   "window": "17:00 to 23:00",
+   "peak_hour": "22:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    19.5,
+    44.5,
+    10.4,
+    -2.2,
+    8.2,
+    46.3
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 107 Signature Burrito",
   "Expect about 96 Street Tacos (3)",
@@ -385,6 +410,18 @@
    6.6
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 60.9,
+   "tacos": 45.4,
+   "bowl": 33.8,
+   "nachos": 23.1,
+   "quesadilla": 20.8,
+   "chips-guac": 16.4,
+   "chips-queso": 13.2,
+   "salad": 9.0,
+   "side-rice": 4.6,
+   "side-beans": 4.4
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

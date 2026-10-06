@@ -186,6 +186,29 @@
    "explanation": "Disney Worlds Collide Concert Tour at Chase Center (0.9 mi away, starts 19:00): a pre-event lift in the three hours before the start, roughly +15%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "disney-2026-10-03",
+   "label": "Disney Worlds Collide Concert Tour",
+   "items": 34,
+   "pct_of_stat": 13.6,
+   "revenue": 309.24,
+   "window": "17:00 to 19:00",
+   "peak_hour": "18:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.8,
+    11.9,
+    18.3,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 66 Signature Burrito",
   "Expect about 55 Street Tacos (3)",
@@ -347,6 +370,18 @@
    14.6
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 65.4,
+   "tacos": 48.7,
+   "bowl": 36.3,
+   "nachos": 24.9,
+   "quesadilla": 22.4,
+   "chips-guac": 17.7,
+   "chips-queso": 14.2,
+   "salad": 9.7,
+   "side-rice": 5.0,
+   "side-beans": 4.7
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

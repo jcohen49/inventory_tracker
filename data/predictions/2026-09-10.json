@@ -186,6 +186,29 @@
    "explanation": "Ferry Building Farmers Market (1.2 mi away): not expected to move sales."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "ferry-farmers-2026-09-10",
+   "label": "Ferry Building Farmers Market",
+   "items": 0,
+   "pct_of_stat": 0.0,
+   "revenue": 0.0,
+   "window": "",
+   "peak_hour": "",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 44 Signature Burrito",
   "Expect about 32 Street Tacos (3)",
@@ -309,6 +332,18 @@
    10.3
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 43.6,
+   "tacos": 32.5,
+   "bowl": 24.2,
+   "nachos": 16.6,
+   "quesadilla": 14.9,
+   "chips-guac": 11.8,
+   "chips-queso": 9.5,
+   "salad": 6.5,
+   "side-rice": 3.3,
+   "side-beans": 3.2
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

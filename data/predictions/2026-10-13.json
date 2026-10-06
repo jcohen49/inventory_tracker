@@ -186,6 +186,29 @@
    "explanation": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 1) (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +16%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "moscone-2026-10-13",
+   "label": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 1)",
+   "items": 22,
+   "pct_of_stat": 16.0,
+   "revenue": 199.97,
+   "window": "11:00 to 19:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    2.8,
+    5.7,
+    5.7,
+    0.0,
+    0.0,
+    0.0,
+    3.8,
+    3.8,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 40 Signature Burrito",
   "Expect about 34 Street Tacos (3)",
@@ -349,6 +372,18 @@
    8.7
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 36.0,
+   "tacos": 26.9,
+   "bowl": 20.0,
+   "nachos": 13.7,
+   "quesadilla": 12.3,
+   "chips-guac": 9.7,
+   "chips-queso": 7.8,
+   "salad": 5.3,
+   "side-rice": 2.7,
+   "side-beans": 2.6
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

@@ -186,6 +186,29 @@
    "explanation": "WNBA Semifinals G1: Valkyries vs Las Vegas Aces at Chase Center (0.9 mi away, starts 13:00): a pre-event lift in the three hours before the start, roughly +15%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "valkyries-2026-10-04",
+   "label": "WNBA Semifinals G1: Valkyries vs Las Vegas Aces",
+   "items": 27,
+   "pct_of_stat": 14.2,
+   "revenue": 242.48,
+   "window": "11:00 to 13:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    10.5,
+    16.1,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 51 Signature Burrito",
   "Expect about 43 Street Tacos (3)",
@@ -355,6 +378,18 @@
    11.4
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 49.3,
+   "tacos": 36.7,
+   "bowl": 27.4,
+   "nachos": 18.7,
+   "quesadilla": 16.9,
+   "chips-guac": 13.3,
+   "chips-queso": 10.7,
+   "salad": 7.3,
+   "side-rice": 3.7,
+   "side-beans": 3.6
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

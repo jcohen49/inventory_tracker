@@ -186,6 +186,29 @@
    "explanation": "Warriors home opener at Chase Center (0.9 mi away, starts 19:30): a pre-event lift in the three hours before the start, roughly +28%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "warriors-2026-10-22",
+   "label": "Warriors home opener",
+   "items": 46,
+   "pct_of_stat": 28.0,
+   "revenue": 422.11,
+   "window": "17:00 to 20:00",
+   "peak_hour": "18:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.6,
+    10.3,
+    19.9,
+    14.7,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 52 Signature Burrito",
   "Expect about 47 Street Tacos (3)",
@@ -349,6 +372,18 @@
    10.3
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 43.6,
+   "tacos": 32.5,
+   "bowl": 24.2,
+   "nachos": 16.6,
+   "quesadilla": 14.9,
+   "chips-guac": 11.8,
+   "chips-queso": 9.5,
+   "salad": 6.5,
+   "side-rice": 3.3,
+   "side-beans": 3.2
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

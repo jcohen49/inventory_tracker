@@ -208,6 +208,71 @@
    "explanation": "Rod Wave: Don't Look Down Tour at Chase Center (0.9 mi away, starts 20:00): a pre-event lift in the three hours before the start, roughly +12%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "gne-2026-10-07",
+   "label": "GNE 2026 (day 2)",
+   "items": 17,
+   "pct_of_stat": 12.0,
+   "revenue": 158.13,
+   "window": "11:00 to 19:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    2.3,
+    4.5,
+    4.5,
+    0.0,
+    0.0,
+    0.0,
+    3.1,
+    3.1,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "event_id": "valkyries-2026-10-07",
+   "label": "WNBA Semifinals G2: Golden State Valkyries vs. Las Vegas Aces",
+   "items": 23,
+   "pct_of_stat": 16.0,
+   "revenue": 210.84,
+   "window": "16:00 to 19:00",
+   "peak_hour": "17:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.8,
+    5.2,
+    10.0,
+    7.4,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "event_id": "rodwave-2026-10-07",
+   "label": "Rod Wave: Don't Look Down Tour",
+   "items": 17,
+   "pct_of_stat": 12.0,
+   "revenue": 158.13,
+   "window": "18:00 to 20:00",
+   "peak_hour": "19:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.9,
+    6.1,
+    9.4,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 49 Signature Burrito",
   "Expect about 46 Street Tacos (3)",
@@ -489,6 +554,18 @@
    9.2
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 38.3,
+   "tacos": 28.5,
+   "bowl": 21.3,
+   "nachos": 14.6,
+   "quesadilla": 13.1,
+   "chips-guac": 10.3,
+   "chips-queso": 8.3,
+   "salad": 5.7,
+   "side-rice": 2.9,
+   "side-beans": 2.8
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

@@ -333,6 +333,15 @@ body{margin:0}
 .ag-tvi .sc{font-size:11px;color:var(--color-neutral-600)}
 .ag-verdict{margin-top:var(--space-2);font-size:13.5px;padding:6px 10px;border-left:3px solid var(--color-accent)}
 .ag-verdict b{font-family:var(--font-heading);font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600);margin-right:6px}
+.ag-chg{margin-bottom:var(--space-2)}
+.ag-chg td.r,.ag-chg th.r{text-align:right;font-variant-numeric:tabular-nums}
+.ag-chg td.up{color:var(--color-accent-800);font-weight:600}
+.ag-chg td.dn{color:var(--color-neutral-700);font-weight:600}
+.ag-note{margin-top:var(--space-3);padding:var(--space-3) var(--space-4);background:var(--color-neutral-100);border-left:3px solid #4a2fd0;font-size:13.5px;line-height:1.65}
+.ag-note.draft{border-left-style:dashed;color:var(--color-neutral-700)}
+.ag-kv{display:grid;grid-template-columns:150px minmax(0,1fr);gap:1px;background:var(--color-divider);border:1px solid var(--color-divider);font-size:13px}
+.ag-kv .k{background:var(--color-bg);padding:6px 10px;color:var(--color-neutral-600);font-size:11px;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center}
+.ag-kv .v{background:var(--color-bg);padding:6px 10px;font-variant-numeric:tabular-nums;word-break:break-word}
 .ag-obj{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;margin-top:6px}
 .ag-obj code{font-size:11px;background:var(--color-neutral-100);padding:1px 5px}
 .ag-ill{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-neutral-600);border:1px dashed var(--color-divider);padding:1px 6px;margin-left:6px}
@@ -352,6 +361,28 @@ body{margin:0}
 .ag-dl:hover{background:var(--color-accent-100)}
 .ag-mm .row .ag-dl.dd{font-family:var(--font-heading);text-align:left;justify-self:start}
 .ag-cal .evd i.oth{background:transparent;box-shadow:inset 0 0 0 1px var(--color-accent-900)}
+.ag-loading{padding:var(--space-4)}
+.ag-load-h{display:flex;align-items:center;gap:var(--space-4);margin-bottom:var(--space-4)}
+.ag-spin{width:28px;height:28px;border:3px solid var(--color-accent-200);border-top-color:var(--color-accent-900);border-radius:50%;animation:agspin .8s linear infinite;flex:none}
+@keyframes agspin{to{transform:rotate(360deg)}}
+.ag-steps{display:flex;flex-direction:column;gap:2px}
+.ag-ls{display:grid;grid-template-columns:20px 22px minmax(0,1fr);gap:10px;align-items:center;padding:7px 0;font-size:14px;color:var(--color-neutral-500);border-bottom:1px solid color-mix(in srgb,var(--color-text) 6%,transparent);transition:color .2s}
+.ag-ls .st-i{font-family:var(--font-heading);font-weight:600;text-align:center}
+.ag-ls.done{color:var(--color-text)}
+.ag-ls.done .st-i{color:var(--color-accent-800)}
+.ag-ls.now{color:var(--color-text);font-weight:600}
+.ag-ls.now .st-i{animation:agpulse 1s ease-in-out infinite}
+@keyframes agpulse{50%{opacity:.25}}
+.ag-mk.ai{background:var(--color-accent-900);color:var(--color-bg)}
+.ag-bar{height:3px;background:var(--color-neutral-200);margin-top:var(--space-4)}
+.ag-bar i{display:block;height:3px;background:var(--color-accent-900);transition:width .3s ease}
+.ag-skel{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--color-divider);border:1px solid var(--color-divider)}
+.ag-skel.big{grid-template-columns:1fr}
+.ag-skel .b{height:64px;background:var(--color-bg);position:relative;overflow:hidden}
+.ag-skel.big .b{height:200px}
+.ag-skel .b::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--color-accent) 14%,transparent),transparent);animation:agshim 1.3s infinite}
+@keyframes agshim{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+@media (prefers-reduced-motion:reduce){.ag-spin,.ag-ls.now .st-i,.ag-skel .b::after{animation:none}}
 .ag-load{padding:var(--space-8);text-align:center;color:var(--color-neutral-600)}
 @media (max-width:1100px){.ag-wrap{grid-template-columns:1fr}.ag-side{position:static;order:-1}}
 @media (max-width:640px){.ag-stats{grid-template-columns:repeat(2,1fr)}}
@@ -574,7 +605,17 @@ body{margin:0}
 
 <sc-if value="{{ ag.ready }}" hint-placeholder-val="{{ true }}"><div class="ag-wrap">
 
-<div class="ag-notes">
+<sc-if value="{{ ag.busy }}" hint-placeholder-val="{{ false }}"><div class="ag-notes">
+<div class="ag-daytitle"><h2>{{ ag.loadDate }}</h2><span class="ag-tag live">Loading</span></div>
+<div class="panel blueprint ag-loading"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="ag-load-h"><div class="ag-spin"></div><div><h4 style="margin:0">Loading insights</h4><div class="growl">{{ ag.loadSub }}</div></div></div>
+<div class="ag-steps"><sc-for list="{{ ag.loadSteps }}" as="s" hint-placeholder-count="5"><div class="ag-ls {{ s.cls }}"><span class="st-i">{{ s.ico }}</span><span class="ag-mk {{ s.mk }}">{{ s.sym }}</span><span>{{ s.label }}</span></div></sc-for></div>
+<div class="ag-bar"><i style="{{ ag.loadBar }}"></i></div>
+</div>
+<div class="ag-skel"><div class="b"></div><div class="b"></div><div class="b"></div><div class="b"></div></div>
+<div class="ag-skel big"><div class="b"></div></div>
+</div></sc-if>
+<sc-if value="{{ ag.idle }}" hint-placeholder-val="{{ true }}"><div class="ag-notes">
 <div class="ag-daytitle"><h2>{{ ag.dateLabel }}</h2><span class="ag-tag {{ ag.tagCls }}">{{ ag.tagText }}</span></div>
 <div class="ag-stats">
 <sc-for list="{{ ag.stats }}" as="t" hint-placeholder-count="4"><div class="ag-stat"><div class="k">{{ t.k }}</div><div class="n">{{ t.n }}</div><div class="s">{{ t.s }}</div></div></sc-for>
@@ -666,6 +707,21 @@ body{margin:0}
 </div>
 
 <div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="ag-hd"><h4>Statistics change from external influences</h4><span class="ag-tag {{ ag.chgTagCls }}">{{ ag.chgTag }}</span></div>
+<div class="growl">{{ ag.chgLead }}</div>
+<div class="ag-sub">How the day's numbers moved</div>
+<table class="inv-t ag-chg"><thead><tr><th>Metric</th><th class="r">Statistical</th><th class="r">With influences</th><th class="r">Change</th><th class="r">Actual</th><th class="r">Actual vs statistical</th></tr></thead>
+<tbody><sc-for list="{{ ag.chgRows }}" as="r" hint-placeholder-count="8"><tr><td>{{ r.m }}</td><td class="r">{{ r.a }}</td><td class="r">{{ r.b }}</td><td class="r {{ r.cCls }}">{{ r.c }}</td><td class="r">{{ r.d }}</td><td class="r {{ r.eCls }}">{{ r.e }}</td></tr></sc-for></tbody></table>
+<div class="ag-sub">Change attributed to each influence</div>
+<sc-if value="{{ ag.noInf }}" hint-placeholder-val="{{ false }}"><div class="growl">No external influence with a modeled effect on this day, so the forecast equals the statistical prediction.</div></sc-if>
+<sc-if value="{{ ag.hasInf }}" hint-placeholder-val="{{ true }}"><table class="inv-t ag-chg"><thead><tr><th>Influence</th><th class="r">Items</th><th class="r">% of statistical</th><th class="r">Revenue</th><th class="r">Busiest window</th><th class="r">Peak hour</th></tr></thead>
+<tbody><sc-for list="{{ ag.infRows }}" as="r" hint-placeholder-count="2"><tr><td><span class="rowname" style="cursor:default">{{ r.name }}</span></td><td class="r {{ r.cls }}">{{ r.items }}</td><td class="r {{ r.cls }}">{{ r.pct }}</td><td class="r {{ r.cls }}">{{ r.rev }}</td><td class="r">{{ r.win }}</td><td class="r">{{ r.peak }}</td></tr></sc-for></tbody></table></sc-if>
+<div class="ag-sub">Product mix shift</div>
+<table class="inv-t ag-chg"><thead><tr><th>Menu item</th><th class="r">Statistical share</th><th class="r">With influences</th><th class="r">Change</th><th class="r">Actual share</th></tr></thead>
+<tbody><sc-for list="{{ ag.mixRows }}" as="r" hint-placeholder-count="10"><tr><td><span class="rowname" style="cursor:default">{{ r.name }}</span></td><td class="r">{{ r.a }}</td><td class="r">{{ r.b }}</td><td class="r {{ r.cCls }}">{{ r.c }}</td><td class="r">{{ r.d }}</td></tr></sc-for></tbody></table>
+</div>
+
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
 <div class="ag-hd"><h4>Reasoning</h4><span class="ag-tag {{ ag.insTagCls }}">{{ ag.insTag }}</span></div>
 <sc-if value="{{ ag.hasInsight }}" hint-placeholder-val="{{ true }}"><div>
 <div class="ag-trace"><sc-for list="{{ ag.trace }}" as="t" hint-placeholder-count="3"><span class="ag-step"><span class="ag-mk {{ t.mk }}">{{ t.sym }}</span><b>{{ t.n }}</b> {{ t.label }}</span></sc-for></div>
@@ -687,11 +743,20 @@ body{margin:0}
 </div>
 
 <div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+<div class="ag-hd"><h4><span class="ag-mk m0" style="margin-right:8px">M0</span>Saved to Mem0</h4><span class="ag-tag {{ ag.savedTagCls }}">{{ ag.savedTag }}</span></div>
+<div class="growl">{{ ag.savedLead }}</div>
+<div class="ag-note {{ ag.savedNoteCls }}">{{ ag.savedNote }}</div>
+<div class="ag-sub">What the note stores</div>
+<div class="ag-kv"><sc-for list="{{ ag.savedFields }}" as="f" hint-placeholder-count="8"><div class="k">{{ f.k }}</div><div class="v">{{ f.v }}</div></sc-for></div>
+<sc-if value="{{ ag.savedObj }}" hint-placeholder-val="{{ false }}"><div class="ag-obj"><a href="{{ ag.savedObjUrl }}" target="_blank" rel="noopener">Open Mem0 memory object</a><code>{{ ag.savedId }}</code></div></sc-if>
+</div>
+
+<div class="panel blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
 <div class="ag-hd"><h4>Agentic actions taken</h4><span class="ag-tag {{ ag.actTagCls }}">{{ ag.actTag }}</span></div>
 <sc-for list="{{ ag.actions }}" as="a" hint-placeholder-count="2"><div class="ag-act"><div class="ic2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg></div><div class="tx"><b>{{ a.title }}</b><div>{{ a.detail }}</div></div><span class="ag-tag {{ a.tagCls }}">{{ a.tag }}</span></div></sc-for>
 <sc-if value="{{ ag.actionsPending }}" hint-placeholder-val="{{ false }}"><div class="ag-pend"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><div>{{ ag.actionsPending }}</div></div></sc-if>
 </div>
-</div>
+</div></sc-if>
 
 <div class="ag-side">
 <div class="panel blueprint ag-cal"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
@@ -1316,7 +1381,27 @@ class Component extends DCLogic {
     sc.onerror=()=>this.setState({agFailed:true});
     document.head.appendChild(sc);
   }
-  agPick(iso){this.setState({agDate:iso, agMonth:iso.slice(0,7), agSrc:null, agHover:null}); try{window.scrollTo({top:0,behavior:'smooth'});}catch(e){}}
+  agSteps(mode){
+    if(mode==='today') return [{mk:'sql',sym:'SQL',label:'Querying the weekday sales baseline'},{mk:'tv',sym:'TV',label:'Searching Tavily for events near the truck today'},{mk:'ai',sym:'AI',label:'Reading today\'s orders up to now'}];
+    if(mode==='past') return [{mk:'sql',sym:'SQL',label:'Querying the weekday sales baseline'},{mk:'tv',sym:'TV',label:'Reading Tavily events and the calamity check'},{mk:'m0',sym:'M0',label:'Recalling similar past days from Mem0'},{mk:'ai',sym:'AI',label:'Correlating influences with how sales moved'},{mk:'m0',sym:'M0',label:'Loading the note saved to Mem0 at end of day'}];
+    return [{mk:'sql',sym:'SQL',label:'Querying the weekday sales baseline'},{mk:'tv',sym:'TV',label:'Searching Tavily for hotspot and other events'},{mk:'m0',sym:'M0',label:'Recalling similar past days from Mem0'},{mk:'ai',sym:'AI',label:'Reasoning about the expected effect on sales'}];
+  }
+  agPick(iso){
+    const D=window.AGENTIC_DATA;
+    if(!D||!D.days[iso]) return;
+    const S=this.state;
+    if(!S.agLoading&&iso===S.agDate) return;
+    clearTimeout(this._agT);
+    try{window.scrollTo({top:0,behavior:'smooth'});}catch(e){}
+    const n=this.agSteps(D.days[iso].status).length;
+    this.setState({agLoading:{iso,step:0}, agMonth:iso.slice(0,7), agSrc:null, agHover:null});
+    const tick=k=>{
+      if(k>=n){this.setState({agDate:iso, agLoading:null, agSrc:null, agHover:null});return;}
+      this.setState({agLoading:{iso,step:k}});
+      this._agT=setTimeout(()=>tick(k+1),340);
+    };
+    this._agT=setTimeout(()=>tick(1),340);
+  }
   agCite(id){
     this.setState(s=>({agSrc:s.agSrc===id?null:id}));
     setTimeout(()=>{const el=document.getElementById('ag-src-'+id); if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'center'});},60);
@@ -1489,12 +1574,47 @@ class Component extends DCLogic {
       else if(c.status==='today'){label='live';}
       else{cls='custom';label='~'+N(c.expected);}
       if(c.status==='today')cls+=' now';
-      if(iso===S.agDate)cls+=' sel';
+      if(iso===(S.agLoading?S.agLoading.iso:S.agDate))cls+=' sel';
       cells.push({cls,num:d,label,click:()=>this.agPick(iso),hasEv:c.events.length>0,evs:c.events.slice(0,3).map(e=>({cls:['Oracle Park','Chase Center','Moscone Center'].includes(e.venue)?'':'oth'}))});
     }
     const upcoming=[];
     Object.keys(D.days).sort().forEach(iso=>{const c=D.days[iso];if(c.status!=='future')return;c.events.forEach(e=>upcoming.push({date:short(iso),name:e.name,meta:e.venue+(e.miles?' · '+e.miles+' mi':'')+' · '+e.start,pick:()=>this.agPick(iso)}));});
 
+    // ---- statistics change from external influences
+    const PR=D.prices, sumH=(a,lo,hi)=>a.reduce((t,v,i)=>hours[i]>=lo&&hours[i]<hi&&v!==null?t+v:t,0);
+    const showAct=past;
+    const statTot=ST.by_item, fcTot={}, actTot={};
+    D.items.forEach(it=>{fcTot[it.id]=day.expItems[it.id].reduce((t,v)=>t+v,0);});
+    if(showAct)day.table.forEach(r=>{actTot[r.id]=r.qty;});
+    const revOf=m=>Object.keys(m).reduce((t,k)=>t+m[k]*PR[k],0);
+    const sumOf=m=>Object.keys(m).reduce((t,k)=>t+m[k],0);
+    const stI=sumOf(statTot), fcI=day.expected, acI=showAct?T.items:null;
+    const stR=revOf(statTot), fcR=future?T.revenue:revOf(fcTot), acR=showAct?T.revenue:null;
+    const pkOf=a=>{let b=-1,bi=0;a.forEach((v,i)=>{if(v!==null&&v>b){b=v;bi=i;}});return {h:h12(hours[bi]),v:Math.round(b),i:bi};};
+    const pS=pkOf(ST.hourly), pF=pkOf(day.expHourly), pA=showAct?pkOf(day.actHourly):null;
+    const diff=(x,y,f)=>{const d=y-x;return (d>=0?'+':'−')+f(Math.abs(d))+' ('+(d>=0?'+':'−')+Math.abs(Math.round(d/x*100))+'%)';};
+    const cls=(x,y)=>Math.abs(y-x)<0.5?'':(y>x?'up':'dn');
+    const num=(label,x,y,z,f)=>({m:label,a:f(x),b:f(y),c:diff(x,y,f),cCls:cls(x,y),d:z===null?'—':f(z),e:z===null?'—':diff(x,z,f),eCls:z===null?'':cls(x,z)});
+    const win=(label,lo,hi)=>num(label,sumH(ST.hourly,lo,hi),sumH(day.expHourly,lo,hi),showAct?sumH(day.actHourly,lo,hi):null,v=>N(v));
+    const chgRows=[
+      num('Items',stI,fcI,acI,N),
+      num('Orders (about 1.7 items each)',stI/1.67,fcI/1.67,showAct?T.orders:null,N),
+      num('Revenue',stR,fcR,acR,M),
+      {m:'Peak hour (items)',a:pS.h+' ('+pS.v+')',b:pF.h+' ('+pF.v+')',c:pS.i===pF.i?'same hour':'moves to '+pF.h,cCls:pS.i===pF.i?'':'up',d:showAct?pA.h+' ('+pA.v+')':'—',e:showAct?(pA.i===pS.i?'same hour':'moves to '+pA.h):'—',eCls:''},
+      win('Lunch, 11a to 2p',11,14), win('Afternoon, 2p to 5p',14,17), win('Dinner, 5p to 8p',17,20), win('Late, after 8p',20,24)];
+    const infRows=day.influence.map(r=>({name:r.label,items:(r.items>=0?'+':'−')+Math.abs(r.items),pct:(r.pct_of_stat>=0?'+':'−')+Math.abs(Math.round(r.pct_of_stat))+'%',rev:(r.revenue>=0?'+':'−')+M(Math.abs(r.revenue)),win:r.window||'—',peak:r.peak_hour||'—',cls:r.items>0?'up':r.items<0?'dn':''}));
+    const stS=sumOf(statTot), fcS=sumOf(fcTot), acS=showAct?sumOf(actTot):0;
+    const mixRows=D.items.map(it=>{const a=statTot[it.id]/stS*100, b=fcTot[it.id]/fcS*100, c=b-a;return {name:it.name,a:a.toFixed(1)+'%',b:b.toFixed(1)+'%',c:(c>=0?'+':'−')+Math.abs(c).toFixed(1)+' pts',cCls:Math.abs(c)<0.05?'':(c>0?'up':'dn'),d:showAct?((actTot[it.id]||0)/acS*100).toFixed(1)+'%':'—',_s:Math.abs(c)};}).sort((x,y)=>y._s-x._s);
+    const SV=day.saved, md=SV.metadata, savedOn=SV.status==='saved';
+    const pc=v=>(v>=0?'+':'−')+Math.abs(Math.round(v*10)/10)+'%';
+    const savedFields=[
+      ...(savedOn?[{k:'Mem0 memory ID',v:SV.memory_id},{k:'Saved',v:new Date(SV.saved_at).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})},{k:'Mem0 user',v:SV.user_id}]:[{k:'Status',v:'Draft, not saved yet'}]),
+      {k:'Type',v:md.type},{k:'Date',v:md.date+' ('+md.day_of_week+')'},{k:'External influences',v:md.influences.length?md.influences.join(' · '):'none found'},
+      {k:'Statistical prediction',v:md.statistical_items+' items'},{k:'Agent forecast',v:md.forecast_items+' items'},
+      ...(md.actual_items!==undefined?[{k:'Actual sold',v:md.actual_items+' items'},{k:'vs statistical',v:pc(md.vs_statistical_pct)},{k:'vs forecast',v:pc(md.vs_forecast_pct)}]:[{k:'Actual sold',v:'filled in at end of day'}])];
+    const LD=S.agLoading;
+    const ldSteps=LD?this.agSteps(D.days[LD.iso].status):[];
+    const loadSteps=ldSteps.map((x,i)=>({...x,cls:i<LD.step?'done':i===LD.step?'now':'',ico:i<LD.step?'✓':i===LD.step?'●':'○'}));
     const insTag=past?'Completed at end of day · 21:30':'Scheduled · end of day';
     return {
       ready:true, loading:false, failed:false,
@@ -1520,6 +1640,14 @@ class Component extends DCLogic {
       hasActual, actD:path2(day.actHourly||[]), actStyle:{fill:'none',stroke:'var(--color-accent-900)',strokeWidth:3.2,strokeLinejoin:'round',strokeLinecap:'round'},
       hoverRows2, hoverRects2, sqlCards,
       hotspots, others, noOther:others.length===0,
+      savedTag:savedOn?'Saved at end of day':'Scheduled · end of day', savedTagCls:savedOn?'done':(today?'warn':'fc'),
+      savedLead:savedOn?'At the end of the day the reasoning layer correlated the external influences with how sales moved and saved this note to Mem0, so later days can retrieve it.':'Draft. At the end of the day the reasoning layer will fill in the actual sales, correlate them with the influences and save this note to Mem0.',
+      savedNote:SV.note, savedNoteCls:savedOn?'':'draft', savedFields, savedObj:savedOn, savedObjUrl:SV.obj_url||'', savedId:SV.memory_id||'',
+      chgTag:future?'Forecast vs trend':today?'Full-day forecast vs trend':'Actual vs trend', chgTagCls:future?'fc':today?'live':'done',
+      chgLead:'How the day\'s statistics moved once the agent accounted for external influences, compared with the plain statistical prediction'+(showAct?' and with what the truck actually sold.':'.'),
+      chgRows, infRows, hasInf:infRows.length>0, noInf:infRows.length===0, mixRows,
+      busy:!!LD, idle:!LD, loadDate:LD?long(LD.iso):'', loadSteps, loadBar:{width:LD?Math.round((LD.step+0.5)/ldSteps.length*100)+'%':'0%'},
+      loadSub:LD?'The agent is gathering the sources for '+short(LD.iso)+'.':'',
       hasInsight:!!ins, insTag:ins?insTag:'Scheduled · end of day', insTagCls:ins?(past?'done':'fc'):'warn', segs, memCards, trace, wf, wfNote,
       insightNote:ins?ins.note:'', insightPending:ins?'':(day.pending||''),
       actions, actTag:today?'Scheduled · end of day':past?'Completed':'Scheduled · end of day', actTagCls:today?'warn':past?'done':'fc',

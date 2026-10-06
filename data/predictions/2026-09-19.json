@@ -186,6 +186,29 @@
    "explanation": "Valkyries vs Seattle Storm at Chase Center (0.9 mi away, starts 17:30): a pre-event lift in the three hours before the start, roughly +15%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "valkyries-2026-09-19",
+   "label": "Valkyries vs Seattle Storm",
+   "items": 34,
+   "pct_of_stat": 13.5,
+   "revenue": 306.39,
+   "window": "15:00 to 18:00",
+   "peak_hour": "16:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    1.1,
+    7.4,
+    14.3,
+    10.6,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 65 Signature Burrito",
   "Expect about 54 Street Tacos (3)",
@@ -337,6 +360,18 @@
    14.6
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 65.4,
+   "tacos": 48.7,
+   "bowl": 36.3,
+   "nachos": 24.9,
+   "quesadilla": 22.4,
+   "chips-guac": 17.7,
+   "chips-queso": 14.2,
+   "salad": 9.7,
+   "side-rice": 5.0,
+   "side-beans": 4.7
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

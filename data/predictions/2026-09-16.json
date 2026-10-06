@@ -221,6 +221,54 @@
    "explanation": "Dreamfest 2026 (Gwen Stefani, Usher) at Oracle Park (0.1 mi away, starts 18:00): expect a rush from about 15:30, a lull while the crowd is inside, and a bump after the end. Roughly +40% on the day."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "dreamforce-2026-09-16",
+   "label": "Dreamforce 2026 (day 2)",
+   "items": 28,
+   "pct_of_stat": 19.1,
+   "revenue": 252.47,
+   "window": "11:00 to 19:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    3.7,
+    7.4,
+    7.4,
+    0.0,
+    0.0,
+    0.0,
+    5.0,
+    4.3,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "event_id": "dreamfest-2026-09-16",
+   "label": "Dreamfest 2026 (Gwen Stefani, Usher)",
+   "items": 64,
+   "pct_of_stat": 44.0,
+   "revenue": 580.06,
+   "window": "16:00 to 23:00",
+   "peak_hour": "17:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.9,
+    14.1,
+    27.8,
+    -5.3,
+    -2.5,
+    -1.2,
+    2.9,
+    26.4
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 63 Signature Burrito",
   "Expect about 59 Street Tacos (3)",
@@ -435,6 +483,18 @@
    4.7
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 38.3,
+   "tacos": 28.5,
+   "bowl": 21.3,
+   "nachos": 14.6,
+   "quesadilla": 13.1,
+   "chips-guac": 10.3,
+   "chips-queso": 8.3,
+   "salad": 5.7,
+   "side-rice": 2.9,
+   "side-beans": 2.8
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",

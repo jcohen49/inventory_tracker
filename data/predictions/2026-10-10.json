@@ -197,6 +197,50 @@
    "explanation": "Golden State Warriors vs. Sacramento Kings (preseason) at Chase Center (0.9 mi away, starts 17:30): a pre-event lift in the three hours before the start, roughly +17%."
   }
  ],
+ "influence_stats": [
+  {
+   "event_id": "fleet-2026-10-10",
+   "label": "SF Fleet Week: Air Show",
+   "items": 25,
+   "pct_of_stat": 10.0,
+   "revenue": 226.29,
+   "window": "12:00 to 16:00",
+   "peak_hour": "12:00",
+   "hourly": [
+    0.0,
+    6.2,
+    6.2,
+    6.2,
+    6.2,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "event_id": "warriors-2026-10-10",
+   "label": "Golden State Warriors vs. Sacramento Kings (preseason)",
+   "items": 42,
+   "pct_of_stat": 17.0,
+   "revenue": 384.69,
+   "window": "15:00 to 18:00",
+   "peak_hour": "16:00",
+   "hourly": [
+    0.0,
+    0.0,
+    0.0,
+    1.4,
+    9.4,
+    18.1,
+    13.3,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ ],
  "prep_notes": [
   "Expect about 79 Signature Burrito",
   "Expect about 68 Street Tacos (3)",
@@ -388,6 +432,18 @@
    14.6
   ],
   "band": "+/-10% plus 1.5 items (about one standard deviation)",
+  "by_item": {
+   "burrito": 65.4,
+   "tacos": 48.7,
+   "bowl": 36.3,
+   "nachos": 24.9,
+   "quesadilla": 22.4,
+   "chips-guac": 17.7,
+   "chips-queso": 14.2,
+   "salad": 9.7,
+   "side-rice": 5.0,
+   "side-beans": 4.7
+  },
   "sql": {
    "type": "sql",
    "database": "sales_history",
