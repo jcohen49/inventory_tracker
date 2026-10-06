@@ -31,10 +31,10 @@ NAMES = {'burrito': 'Signature Burrito', 'tacos': 'Street Tacos (3)', 'bowl': 'B
          'side-rice': 'Side of Rice', 'side-beans': 'Side of Beans'}
 
 # ---------------------------------------------------------------- placeholder events
-def E(eid, name, cat, venue, dist, d, start, end, cap, status, strength, model, note, confirmed=False):
+def E(eid, name, cat, venue, dist, d, start, end, cap, status, strength, model, note, confirmed=False, src=None):
     return {'event_id': eid, 'name': name, 'category': cat, 'venue': venue, 'distance_from_oracle_park_miles': dist,
             'date': d, 'start_time': start, 'estimated_end_time': end, 'start_time_confirmed': confirmed,
-            'venue_capacity': cap, 'status': status, 'source': 'placeholder', 'placeholder': True,
+            'venue_capacity': cap, 'status': status, 'source': src or 'placeholder', 'placeholder': src is None,
             'model': model, 'expected_effect_pct_of_baseline': round(strength * 100), 'note': note}
 
 NEW_EVENTS = [
@@ -45,18 +45,21 @@ NEW_EVENTS = [
     # --- today
     E('muni-trackwork-2026-10-05', 'Central Subway track work: King St lane closure', 'Road closure', 'King St & 3rd St', 0.2, '2026-10-05', '11:00', '17:00', 0, 'in progress', -0.08, 'closure', 'Lane closure along the truck\'s block through mid-afternoon.', True),
     # --- future
-    E('warriors-2026-10-06', 'Golden State Warriors vs. Los Angeles Lakers (preseason)', 'NBA preseason game', 'Chase Center', 0.9, '2026-10-06', '19:00', '21:15', 18064, 'scheduled', 0.20, 'chase', 'Preseason home game; the Lakers visit is the marquee date.', True),
-    E('valkyries-2026-10-07', 'Golden State Valkyries vs. Las Vegas Aces (WNBA playoffs)', 'WNBA playoff game', 'Chase Center', 0.9, '2026-10-07', '18:30', '20:40', 18064, 'scheduled', 0.16, 'chase', 'Playoff home game.', True),
-    E('rodwave-2026-10-07', 'Rod Wave', 'Concert', 'Oakland Arena', 9.1, '2026-10-07', '20:00', '22:30', 19500, 'scheduled', 0.01, 'minor', 'Venue is a placeholder: across the bay, too far for walk-up traffic to reach the truck.', True),
-    E('warriors-2026-10-10', 'Golden State Warriors vs. Sacramento Kings (preseason)', 'NBA preseason game', 'Chase Center', 0.9, '2026-10-10', '17:30', '19:45', 18064, 'scheduled', 0.17, 'chase', 'Early Saturday tip-off.', True),
-    E('fleet-2026-10-08', 'SF Fleet Week: Blue Angels practice', 'Festival', 'Marina / Embarcadero', 3.0, '2026-10-08', '12:00', '15:00', 0, 'scheduled', 0.05, 'festival', 'Bay-front crowds, mostly further up the waterfront.'),
-    E('fleet-2026-10-10', 'SF Fleet Week: Air Show', 'Festival', 'Marina / Embarcadero', 3.0, '2026-10-10', '12:00', '16:00', 0, 'scheduled', 0.10, 'festival', 'Peak air-show Saturday.'),
-    E('fleet-2026-10-11', 'SF Fleet Week: Air Show', 'Festival', 'Marina / Embarcadero', 3.0, '2026-10-11', '12:00', '16:00', 0, 'scheduled', 0.10, 'festival', 'Peak air-show Sunday.'),
+    E('warriors-2026-10-06', 'Golden State Warriors vs. Los Angeles Lakers (preseason)', 'NBA preseason game', 'Chase Center', 0.9, '2026-10-06', '19:00', '21:15', 18064, 'scheduled', 0.20, 'chase', 'Tuesday, 7:00 PM PT. Confirmed by Tavily (nba.com, nightout.com).', True, 'https://www.nba.com/game/lal-vs-gsw-0012600010'),
+    E('gne-2026-10-06', 'GNE 2026 (day 1)', 'Conference', 'Moscone Center', 0.9, '2026-10-06', '09:00', '17:00', 15000, 'scheduled', 0.12, 'conference', 'Listed on the Moscone Center calendar, Oct 6 to 8, 9am to 5pm.', True, 'https://yerbabuena.org/go/moscone-center'),
+    E('gne-2026-10-07', 'GNE 2026 (day 2)', 'Conference', 'Moscone Center', 0.9, '2026-10-07', '09:00', '17:00', 15000, 'scheduled', 0.12, 'conference', 'Listed on the Moscone Center calendar, Oct 6 to 8, 9am to 5pm.', True, 'https://yerbabuena.org/go/moscone-center'),
+    E('gne-2026-10-08', 'GNE 2026 (day 3)', 'Conference', 'Moscone Center', 0.9, '2026-10-08', '09:00', '17:00', 15000, 'scheduled', 0.12, 'conference', 'Listed on the Moscone Center calendar, Oct 6 to 8, 9am to 5pm.', True, 'https://yerbabuena.org/go/moscone-center'),
+    E('valkyries-2026-10-07', 'WNBA Semifinals G2: Golden State Valkyries vs. Las Vegas Aces', 'WNBA playoff game', 'Chase Center', 0.9, '2026-10-07', '18:30', '20:40', 18064, 'scheduled', 0.16, 'chase', 'Wednesday. wnba.com lists 9:30 PM ET, which is 6:30 PM PT.', True, 'https://www.wnba.com/game/lva-vs-gsv-1042600212'),
+    E('rodwave-2026-10-07', 'Rod Wave: Don\'t Look Down Tour', 'Concert', 'Chase Center', 0.9, '2026-10-07', '20:00', '22:30', 18064, 'scheduled', 0.12, 'chase', 'Tavily lists Chase Center on Oct 7 (TicketNews) but Ticketmaster and Bandsintown show Chase Center on Oct 9, and the Valkyries game is also at Chase Center on Oct 7. The two cannot share the arena; the date is unresolved.', True, 'https://www.ticketnews.com/2026/06/rod-wave-tickets-on-sale-in-san-francisco'),
+    E('warriors-2026-10-10', 'Golden State Warriors vs. Sacramento Kings (preseason)', 'NBA preseason game', 'Chase Center', 0.9, '2026-10-10', '17:30', '19:45', 18064, 'scheduled', 0.17, 'chase', 'Saturday, 5:30 PM PT. Confirmed by Tavily (axs.com, nba.com, stubhub.com).', True, 'https://www.axs.com/events/1536580/nba-preseason-sacramento-kings-at-golden-state-warriors-tickets'),
+    E('fleet-2026-10-08', 'SF Fleet Week: Blue Angels practice', 'Festival', 'Marina / Embarcadero', 3.0, '2026-10-08', '12:00', '15:00', 0, 'scheduled', 0.05, 'festival', 'SF Fleet Week (Oct 4 to 12) is listed by Funcheap; show times are not confirmed.', False, 'https://sf.funcheap.com/city-guide/october-street-fairs-festivals'),
+    E('fleet-2026-10-10', 'SF Fleet Week: Air Show', 'Festival', 'Marina / Embarcadero', 3.0, '2026-10-10', '12:00', '16:00', 0, 'scheduled', 0.10, 'festival', 'SF Fleet Week air show weekend; times are not confirmed.', False, 'https://sf.funcheap.com/city-guide/october-street-fairs-festivals'),
+    E('fleet-2026-10-11', 'SF Fleet Week: Air Show', 'Festival', 'Marina / Embarcadero', 3.0, '2026-10-11', '12:00', '16:00', 0, 'scheduled', 0.10, 'festival', 'SF Fleet Week air show weekend; times are not confirmed.', False, 'https://sf.funcheap.com/city-guide/october-street-fairs-festivals'),
     E('chase-2026-10-12', 'Concert at Chase Center (headliner TBA)', 'Concert', 'Chase Center', 0.9, '2026-10-12', '20:00', '22:30', 18000, 'scheduled', 0.18, 'chase', 'Placeholder concert; Indigenous Peoples\' Day holiday.'),
-    E('moscone-2026-10-13', 'Moscone Center conference, day 1', 'Conference', 'Moscone Center', 0.9, '2026-10-13', '09:00', '18:00', 20000, 'scheduled', 0.14, 'conference', 'Placeholder conference; lunch-heavy lift.'),
-    E('moscone-2026-10-14', 'Moscone Center conference, day 2', 'Conference', 'Moscone Center', 0.9, '2026-10-14', '09:00', '18:00', 20000, 'scheduled', 0.14, 'conference', 'Placeholder conference; lunch-heavy lift.'),
+    E('moscone-2026-10-13', 'SEMICON West 2026 and TechCrunch Disrupt 2026 (day 1)', 'Conference', 'Moscone Center', 0.9, '2026-10-13', '09:00', '17:00', 20000, 'scheduled', 0.16, 'conference', 'Listed on the Moscone Center calendar, Oct 13 to 15, 9am to 5pm. One calendar shows TechCrunch Disrupt Oct 12 to 14.', True, 'https://www.moscone.com'),
+    E('moscone-2026-10-14', 'SEMICON West 2026 and TechCrunch Disrupt 2026 (day 2)', 'Conference', 'Moscone Center', 0.9, '2026-10-14', '09:00', '17:00', 20000, 'scheduled', 0.16, 'conference', 'Listed on the Moscone Center calendar, Oct 13 to 15, 9am to 5pm. One calendar shows TechCrunch Disrupt Oct 12 to 14.', True, 'https://www.moscone.com'),
     E('thirdst-2026-10-14', 'Third St Bridge maintenance: lane closure', 'Road closure', 'Third St Bridge', 0.3, '2026-10-14', '12:00', '16:00', 0, 'scheduled', -0.07, 'closure', 'Bridge lane closure cuts afternoon foot and vehicle traffic.'),
-    E('moscone-2026-10-15', 'Moscone Center conference, day 3', 'Conference', 'Moscone Center', 0.9, '2026-10-15', '09:00', '16:00', 20000, 'scheduled', 0.12, 'conference', 'Placeholder conference; final day ends early.'),
+    E('moscone-2026-10-15', 'SEMICON West 2026 and TechCrunch Disrupt 2026 (day 3)', 'Conference', 'Moscone Center', 0.9, '2026-10-15', '09:00', '17:00', 20000, 'scheduled', 0.16, 'conference', 'Listed on the Moscone Center calendar, Oct 13 to 15, 9am to 5pm. One calendar shows TechCrunch Disrupt Oct 12 to 14.', True, 'https://www.moscone.com'),
     E('oracle-2026-10-17', 'Concert at Oracle Park (headliner TBA)', 'Concert', 'Oracle Park', 0.1, '2026-10-17', '19:00', '22:30', 41000, 'scheduled', 0.85, 'oracle', 'Placeholder concert; truck would stay open to 23:00.'),
     E('oracle-2026-10-18', 'Concert at Oracle Park (headliner TBA), night 2', 'Concert', 'Oracle Park', 0.1, '2026-10-18', '18:30', '22:00', 41000, 'scheduled', 0.75, 'oracle', 'Placeholder concert; truck would stay open to 23:00.'),
     E('weather-rain-2026-10-20', 'Heavy rain forecast', 'Weather', 'San Francisco', 0.0, '2026-10-20', '06:00', '23:00', 0, 'scheduled', -0.20, 'weather', 'Placeholder forecast; steady rain keeps people indoors.'),
@@ -367,109 +370,6 @@ def external_block(evs, sources, extra):
     other = [item(e) for e in evs if e['venue'] not in dict(HOTSPOTS)] + list(extra)
     return {'hotspots': hot, 'other': other}
 
-def tav(query, title, url, snippet, event_id=None):
-    return {'type': 'tavily', 'event_id': event_id, 'query': query, 'title': title, 'url': url,
-            'domain': url.split('/')[2].replace('www.', ''), 'snippet': snippet, 'verified': False, 'placeholder': True}
-
-def mem(c, query, memory, linked, rel):
-    out = []
-    for iso, label in linked:
-        t = c['truth'][iso]
-        out.append({'date': iso, 'event': label, 'category': '', 'actual_items': t['actual_items'], 'expected_items': round(t['expected_items']),
-                    'baseline_items': round(t['baseline_expected_items']),
-                    'vs_baseline_pct': round((t['actual_items'] / t['baseline_expected_items'] - 1) * 100, 1), 'revenue': t['actual_revenue']})
-    avg = round(sum(x['vs_baseline_pct'] for x in out) / len(out), 1) if out else None
-    return {'type': 'mem0', 'memory_id': 'mem_' + hashlib.sha1((query + c['d']).encode()).hexdigest()[:10], 'query': query,
-            'memory': memory, 'relevance': rel, 'avg_vs_baseline_pct': avg, 'linked_days': out}
-
-def num(tag):
-    return int(tag.strip('[]'))
-
-def _weather(c, query, snippet):
-    tag = c['add'](tav(query, 'San Francisco forecast', 'https://www.weather.gov/mtr/', snippet))
-    return tag, {'name': 'Weather: ' + snippet.split('.')[0], 'category': 'Weather', 'venue': 'San Francisco', 'miles': 0.0, 'start': '08:00', 'end': '22:00',
-                 'status': 'scheduled', 'placeholder': True, 'effect_pct': 0, 'direction': 'flat', 'event_id': None, 'source_id': num(tag),
-                 'tavily': c['tav_last'](), 'note': 'No weather effect expected.'}
-
-def day_oct6(c):
-    add, sq, adj = c['add'], c['sq'], c['adj']
-    ev = c['evs'][0]; lift = adj['forecast'] - adj['stat']
-    tv1 = add(tavily_for(ev))
-    tv2 = add(tav('Warriors Lakers preseason October 6 2026 attendance', 'Warriors 2026 preseason home schedule', 'https://www.nba.com/warriors/schedule',
-                  'Lakers visit is the marquee game of the Warriors home preseason slate; tip-off 7:00 PM.', ev['event_id']))
-    m1 = add(mem(c, 'past sales near Chase Center on basketball nights',
-                 f"Two Valkyries weeknight games at Chase Center sold {c['truth']['2026-09-18']['actual_items']} items on {dl('2026-09-18')} and "
-                 f"{c['truth']['2026-10-02']['actual_items']} on {dl('2026-10-02')}. Extra sales came 17:00 to 18:00, about 90 minutes before tip-off, and faded once the game began.",
-                 [('2026-09-18', 'Valkyries vs Portland Fire (Fri 19:00)'), ('2026-10-02', 'WNBA Playoffs R1 G3: Valkyries vs Dallas Wings (Fri 18:00)'), ('2026-09-19', 'Valkyries vs Seattle Storm (Sat 17:30)')], .94))
-    m2 = add(mem(c, 'Chase Center concerts on weeknights vs the Giants calendar',
-                 f"Weeknight Chase Center concerts looked big ({dl('2026-09-09')} +44%, {dl('2026-09-23')} +55%) but the surge came at 12:00, "
-                 "which is the Giants day game, not the concert. The evening lift behind both was only +5 to +11 items an hour.",
-                 [('2026-09-09', 'Weezer, The Shins, Silversun Pickups (Wed 19:00)'), ('2026-09-23', 'Lily Allen (Wed 20:00)')], .81))
-    wx, wi = _weather(c, 'San Francisco weather forecast October 6 2026', 'Clear and 66F, light wind. Dry all day.')
-    parts = [
-        f"Statistical prediction for a Tuesday is {adj['stat']} items {sq}. The agent forecasts {adj['forecast']} ({(adj['forecast'] / adj['stat'] - 1) * 100:+.0f}%), "
-        f"a lift of about {lift} items from one hotspot event.",
-        f"Tavily confirms the Warriors host the Lakers at Chase Center, 19:00, 0.9 mi from the truck {tv1}, and lists it as the marquee game of the home preseason {tv2}.",
-        f"Mem0 recalls the closest past nights at the same arena, the Valkyries on {dl('2026-09-18')} and {dl('2026-10-02')}: only +14% and +11% over trend, "
-        f"with the extra sales landing 17:00 to 18:00 {m1}.",
-        f"Why the agent goes above those Valkyries nights: a Warriors game seats up to 18,064 and the Lakers draw a fuller house, so it scales the lift to +{(adj['forecast'] / adj['stat'] - 1) * 100:.0f}%. "
-        f"Why not higher: preseason, a Tuesday, and a 19:00 tip-off means most fans reach Chase Center between 17:00 and 18:30. "
-        f"It also discounts the Wednesday concert surges on {dl('2026-09-09')} and {dl('2026-09-23')}, which were really Giants day games {m2}.",
-        f"Nothing else is in play: dry weather and no closures {wx}. Expect the peak around 18:00 rather than the usual lunch rush."]
-    return parts, [wi]
-
-def day_oct7(c):
-    add, sq, adj = c['add'], c['sq'], c['adj']
-    ev = c['evs'][0]; rw = c['evs'][1] if len(c['evs']) > 1 else None
-    lift = adj['forecast'] - adj['stat']
-    tv1 = add(tavily_for(ev))
-    tv2 = add(tavily_for(rw)) if rw else ''
-    t = c['truth']
-    m1 = add(mem(c, 'past sales near Chase Center on Valkyries playoff games',
-                 f"Valkyries playoff nights moved the truck {dl('2026-10-02')} +11% and {dl('2026-10-04')} +17%. The +87% on {dl('2026-09-27')} was the Giants-Dodgers day game at 12:05, so it is discounted.",
-                 [('2026-10-02', 'WNBA Playoffs R1 G3: Valkyries vs Dallas Wings (Fri 18:00)'), ('2026-10-04', 'WNBA Semifinals G1: Valkyries vs Las Vegas Aces (Sun 13:00)'), ('2026-09-27', 'WNBA Playoffs R1 G1 (Sun 18:00), Giants day game same day')], .91))
-    m2 = add(mem(c, 'does a concert outside the Oracle Park / Chase Center area move sales',
-                 f"The one Chase Center concert on a weekend, {dl('2026-10-03')}, came in -11% against trend. No past event 9 miles away has moved the truck.",
-                 [('2026-10-03', 'Disney Worlds Collide Concert Tour (Sat 19:00)')], .66))
-    wx, wi = _weather(c, 'San Francisco weather forecast October 7 2026', 'Partly cloudy and 63F. Dry evening.')
-    parts = [
-        f"Statistical prediction for a Wednesday is {adj['stat']} items {sq}. The agent forecasts {adj['forecast']} ({(adj['forecast'] / adj['stat'] - 1) * 100:+.0f}%), a lift of about {lift} items, all from the Valkyries game.",
-        f"Tavily shows two events tonight: Valkyries vs Aces at Chase Center, 18:30, 0.9 mi away {tv1}, and Rod Wave at 20:00 {tv2}. Rod Wave's listing is at Oakland Arena, 9.1 mi away.",
-        f"Mem0 recalls the Valkyries' recent playoff nights: {dl('2026-10-02')} +11% and the semifinal opener {dl('2026-10-04')} +17% {m1}. "
-        f"The agent treats +87% on {dl('2026-09-27')} as a Giants day-game effect, not a Valkyries one.",
-        f"Why a lift near +{(adj['forecast'] / adj['stat'] - 1) * 100:.0f}%: a playoff semifinal crowd arrives early, so sales build from about 15:30 and peak 17:30 to 18:30. "
-        f"Why Rod Wave adds almost nothing: it is across the bay and the two events do not share a crowd, and a past concert outside the ballpark area gave no lift {m2}. "
-        f"It does not expect the two events to cannibalise each other.",
-        f"Dry, mild evening {wx}, so no weather adjustment."]
-    return parts, [wi]
-
-def day_oct10(c):
-    add, sq, adj = c['add'], c['sq'], c['adj']
-    ev = c['evs'][0]
-    fleet = [e for e in c['evs'] if 'Air Show' in e['name']]
-    ev = [e for e in c['evs'] if 'Warriors' in e['name']][0]
-    tv1 = add(tavily_for(ev))
-    tv2 = add(tavily_for(fleet[0])) if fleet else ''
-    lift = adj['forecast'] - adj['stat']
-    m1 = add(mem(c, 'past sales near Chase Center on early Saturday evening games',
-                 f"The Valkyries' Saturday 17:30 game on {dl('2026-09-19')} sold {c['truth']['2026-09-19']['actual_items']} items, +17% over trend, with extra sales from 13:00 to 18:00 instead of a single spike. "
-                 f"{dl('2026-10-03')}, a Saturday 19:00 concert, came in -11%.",
-                 [('2026-09-19', 'Valkyries vs Seattle Storm (Sat 17:30)'), ('2026-10-03', 'Disney Worlds Collide Concert Tour (Sat 19:00)')], .9))
-    m2 = add(mem(c, 'Fleet Week Blue Angels air show crowds near the truck', 'No earlier Fleet Week day is in memory. The agent assumes a weak spillover, about +10% on the day, because the show is 3 miles up the waterfront.', [], .42))
-    wx, wi = _weather(c, 'San Francisco weather forecast October 10 2026', 'Sunny and 71F. Good air-show weather.')
-    parts = [
-        f"Statistical prediction for a Saturday is {adj['stat']} items {sq}. The agent forecasts {adj['forecast']} ({(adj['forecast'] / adj['stat'] - 1) * 100:+.0f}%), "
-        f"a lift of about {lift} items from two events.",
-        f"Tavily lists the Warriors vs Kings preseason game at Chase Center, tip-off 17:30 {tv1}, and the Fleet Week Air Show, 12:00 to 16:00 {tv2}.",
-        f"Mem0's best match is the Valkyries' Saturday 17:30 game on {dl('2026-09-19')}, the same tip-off time: +17%, with sales rising from early afternoon {m1}. "
-        f"There is no earlier Fleet Week to compare, so the air show gets a small +10% allowance {m2}.",
-        f"Why this matters for the day's shape: a 17:30 tip-off pulls the pre-game rush to about 14:30 to 17:30, where it overlaps the tail of the Air Show. "
-        f"The usual 14:00 to 16:00 lull largely disappears: those hours run more than double the Saturday trend. The agent leans on Saturday's high base ({adj['stat']} items), so the lift is a smaller share than on a weekday.",
-        f"Sunny and warm {wx}, which helps both the air show and foot traffic."]
-    return parts, [wi]
-
-CUSTOM_DAYS = {'2026-10-06': day_oct6, '2026-10-07': day_oct7, '2026-10-10': day_oct10}
-
 def build_insight(d, dow, status, evs, base, total, doc_t, truth, events, weather_days, item_tot, hourly_peak, adj):
     sources = []
     def add(src):
@@ -478,20 +378,15 @@ def build_insight(d, dow, status, evs, base, total, doc_t, truth, events, weathe
     extra = []
     pct = (total / base - 1) * 100
     parts = []
-    if d in CUSTOM_DAYS:
-        parts, extra = CUSTOM_DAYS[d]({'add': add, 'sq': sq, 'd': d, 'dow': dow, 'base': base, 'total': total, 'evs': evs, 'truth': truth, 'adj': adj,
-                                       'tav_last': lambda: {k: v for k, v in sources[-1].items() if k != 'id'}})
-    elif status == 'past':
+    if status == 'past':
         parts.append(f"Sold {doc_t['actual_items']} items vs {round(total)} expected ({(doc_t['actual_items'] / total - 1) * 100:+.0f}%). "
                      f"A typical {dow} runs about {round(base)} items {sq}.")
     else:
         parts.append(f"Expected about {round(total)} items ({pct:+.0f}% vs a typical {dow} of {round(base)} {sq}), peaking around {hourly_peak}.")
-    if d in CUSTOM_DAYS:
-        pass
-    elif not evs:
+    if not evs:
         m0 = normal_day_mem0(d, dow, truth)
         parts.append(f"No events within a mile, so this follows the plain weekday trend. {m0['memory']} {add(m0)}")
-    for ev in ([] if d in CUSTOM_DAYS else evs):
+    for ev in evs:
         tv = add(tavily_for(ev))
         found = analogs(ev, d, events, truth, weather_days)
         mm = add(mem0_for(ev, d, found))
@@ -502,7 +397,7 @@ def build_insight(d, dow, status, evs, base, total, doc_t, truth, events, weathe
             parts.append(f"Memory recall of similar days: {hist} {mm}.")
         else:
             parts.append(f"Memory has no close analogue, so the weekday baseline carries this one {mm}.")
-    if status == 'past' and d not in CUSTOM_DAYS:
+    if status == 'past':
         lab = doc_t['label']
         wx = {'event_lift_muted': ('2026-09-22', 'cold, foggy, windy evening'), 'no_event_slow_day': ('2026-09-30', 'drizzle most of the day')}
         if lab in wx:
@@ -631,7 +526,7 @@ def main():
             'expected_vs_baseline_pct': lift_pct,
             'expected_orders': round(total / 1.67), 'expected_revenue': round(sum(item_tot[i] * p for i, p in PRICE.items()), 2),
             'range_items': [round(total * .88), round(total * 1.12)],
-            'confidence': 'high' if status == 'past' else ('medium' if any(e['start_time_confirmed'] for e in evs) or not evs else 'low'),
+            'confidence': 'high' if status == 'past' else ('low' if len([e for e in evs if e['venue'] == 'Chase Center']) > 1 or not any(e['start_time_confirmed'] for e in evs) and evs else 'medium'),
             'peak_hour': f'{peak_h:02d}:00',
             'hours': [f'{h:02d}:00' for h in hours],
             'hourly_expected': [round(exp[h], 1) for h in hours],

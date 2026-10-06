@@ -6,6 +6,7 @@ Run after generate_orders_predictions.py:   python3 data/build_agentic_page_data
 """
 import json, os
 from collections import defaultdict
+import research_overlay
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ITEMS = [('burrito', 'Signature Burrito'), ('tacos', 'Street Tacos (3)'), ('bowl', 'Burrito Bowl'), ('nachos', 'Loaded Nachos'),
@@ -75,6 +76,8 @@ def main():
                     for i, n in ITEMS]
             day['table'] = rows
             day['totals'] = {'orders': p['expected_orders'], 'items': round(p['expected_items']), 'revenue': p['expected_revenue'], 'cost': None}
+    truth = {t['date']: t for t in load('ground_truth.json')}
+    research_overlay.apply(days, truth, events)          # recorded Tavily / Mem0 research (see research_*.py)
     data = {'today': TODAY, 'items': [{'id': i, 'name': n} for i, n in ITEMS], 'days': days}
     out = os.path.join(HERE, 'agentic_insights.js')
     with open(out, 'w') as f:

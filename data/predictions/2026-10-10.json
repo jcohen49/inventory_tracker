@@ -208,7 +208,7 @@
   "status": "scheduled",
   "runs_at": "end of day",
   "note": "Scheduled to run at the end of the day on Oct 10 (21:30); this is the forecast it will start from.",
-  "summary": "Statistical prediction for a Saturday is 249 items [1]. The agent forecasts 316 (+27%), a lift of about 67 items from two events. Tavily lists the Warriors vs Kings preseason game at Chase Center, tip-off 17:30 [2], and the Fleet Week Air Show, 12:00 to 16:00 [3]. Mem0's best match is the Valkyries' Saturday 17:30 game on <<2026-09-19|Sep 19>>, the same tip-off time: +17%, with sales rising from early afternoon [4]. There is no earlier Fleet Week to compare, so the air show gets a small +10% allowance [5]. Why this matters for the day's shape: a 17:30 tip-off pulls the pre-game rush to about 14:30 to 17:30, where it overlaps the tail of the Air Show. The usual 14:00 to 16:00 lull largely disappears: those hours run more than double the Saturday trend. The agent leans on Saturday's high base (249 items), so the lift is a smaller share than on a weekday. Sunny and warm [6], which helps both the air show and foot traffic.",
+  "summary": "Expected about 316 items (+27% vs a typical Saturday of 249 [1]), peaking around 12:00. SF Fleet Week: Air Show (3.0 mi away, 12:00 to 16:00): mostly crowds up the waterfront, only a small spillover, roughly +10%. [2] Memory has no close analogue, so the weekday baseline carries this one [3]. Golden State Warriors vs. Sacramento Kings (preseason) at Chase Center (0.9 mi away, starts 17:30): a pre-event lift in the three hours before the start, roughly +17%. [4] Memory recall of similar days: <<2026-10-04|Oct 4>> +17% (219 items), <<2026-10-03|Oct 3>> -11% (221 items), <<2026-10-02|Oct 2>> +11% (257 items) [5].",
   "sources": [
    {
     "id": 1,
@@ -234,79 +234,77 @@
    {
     "id": 2,
     "type": "tavily",
-    "event_id": "warriors-2026-10-10",
-    "query": "Golden State Warriors vs. Sacramento Kings (preseason) Chase Center San Francisco Oct 10",
-    "title": "Golden State Warriors vs. Sacramento Kings (preseason)",
-    "url": "https://www.chasecenter.com/events",
-    "domain": "chasecenter.com",
-    "snippet": "NBA preseason game at Chase Center, 17:30 to 19:45.",
-    "verified": false,
-    "placeholder": true
-   },
-   {
-    "id": 3,
-    "type": "tavily",
     "event_id": "fleet-2026-10-10",
     "query": "SF Fleet Week: Air Show Marina / Embarcadero San Francisco Oct 10",
     "title": "SF Fleet Week: Air Show",
-    "url": "https://fleetweek.us/",
-    "domain": "fleetweek.us",
+    "url": "https://sf.funcheap.com/city-guide/october-street-fairs-festivals",
+    "domain": "sf.funcheap.com",
     "snippet": "Festival at Marina / Embarcadero, 12:00 to 16:00 (start time not confirmed).",
-    "verified": false,
-    "placeholder": true
+    "verified": true,
+    "placeholder": false
+   },
+   {
+    "id": 3,
+    "type": "mem0",
+    "memory_id": "mem_b9e5f1436e",
+    "query": "past sales near Marina / Embarcadero on festival days",
+    "memory": "No close past analogue for sf fleet week: air show; falling back to the typical day-of-week baseline.",
+    "relevance": 0.41,
+    "avg_vs_baseline_pct": null,
+    "linked_days": []
    },
    {
     "id": 4,
+    "type": "tavily",
+    "event_id": "warriors-2026-10-10",
+    "query": "Golden State Warriors vs. Sacramento Kings (preseason) Chase Center San Francisco Oct 10",
+    "title": "Golden State Warriors vs. Sacramento Kings (preseason)",
+    "url": "https://www.axs.com/events/1536580/nba-preseason-sacramento-kings-at-golden-state-warriors-tickets",
+    "domain": "axs.com",
+    "snippet": "NBA preseason game at Chase Center, 17:30 to 19:45.",
+    "verified": true,
+    "placeholder": false
+   },
+   {
+    "id": 5,
     "type": "mem0",
-    "memory_id": "mem_4ae76a8248",
-    "query": "past sales near Chase Center on early Saturday evening games",
-    "memory": "The Valkyries' Saturday 17:30 game on <<2026-09-19|Sep 19>> sold 290 items, +17% over trend, with extra sales from 13:00 to 18:00 instead of a single spike. <<2026-10-03|Oct 3>>, a Saturday 19:00 concert, came in -11%.",
-    "relevance": 0.9,
-    "avg_vs_baseline_pct": 2.8,
+    "memory_id": "mem_a65a4cce24",
+    "query": "past sales near Chase Center on nba preseason game days",
+    "memory": "Comparable Chase Center days (wnba playoff game / concert): the truck averaged +6% vs baseline over the last 3 day(s); most recent <<2026-10-04|Oct 4>> at 219 items.",
+    "relevance": 0.93,
+    "avg_vs_baseline_pct": 5.6,
     "linked_days": [
      {
-      "date": "2026-09-19",
-      "event": "Valkyries vs Seattle Storm (Sat 17:30)",
-      "category": "",
-      "actual_items": 290,
-      "expected_items": 257,
-      "baseline_items": 249,
-      "vs_baseline_pct": 16.7,
-      "revenue": 2661
+      "date": "2026-10-04",
+      "event": "WNBA Semifinals G1: Valkyries vs Las Vegas Aces",
+      "category": "WNBA playoff game",
+      "actual_items": 219,
+      "expected_items": 204,
+      "baseline_items": 187,
+      "vs_baseline_pct": 16.9,
+      "revenue": 2018.5
      },
      {
       "date": "2026-10-03",
-      "event": "Disney Worlds Collide Concert Tour (Sat 19:00)",
-      "category": "",
+      "event": "Disney Worlds Collide Concert Tour",
+      "category": "Concert",
       "actual_items": 221,
       "expected_items": 260,
       "baseline_items": 249,
       "vs_baseline_pct": -11.1,
       "revenue": 2053
+     },
+     {
+      "date": "2026-10-02",
+      "event": "WNBA Playoffs R1 G3: Valkyries vs Dallas Wings",
+      "category": "WNBA playoff game",
+      "actual_items": 257,
+      "expected_items": 245,
+      "baseline_items": 231,
+      "vs_baseline_pct": 11.1,
+      "revenue": 2360
      }
     ]
-   },
-   {
-    "id": 5,
-    "type": "mem0",
-    "memory_id": "mem_bfc1f7190c",
-    "query": "Fleet Week Blue Angels air show crowds near the truck",
-    "memory": "No earlier Fleet Week day is in memory. The agent assumes a weak spillover, about +10% on the day, because the show is 3 miles up the waterfront.",
-    "relevance": 0.42,
-    "avg_vs_baseline_pct": null,
-    "linked_days": []
-   },
-   {
-    "id": 6,
-    "type": "tavily",
-    "event_id": null,
-    "query": "San Francisco weather forecast October 10 2026",
-    "title": "San Francisco forecast",
-    "url": "https://www.weather.gov/mtr/",
-    "domain": "weather.gov",
-    "snippet": "Sunny and 71F. Good air-show weather.",
-    "verified": false,
-    "placeholder": true
    }
   ],
   "adjustments": {
@@ -434,7 +432,7 @@
       "start": "17:30",
       "end": "19:45",
       "status": "scheduled",
-      "placeholder": true,
+      "placeholder": false,
       "effect_pct": 17,
       "direction": "up",
       "tavily": {
@@ -442,13 +440,13 @@
        "event_id": "warriors-2026-10-10",
        "query": "Golden State Warriors vs. Sacramento Kings (preseason) Chase Center San Francisco Oct 10",
        "title": "Golden State Warriors vs. Sacramento Kings (preseason)",
-       "url": "https://www.chasecenter.com/events",
-       "domain": "chasecenter.com",
+       "url": "https://www.axs.com/events/1536580/nba-preseason-sacramento-kings-at-golden-state-warriors-tickets",
+       "domain": "axs.com",
        "snippet": "NBA preseason game at Chase Center, 17:30 to 19:45.",
-       "verified": false,
-       "placeholder": true
+       "verified": true,
+       "placeholder": false
       },
-      "source_id": 2,
+      "source_id": 4,
       "more": []
      }
     ],
@@ -472,7 +470,7 @@
     "start": "12:00",
     "end": "16:00",
     "status": "scheduled",
-    "placeholder": true,
+    "placeholder": false,
     "effect_pct": 10,
     "direction": "up",
     "tavily": {
@@ -480,40 +478,14 @@
      "event_id": "fleet-2026-10-10",
      "query": "SF Fleet Week: Air Show Marina / Embarcadero San Francisco Oct 10",
      "title": "SF Fleet Week: Air Show",
-     "url": "https://fleetweek.us/",
-     "domain": "fleetweek.us",
+     "url": "https://sf.funcheap.com/city-guide/october-street-fairs-festivals",
+     "domain": "sf.funcheap.com",
      "snippet": "Festival at Marina / Embarcadero, 12:00 to 16:00 (start time not confirmed).",
-     "verified": false,
-     "placeholder": true
+     "verified": true,
+     "placeholder": false
     },
-    "source_id": 3,
+    "source_id": 2,
     "more": []
-   },
-   {
-    "name": "Weather: Sunny and 71F",
-    "category": "Weather",
-    "venue": "San Francisco",
-    "miles": 0.0,
-    "start": "08:00",
-    "end": "22:00",
-    "status": "scheduled",
-    "placeholder": true,
-    "effect_pct": 0,
-    "direction": "flat",
-    "event_id": null,
-    "source_id": 6,
-    "tavily": {
-     "type": "tavily",
-     "event_id": null,
-     "query": "San Francisco weather forecast October 10 2026",
-     "title": "San Francisco forecast",
-     "url": "https://www.weather.gov/mtr/",
-     "domain": "weather.gov",
-     "snippet": "Sunny and 71F. Good air-show weather.",
-     "verified": false,
-     "placeholder": true
-    },
-    "note": "No weather effect expected."
    }
   ]
  }

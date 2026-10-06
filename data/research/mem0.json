@@ -1,0 +1,1424 @@
+{
+ "user_id": "mauricios-burrito-truck",
+ "seeded": [
+  {
+   "key": "day:2026-09-05",
+   "id": "98dc5f4a-e4ab-4afb-9bfe-c9da80b6bc25",
+   "text": "2026-09-05 (Saturday): no events nearby. The truck sold 289 items vs a Saturday trend of 249 (+16%), revenue $2,702.50, 178 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-05",
+    "day_of_week": "Saturday",
+    "actual_items": 289,
+    "baseline_items": 249,
+    "vs_baseline_pct": 16,
+    "event_ids": [],
+    "venues": [],
+    "revenue": 2702.5
+   }
+  },
+  {
+   "key": "day:2026-09-06",
+   "id": "f26db081-c3a0-4eaf-afdc-7d34d315c25d",
+   "text": "2026-09-06 (Sunday): no events nearby. The truck sold 194 items vs a Sunday trend of 187 (+4%), revenue $1,771.50, 119 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-06",
+    "day_of_week": "Sunday",
+    "actual_items": 194,
+    "baseline_items": 187,
+    "vs_baseline_pct": 4,
+    "event_ids": [],
+    "venues": [],
+    "revenue": 1771.5
+   }
+  },
+  {
+   "key": "day:2026-09-07",
+   "id": "b97ec9b4-2753-4365-97fd-f0f9dcb7cedb",
+   "text": "2026-09-07 (Monday): Giants vs St. Louis Cardinals at Oracle Park (0.1 mi from the truck, starts 17:10). The truck sold 149 items vs a Monday trend of 128 (+16%), revenue $1,355.50, 97 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-07",
+    "day_of_week": "Monday",
+    "actual_items": 149,
+    "baseline_items": 128,
+    "vs_baseline_pct": 16,
+    "event_ids": [
+     "giants-2026-09-07"
+    ],
+    "venues": [
+     "Oracle Park"
+    ],
+    "revenue": 1355.5
+   }
+  },
+  {
+   "key": "day:2026-09-08",
+   "id": "1e95c934-d689-4518-a9e3-82408236e0f9",
+   "text": "2026-09-08 (Tuesday): Giants vs St. Louis Cardinals at Oracle Park (0.1 mi from the truck, starts 18:45). The truck sold 248 items vs a Tuesday trend of 137 (+81%), revenue $2,239.00, 148 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-08",
+    "day_of_week": "Tuesday",
+    "actual_items": 248,
+    "baseline_items": 137,
+    "vs_baseline_pct": 81,
+    "event_ids": [
+     "giants-2026-09-08"
+    ],
+    "venues": [
+     "Oracle Park"
+    ],
+    "revenue": 2239
+   }
+  },
+  {
+   "key": "day:2026-09-09",
+   "id": "07cc0fec-b6cd-4b04-a10d-11f88b374270",
+   "text": "2026-09-09 (Wednesday): Giants vs St. Louis Cardinals at Oracle Park (0.1 mi from the truck, starts 12:45); Weezer with The Shins and Silversun Pickups at Chase Center (0.9 mi from the truck, starts 19:00). The truck sold 210 items vs a Wednesday trend of 146 (+44%), revenue $1,909.00, 127 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-09",
+    "day_of_week": "Wednesday",
+    "actual_items": 210,
+    "baseline_items": 146,
+    "vs_baseline_pct": 44,
+    "event_ids": [
+     "giants-2026-09-09",
+     "weezer-2026-09-09"
+    ],
+    "venues": [
+     "Chase Center",
+     "Oracle Park"
+    ],
+    "revenue": 1909
+   }
+  },
+  {
+   "key": "day:2026-09-10",
+   "id": "29433a9a-4d5b-4f4d-acfe-4ff32b54853d",
+   "text": "2026-09-10 (Thursday): Ferry Building Farmers Market at Ferry Building (1.2 mi from the truck, starts 10:00). The truck sold 141 items vs a Thursday trend of 166 (-15%), revenue $1,334.50, 94 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-10",
+    "day_of_week": "Thursday",
+    "actual_items": 141,
+    "baseline_items": 166,
+    "vs_baseline_pct": -15,
+    "event_ids": [
+     "ferry-farmers-2026-09-10"
+    ],
+    "venues": [
+     "Ferry Building"
+    ],
+    "revenue": 1334.5
+   }
+  },
+  {
+   "key": "day:2026-09-11",
+   "id": "9c73258c-9d08-4917-87ff-be3945275e6b",
+   "text": "2026-09-11 (Friday): Giants vs San Diego Padres at Oracle Park (0.1 mi from the truck, starts 19:15). The truck sold 455 items vs a Friday trend of 231 (+97%), revenue $4,149.50, 254 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-11",
+    "day_of_week": "Friday",
+    "actual_items": 455,
+    "baseline_items": 231,
+    "vs_baseline_pct": 97,
+    "event_ids": [
+     "giants-2026-09-11"
+    ],
+    "venues": [
+     "Oracle Park"
+    ],
+    "revenue": 4149.5
+   }
+  },
+  {
+   "key": "day:2026-09-12",
+   "id": "cce88d89-ecb8-43b8-8985-3d956329c838",
+   "text": "2026-09-12 (Saturday): Giants vs San Diego Padres at Oracle Park (0.1 mi from the truck, starts 13:05). The truck sold 438 items vs a Saturday trend of 249 (+76%), revenue $3,893.00, 238 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-12",
+    "day_of_week": "Saturday",
+    "actual_items": 438,
+    "baseline_items": 249,
+    "vs_baseline_pct": 76,
+    "event_ids": [
+     "giants-2026-09-12"
+    ],
+    "venues": [
+     "Oracle Park"
+    ],
+    "revenue": 3893
+   }
+  },
+  {
+   "key": "day:2026-09-13",
+   "id": "9ead0998-f222-410f-a385-84c5b7db8f24",
+   "text": "2026-09-13 (Sunday): Giants vs San Diego Padres at Oracle Park (0.1 mi from the truck, starts 16:20). The truck sold 234 items vs a Sunday trend of 187 (+25%), revenue $2,118.00, 146 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-13",
+    "day_of_week": "Sunday",
+    "actual_items": 234,
+    "baseline_items": 187,
+    "vs_baseline_pct": 25,
+    "event_ids": [
+     "giants-2026-09-13"
+    ],
+    "venues": [
+     "Oracle Park"
+    ],
+    "revenue": 2118
+   }
+  },
+  {
+   "key": "day:2026-09-14",
+   "id": "ee6173a3-7a98-4309-8b64-e3cfe7d90a68",
+   "text": "2026-09-14 (Monday): Muni N-Judah track work: King St lane closure at King St & 4th St (0.2 mi from the truck, starts 07:00). The truck sold 116 items vs a Monday trend of 128 (-10%), revenue $1,059.00, 74 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-14",
+    "day_of_week": "Monday",
+    "actual_items": 116,
+    "baseline_items": 128,
+    "vs_baseline_pct": -10,
+    "event_ids": [
+     "muni-trackwork-2026-09-14"
+    ],
+    "venues": [
+     "King St & 4th St"
+    ],
+    "revenue": 1059
+   }
+  },
+  {
+   "key": "day:2026-09-15",
+   "id": "c3cd3ed9-2c78-4a6a-be5e-732d894a9163",
+   "text": "2026-09-15 (Tuesday): Dreamforce 2026 (day 1) at Moscone Center (0.9 mi from the truck, starts 09:00). The truck sold 141 items vs a Tuesday trend of 137 (+3%), revenue $1,285.50, 87 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-15",
+    "day_of_week": "Tuesday",
+    "actual_items": 141,
+    "baseline_items": 137,
+    "vs_baseline_pct": 3,
+    "event_ids": [
+     "dreamforce-2026-09-15"
+    ],
+    "venues": [
+     "Moscone Center"
+    ],
+    "revenue": 1285.5
+   }
+  },
+  {
+   "key": "day:2026-09-16",
+   "id": "0b50cc74-f63f-4ab0-ac42-d296c7b4f553",
+   "text": "2026-09-16 (Wednesday): Dreamforce 2026 (day 2) at Moscone Center (0.9 mi from the truck, starts 09:00); Dreamfest 2026 (Gwen Stefani, Usher) at Oracle Park (0.1 mi from the truck, starts 18:00). The truck sold 267 items vs a Wednesday trend of 146 (+83%), revenue $2,477.50, 157 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-16",
+    "day_of_week": "Wednesday",
+    "actual_items": 267,
+    "baseline_items": 146,
+    "vs_baseline_pct": 83,
+    "event_ids": [
+     "dreamforce-2026-09-16",
+     "dreamfest-2026-09-16"
+    ],
+    "venues": [
+     "Moscone Center",
+     "Oracle Park"
+    ],
+    "revenue": 2477.5
+   }
+  },
+  {
+   "key": "day:2026-09-17",
+   "id": "47d8b9ff-bcc1-428d-9155-808c0b8e7eb5",
+   "text": "2026-09-17 (Thursday): Dreamforce 2026 (day 3) at Moscone Center (0.9 mi from the truck, starts 09:00). The truck sold 181 items vs a Thursday trend of 166 (+9%), revenue $1,665.00, 105 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-17",
+    "day_of_week": "Thursday",
+    "actual_items": 181,
+    "baseline_items": 166,
+    "vs_baseline_pct": 9,
+    "event_ids": [
+     "dreamforce-2026-09-17"
+    ],
+    "venues": [
+     "Moscone Center"
+    ],
+    "revenue": 1665
+   }
+  },
+  {
+   "key": "day:2026-09-18",
+   "id": "da2fff30-9f0a-4dbe-9dc7-3b91324011e8",
+   "text": "2026-09-18 (Friday): Valkyries vs Portland Fire at Chase Center (0.9 mi from the truck, starts 19:00). The truck sold 264 items vs a Friday trend of 231 (+14%), revenue $2,506.50, 161 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-18",
+    "day_of_week": "Friday",
+    "actual_items": 264,
+    "baseline_items": 231,
+    "vs_baseline_pct": 14,
+    "event_ids": [
+     "valkyries-2026-09-18"
+    ],
+    "venues": [
+     "Chase Center"
+    ],
+    "revenue": 2506.5
+   }
+  },
+  {
+   "key": "day:2026-09-19",
+   "id": "33f696ca-9de6-4b95-8e41-d24953146587",
+   "text": "2026-09-19 (Saturday): Valkyries vs Seattle Storm at Chase Center (0.9 mi from the truck, starts 17:30). The truck sold 290 items vs a Saturday trend of 249 (+17%), revenue $2,661.00, 176 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-19",
+    "day_of_week": "Saturday",
+    "actual_items": 290,
+    "baseline_items": 249,
+    "vs_baseline_pct": 17,
+    "event_ids": [
+     "valkyries-2026-09-19"
+    ],
+    "venues": [
+     "Chase Center"
+    ],
+    "revenue": 2661
+   }
+  },
+  {
+   "key": "day:2026-09-20",
+   "id": "ec055e8d-64db-496e-950f-fb88592aac6b",
+   "text": "2026-09-20 (Sunday): no events nearby. The truck sold 167 items vs a Sunday trend of 187 (-11%), revenue $1,580.00, 114 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-20",
+    "day_of_week": "Sunday",
+    "actual_items": 167,
+    "baseline_items": 187,
+    "vs_baseline_pct": -11,
+    "event_ids": [],
+    "venues": [],
+    "revenue": 1580
+   }
+  },
+  {
+   "key": "day:2026-09-21",
+   "id": "79d53b74-c3e5-404e-accf-6c43e63ee1f4",
+   "text": "2026-09-21 (Monday): Giants vs Minnesota Twins at Oracle Park (0.1 mi from the truck, starts 18:45). The truck sold 181 items vs a Monday trend of 128 (+41%), revenue $1,695.00, 120 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-21",
+    "day_of_week": "Monday",
+    "actual_items": 181,
+    "baseline_items": 128,
+    "vs_baseline_pct": 41,
+    "event_ids": [
+     "giants-2026-09-21"
+    ],
+    "venues": [
+     "Oracle Park"
+    ],
+    "revenue": 1695
+   }
+  },
+  {
+   "key": "day:2026-09-22",
+   "id": "fd40e33c-3219-47f4-895b-1c34c8eab0f6",
+   "text": "2026-09-22 (Tuesday): Giants vs Minnesota Twins at Oracle Park (0.1 mi from the truck, starts 18:45). The truck sold 132 items vs a Tuesday trend of 137 (-4%), revenue $1,231.50, 83 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-22",
+    "day_of_week": "Tuesday",
+    "actual_items": 132,
+    "baseline_items": 137,
+    "vs_baseline_pct": -4,
+    "event_ids": [
+     "giants-2026-09-22"
+    ],
+    "venues": [
+     "Oracle Park"
+    ],
+    "revenue": 1231.5
+   }
+  },
+  {
+   "key": "day:2026-09-23",
+   "id": "bb3625d3-b317-40ab-a740-239a74b7ca4f",
+   "text": "2026-09-23 (Wednesday): Giants vs Minnesota Twins at Oracle Park (0.1 mi from the truck, starts 12:45); Lily Allen at Chase Center (0.9 mi from the truck, starts 20:00). The truck sold 225 items vs a Wednesday trend of 146 (+55%), revenue $2,064.50, 127 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-23",
+    "day_of_week": "Wednesday",
+    "actual_items": 225,
+    "baseline_items": 146,
+    "vs_baseline_pct": 55,
+    "event_ids": [
+     "giants-2026-09-23",
+     "lily-allen-2026-09-23"
+    ],
+    "venues": [
+     "Chase Center",
+     "Oracle Park"
+    ],
+    "revenue": 2064.5
+   }
+  },
+  {
+   "key": "day:2026-09-24",
+   "id": "742eb148-a628-41d4-b19a-cf2cb7699424",
+   "text": "2026-09-24 (Thursday): no events nearby. The truck sold 180 items vs a Thursday trend of 166 (+8%), revenue $1,697.50, 119 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-24",
+    "day_of_week": "Thursday",
+    "actual_items": 180,
+    "baseline_items": 166,
+    "vs_baseline_pct": 8,
+    "event_ids": [],
+    "venues": [],
+    "revenue": 1697.5
+   }
+  },
+  {
+   "key": "day:2026-09-25",
+   "id": "e9c5cbc0-6ee9-4625-a68f-c320003e831a",
+   "text": "2026-09-25 (Friday): Giants vs Los Angeles Dodgers at Oracle Park (0.1 mi from the truck, starts 19:15). The truck sold 574 items vs a Friday trend of 231 (+148%), revenue $5,262.50, 318 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-25",
+    "day_of_week": "Friday",
+    "actual_items": 574,
+    "baseline_items": 231,
+    "vs_baseline_pct": 148,
+    "event_ids": [
+     "giants-2026-09-25"
+    ],
+    "venues": [
+     "Oracle Park"
+    ],
+    "revenue": 5262.5
+   }
+  },
+  {
+   "key": "day:2026-09-26",
+   "id": "df675617-a010-418a-9577-2a12b095ec42",
+   "text": "2026-09-26 (Saturday): Giants vs Los Angeles Dodgers at Oracle Park (0.1 mi from the truck, starts 13:05). The truck sold 468 items vs a Saturday trend of 249 (+88%), revenue $4,364.00, 254 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-26",
+    "day_of_week": "Saturday",
+    "actual_items": 468,
+    "baseline_items": 249,
+    "vs_baseline_pct": 88,
+    "event_ids": [
+     "giants-2026-09-26"
+    ],
+    "venues": [
+     "Oracle Park"
+    ],
+    "revenue": 4364
+   }
+  },
+  {
+   "key": "day:2026-09-27",
+   "id": "a5d1d051-d0c8-44d2-8c3c-c15c6316f7a4",
+   "text": "2026-09-27 (Sunday): Giants vs Los Angeles Dodgers at Oracle Park (0.1 mi from the truck, starts 12:05); WNBA Playoffs R1 G1: Valkyries vs Dallas Wings at Chase Center (0.9 mi from the truck, starts 18:00). The truck sold 350 items vs a Sunday trend of 187 (+87%), revenue $3,213.50, 197 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-27",
+    "day_of_week": "Sunday",
+    "actual_items": 350,
+    "baseline_items": 187,
+    "vs_baseline_pct": 87,
+    "event_ids": [
+     "giants-2026-09-27",
+     "valkyries-2026-09-27"
+    ],
+    "venues": [
+     "Chase Center",
+     "Oracle Park"
+    ],
+    "revenue": 3213.5
+   }
+  },
+  {
+   "key": "day:2026-09-28",
+   "id": "f018ccd8-12f5-458e-9c1d-c9b3dccc6977",
+   "text": "2026-09-28 (Monday): no events nearby. The truck sold 123 items vs a Monday trend of 128 (-4%), revenue $1,145.00, 82 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-28",
+    "day_of_week": "Monday",
+    "actual_items": 123,
+    "baseline_items": 128,
+    "vs_baseline_pct": -4,
+    "event_ids": [],
+    "venues": [],
+    "revenue": 1145
+   }
+  },
+  {
+   "key": "day:2026-09-29",
+   "id": "87c7f275-4eff-49b2-a9e2-7847e23a4e2c",
+   "text": "2026-09-29 (Tuesday): Light rain, 58F at San Francisco (0.0 mi from the truck, starts 08:00). The truck sold 111 items vs a Tuesday trend of 137 (-19%), revenue $1,065.50, 77 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-29",
+    "day_of_week": "Tuesday",
+    "actual_items": 111,
+    "baseline_items": 137,
+    "vs_baseline_pct": -19,
+    "event_ids": [
+     "weather-rain-2026-09-29"
+    ],
+    "venues": [
+     "San Francisco"
+    ],
+    "revenue": 1065.5
+   }
+  },
+  {
+   "key": "day:2026-09-30",
+   "id": "dd2ab7d6-b402-4463-965e-4dbc1c9717ca",
+   "text": "2026-09-30 (Wednesday): no events nearby. The truck sold 111 items vs a Wednesday trend of 146 (-24%), revenue $1,019.00, 74 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-09-30",
+    "day_of_week": "Wednesday",
+    "actual_items": 111,
+    "baseline_items": 146,
+    "vs_baseline_pct": -24,
+    "event_ids": [],
+    "venues": [],
+    "revenue": 1019
+   }
+  },
+  {
+   "key": "day:2026-10-01",
+   "id": "48e27a2c-4644-49e9-a1f5-1ca753360599",
+   "text": "2026-10-01 (Thursday): no events nearby. The truck sold 216 items vs a Thursday trend of 166 (+30%), revenue $1,979.00, 134 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-10-01",
+    "day_of_week": "Thursday",
+    "actual_items": 216,
+    "baseline_items": 166,
+    "vs_baseline_pct": 30,
+    "event_ids": [],
+    "venues": [],
+    "revenue": 1979
+   }
+  },
+  {
+   "key": "day:2026-10-02",
+   "id": "c6afbd11-5676-42ed-bb7e-7bcedcc771f3",
+   "text": "2026-10-02 (Friday): WNBA Playoffs R1 G3: Valkyries vs Dallas Wings at Chase Center (0.9 mi from the truck, starts 18:00). The truck sold 257 items vs a Friday trend of 231 (+11%), revenue $2,360.00, 163 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-10-02",
+    "day_of_week": "Friday",
+    "actual_items": 257,
+    "baseline_items": 231,
+    "vs_baseline_pct": 11,
+    "event_ids": [
+     "valkyries-2026-10-02"
+    ],
+    "venues": [
+     "Chase Center"
+    ],
+    "revenue": 2360
+   }
+  },
+  {
+   "key": "day:2026-10-03",
+   "id": "967369c1-6d1f-4691-9343-c321eb30cf9e",
+   "text": "2026-10-03 (Saturday): Disney Worlds Collide Concert Tour at Chase Center (0.9 mi from the truck, starts 19:00). The truck sold 221 items vs a Saturday trend of 249 (-11%), revenue $2,053.00, 135 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-10-03",
+    "day_of_week": "Saturday",
+    "actual_items": 221,
+    "baseline_items": 249,
+    "vs_baseline_pct": -11,
+    "event_ids": [
+     "disney-2026-10-03"
+    ],
+    "venues": [
+     "Chase Center"
+    ],
+    "revenue": 2053
+   }
+  },
+  {
+   "key": "day:2026-10-04",
+   "id": "1407b19d-ae88-4b0e-ae3a-cfbf5dd2fd75",
+   "text": "2026-10-04 (Sunday): WNBA Semifinals G1: Valkyries vs Las Vegas Aces at Chase Center (0.9 mi from the truck, starts 13:00). The truck sold 219 items vs a Sunday trend of 187 (+17%), revenue $2,018.50, 134 orders.",
+   "metadata": {
+    "type": "sales_day",
+    "date": "2026-10-04",
+    "day_of_week": "Sunday",
+    "actual_items": 219,
+    "baseline_items": 187,
+    "vs_baseline_pct": 17,
+    "event_ids": [
+     "valkyries-2026-10-04"
+    ],
+    "venues": [
+     "Chase Center"
+    ],
+    "revenue": 2018.5
+   }
+  },
+  {
+   "key": "lesson:giants-day-games",
+   "id": "6ee73e90-0f74-499b-abaa-098642d43104",
+   "text": "Lesson: lunch spikes on 2026-09-09, 2026-09-23 and 2026-09-27 came from Giants day games at Oracle Park (0.1 mi away), not from the Chase Center evening events the same days. Isolated Chase Center evening lift was only +5 to +11 items an hour.",
+   "metadata": {
+    "type": "lesson",
+    "dates": [
+     "2026-09-09",
+     "2026-09-23",
+     "2026-09-27"
+    ],
+    "venues": [
+     "Oracle Park",
+     "Chase Center"
+    ]
+   }
+  },
+  {
+   "key": "lesson:chase-basketball",
+   "id": "601efaef-274c-45b2-8bb9-07d67e71fffe",
+   "text": "Lesson: Valkyries nights at Chase Center (0.9 mi) lift the truck +11% to +17% on a normal weekday or Saturday, with the extra sales 17:00 to 18:00, about 90 minutes before the game.",
+   "metadata": {
+    "type": "lesson",
+    "dates": [
+     "2026-09-18",
+     "2026-09-19",
+     "2026-10-02",
+     "2026-10-04"
+    ],
+    "venues": [
+     "Chase Center"
+    ]
+   }
+  },
+  {
+   "key": "lesson:oracle-strongest",
+   "id": "6fdabf7a-de56-4461-9d05-b7debcd165cd",
+   "text": "Lesson: Oracle Park games (0.1 mi) are the biggest driver, +85% to +150% on Dodgers weekend games, with a rush from 2.5 hours before first pitch.",
+   "metadata": {
+    "type": "lesson",
+    "dates": [
+     "2026-09-25",
+     "2026-09-26",
+     "2026-09-27"
+    ],
+    "venues": [
+     "Oracle Park"
+    ]
+   }
+  },
+  {
+   "key": "lesson:rain-fog",
+   "id": "69811098-78bf-47e7-89e9-98b31d305331",
+   "text": "Lesson: rain, drizzle and cold fog cut sales 15% to 30%, and can erase an expected game-night lift (2026-09-22, 2026-09-29, 2026-09-30).",
+   "metadata": {
+    "type": "lesson",
+    "dates": [
+     "2026-09-22",
+     "2026-09-29",
+     "2026-09-30"
+    ],
+    "venues": []
+   }
+  },
+  {
+   "key": "lesson:moscone",
+   "id": "cb360c22-4b15-41bd-87d5-164641f2020e",
+   "text": "Lesson: Moscone Center conferences (0.9 mi), such as Dreamforce on 2026-09-15 to 2026-09-17, add a lunch lift of about +15% to +20%.",
+   "metadata": {
+    "type": "lesson",
+    "dates": [
+     "2026-09-15",
+     "2026-09-16",
+     "2026-09-17"
+    ],
+    "venues": [
+     "Moscone Center"
+    ]
+   }
+  }
+ ],
+ "searches": [
+  {
+   "date": "2026-10-06",
+   "query": "past sales on basketball nights at Chase Center",
+   "status": 200,
+   "results": [
+    {
+     "id": "601efaef-274c-45b2-8bb9-07d67e71fffe",
+     "memory": "Lesson: Valkyries nights at Chase Center (0.9 mi) lift the truck +11% to +17% on a normal weekday or Saturday, with the extra sales 17:00 to 18:00, about 90 minutes before the game.",
+     "score": 0.5724,
+     "metadata": {
+      "type": "lesson",
+      "dates": [
+       "2026-09-18",
+       "2026-09-19",
+       "2026-10-02",
+       "2026-10-04"
+      ],
+      "venues": [
+       "Chase Center"
+      ]
+     },
+     "created_at": "2026-10-06T02:29:51.315292+00:00"
+    },
+    {
+     "id": "69811098-78bf-47e7-89e9-98b31d305331",
+     "memory": "Lesson: rain, drizzle and cold fog cut sales 15% to 30%, and can erase an expected game-night lift (2026-09-22, 2026-09-29, 2026-09-30).",
+     "score": 0.2773,
+     "metadata": {
+      "type": "lesson",
+      "dates": [
+       "2026-09-22",
+       "2026-09-29",
+       "2026-09-30"
+      ],
+      "venues": []
+     },
+     "created_at": "2026-10-06T02:29:52.656084+00:00"
+    },
+    {
+     "id": "6ee73e90-0f74-499b-abaa-098642d43104",
+     "memory": "Lesson: lunch spikes on 2026-09-09, 2026-09-23 and 2026-09-27 came from Giants day games at Oracle Park (0.1 mi away), not from the Chase Center evening events the same days. Isolated Chase Center evening lift was only +5 to +11 items an hour.",
+     "score": 0.2526,
+     "metadata": {
+      "type": "lesson",
+      "dates": [
+       "2026-09-09",
+       "2026-09-23",
+       "2026-09-27"
+      ],
+      "venues": [
+       "Oracle Park",
+       "Chase Center"
+      ]
+     },
+     "created_at": "2026-10-06T02:29:50.783487+00:00"
+    },
+    {
+     "id": "da2fff30-9f0a-4dbe-9dc7-3b91324011e8",
+     "memory": "2026-09-18 (Friday): Valkyries vs Portland Fire at Chase Center (0.9 mi from the truck, starts 19:00). The truck sold 264 items vs a Friday trend of 231 (+14%), revenue $2,506.50, 161 orders.",
+     "score": 0.2421,
+     "metadata": {
+      "date": "2026-09-18",
+      "type": "sales_day",
+      "venues": [
+       "Chase Center"
+      ],
+      "revenue": 2506.5,
+      "event_ids": [
+       "valkyries-2026-09-18"
+      ],
+      "day_of_week": "Friday",
+      "actual_items": 264,
+      "baseline_items": 231,
+      "vs_baseline_pct": 14
+     },
+     "created_at": "2026-10-06T02:29:40.535718+00:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-06",
+   "query": "sales when a Moscone Center conference is on",
+   "status": 200,
+   "results": [
+    {
+     "id": "cb360c22-4b15-41bd-87d5-164641f2020e",
+     "memory": "Lesson: Moscone Center conferences (0.9 mi), such as Dreamforce on 2026-09-15 to 2026-09-17, add a lunch lift of about +15% to +20%.",
+     "score": 0.5434,
+     "metadata": {
+      "type": "lesson",
+      "dates": [
+       "2026-09-15",
+       "2026-09-16",
+       "2026-09-17"
+      ],
+      "venues": [
+       "Moscone Center"
+      ]
+     },
+     "created_at": "2026-10-06T02:29:53.198043+00:00"
+    },
+    {
+     "id": "c3cd3ed9-2c78-4a6a-be5e-732d894a9163",
+     "memory": "2026-09-15 (Tuesday): Dreamforce 2026 (day 1) at Moscone Center (0.9 mi from the truck, starts 09:00). The truck sold 141 items vs a Tuesday trend of 137 (+3%), revenue $1,285.50, 87 orders.",
+     "score": 0.2634,
+     "metadata": {
+      "date": "2026-09-15",
+      "type": "sales_day",
+      "venues": [
+       "Moscone Center"
+      ],
+      "revenue": 1285.5,
+      "event_ids": [
+       "dreamforce-2026-09-15"
+      ],
+      "day_of_week": "Tuesday",
+      "actual_items": 141,
+      "baseline_items": 137,
+      "vs_baseline_pct": 3
+     },
+     "created_at": "2026-10-06T02:29:38.614862+00:00"
+    },
+    {
+     "id": "47d8b9ff-bcc1-428d-9155-808c0b8e7eb5",
+     "memory": "2026-09-17 (Thursday): Dreamforce 2026 (day 3) at Moscone Center (0.9 mi from the truck, starts 09:00). The truck sold 181 items vs a Thursday trend of 166 (+9%), revenue $1,665.00, 105 orders.",
+     "score": 0.2631,
+     "metadata": {
+      "date": "2026-09-17",
+      "type": "sales_day",
+      "venues": [
+       "Moscone Center"
+      ],
+      "revenue": 1665,
+      "event_ids": [
+       "dreamforce-2026-09-17"
+      ],
+      "day_of_week": "Thursday",
+      "actual_items": 181,
+      "baseline_items": 166,
+      "vs_baseline_pct": 9
+     },
+     "created_at": "2026-10-06T02:29:39.938156+00:00"
+    },
+    {
+     "id": "0b50cc74-f63f-4ab0-ac42-d296c7b4f553",
+     "memory": "2026-09-16 (Wednesday): Dreamforce 2026 (day 2) at Moscone Center (0.9 mi from the truck, starts 09:00); Dreamfest 2026 (Gwen Stefani, Usher) at Oracle Park (0.1 mi from the truck, starts 18:00). The truck sold 267 items vs a Wednesday trend of 146 (+83%), revenue $2,477.50, 157 orders.",
+     "score": 0.2359,
+     "metadata": {
+      "date": "2026-09-16",
+      "type": "sales_day",
+      "venues": [
+       "Moscone Center",
+       "Oracle Park"
+      ],
+      "revenue": 2477.5,
+      "event_ids": [
+       "dreamforce-2026-09-16",
+       "dreamfest-2026-09-16"
+      ],
+      "day_of_week": "Wednesday",
+      "actual_items": 267,
+      "baseline_items": 146,
+      "vs_baseline_pct": 83
+     },
+     "created_at": "2026-10-06T02:29:39.161095+00:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-06",
+   "query": "concerts at Chase Center on weeknights",
+   "status": 200,
+   "results": [
+    {
+     "id": "967369c1-6d1f-4691-9343-c321eb30cf9e",
+     "memory": "2026-10-03 (Saturday): Disney Worlds Collide Concert Tour at Chase Center (0.9 mi from the truck, starts 19:00). The truck sold 221 items vs a Saturday trend of 249 (-11%), revenue $2,053.00, 135 orders.",
+     "score": 0.3597,
+     "metadata": {
+      "date": "2026-10-03",
+      "type": "sales_day",
+      "venues": [
+       "Chase Center"
+      ],
+      "revenue": 2053,
+      "event_ids": [
+       "disney-2026-10-03"
+      ],
+      "day_of_week": "Saturday",
+      "actual_items": 221,
+      "baseline_items": 249,
+      "vs_baseline_pct": -11
+     },
+     "created_at": "2026-10-06T02:29:49.396935+00:00"
+    },
+    {
+     "id": "601efaef-274c-45b2-8bb9-07d67e71fffe",
+     "memory": "Lesson: Valkyries nights at Chase Center (0.9 mi) lift the truck +11% to +17% on a normal weekday or Saturday, with the extra sales 17:00 to 18:00, about 90 minutes before the game.",
+     "score": 0.2877,
+     "metadata": {
+      "type": "lesson",
+      "dates": [
+       "2026-09-18",
+       "2026-09-19",
+       "2026-10-02",
+       "2026-10-04"
+      ],
+      "venues": [
+       "Chase Center"
+      ]
+     },
+     "created_at": "2026-10-06T02:29:51.315292+00:00"
+    },
+    {
+     "id": "6ee73e90-0f74-499b-abaa-098642d43104",
+     "memory": "Lesson: lunch spikes on 2026-09-09, 2026-09-23 and 2026-09-27 came from Giants day games at Oracle Park (0.1 mi away), not from the Chase Center evening events the same days. Isolated Chase Center evening lift was only +5 to +11 items an hour.",
+     "score": 0.269,
+     "metadata": {
+      "type": "lesson",
+      "dates": [
+       "2026-09-09",
+       "2026-09-23",
+       "2026-09-27"
+      ],
+      "venues": [
+       "Oracle Park",
+       "Chase Center"
+      ]
+     },
+     "created_at": "2026-10-06T02:29:50.783487+00:00"
+    },
+    {
+     "id": "07cc0fec-b6cd-4b04-a10d-11f88b374270",
+     "memory": "2026-09-09 (Wednesday): Giants vs St. Louis Cardinals at Oracle Park (0.1 mi from the truck, starts 12:45); Weezer with The Shins and Silversun Pickups at Chase Center (0.9 mi from the truck, starts 19:00). The truck sold 210 items vs a Wednesday trend of 146 (+44%), revenue $1,909.00, 127 orders.",
+     "score": 0.2461,
+     "metadata": {
+      "date": "2026-09-09",
+      "type": "sales_day",
+      "venues": [
+       "Chase Center",
+       "Oracle Park"
+      ],
+      "revenue": 1909,
+      "event_ids": [
+       "giants-2026-09-09",
+       "weezer-2026-09-09"
+      ],
+      "day_of_week": "Wednesday",
+      "actual_items": 210,
+      "baseline_items": 146,
+      "vs_baseline_pct": 44
+     },
+     "created_at": "2026-10-06T02:29:34.756521+00:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-07",
+   "query": "past sales on Valkyries playoff games",
+   "status": 200,
+   "results": [
+    {
+     "id": "601efaef-274c-45b2-8bb9-07d67e71fffe",
+     "memory": "Lesson: Valkyries nights at Chase Center (0.9 mi) lift the truck +11% to +17% on a normal weekday or Saturday, with the extra sales 17:00 to 18:00, about 90 minutes before the game.",
+     "score": 0.4655,
+     "metadata": {
+      "type": "lesson",
+      "dates": [
+       "2026-09-18",
+       "2026-09-19",
+       "2026-10-02",
+       "2026-10-04"
+      ],
+      "venues": [
+       "Chase Center"
+      ]
+     },
+     "created_at": "2026-10-06T02:29:51.315292+00:00"
+    },
+    {
+     "id": "c6afbd11-5676-42ed-bb7e-7bcedcc771f3",
+     "memory": "2026-10-02 (Friday): WNBA Playoffs R1 G3: Valkyries vs Dallas Wings at Chase Center (0.9 mi from the truck, starts 18:00). The truck sold 257 items vs a Friday trend of 231 (+11%), revenue $2,360.00, 163 orders.",
+     "score": 0.284,
+     "metadata": {
+      "date": "2026-10-02",
+      "type": "sales_day",
+      "venues": [
+       "Chase Center"
+      ],
+      "revenue": 2360,
+      "event_ids": [
+       "valkyries-2026-10-02"
+      ],
+      "day_of_week": "Friday",
+      "actual_items": 257,
+      "baseline_items": 231,
+      "vs_baseline_pct": 11
+     },
+     "created_at": "2026-10-06T02:29:48.839588+00:00"
+    },
+    {
+     "id": "69811098-78bf-47e7-89e9-98b31d305331",
+     "memory": "Lesson: rain, drizzle and cold fog cut sales 15% to 30%, and can erase an expected game-night lift (2026-09-22, 2026-09-29, 2026-09-30).",
+     "score": 0.2614,
+     "metadata": {
+      "type": "lesson",
+      "dates": [
+       "2026-09-22",
+       "2026-09-29",
+       "2026-09-30"
+      ],
+      "venues": []
+     },
+     "created_at": "2026-10-06T02:29:52.656084+00:00"
+    },
+    {
+     "id": "da2fff30-9f0a-4dbe-9dc7-3b91324011e8",
+     "memory": "2026-09-18 (Friday): Valkyries vs Portland Fire at Chase Center (0.9 mi from the truck, starts 19:00). The truck sold 264 items vs a Friday trend of 231 (+14%), revenue $2,506.50, 161 orders.",
+     "score": 0.2545,
+     "metadata": {
+      "date": "2026-09-18",
+      "type": "sales_day",
+      "venues": [
+       "Chase Center"
+      ],
+      "revenue": 2506.5,
+      "event_ids": [
+       "valkyries-2026-09-18"
+      ],
+      "day_of_week": "Friday",
+      "actual_items": 264,
+      "baseline_items": 231,
+      "vs_baseline_pct": 14
+     },
+     "created_at": "2026-10-06T02:29:40.535718+00:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-07",
+   "query": "sales on days with an event far from the ballpark",
+   "status": 200,
+   "results": [
+    {
+     "id": "6ee73e90-0f74-499b-abaa-098642d43104",
+     "memory": "Lesson: lunch spikes on 2026-09-09, 2026-09-23 and 2026-09-27 came from Giants day games at Oracle Park (0.1 mi away), not from the Chase Center evening events the same days. Isolated Chase Center evening lift was only +5 to +11 items an hour.",
+     "score": 0.2827,
+     "metadata": {
+      "type": "lesson",
+      "dates": [
+       "2026-09-09",
+       "2026-09-23",
+       "2026-09-27"
+      ],
+      "venues": [
+       "Oracle Park",
+       "Chase Center"
+      ]
+     },
+     "created_at": "2026-10-06T02:29:50.783487+00:00"
+    },
+    {
+     "id": "ec055e8d-64db-496e-950f-fb88592aac6b",
+     "memory": "2026-09-20 (Sunday): no events nearby. The truck sold 167 items vs a Sunday trend of 187 (-11%), revenue $1,580.00, 114 orders.",
+     "score": 0.2461,
+     "metadata": {
+      "date": "2026-09-20",
+      "type": "sales_day",
+      "venues": [],
+      "revenue": 1580,
+      "event_ids": [],
+      "day_of_week": "Sunday",
+      "actual_items": 167,
+      "baseline_items": 187,
+      "vs_baseline_pct": -11
+     },
+     "created_at": "2026-10-06T02:29:41.638311+00:00"
+    },
+    {
+     "id": "601efaef-274c-45b2-8bb9-07d67e71fffe",
+     "memory": "Lesson: Valkyries nights at Chase Center (0.9 mi) lift the truck +11% to +17% on a normal weekday or Saturday, with the extra sales 17:00 to 18:00, about 90 minutes before the game.",
+     "score": 0.2458,
+     "metadata": {
+      "type": "lesson",
+      "dates": [
+       "2026-09-18",
+       "2026-09-19",
+       "2026-10-02",
+       "2026-10-04"
+      ],
+      "venues": [
+       "Chase Center"
+      ]
+     },
+     "created_at": "2026-10-06T02:29:51.315292+00:00"
+    },
+    {
+     "id": "f26db081-c3a0-4eaf-afdc-7d34d315c25d",
+     "memory": "2026-09-06 (Sunday): no events nearby. The truck sold 194 items vs a Sunday trend of 187 (+4%), revenue $1,771.50, 119 orders.",
+     "score": 0.2435,
+     "metadata": {
+      "date": "2026-09-06",
+      "type": "sales_day",
+      "venues": [],
+      "revenue": 1771.5,
+      "event_ids": [],
+      "day_of_week": "Sunday",
+      "actual_items": 194,
+      "baseline_items": 187,
+      "vs_baseline_pct": 4
+     },
+     "created_at": "2026-10-06T02:29:33.074681+00:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-07",
+   "query": "sales when a Moscone Center conference is on",
+   "status": 200,
+   "results": [
+    {
+     "id": "cb360c22-4b15-41bd-87d5-164641f2020e",
+     "memory": "Lesson: Moscone Center conferences (0.9 mi), such as Dreamforce on 2026-09-15 to 2026-09-17, add a lunch lift of about +15% to +20%.",
+     "score": 0.5434,
+     "metadata": {
+      "type": "lesson",
+      "dates": [
+       "2026-09-15",
+       "2026-09-16",
+       "2026-09-17"
+      ],
+      "venues": [
+       "Moscone Center"
+      ]
+     },
+     "created_at": "2026-10-06T02:29:53.198043+00:00"
+    },
+    {
+     "id": "c3cd3ed9-2c78-4a6a-be5e-732d894a9163",
+     "memory": "2026-09-15 (Tuesday): Dreamforce 2026 (day 1) at Moscone Center (0.9 mi from the truck, starts 09:00). The truck sold 141 items vs a Tuesday trend of 137 (+3%), revenue $1,285.50, 87 orders.",
+     "score": 0.2634,
+     "metadata": {
+      "date": "2026-09-15",
+      "type": "sales_day",
+      "venues": [
+       "Moscone Center"
+      ],
+      "revenue": 1285.5,
+      "event_ids": [
+       "dreamforce-2026-09-15"
+      ],
+      "day_of_week": "Tuesday",
+      "actual_items": 141,
+      "baseline_items": 137,
+      "vs_baseline_pct": 3
+     },
+     "created_at": "2026-10-06T02:29:38.614862+00:00"
+    },
+    {
+     "id": "47d8b9ff-bcc1-428d-9155-808c0b8e7eb5",
+     "memory": "2026-09-17 (Thursday): Dreamforce 2026 (day 3) at Moscone Center (0.9 mi from the truck, starts 09:00). The truck sold 181 items vs a Thursday trend of 166 (+9%), revenue $1,665.00, 105 orders.",
+     "score": 0.2631,
+     "metadata": {
+      "date": "2026-09-17",
+      "type": "sales_day",
+      "venues": [
+       "Moscone Center"
+      ],
+      "revenue": 1665,
+      "event_ids": [
+       "dreamforce-2026-09-17"
+      ],
+      "day_of_week": "Thursday",
+      "actual_items": 181,
+      "baseline_items": 166,
+      "vs_baseline_pct": 9
+     },
+     "created_at": "2026-10-06T02:29:39.938156+00:00"
+    },
+    {
+     "id": "0b50cc74-f63f-4ab0-ac42-d296c7b4f553",
+     "memory": "2026-09-16 (Wednesday): Dreamforce 2026 (day 2) at Moscone Center (0.9 mi from the truck, starts 09:00); Dreamfest 2026 (Gwen Stefani, Usher) at Oracle Park (0.1 mi from the truck, starts 18:00). The truck sold 267 items vs a Wednesday trend of 146 (+83%), revenue $2,477.50, 157 orders.",
+     "score": 0.2359,
+     "metadata": {
+      "date": "2026-09-16",
+      "type": "sales_day",
+      "venues": [
+       "Moscone Center",
+       "Oracle Park"
+      ],
+      "revenue": 2477.5,
+      "event_ids": [
+       "dreamforce-2026-09-16",
+       "dreamfest-2026-09-16"
+      ],
+      "day_of_week": "Wednesday",
+      "actual_items": 267,
+      "baseline_items": 146,
+      "vs_baseline_pct": 83
+     },
+     "created_at": "2026-10-06T02:29:39.161095+00:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-10",
+   "query": "Saturday early evening game at Chase Center",
+   "status": 200,
+   "results": [
+    {
+     "id": "6ee73e90-0f74-499b-abaa-098642d43104",
+     "memory": "Lesson: lunch spikes on 2026-09-09, 2026-09-23 and 2026-09-27 came from Giants day games at Oracle Park (0.1 mi away), not from the Chase Center evening events the same days. Isolated Chase Center evening lift was only +5 to +11 items an hour.",
+     "score": 0.5582,
+     "metadata": {
+      "type": "lesson",
+      "dates": [
+       "2026-09-09",
+       "2026-09-23",
+       "2026-09-27"
+      ],
+      "venues": [
+       "Oracle Park",
+       "Chase Center"
+      ]
+     },
+     "created_at": "2026-10-06T02:29:50.783487+00:00"
+    },
+    {
+     "id": "601efaef-274c-45b2-8bb9-07d67e71fffe",
+     "memory": "Lesson: Valkyries nights at Chase Center (0.9 mi) lift the truck +11% to +17% on a normal weekday or Saturday, with the extra sales 17:00 to 18:00, about 90 minutes before the game.",
+     "score": 0.5326,
+     "metadata": {
+      "type": "lesson",
+      "dates": [
+       "2026-09-18",
+       "2026-09-19",
+       "2026-10-02",
+       "2026-10-04"
+      ],
+      "venues": [
+       "Chase Center"
+      ]
+     },
+     "created_at": "2026-10-06T02:29:51.315292+00:00"
+    },
+    {
+     "id": "33f696ca-9de6-4b95-8e41-d24953146587",
+     "memory": "2026-09-19 (Saturday): Valkyries vs Seattle Storm at Chase Center (0.9 mi from the truck, starts 17:30). The truck sold 290 items vs a Saturday trend of 249 (+17%), revenue $2,661.00, 176 orders.",
+     "score": 0.3366,
+     "metadata": {
+      "date": "2026-09-19",
+      "type": "sales_day",
+      "venues": [
+       "Chase Center"
+      ],
+      "revenue": 2661,
+      "event_ids": [
+       "valkyries-2026-09-19"
+      ],
+      "day_of_week": "Saturday",
+      "actual_items": 290,
+      "baseline_items": 249,
+      "vs_baseline_pct": 17
+     },
+     "created_at": "2026-10-06T02:29:41.090279+00:00"
+    },
+    {
+     "id": "967369c1-6d1f-4691-9343-c321eb30cf9e",
+     "memory": "2026-10-03 (Saturday): Disney Worlds Collide Concert Tour at Chase Center (0.9 mi from the truck, starts 19:00). The truck sold 221 items vs a Saturday trend of 249 (-11%), revenue $2,053.00, 135 orders.",
+     "score": 0.299,
+     "metadata": {
+      "date": "2026-10-03",
+      "type": "sales_day",
+      "venues": [
+       "Chase Center"
+      ],
+      "revenue": 2053,
+      "event_ids": [
+       "disney-2026-10-03"
+      ],
+      "day_of_week": "Saturday",
+      "actual_items": 221,
+      "baseline_items": 249,
+      "vs_baseline_pct": -11
+     },
+     "created_at": "2026-10-06T02:29:49.396935+00:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-10",
+   "query": "Saturday sales with no event nearby",
+   "status": 200,
+   "results": [
+    {
+     "id": "98dc5f4a-e4ab-4afb-9bfe-c9da80b6bc25",
+     "memory": "2026-09-05 (Saturday): no events nearby. The truck sold 289 items vs a Saturday trend of 249 (+16%), revenue $2,702.50, 178 orders.",
+     "score": 0.4735,
+     "metadata": {
+      "date": "2026-09-05",
+      "type": "sales_day",
+      "venues": [],
+      "revenue": 2702.5,
+      "event_ids": [],
+      "day_of_week": "Saturday",
+      "actual_items": 289,
+      "baseline_items": 249,
+      "vs_baseline_pct": 16
+     },
+     "created_at": "2026-10-06T02:29:32.431111+00:00"
+    },
+    {
+     "id": "ec055e8d-64db-496e-950f-fb88592aac6b",
+     "memory": "2026-09-20 (Sunday): no events nearby. The truck sold 167 items vs a Sunday trend of 187 (-11%), revenue $1,580.00, 114 orders.",
+     "score": 0.3233,
+     "metadata": {
+      "date": "2026-09-20",
+      "type": "sales_day",
+      "venues": [],
+      "revenue": 1580,
+      "event_ids": [],
+      "day_of_week": "Sunday",
+      "actual_items": 167,
+      "baseline_items": 187,
+      "vs_baseline_pct": -11
+     },
+     "created_at": "2026-10-06T02:29:41.638311+00:00"
+    },
+    {
+     "id": "f26db081-c3a0-4eaf-afdc-7d34d315c25d",
+     "memory": "2026-09-06 (Sunday): no events nearby. The truck sold 194 items vs a Sunday trend of 187 (+4%), revenue $1,771.50, 119 orders.",
+     "score": 0.3217,
+     "metadata": {
+      "date": "2026-09-06",
+      "type": "sales_day",
+      "venues": [],
+      "revenue": 1771.5,
+      "event_ids": [],
+      "day_of_week": "Sunday",
+      "actual_items": 194,
+      "baseline_items": 187,
+      "vs_baseline_pct": 4
+     },
+     "created_at": "2026-10-06T02:29:33.074681+00:00"
+    },
+    {
+     "id": "f018ccd8-12f5-458e-9c1d-c9b3dccc6977",
+     "memory": "2026-09-28 (Monday): no events nearby. The truck sold 123 items vs a Monday trend of 128 (-4%), revenue $1,145.00, 82 orders.",
+     "score": 0.3122,
+     "metadata": {
+      "date": "2026-09-28",
+      "type": "sales_day",
+      "venues": [],
+      "revenue": 1145,
+      "event_ids": [],
+      "day_of_week": "Monday",
+      "actual_items": 123,
+      "baseline_items": 128,
+      "vs_baseline_pct": -4
+     },
+     "created_at": "2026-10-06T02:29:46.546509+00:00"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-10",
+   "query": "bayfront festival or air show crowds",
+   "status": 200,
+   "results": [
+    {
+     "id": "29433a9a-4d5b-4f4d-acfe-4ff32b54853d",
+     "memory": "2026-09-10 (Thursday): Ferry Building Farmers Market at Ferry Building (1.2 mi from the truck, starts 10:00). The truck sold 141 items vs a Thursday trend of 166 (-15%), revenue $1,334.50, 94 orders.",
+     "score": 0.1604,
+     "metadata": {
+      "date": "2026-09-10",
+      "type": "sales_day",
+      "venues": [
+       "Ferry Building"
+      ],
+      "revenue": 1334.5,
+      "event_ids": [
+       "ferry-farmers-2026-09-10"
+      ],
+      "day_of_week": "Thursday",
+      "actual_items": 141,
+      "baseline_items": 166,
+      "vs_baseline_pct": -15
+     },
+     "created_at": "2026-10-06T02:29:35.294782+00:00"
+    },
+    {
+     "id": "0b50cc74-f63f-4ab0-ac42-d296c7b4f553",
+     "memory": "2026-09-16 (Wednesday): Dreamforce 2026 (day 2) at Moscone Center (0.9 mi from the truck, starts 09:00); Dreamfest 2026 (Gwen Stefani, Usher) at Oracle Park (0.1 mi from the truck, starts 18:00). The truck sold 267 items vs a Wednesday trend of 146 (+83%), revenue $2,477.50, 157 orders.",
+     "score": 0.1603,
+     "metadata": {
+      "date": "2026-09-16",
+      "type": "sales_day",
+      "venues": [
+       "Moscone Center",
+       "Oracle Park"
+      ],
+      "revenue": 2477.5,
+      "event_ids": [
+       "dreamforce-2026-09-16",
+       "dreamfest-2026-09-16"
+      ],
+      "day_of_week": "Wednesday",
+      "actual_items": 267,
+      "baseline_items": 146,
+      "vs_baseline_pct": 83
+     },
+     "created_at": "2026-10-06T02:29:39.161095+00:00"
+    },
+    {
+     "id": "c3cd3ed9-2c78-4a6a-be5e-732d894a9163",
+     "memory": "2026-09-15 (Tuesday): Dreamforce 2026 (day 1) at Moscone Center (0.9 mi from the truck, starts 09:00). The truck sold 141 items vs a Tuesday trend of 137 (+3%), revenue $1,285.50, 87 orders.",
+     "score": 0.1543,
+     "metadata": {
+      "date": "2026-09-15",
+      "type": "sales_day",
+      "venues": [
+       "Moscone Center"
+      ],
+      "revenue": 1285.5,
+      "event_ids": [
+       "dreamforce-2026-09-15"
+      ],
+      "day_of_week": "Tuesday",
+      "actual_items": 141,
+      "baseline_items": 137,
+      "vs_baseline_pct": 3
+     },
+     "created_at": "2026-10-06T02:29:38.614862+00:00"
+    },
+    {
+     "id": "47d8b9ff-bcc1-428d-9155-808c0b8e7eb5",
+     "memory": "2026-09-17 (Thursday): Dreamforce 2026 (day 3) at Moscone Center (0.9 mi from the truck, starts 09:00). The truck sold 181 items vs a Thursday trend of 166 (+9%), revenue $1,665.00, 105 orders.",
+     "score": 0.1536,
+     "metadata": {
+      "date": "2026-09-17",
+      "type": "sales_day",
+      "venues": [
+       "Moscone Center"
+      ],
+      "revenue": 1665,
+      "event_ids": [
+       "dreamforce-2026-09-17"
+      ],
+      "day_of_week": "Thursday",
+      "actual_items": 181,
+      "baseline_items": 166,
+      "vs_baseline_pct": 9
+     },
+     "created_at": "2026-10-06T02:29:39.938156+00:00"
+    }
+   ]
+  }
+ ],
+ "generated_at": "2026-10-05T19:29:58-07:00"
+}

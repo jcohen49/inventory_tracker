@@ -5,13 +5,13 @@
  "open": "11:00",
  "close": "21:00",
  "baseline_items": 137.0,
- "expected_items": 164.5,
- "expected_vs_baseline_pct": 20.1,
- "expected_orders": 99,
- "expected_revenue": 1499.42,
+ "expected_items": 181.0,
+ "expected_vs_baseline_pct": 32.1,
+ "expected_orders": 108,
+ "expected_revenue": 1642.35,
  "range_items": [
-  145,
-  184
+  159,
+  203
  ],
  "confidence": "medium",
  "peak_hour": "18:00",
@@ -28,99 +28,99 @@
   "20:00"
  ],
  "hourly_expected": [
-  15.6,
-  31.4,
-  13.4,
+  17.8,
+  35.6,
+  17.7,
   5.8,
   6.4,
   10.0,
-  22.2,
-  39.4,
+  25.1,
+  42.3,
   13.7,
   6.6
  ],
  "hourly_expected_by_item": {
   "burrito": [
-   4.1,
-   8.2,
-   3.5,
+   4.5,
+   9.0,
+   4.3,
    1.5,
    1.7,
    2.4,
-   5.1,
-   9.2,
+   5.8,
+   9.8,
    3.6,
    1.7
   ],
   "tacos": [
-   3.1,
-   6.1,
-   2.6,
+   3.7,
+   7.5,
+   4.0,
    1.1,
    1.3,
    2.3,
-   5.4,
-   9.4,
+   6.1,
+   10.2,
    2.7,
    1.3
   ],
   "bowl": [
    2.3,
-   4.6,
+   4.5,
    2.0,
    0.8,
    0.9,
    1.0,
-   2.0,
-   3.7,
+   2.3,
+   3.8,
    2.0,
    1.0
   ],
   "nachos": [
-   1.6,
-   3.1,
-   1.3,
+   2.0,
+   4.0,
+   2.2,
    0.6,
    0.6,
    1.3,
-   3.1,
-   5.5,
+   3.5,
+   6.0,
    1.4,
    0.7
   ],
   "quesadilla": [
-   1.4,
-   2.8,
-   1.2,
+   1.5,
+   3.1,
+   1.5,
    0.5,
    0.6,
    0.8,
-   1.8,
-   3.1,
+   2.0,
+   3.3,
    1.2,
    0.6
   ],
   "chips-guac": [
-   1.1,
-   2.2,
-   1.0,
+   1.4,
+   2.7,
+   1.4,
    0.4,
    0.5,
    0.8,
-   1.9,
-   3.4,
+   2.2,
+   3.7,
    1.0,
    0.5
   ],
   "chips-queso": [
-   0.9,
-   1.8,
-   0.8,
+   1.1,
+   2.2,
+   1.2,
    0.3,
    0.4,
    0.7,
-   1.7,
-   2.9,
+   1.9,
+   3.2,
    0.8,
    0.4
   ],
@@ -138,7 +138,7 @@
   ],
   "side-rice": [
    0.3,
-   0.6,
+   0.7,
    0.3,
    0.1,
    0.1,
@@ -150,7 +150,7 @@
   ],
   "side-beans": [
    0.3,
-   0.6,
+   0.7,
    0.3,
    0.1,
    0.1,
@@ -162,18 +162,29 @@
   ]
  },
  "expected_items_by_item": {
-  "burrito": 41.1,
-  "tacos": 35.3,
-  "bowl": 20.2,
-  "nachos": 19.2,
-  "quesadilla": 14.1,
-  "chips-guac": 12.8,
-  "chips-queso": 10.6,
-  "salad": 5.2,
-  "side-rice": 3.1,
-  "side-beans": 3.0
+  "burrito": 44.3,
+  "tacos": 40.2,
+  "bowl": 20.6,
+  "nachos": 22.3,
+  "quesadilla": 15.2,
+  "chips-guac": 14.6,
+  "chips-queso": 12.2,
+  "salad": 5.1,
+  "side-rice": 3.4,
+  "side-beans": 3.2
  },
  "drivers": [
+  {
+   "event_id": "gne-2026-10-06",
+   "name": "GNE 2026 (day 1)",
+   "venue": "Moscone Center",
+   "distance_miles": 0.9,
+   "direction": "up",
+   "expected_effect_pct": 12,
+   "start_time": "09:00",
+   "end_time": "17:00",
+   "explanation": "GNE 2026 (day 1) (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +12%."
+  },
   {
    "event_id": "warriors-2026-10-06",
    "name": "Golden State Warriors vs. Los Angeles Lakers (preseason)",
@@ -187,9 +198,9 @@
   }
  ],
  "prep_notes": [
-  "Expect about 41 Signature Burrito",
-  "Expect about 35 Street Tacos (3)",
-  "Expect about 20 Burrito Bowl",
+  "Expect about 44 Signature Burrito",
+  "Expect about 40 Street Tacos (3)",
+  "Expect about 22 Loaded Nachos",
   "Pre-portion nachos, chips and tortillas before the rush window"
  ],
  "placeholder": true,
@@ -197,7 +208,7 @@
   "status": "scheduled",
   "runs_at": "end of day",
   "note": "Scheduled to run at the end of the day on Oct 6 (21:30); this is the forecast it will start from.",
-  "summary": "Statistical prediction for a Tuesday is 137 items [1]. The agent forecasts 165 (+20%), a lift of about 28 items from one hotspot event. Tavily confirms the Warriors host the Lakers at Chase Center, 19:00, 0.9 mi from the truck [2], and lists it as the marquee game of the home preseason [3]. Mem0 recalls the closest past nights at the same arena, the Valkyries on <<2026-09-18|Sep 18>> and <<2026-10-02|Oct 2>>: only +14% and +11% over trend, with the extra sales landing 17:00 to 18:00 [4]. Why the agent goes above those Valkyries nights: a Warriors game seats up to 18,064 and the Lakers draw a fuller house, so it scales the lift to +20%. Why not higher: preseason, a Tuesday, and a 19:00 tip-off means most fans reach Chase Center between 17:00 and 18:30. It also discounts the Wednesday concert surges on <<2026-09-09|Sep 9>> and <<2026-09-23|Sep 23>>, which were really Giants day games [5]. Nothing else is in play: dry weather and no closures [6]. Expect the peak around 18:00 rather than the usual lunch rush.",
+  "summary": "Expected about 181 items (+32% vs a typical Tuesday of 137 [1]), peaking around 18:00. GNE 2026 (day 1) (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +12%. [2] Memory recall of similar days: <<2026-09-17|Sep 17>> +9% (181 items), <<2026-09-16|Sep 16>> +83% (267 items), <<2026-09-15|Sep 15>> +3% (141 items) [3]. Golden State Warriors vs. Los Angeles Lakers (preseason) at Chase Center (0.9 mi away, starts 19:00): a pre-event lift in the three hours before the start, roughly +20%. [4] Memory recall of similar days: <<2026-10-04|Oct 4>> +17% (219 items), <<2026-10-03|Oct 3>> -11% (221 items), <<2026-10-02|Oct 2>> +11% (257 items) [5].",
   "sources": [
    {
     "id": 1,
@@ -223,115 +234,119 @@
    {
     "id": 2,
     "type": "tavily",
-    "event_id": "warriors-2026-10-06",
-    "query": "Golden State Warriors vs. Los Angeles Lakers (preseason) Chase Center San Francisco Oct 6",
-    "title": "Golden State Warriors vs. Los Angeles Lakers (preseason)",
-    "url": "https://www.chasecenter.com/events",
-    "domain": "chasecenter.com",
-    "snippet": "NBA preseason game at Chase Center, 19:00 to 21:15.",
-    "verified": false,
-    "placeholder": true
+    "event_id": "gne-2026-10-06",
+    "query": "GNE 2026 (day 1) Moscone Center San Francisco Oct 6",
+    "title": "GNE 2026 (day 1)",
+    "url": "https://yerbabuena.org/go/moscone-center",
+    "domain": "yerbabuena.org",
+    "snippet": "Conference at Moscone Center, 09:00 to 17:00.",
+    "verified": true,
+    "placeholder": false
    },
    {
     "id": 3,
-    "type": "tavily",
-    "event_id": "warriors-2026-10-06",
-    "query": "Warriors Lakers preseason October 6 2026 attendance",
-    "title": "Warriors 2026 preseason home schedule",
-    "url": "https://www.nba.com/warriors/schedule",
-    "domain": "nba.com",
-    "snippet": "Lakers visit is the marquee game of the Warriors home preseason slate; tip-off 7:00 PM.",
-    "verified": false,
-    "placeholder": true
+    "type": "mem0",
+    "memory_id": "mem_4903bdf39d",
+    "query": "past sales near Moscone Center on conference days",
+    "memory": "Comparable Moscone Center days (conference): the truck averaged +32% vs baseline over the last 3 day(s); most recent <<2026-09-17|Sep 17>> at 181 items.",
+    "relevance": 0.93,
+    "avg_vs_baseline_pct": 31.8,
+    "linked_days": [
+     {
+      "date": "2026-09-17",
+      "event": "Dreamforce 2026 (day 3)",
+      "category": "Conference",
+      "actual_items": 181,
+      "expected_items": 195,
+      "baseline_items": 166,
+      "vs_baseline_pct": 9.1,
+      "revenue": 1665
+     },
+     {
+      "date": "2026-09-16",
+      "event": "Dreamforce 2026 (day 2)",
+      "category": "Conference",
+      "actual_items": 267,
+      "expected_items": 261,
+      "baseline_items": 146,
+      "vs_baseline_pct": 83.4,
+      "revenue": 2477.5
+     },
+     {
+      "date": "2026-09-15",
+      "event": "Dreamforce 2026 (day 1)",
+      "category": "Conference",
+      "actual_items": 141,
+      "expected_items": 161,
+      "baseline_items": 137,
+      "vs_baseline_pct": 2.9,
+      "revenue": 1285.5
+     }
+    ]
    },
    {
     "id": 4,
+    "type": "tavily",
+    "event_id": "warriors-2026-10-06",
+    "query": "Golden State Warriors vs. Los Angeles Lakers (preseason) Chase Center San Francisco Oct 6",
+    "title": "Golden State Warriors vs. Los Angeles Lakers (preseason)",
+    "url": "https://www.nba.com/game/lal-vs-gsw-0012600010",
+    "domain": "nba.com",
+    "snippet": "NBA preseason game at Chase Center, 19:00 to 21:15.",
+    "verified": true,
+    "placeholder": false
+   },
+   {
+    "id": 5,
     "type": "mem0",
-    "memory_id": "mem_92cf2eb17e",
-    "query": "past sales near Chase Center on basketball nights",
-    "memory": "Two Valkyries weeknight games at Chase Center sold 264 items on <<2026-09-18|Sep 18>> and 257 on <<2026-10-02|Oct 2>>. Extra sales came 17:00 to 18:00, about 90 minutes before tip-off, and faded once the game began.",
-    "relevance": 0.94,
-    "avg_vs_baseline_pct": 14.0,
+    "memory_id": "mem_693dcde570",
+    "query": "past sales near Chase Center on nba preseason game days",
+    "memory": "Comparable Chase Center days (wnba playoff game / concert): the truck averaged +6% vs baseline over the last 3 day(s); most recent <<2026-10-04|Oct 4>> at 219 items.",
+    "relevance": 0.93,
+    "avg_vs_baseline_pct": 5.6,
     "linked_days": [
      {
-      "date": "2026-09-18",
-      "event": "Valkyries vs Portland Fire (Fri 19:00)",
-      "category": "",
-      "actual_items": 264,
-      "expected_items": 249,
-      "baseline_items": 231,
-      "vs_baseline_pct": 14.1,
-      "revenue": 2506.5
+      "date": "2026-10-04",
+      "event": "WNBA Semifinals G1: Valkyries vs Las Vegas Aces",
+      "category": "WNBA playoff game",
+      "actual_items": 219,
+      "expected_items": 204,
+      "baseline_items": 187,
+      "vs_baseline_pct": 16.9,
+      "revenue": 2018.5
+     },
+     {
+      "date": "2026-10-03",
+      "event": "Disney Worlds Collide Concert Tour",
+      "category": "Concert",
+      "actual_items": 221,
+      "expected_items": 260,
+      "baseline_items": 249,
+      "vs_baseline_pct": -11.1,
+      "revenue": 2053
      },
      {
       "date": "2026-10-02",
-      "event": "WNBA Playoffs R1 G3: Valkyries vs Dallas Wings (Fri 18:00)",
-      "category": "",
+      "event": "WNBA Playoffs R1 G3: Valkyries vs Dallas Wings",
+      "category": "WNBA playoff game",
       "actual_items": 257,
       "expected_items": 245,
       "baseline_items": 231,
       "vs_baseline_pct": 11.1,
       "revenue": 2360
-     },
-     {
-      "date": "2026-09-19",
-      "event": "Valkyries vs Seattle Storm (Sat 17:30)",
-      "category": "",
-      "actual_items": 290,
-      "expected_items": 257,
-      "baseline_items": 249,
-      "vs_baseline_pct": 16.7,
-      "revenue": 2661
      }
     ]
-   },
-   {
-    "id": 5,
-    "type": "mem0",
-    "memory_id": "mem_31254bf47f",
-    "query": "Chase Center concerts on weeknights vs the Giants calendar",
-    "memory": "Weeknight Chase Center concerts looked big (<<2026-09-09|Sep 9>> +44%, <<2026-09-23|Sep 23>> +55%) but the surge came at 12:00, which is the Giants day game, not the concert. The evening lift behind both was only +5 to +11 items an hour.",
-    "relevance": 0.81,
-    "avg_vs_baseline_pct": 49.4,
-    "linked_days": [
-     {
-      "date": "2026-09-09",
-      "event": "Weezer, The Shins, Silversun Pickups (Wed 19:00)",
-      "category": "",
-      "actual_items": 210,
-      "expected_items": 226,
-      "baseline_items": 146,
-      "vs_baseline_pct": 44.2,
-      "revenue": 1909
-     },
-     {
-      "date": "2026-09-23",
-      "event": "Lily Allen (Wed 20:00)",
-      "category": "",
-      "actual_items": 225,
-      "expected_items": 196,
-      "baseline_items": 146,
-      "vs_baseline_pct": 54.5,
-      "revenue": 2064.5
-     }
-    ]
-   },
-   {
-    "id": 6,
-    "type": "tavily",
-    "event_id": null,
-    "query": "San Francisco weather forecast October 6 2026",
-    "title": "San Francisco forecast",
-    "url": "https://www.weather.gov/mtr/",
-    "domain": "weather.gov",
-    "snippet": "Clear and 66F, light wind. Dry all day.",
-    "verified": false,
-    "placeholder": true
    }
   ],
   "adjustments": {
    "stat": 137,
    "rows": [
+    {
+     "label": "GNE 2026 (day 1)",
+     "event_id": "gne-2026-10-06",
+     "delta": 16,
+     "kind": "up"
+    },
     {
      "label": "Golden State Warriors vs. Los Angeles Lakers (preseason)",
      "event_id": "warriors-2026-10-06",
@@ -339,7 +354,7 @@
      "kind": "up"
     }
    ],
-   "forecast": 165,
+   "forecast": 181,
    "actual": null,
    "gap": null,
    "gap_note": ""
@@ -349,17 +364,17 @@
   {
    "type": "reorder_alert_updated",
    "ingredient": "Large Flour Tortilla",
-   "change": "+32 tortillas",
+   "change": "+51 tortillas",
    "status": "scheduled",
-   "detail": "Will raise the Large Flour Tortilla reorder alert by 32 tortillas to cover the expected rush at the end of the day on Oct 6.",
+   "detail": "Will raise the Large Flour Tortilla reorder alert by 51 tortillas to cover the expected rush at the end of the day on Oct 6.",
    "runs_at": "end of day"
   },
   {
    "type": "reorder_alert_updated",
    "ingredient": "Tortilla Chips",
-   "change": "+3 bags",
+   "change": "+4 bags",
    "status": "scheduled",
-   "detail": "Will raise the Tortilla Chips reorder alert by 3 bags to cover the expected rush at the end of the day on Oct 6.",
+   "detail": "Will raise the Tortilla Chips reorder alert by 4 bags to cover the expected rush at the end of the day on Oct 6.",
    "runs_at": "end of day"
   }
  ],
@@ -448,7 +463,7 @@
       "start": "19:00",
       "end": "21:15",
       "status": "scheduled",
-      "placeholder": true,
+      "placeholder": false,
       "effect_pct": 20,
       "direction": "up",
       "tavily": {
@@ -456,29 +471,14 @@
        "event_id": "warriors-2026-10-06",
        "query": "Golden State Warriors vs. Los Angeles Lakers (preseason) Chase Center San Francisco Oct 6",
        "title": "Golden State Warriors vs. Los Angeles Lakers (preseason)",
-       "url": "https://www.chasecenter.com/events",
-       "domain": "chasecenter.com",
+       "url": "https://www.nba.com/game/lal-vs-gsw-0012600010",
+       "domain": "nba.com",
        "snippet": "NBA preseason game at Chase Center, 19:00 to 21:15.",
-       "verified": false,
-       "placeholder": true
+       "verified": true,
+       "placeholder": false
       },
-      "source_id": 2,
-      "more": [
-       {
-        "source_id": 3,
-        "tavily": {
-         "type": "tavily",
-         "event_id": "warriors-2026-10-06",
-         "query": "Warriors Lakers preseason October 6 2026 attendance",
-         "title": "Warriors 2026 preseason home schedule",
-         "url": "https://www.nba.com/warriors/schedule",
-         "domain": "nba.com",
-         "snippet": "Lakers visit is the marquee game of the Warriors home preseason slate; tip-off 7:00 PM.",
-         "verified": false,
-         "placeholder": true
-        }
-       }
-      ]
+      "source_id": 4,
+      "more": []
      }
     ],
     "check": "Chase Center events 2026-10-06"
@@ -486,38 +486,38 @@
    {
     "venue": "Moscone Center",
     "miles": 0.9,
-    "status": "quiet",
-    "items": [],
+    "status": "event",
+    "items": [
+     {
+      "event_id": "gne-2026-10-06",
+      "name": "GNE 2026 (day 1)",
+      "category": "Conference",
+      "venue": "Moscone Center",
+      "miles": 0.9,
+      "start": "09:00",
+      "end": "17:00",
+      "status": "scheduled",
+      "placeholder": false,
+      "effect_pct": 12,
+      "direction": "up",
+      "tavily": {
+       "type": "tavily",
+       "event_id": "gne-2026-10-06",
+       "query": "GNE 2026 (day 1) Moscone Center San Francisco Oct 6",
+       "title": "GNE 2026 (day 1)",
+       "url": "https://yerbabuena.org/go/moscone-center",
+       "domain": "yerbabuena.org",
+       "snippet": "Conference at Moscone Center, 09:00 to 17:00.",
+       "verified": true,
+       "placeholder": false
+      },
+      "source_id": 2,
+      "more": []
+     }
+    ],
     "check": "Moscone Center events 2026-10-06"
    }
   ],
-  "other": [
-   {
-    "name": "Weather: Clear and 66F, light wind",
-    "category": "Weather",
-    "venue": "San Francisco",
-    "miles": 0.0,
-    "start": "08:00",
-    "end": "22:00",
-    "status": "scheduled",
-    "placeholder": true,
-    "effect_pct": 0,
-    "direction": "flat",
-    "event_id": null,
-    "source_id": 6,
-    "tavily": {
-     "type": "tavily",
-     "event_id": null,
-     "query": "San Francisco weather forecast October 6 2026",
-     "title": "San Francisco forecast",
-     "url": "https://www.weather.gov/mtr/",
-     "domain": "weather.gov",
-     "snippet": "Clear and 66F, light wind. Dry all day.",
-     "verified": false,
-     "placeholder": true
-    },
-    "note": "No weather effect expected."
-   }
-  ]
+  "other": []
  }
 }

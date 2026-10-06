@@ -5,15 +5,15 @@
  "open": "11:00",
  "close": "21:00",
  "baseline_items": 145.6,
- "expected_items": 161.1,
- "expected_vs_baseline_pct": 10.7,
- "expected_orders": 96,
- "expected_revenue": 1471.16,
+ "expected_items": 164.0,
+ "expected_vs_baseline_pct": 12.6,
+ "expected_orders": 98,
+ "expected_revenue": 1495.3,
  "range_items": [
-  142,
-  180
+  144,
+  184
  ],
- "confidence": "low",
+ "confidence": "medium",
  "peak_hour": "12:00",
  "hours": [
   "11:00",
@@ -28,39 +28,39 @@
   "20:00"
  ],
  "hourly_expected": [
-  19.2,
-  35.9,
-  18.2,
+  19.6,
+  36.6,
+  18.9,
   5.7,
   6.4,
   7.4,
-  17.0,
-  29.8,
+  17.5,
+  30.3,
   14.6,
   7.0
  ],
  "hourly_expected_by_item": {
   "burrito": [
-   4.8,
-   9.0,
-   4.4,
+   4.9,
+   9.1,
+   4.5,
    1.5,
    1.7,
    2.0,
-   4.2,
-   7.5,
+   4.3,
+   7.6,
    3.8,
    1.8
   ],
   "tacos": [
-   4.1,
-   7.7,
    4.2,
+   7.9,
+   4.4,
    1.1,
    1.2,
    1.5,
-   3.8,
-   6.3,
+   3.9,
+   6.4,
    2.9,
    1.4
   ],
@@ -77,14 +77,14 @@
    1.0
   ],
   "nachos": [
-   2.2,
-   4.2,
-   2.4,
+   2.3,
+   4.3,
+   2.5,
    0.6,
    0.6,
    0.7,
-   2.1,
-   3.4,
+   2.2,
+   3.5,
    1.5,
    0.7
   ],
@@ -95,15 +95,15 @@
    0.5,
    0.6,
    0.7,
-   1.4,
+   1.5,
    2.6,
    1.3,
    0.6
   ],
   "chips-guac": [
    1.5,
-   2.8,
-   1.5,
+   2.9,
+   1.6,
    0.4,
    0.5,
    0.5,
@@ -113,13 +113,13 @@
    0.5
   ],
   "chips-queso": [
-   1.2,
-   2.3,
    1.3,
+   2.4,
+   1.4,
    0.3,
    0.4,
    0.4,
-   1.1,
+   1.2,
    1.9,
    0.8,
    0.4
@@ -149,8 +149,8 @@
    0.1
   ],
   "side-beans": [
-   0.3,
-   0.6,
+   0.4,
+   0.7,
    0.3,
    0.1,
    0.1,
@@ -162,28 +162,28 @@
   ]
  },
  "expected_items_by_item": {
-  "burrito": 40.6,
-  "tacos": 34.0,
+  "burrito": 41.1,
+  "tacos": 34.9,
   "bowl": 20.5,
-  "nachos": 18.3,
-  "quesadilla": 13.9,
-  "chips-guac": 12.3,
-  "chips-queso": 10.2,
+  "nachos": 18.9,
+  "quesadilla": 14.1,
+  "chips-guac": 12.6,
+  "chips-queso": 10.5,
   "salad": 5.3,
   "side-rice": 3.1,
-  "side-beans": 2.9
+  "side-beans": 3.0
  },
  "drivers": [
   {
    "event_id": "moscone-2026-10-14",
-   "name": "Moscone Center conference, day 2",
+   "name": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 2)",
    "venue": "Moscone Center",
    "distance_miles": 0.9,
    "direction": "up",
-   "expected_effect_pct": 14,
+   "expected_effect_pct": 16,
    "start_time": "09:00",
-   "end_time": "18:00",
-   "explanation": "Moscone Center conference, day 2 (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +14%."
+   "end_time": "17:00",
+   "explanation": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 2) (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +16%."
   },
   {
    "event_id": "thirdst-2026-10-14",
@@ -199,7 +199,7 @@
  ],
  "prep_notes": [
   "Expect about 41 Signature Burrito",
-  "Expect about 34 Street Tacos (3)",
+  "Expect about 35 Street Tacos (3)",
   "Expect about 20 Burrito Bowl",
   "Pre-portion nachos, chips and tortillas before the rush window"
  ],
@@ -208,7 +208,7 @@
   "status": "scheduled",
   "runs_at": "end of day",
   "note": "Scheduled to run at the end of the day on Oct 14 (21:30); this is the forecast it will start from.",
-  "summary": "Expected about 161 items (+11% vs a typical Wednesday of 146 [1]), peaking around 12:00. Moscone Center conference, day 2 (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +14%. [2] Memory recall of similar days: <<2026-09-17|Sep 17>> +9% (181 items), <<2026-09-16|Sep 16>> +83% (267 items), <<2026-09-15|Sep 15>> +3% (141 items) [3]. Third St Bridge maintenance: lane closure (12:00 to 16:00): fewer walk-ups while access is restricted, roughly -7% over that window. [4] Memory recall of similar days: <<2026-09-14|Sep 14>> -10% (116 items) [5].",
+  "summary": "Expected about 164 items (+13% vs a typical Wednesday of 146 [1]), peaking around 12:00. SEMICON West 2026 and TechCrunch Disrupt 2026 (day 2) (0.9 mi away): attendees break for lunch around 12:00 to 14:00 with a smaller early-evening wave, roughly +16%. [2] Memory recall of similar days: <<2026-09-17|Sep 17>> +9% (181 items), <<2026-09-16|Sep 16>> +83% (267 items), <<2026-09-15|Sep 15>> +3% (141 items) [3]. Third St Bridge maintenance: lane closure (12:00 to 16:00): fewer walk-ups while access is restricted, roughly -7% over that window. [4] Memory recall of similar days: <<2026-09-14|Sep 14>> -10% (116 items) [5].",
   "sources": [
    {
     "id": 1,
@@ -235,13 +235,13 @@
     "id": 2,
     "type": "tavily",
     "event_id": "moscone-2026-10-14",
-    "query": "Moscone Center conference, day 2 Moscone Center San Francisco Oct 14",
-    "title": "Moscone Center conference, day 2",
-    "url": "https://www.sftravel.com/",
-    "domain": "sftravel.com",
-    "snippet": "Conference at Moscone Center, 09:00 to 18:00 (start time not confirmed).",
-    "verified": false,
-    "placeholder": true
+    "query": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 2) Moscone Center San Francisco Oct 14",
+    "title": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 2)",
+    "url": "https://www.moscone.com",
+    "domain": "moscone.com",
+    "snippet": "Conference at Moscone Center, 09:00 to 17:00.",
+    "verified": true,
+    "placeholder": false
    },
    {
     "id": 3,
@@ -322,9 +322,9 @@
    "stat": 146,
    "rows": [
     {
-     "label": "Moscone Center conference, day 2",
+     "label": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 2)",
      "event_id": "moscone-2026-10-14",
-     "delta": 20,
+     "delta": 22,
      "kind": "up"
     },
     {
@@ -334,7 +334,7 @@
      "kind": "down"
     }
    ],
-   "forecast": 161,
+   "forecast": 164,
    "actual": null,
    "gap": null,
    "gap_note": ""
@@ -344,9 +344,9 @@
   {
    "type": "reorder_alert_updated",
    "ingredient": "Large Flour Tortilla",
-   "change": "+20 tortillas",
+   "change": "+23 tortillas",
    "status": "scheduled",
-   "detail": "Will raise the Large Flour Tortilla reorder alert by 20 tortillas to cover the expected rush at the end of the day on Oct 14.",
+   "detail": "Will raise the Large Flour Tortilla reorder alert by 23 tortillas to cover the expected rush at the end of the day on Oct 14.",
    "runs_at": "end of day"
   },
   {
@@ -443,26 +443,26 @@
     "items": [
      {
       "event_id": "moscone-2026-10-14",
-      "name": "Moscone Center conference, day 2",
+      "name": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 2)",
       "category": "Conference",
       "venue": "Moscone Center",
       "miles": 0.9,
       "start": "09:00",
-      "end": "18:00",
+      "end": "17:00",
       "status": "scheduled",
-      "placeholder": true,
-      "effect_pct": 14,
+      "placeholder": false,
+      "effect_pct": 16,
       "direction": "up",
       "tavily": {
        "type": "tavily",
        "event_id": "moscone-2026-10-14",
-       "query": "Moscone Center conference, day 2 Moscone Center San Francisco Oct 14",
-       "title": "Moscone Center conference, day 2",
-       "url": "https://www.sftravel.com/",
-       "domain": "sftravel.com",
-       "snippet": "Conference at Moscone Center, 09:00 to 18:00 (start time not confirmed).",
-       "verified": false,
-       "placeholder": true
+       "query": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 2) Moscone Center San Francisco Oct 14",
+       "title": "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 2)",
+       "url": "https://www.moscone.com",
+       "domain": "moscone.com",
+       "snippet": "Conference at Moscone Center, 09:00 to 17:00.",
+       "verified": true,
+       "placeholder": false
       },
       "source_id": 2,
       "more": []

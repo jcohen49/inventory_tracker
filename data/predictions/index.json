@@ -303,31 +303,34 @@
   {
    "date": "2026-10-06",
    "status": "future",
-   "expected_items": 164.5,
+   "expected_items": 181.0,
    "baseline_items": 137.0,
-   "expected_vs_baseline_pct": 20.1,
+   "expected_vs_baseline_pct": 32.1,
    "events": [
+    "GNE 2026 (day 1)",
     "Golden State Warriors vs. Los Angeles Lakers (preseason)"
    ]
   },
   {
    "date": "2026-10-07",
    "status": "future",
-   "expected_items": 169.0,
+   "expected_items": 204.0,
    "baseline_items": 145.6,
-   "expected_vs_baseline_pct": 16.1,
+   "expected_vs_baseline_pct": 40.1,
    "events": [
-    "Golden State Valkyries vs. Las Vegas Aces (WNBA playoffs)",
-    "Rod Wave"
+    "GNE 2026 (day 2)",
+    "WNBA Semifinals G2: Golden State Valkyries vs. Las Vegas Aces",
+    "Rod Wave: Don't Look Down Tour"
    ]
   },
   {
    "date": "2026-10-08",
    "status": "future",
-   "expected_items": 174.4,
+   "expected_items": 194.3,
    "baseline_items": 165.9,
-   "expected_vs_baseline_pct": 5.1,
+   "expected_vs_baseline_pct": 17.1,
    "events": [
+    "GNE 2026 (day 3)",
     "SF Fleet Week: Blue Angels practice"
    ]
   },
@@ -373,32 +376,32 @@
   {
    "date": "2026-10-13",
    "status": "future",
-   "expected_items": 156.3,
+   "expected_items": 159.1,
    "baseline_items": 137.0,
-   "expected_vs_baseline_pct": 14.1,
+   "expected_vs_baseline_pct": 16.1,
    "events": [
-    "Moscone Center conference, day 1"
+    "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 1)"
    ]
   },
   {
    "date": "2026-10-14",
    "status": "future",
-   "expected_items": 161.1,
+   "expected_items": 164.0,
    "baseline_items": 145.6,
-   "expected_vs_baseline_pct": 10.7,
+   "expected_vs_baseline_pct": 12.6,
    "events": [
-    "Moscone Center conference, day 2",
+    "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 2)",
     "Third St Bridge maintenance: lane closure"
    ]
   },
   {
    "date": "2026-10-15",
    "status": "future",
-   "expected_items": 186.0,
+   "expected_items": 192.6,
    "baseline_items": 165.9,
-   "expected_vs_baseline_pct": 12.1,
+   "expected_vs_baseline_pct": 16.1,
    "events": [
-    "Moscone Center conference, day 3"
+    "SEMICON West 2026 and TechCrunch Disrupt 2026 (day 3)"
    ]
   },
   {

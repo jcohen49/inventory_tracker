@@ -226,11 +226,11 @@
     "event_id": "fleet-2026-10-11",
     "query": "SF Fleet Week: Air Show Marina / Embarcadero San Francisco Oct 11",
     "title": "SF Fleet Week: Air Show",
-    "url": "https://fleetweek.us/",
-    "domain": "fleetweek.us",
+    "url": "https://sf.funcheap.com/city-guide/october-street-fairs-festivals",
+    "domain": "sf.funcheap.com",
     "snippet": "Festival at Marina / Embarcadero, 12:00 to 16:00 (start time not confirmed).",
-    "verified": false,
-    "placeholder": true
+    "verified": true,
+    "placeholder": false
    },
    {
     "id": 3,
@@ -373,7 +373,7 @@
     "start": "12:00",
     "end": "16:00",
     "status": "scheduled",
-    "placeholder": true,
+    "placeholder": false,
     "effect_pct": 10,
     "direction": "up",
     "tavily": {
@@ -381,11 +381,11 @@
      "event_id": "fleet-2026-10-11",
      "query": "SF Fleet Week: Air Show Marina / Embarcadero San Francisco Oct 11",
      "title": "SF Fleet Week: Air Show",
-     "url": "https://fleetweek.us/",
-     "domain": "fleetweek.us",
+     "url": "https://sf.funcheap.com/city-guide/october-street-fairs-festivals",
+     "domain": "sf.funcheap.com",
      "snippet": "Festival at Marina / Embarcadero, 12:00 to 16:00 (start time not confirmed).",
-     "verified": false,
-     "placeholder": true
+     "verified": true,
+     "placeholder": false
     },
     "source_id": 2,
     "more": []
